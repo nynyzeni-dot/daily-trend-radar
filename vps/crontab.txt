@@ -1,0 +1,7 @@
+# daily-trend-radar: 毎朝7:30(JST)にレポートをLINE配信する
+# `crontab -e` で1行追加する。標準出力・標準エラーはスクリプト自身がログファイルに
+# 書くので、cron側のリダイレクト先はcron実行そのものの異常(起動失敗等)の捕捉用。
+#
+# ★deliver.pyは標準ライブラリのみで動くのでvenvは不要(python3をそのまま呼ぶ)。
+#   他アプリのようなvenv/bin/pythonパターンは踏襲していない(依存が無いため)。
+30 7 * * * cd /var/www/apps/daily-trend-radar && /usr/bin/python3 deliver.py >> /var/log/daily-trend-radar-cron.log 2>&1

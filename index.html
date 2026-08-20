@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンドレーダー｜準備中</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #E8944A;
+    --accent: #F5C28A;
+    --text-brand: #C47A2A;
+    --bg: #15120F;
+    --bg-card: #1E1A16;
+    --bg-card2: #201C18;
+    --border: #322A22;
+    --text: #EFE7DC;
+    --text-dim: #B6AA9C;
+    --text-faint: #8A7F72;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  /* ヘッダー */
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--bg);
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--accent); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  /* 今日の一言まとめ */
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--sub);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  /* セクション見出し（一覧） */
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  /* カード */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-faint);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--border);
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--sub);
+    opacity: 0.85;
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--sub);
+    text-decoration: none;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--accent);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  /* 準備中プレースホルダ */
+  .empty-box {
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 28px 18px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .empty-box p {
+    margin: 0 0 6px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+  .empty-box p:last-child { margin-bottom: 0; }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 準備中</span>
+    <h1>今日のトレンド調査<br><span class="accent">まだ第1回が公開されていません</span></h1>
+    <p class="period">動画の作り方・演出の新手法 ＋ AIツールのニュースを毎日お届け</p>
+  </header>
+
+  <div class="empty-box">
+    <p>クラウドの自動routineが初回のレポートを作成すると、ここに最新日の内容が表示される。</p>
+    <p>過去回は <code>days/</code> 配下に日付ごとに保存されていく。</p>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー<br>
+    初回公開待ち
+  </footer>
+
+</div>
+</body>
+</html>

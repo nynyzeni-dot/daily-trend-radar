@@ -1,1 +1,24 @@
-{"urls": []}
+{
+  "urls": [
+    {
+      "url": "https://shortzly.com/blog/short-form-video-pacing-editing-guide",
+      "title": "リール編集、カット速度の黄金比が判明",
+      "date": "2026-08-21"
+    },
+    {
+      "url": "https://www.adobe.com/jp/creativecloud/roc/blog/video/telop.html",
+      "title": "テロップ、1秒4文字ルールに数式あり",
+      "date": "2026-08-21"
+    },
+    {
+      "url": "https://note.com/witty_ixora1236/n/n542ad5b33e84",
+      "title": "CapCut、3タップ編集と倍速テクの実例",
+      "date": "2026-08-21"
+    },
+    {
+      "url": "https://experiment.pika.art/blog/pika-audio-models",
+      "title": "Pika、音声4兄弟モデルを一挙公開",
+      "date": "2026-08-21"
+    }
+  ]
+}

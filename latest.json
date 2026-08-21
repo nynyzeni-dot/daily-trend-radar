@@ -1,1 +1,27 @@
-{"date": "2026-08-20", "count": 0, "items": []}
+{
+  "date": "2026-08-21",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-21.html",
+  "items": [
+    {
+      "title": "リール編集、カット速度の黄金比が判明",
+      "why": "カット間隔を2.5〜4秒基準で見直し、長すぎる部分にB-rollを1秒挟む",
+      "url": "https://shortzly.com/blog/short-form-video-pacing-editing-guide"
+    },
+    {
+      "title": "テロップ、1秒4文字ルールに数式あり",
+      "why": "テロップ表示秒数を「文字数÷4秒」で計算し直す",
+      "url": "https://www.adobe.com/jp/creativecloud/roc/blog/video/telop.html"
+    },
+    {
+      "title": "CapCut、3タップ編集と倍速テクの実例",
+      "why": "CapCutの速度調整で1.1〜1.2倍にしてテンポを詰める",
+      "url": "https://note.com/witty_ixora1236/n/n542ad5b33e84"
+    },
+    {
+      "title": "Pika、音声4兄弟モデルを一挙公開",
+      "why": "テキスト入力だけでナレーション・効果音をAI生成する選択肢が増える",
+      "url": "https://experiment.pika.art/blog/pika-audio-models"
+    }
+  ]
+}

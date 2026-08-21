@@ -1,27 +1,22 @@
 {
-  "date": "2026-08-21",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-21.html",
+  "date": "2026-08-22",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-22.html",
   "items": [
     {
-      "title": "リール編集、カット速度の黄金比が判明",
-      "why": "カット間隔を2.5〜4秒基準で見直し、長すぎる部分にB-rollを1秒挟む",
-      "url": "https://shortzly.com/blog/short-form-video-pacing-editing-guide"
+      "title": "リール冒頭フック、３種類の作り方",
+      "why": "冒頭0〜3秒を「損」「常識破壊」型の一言に差し替える",
+      "url": "https://note.com/miku_lifework/n/nc8dd9e2e5fd3"
     },
     {
-      "title": "テロップ、1秒4文字ルールに数式あり",
-      "why": "テロップ表示秒数を「文字数÷4秒」で計算し直す",
-      "url": "https://www.adobe.com/jp/creativecloud/roc/blog/video/telop.html"
+      "title": "バズる動画、企画〜編集の型が公開",
+      "why": "同業20本の共通点を自分の店ネタに置き換える",
+      "url": "https://trendmap.jp/blog/buzz-video-recipe-2026"
     },
     {
-      "title": "CapCut、3タップ編集と倍速テクの実例",
-      "why": "CapCutの速度調整で1.1〜1.2倍にしてテンポを詰める",
-      "url": "https://note.com/witty_ixora1236/n/n542ad5b33e84"
-    },
-    {
-      "title": "Pika、音声4兄弟モデルを一挙公開",
-      "why": "テキスト入力だけでナレーション・効果音をAI生成する選択肢が増える",
-      "url": "https://experiment.pika.art/blog/pika-audio-models"
+      "title": "CapCutのAI機能、20本を10分で完成",
+      "why": "自動カットの重要度閾値0.55を試してみる",
+      "url": "https://app-tatsujin.com/capcut-2026-ai-features-short-video-production/"
     }
   ]
 }

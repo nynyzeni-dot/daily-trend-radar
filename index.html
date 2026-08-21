@@ -7,16 +7,16 @@
 <style>
   :root {
     --main: #D4722A;
-    --sub: #E8944A;
+    --sub: #C25F18;
     --accent: #F5C28A;
-    --text-brand: #C47A2A;
-    --bg: #15120F;
-    --bg-card: #1E1A16;
-    --bg-card2: #201C18;
-    --border: #322A22;
-    --text: #EFE7DC;
-    --text-dim: #B6AA9C;
-    --text-faint: #8A7F72;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
   }
   * { box-sizing: border-box; }
   html, body {
@@ -47,7 +47,7 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: var(--bg);
+    color: #1A0F06;
     background: linear-gradient(135deg, var(--main), var(--sub));
     padding: 4px 10px;
     border-radius: 20px;
@@ -60,7 +60,7 @@
     color: var(--text);
     font-weight: 800;
   }
-  h1 .accent { color: var(--accent); }
+  h1 .accent { color: var(--text-brand); }
   .period {
     font-size: 13px;
     color: var(--text-dim);
@@ -74,11 +74,12 @@
     border-radius: 10px;
     padding: 14px 16px;
     margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
   }
   .summary-box .label {
     font-size: 11px;
     font-weight: 700;
-    color: var(--sub);
+    color: var(--text-brand);
     letter-spacing: 0.05em;
     margin-bottom: 6px;
     display: block;
@@ -104,6 +105,7 @@
     padding: 18px 16px;
     margin-bottom: 18px;
     position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
   }
   .card.high {
     border-left: 4px solid var(--main);
@@ -134,13 +136,13 @@
   }
   .badge.mid {
     background: transparent;
-    color: var(--text-faint);
+    color: var(--text-dim);
     border: 1px solid var(--border);
   }
   .badge.genre {
-    background: transparent;
-    color: var(--accent);
-    border: 1px solid var(--border);
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
   }
   .date {
     font-size: 11px;
@@ -164,13 +166,12 @@
   .block .h {
     font-size: 11.5px;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--text-brand);
     margin: 0 0 5px;
     letter-spacing: 0.03em;
   }
   .card.mid .block .h {
-    color: var(--sub);
-    opacity: 0.85;
+    color: var(--text-brand);
   }
   .block p {
     margin: 0;
@@ -184,8 +185,8 @@
     align-items: center;
     gap: 6px;
     font-size: 12.5px;
-    color: var(--sub);
-    text-decoration: none;
+    color: var(--text-brand);
+    text-decoration: underline;
     border-top: 1px solid var(--border);
     padding-top: 10px;
     margin-top: 4px;
@@ -193,7 +194,7 @@
   }
   .source-link:active,
   .source-link:hover {
-    color: var(--accent);
+    color: var(--main);
   }
   .source-link .arrow {
     flex-shrink: 0;
@@ -217,12 +218,12 @@
     color: var(--text-faint);
   }
   footer .archive a {
-    color: var(--sub);
-    text-decoration: none;
+    color: var(--text-brand);
+    text-decoration: underline;
     display: block;
     margin-bottom: 4px;
   }
-  footer .archive a:hover { color: var(--accent); }
+  footer .archive a:hover { color: var(--main); }
 
   @media (min-width: 480px) {
     h1 { font-size: 24px; }

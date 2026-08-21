@@ -1,7 +1,14 @@
-# daily-trend-radar: 毎朝7:30(JST)にレポートをLINE配信する
+# daily-trend-radar: 毎朝7:35(JST)にレポートをLINE配信する
 # `crontab -e` で1行追加する。標準出力・標準エラーはスクリプト自身がログファイルに
 # 書くので、cron側のリダイレクト先はcron実行そのものの異常(起動失敗等)の捕捉用。
 #
 # ★deliver.pyは標準ライブラリのみで動くのでvenvは不要(python3をそのまま呼ぶ)。
 #   他アプリのようなvenv/bin/pythonパターンは踏襲していない(依存が無いため)。
-30 7 * * * cd /var/www/apps/daily-trend-radar && /usr/bin/python3 deliver.py >> /var/log/daily-trend-radar-cron.log 2>&1
+# ★設置先は/usr/local/bin/(VPS既存バッチと同じ流儀)。cdを使わず絶対パス1本で呼ぶ。
+# ★7:35なのはVPS侵入チェック(毎朝7:30)との丸かぶりを避けるため。
+35 7 * * * /usr/bin/python3 /usr/local/bin/daily-trend-radar-deliver.py >> /var/log/daily-trend-radar-cron.log 2>&1
+
+# daily-trend-radar: 毎週土曜9:00(JST)にYouTubeで伸びとる動画を拾ってLINE配信する
+# ★weekly_youtube.pyも標準ライブラリのみで動くのでvenv不要(python3をそのまま呼ぶ)
+# ★設置先は/usr/local/bin/。cdを使わず絶対パス1本で呼ぶ。
+0 9 * * 6 /usr/bin/python3 /usr/local/bin/daily-trend-radar-youtube.py >> /var/log/daily-trend-radar-youtube-cron.log 2>&1

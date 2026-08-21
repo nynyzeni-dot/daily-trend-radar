@@ -15,6 +15,15 @@ daily-trend-radar: 毎朝7:30(JST)にレポート(latest.json)を取得してLIN
 - 送信・スキップいずれでも処理が最後まで正常に走ったらhealthchecksにpingを打つ。
 - ネットワークエラー・JSONパース失敗・LINE APIのエラーレスポンスは、ログに残した上で
   非ゼロ終了する(=pingを打たない=監視が鳴る)。例外を握りつぶして正常終了しない。
+- レポートのdateの古さ(age)をJST基準でチェックする(生成側=クラウドのroutineが止まって
+  latest.jsonが何日も更新されなくなっても、このスクリプトが「前回と同じ日付やからスキップ」
+  で正常終了し続けてpingを打ち、監視だけ緑のままになる事故を防ぐため):
+    - 0日(今日)          … 通常通り処理を続ける
+    - 1日前              … 警告ログを出して続行する(pingは打つ)
+    - 2日以上前/パース失敗 … 例外を投げて非ゼロ終了する(pingは打たない)
+- `--dry-run` を付けて実行すると、LINE送信・STATE_FILE更新・healthchecks pingを一切行わず、
+  組み上げるはずだった本文を標準出力に表示するだけで終わる(送信経路のテストが本番の
+  LINE送信や状態ファイルを汚さないようにするための穴)。
 """
 
 from __future__ import annotations
@@ -184,6 +193,39 @@ def write_state(path: str, date_str: str) -> None:
     os.replace(tmp_path, path)
 
 
+def check_report_freshness(report_date_str: str, now: datetime) -> None:
+    """report["date"]の古さ(age)をJST基準でチェックする。
+
+    生成側(クラウドのroutine)が止まってlatest.jsonが何日も更新されなくなっても、
+    このスクリプトが「前回と同じ日付やからスキップ」で正常終了し続けてpingを打ち、
+    LINEは1通も来んのに監視だけ緑のまま、という一番タチの悪い壊れ方を防ぐガード。
+
+    - age<=0(今日)         … 何もしない
+    - age==1(1日前)        … 警告ログを出して続行する(呼び出し元はpingを打つ)
+    - age>=2/パース失敗    … RuntimeErrorを投げる(呼び出し元は非ゼロ終了・pingを打たない)
+    """
+    try:
+        report_date = datetime.strptime(report_date_str, "%Y-%m-%d").date()
+    except (TypeError, ValueError) as e:
+        raise RuntimeError(
+            f"レポートのdateがパースできん(形式異常のため生成側の異常を疑う): {report_date_str!r}"
+        ) from e
+
+    age_days = (now.date() - report_date).days
+
+    if age_days <= 0:
+        return
+    if age_days == 1:
+        logging.warning(
+            "レポートが1日前のまま更新されていない(生成側が止まっている可能性): date=%s",
+            report_date_str,
+        )
+        return
+    raise RuntimeError(
+        f"レポートが{age_days}日前のまま更新されていない(生成側が止まっている可能性): date={report_date_str}"
+    )
+
+
 def build_message(report: dict) -> str:
     date_str = report["date"]
     try:
@@ -261,13 +303,20 @@ def ping(url: str | None) -> None:
 
 def main() -> int:
     setup_logging()
-    logging.info("daily-trend-radar deliver.py 開始")
+    dry_run = "--dry-run" in sys.argv[1:]
+    logging.info("daily-trend-radar deliver.py 開始%s", "(dry-run)" if dry_run else "")
 
     try:
         config = load_config()
         report = fetch_report(config["REPORT_JSON_URL"])
         report_date = report["date"]
         count = report["count"]
+
+        # レポートが古いまま(生成側停止の疑い)なら、ここで例外を投げて非ゼロ終了させる。
+        # last_delivered比較より先に行う: state側だけ古い日付のまま止まっていても
+        # 「スキップ扱いで正常終了→ping」になってしまうのを防ぐため。
+        check_report_freshness(report_date, datetime.now(JST))
+
         state_path = config["STATE_FILE"]
         last_delivered = read_state(state_path)
 
@@ -280,21 +329,31 @@ def main() -> int:
             logging.info("配信スキップ(既に配信済みの日付): date=%s", report_date)
         elif not count:
             logging.info("配信スキップ(ネタなし count=0): date=%s", report_date)
-            write_state(state_path, report_date)
+            if dry_run:
+                logging.info("[dry-run] state更新をスキップ")
+            else:
+                write_state(state_path, report_date)
         else:
             message = build_message(report)
-            status = send_line(config["LINE_CHANNEL_ACCESS_TOKEN"], config["LINE_USER_ID"], message)
-            if status != 200:
-                # ここでraiseしてping前にプロセスを非ゼロ終了させる(監視が鳴る)
-                raise RuntimeError(f"LINE push失敗のため中断(http={status})")
-            logging.info(
-                "LINE配信完了: date=%s count=%s http=%s 文字数=%s",
-                report_date, count, status, len(message),
-            )
-            write_state(state_path, report_date)
+            if dry_run:
+                logging.info("[dry-run] LINE送信をスキップし、本文を標準出力に表示する")
+                print(message)
+            else:
+                status = send_line(config["LINE_CHANNEL_ACCESS_TOKEN"], config["LINE_USER_ID"], message)
+                if status != 200:
+                    # ここでraiseしてping前にプロセスを非ゼロ終了させる(監視が鳴る)
+                    raise RuntimeError(f"LINE push失敗のため中断(http={status})")
+                logging.info(
+                    "LINE配信完了: date=%s count=%s http=%s 文字数=%s",
+                    report_date, count, status, len(message),
+                )
+                write_state(state_path, report_date)
 
-        ping(config["LINE_PING_URL"])
-        logging.info("daily-trend-radar deliver.py 正常終了")
+        if dry_run:
+            logging.info("[dry-run] healthchecks pingをスキップ")
+        else:
+            ping(config["LINE_PING_URL"])
+        logging.info("daily-trend-radar deliver.py 正常終了%s", "(dry-run)" if dry_run else "")
         return 0
 
     except Exception:

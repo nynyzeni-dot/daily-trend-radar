@@ -3,3 +3,6 @@ Thumbs.db
 *.log
 .env
 node_modules/
+config.env
+*.env
+!config.env.example

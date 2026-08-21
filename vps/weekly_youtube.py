@@ -3,9 +3,14 @@
 """
 daily-trend-radar: 毎週土曜9:00(JST)にYouTubeで伸びとる動画を拾ってLINEに配信する。
 
-読み手は美容室経営コンサルタントで、自分でInstagramリールを作っとる人。
-「リール伸ばし方」「美容室集客」など指定キーワードで直近7日公開の動画を検索し、
-再生数が伸びとる動画の上位5本(同一チャンネル最大2本まで)をLINEに送る。
+読み手は美容室経営コンサルタントで、自分でInstagramリールを作っとる日本語話者。
+「リール 編集 やり方」など指定キーワードで直近30日公開・再生数10,000回以上の動画を検索する。
+`relevanceLanguage=ja` はYouTube APIでは「ヒント」程度にしか効かんので、取得後に
+タイトルのひらがな/カタカナの有無で自前判定して日本語動画を優先する
+(漢字は中国語動画にも含まれるため判定条件に使わない)。
+関連語を含まん動画・除外語(レシピ/ゲーム実況等)を含む動画は落とす。
+最終的に日本語動画を上・英語動画を下(最大2本、タイトル先頭に《英》を付与)に並べ、
+上位5本をLINEに送る(同一チャンネル最大2本まで)。
 
 流儀はdeliver.pyに合わせている(このファイルはdeliver.pyをimportせず独立して動く。
 共通処理は意図的にコピーしている):
@@ -13,6 +18,8 @@ daily-trend-radar: 毎週土曜9:00(JST)にYouTubeで伸びとる動画を拾っ
 - 設定ファイルは/etc/daily-trend-radar/config.env(deliver.pyと共用)からKEY=VALUEで読む。
 - LINE Messaging APIのpushはdeliver.pyと同じエンドポイント・payload形。
 - 状態ファイルに実行日を記録し、同じ日の二重実行を防ぐ。
+- `--dry-run` を付けて実行すると、LINE送信・状態ファイル更新を一切行わず、
+  組み上げるはずだった本文を標準出力に表示するだけで終わる(deliver.pyと同じ穴)。
 
 deliver.pyとの違い:
 - healthchecks.ioへのpingは行わない(週1実行のため専用の死活監視を用意していない)。
@@ -52,15 +59,32 @@ SEARCH_MAX_RESULTS = 10
 VIDEOS_CHUNK_SIZE = 50  # videos.listは1回のリクエストでidを最大50件まとめて取れる
 MAX_PER_CHANNEL = 2  # 同一チャンネルからは最大2本まで(多様性の確保)
 TOP_N = 5
-PUBLISHED_WITHIN_DAYS = 7
+DAYS_BACK = 30  # 検索対象期間(公開からの日数)。7日だと伸びきる前の動画ばかり拾ってしまうため30日に広げた
+MIN_VIEWS = 10000  # これ未満は「伸びとる」と呼べんため除外
+MAX_ENGLISH = 2  # 英語動画は最大この本数まで(残りは日本語で埋める)
 
 # 後から足しやすいよう定数として持つ。読み手=美容室経営コンサルタントで自分でリールを作る人。
 KEYWORDS = [
-    "リール 伸ばし方",
-    "ショート動画 バズる 作り方",
-    "動画編集 テクニック",
-    "美容室 集客",
-    "美容師 SNS",
+    "リール 編集 やり方",
+    "ショート動画 冒頭 フック",
+    "動画編集 テロップ 入れ方",
+    "インスタ リール 伸ばす 方法",
+    "美容室 SNS 集客",
+]
+
+# タイトル or 説明文にこの語が1つも含まれん動画は無関係とみなして落とす(大小文字は区別しない)
+RELATED_WORDS = [
+    "編集", "テロップ", "字幕", "リール", "ショート", "フック", "冒頭",
+    "撮影", "カット", "演出", "動画", "サムネ", "バズ", "伸ば", "再生数",
+    "SNS", "Instagram", "インスタ", "TikTok", "YouTube", "Reels", "Shorts",
+    "editing", "edit", "hook", "retention", "thumbnail", "viral video",
+]
+
+# タイトルにこの語が含まれとったら無関係として落とす(大小文字は区別しない)
+EXCLUDE_WORDS = [
+    "レシピ", "recipe", "料理", "cooking", "cake", "food", "먹방",
+    "ゲーム実況", "gameplay", "ASMR", "MV", "Official Video", "歌ってみた",
+    "vlog", "ルーティン", "購入品",
 ]
 
 # YouTube APIのクォータエラーとして扱うreason(新旧両対応)
@@ -253,6 +277,35 @@ def search_video_ids(api_key: str, keyword: str, published_after: str) -> list[s
     return video_ids
 
 
+# ひらがな/カタカナのUnicode範囲。漢字(一-鿿)は中国語動画にも含まれるため
+# 日本語判定には使わない(ひらがな or カタカナが1文字でもあれば日本語とみなす)。
+_HIRAGANA_RANGE = (0x3040, 0x309F)
+_KATAKANA_RANGE = (0x30A0, 0x30FF)
+
+
+def is_japanese_title(title: str) -> bool:
+    """タイトルにひらがな or カタカナが1文字でも含まれとれば日本語動画とみなす。"""
+    for ch in title:
+        code = ord(ch)
+        if _HIRAGANA_RANGE[0] <= code <= _HIRAGANA_RANGE[1]:
+            return True
+        if _KATAKANA_RANGE[0] <= code <= _KATAKANA_RANGE[1]:
+            return True
+    return False
+
+
+def is_related(title: str, description: str) -> bool:
+    """タイトル or 説明文にRELATED_WORDSが1つでも含まれとれば関連ありとみなす(大小文字区別なし)。"""
+    haystack = f"{title}\n{description}".lower()
+    return any(word.lower() in haystack for word in RELATED_WORDS)
+
+
+def is_excluded(title: str) -> bool:
+    """タイトルにEXCLUDE_WORDSが1つでも含まれとれば無関係として除外する(大小文字区別なし)。"""
+    haystack = title.lower()
+    return any(word.lower() in haystack for word in EXCLUDE_WORDS)
+
+
 def parse_video_item(item: dict) -> dict | None:
     video_id = item.get("id")
     snippet = item.get("snippet") or {}
@@ -267,14 +320,17 @@ def parse_video_item(item: dict) -> dict | None:
         like_count = int(statistics.get("likeCount", 0))
     except (TypeError, ValueError):
         like_count = 0
+    title = (snippet.get("title") or "").strip()
     return {
         "video_id": video_id,
-        "title": (snippet.get("title") or "").strip(),
+        "title": title,
+        "description": (snippet.get("description") or "").strip(),
         "channel_id": snippet.get("channelId") or "",
         "channel_title": (snippet.get("channelTitle") or "").strip(),
         "view_count": view_count,
         "like_count": like_count,
         "url": f"https://youtu.be/{video_id}",
+        "is_japanese": is_japanese_title(title),
     }
 
 
@@ -295,19 +351,60 @@ def fetch_video_details(api_key: str, video_ids: list[str]) -> list[dict]:
     return videos
 
 
-def rank_videos(videos: list[dict], max_per_channel: int = MAX_PER_CHANNEL, top_n: int = TOP_N) -> list[dict]:
-    """再生数の多い順に並べつつ、同一チャンネルはmax_per_channel本までに制限してtop_n本を返す。"""
-    sorted_videos = sorted(videos, key=lambda v: v.get("view_count", 0), reverse=True)
+def filter_videos(videos: list[dict], min_views: int = MIN_VIEWS) -> list[dict]:
+    """再生数不足・除外語ヒット・関連語なし、のいずれかに当てはまる動画を落とす。"""
+    filtered: list[dict] = []
+    for v in videos:
+        if v.get("view_count", 0) < min_views:
+            continue
+        title = v.get("title") or ""
+        description = v.get("description") or ""
+        if is_excluded(title):
+            continue
+        if not is_related(title, description):
+            continue
+        filtered.append(v)
+    return filtered
+
+
+def rank_videos(
+    videos: list[dict],
+    max_per_channel: int = MAX_PER_CHANNEL,
+    top_n: int = TOP_N,
+    max_english: int = MAX_ENGLISH,
+) -> list[dict]:
+    """日本語動画を優先し、英語動画は最大max_english本だけ末尾に添えてtop_n本を返す。
+
+    日本語・英語それぞれ再生数の多い順に並べ、同一チャンネルはmax_per_channel本まで
+    (日本語・英語を通じてカウント)。日本語だけでtop_n本埋まれば英語は0本になる。
+    """
+    ja_sorted = sorted(
+        (v for v in videos if v.get("is_japanese")), key=lambda v: v.get("view_count", 0), reverse=True
+    )
+    en_sorted = sorted(
+        (v for v in videos if not v.get("is_japanese")), key=lambda v: v.get("view_count", 0), reverse=True
+    )
+
     channel_counts: dict[str, int] = {}
     selected: list[dict] = []
-    for v in sorted_videos:
-        channel_id = v.get("channel_id") or v.get("channel_title") or ""
-        if channel_counts.get(channel_id, 0) >= max_per_channel:
-            continue
-        selected.append(v)
-        channel_counts[channel_id] = channel_counts.get(channel_id, 0) + 1
-        if len(selected) >= top_n:
-            break
+
+    def take(candidates: list[dict], limit: int) -> None:
+        for v in candidates:
+            if len(selected) >= top_n or len(selected) >= limit:
+                return
+            channel_id = v.get("channel_id") or v.get("channel_title") or ""
+            if channel_counts.get(channel_id, 0) >= max_per_channel:
+                continue
+            selected.append(v)
+            channel_counts[channel_id] = channel_counts.get(channel_id, 0) + 1
+
+    take(ja_sorted, top_n)
+
+    remaining_slots = top_n - len(selected)
+    english_quota = min(max_english, remaining_slots)
+    if english_quota > 0:
+        take(en_sorted, len(selected) + english_quota)
+
     return selected
 
 
@@ -329,6 +426,8 @@ def build_message(videos: list[dict], today_label: str) -> str:
         lines = [header, ""]
         for i, v in enumerate(videos[:keep], start=1):
             title = (v.get("title") or "").strip()
+            if not v.get("is_japanese"):
+                title = f"《英》{title}"
             channel_title = (v.get("channel_title") or "").strip()
             view_label = format_view_count(v.get("view_count", 0))
             url = (v.get("url") or "").strip()
@@ -373,7 +472,8 @@ def send_line(token: str, user_id: str, message: str) -> int:
 
 def main() -> int:
     setup_logging()
-    logging.info("weekly_youtube.py 開始")
+    dry_run = "--dry-run" in sys.argv[1:]
+    logging.info("weekly_youtube.py 開始%s", "(dry-run)" if dry_run else "")
 
     try:
         config = load_config()
@@ -384,12 +484,12 @@ def main() -> int:
 
         if last_run == today_key:
             logging.info("実行スキップ(本日は実行済み): date=%s", today_key)
-            logging.info("weekly_youtube.py 正常終了")
+            logging.info("weekly_youtube.py 正常終了%s", "(dry-run)" if dry_run else "")
             return 0
 
         api_key = config["YOUTUBE_API_KEY"]
         published_after = (
-            (datetime.now(timezone.utc) - timedelta(days=PUBLISHED_WITHIN_DAYS))
+            (datetime.now(timezone.utc) - timedelta(days=DAYS_BACK))
             .strftime("%Y-%m-%dT%H:%M:%SZ")
         )
 
@@ -406,23 +506,41 @@ def main() -> int:
         else:
             details = fetch_video_details(api_key, list(video_ids.keys()))
             logging.info("videos.list 完了: 詳細取得件数=%s", len(details))
-            ranked = rank_videos(details)
+            filtered = filter_videos(details)
+            logging.info(
+                "フィルタ完了: 再生数%s回以上・関連語あり・除外語なし=%s件(取得%s件中)",
+                MIN_VIEWS, len(filtered), len(details),
+            )
+            ranked = rank_videos(filtered)
 
         if ranked:
             today_label = f"{today.month}/{today.day}"
             message = build_message(ranked, today_label)
-            status = send_line(config["LINE_CHANNEL_ACCESS_TOKEN"], config["LINE_USER_ID"], message)
-            if status != 200:
-                # ここでraiseして状態ファイル更新前に非ゼロ終了させる
-                raise RuntimeError(f"LINE push失敗のため中断(http={status})")
-            logging.info(
-                "LINE配信完了: 件数=%s http=%s 文字数=%s", len(ranked), status, len(message)
-            )
+            ja_count = sum(1 for v in ranked if v.get("is_japanese"))
+            en_count = len(ranked) - ja_count
+            if dry_run:
+                logging.info(
+                    "[dry-run] LINE送信をスキップし、本文を標準出力に表示する: 件数=%s(日本語%s/英語%s)",
+                    len(ranked), ja_count, en_count,
+                )
+                print(message)
+            else:
+                status = send_line(config["LINE_CHANNEL_ACCESS_TOKEN"], config["LINE_USER_ID"], message)
+                if status != 200:
+                    # ここでraiseして状態ファイル更新前に非ゼロ終了させる
+                    raise RuntimeError(f"LINE push失敗のため中断(http={status})")
+                logging.info(
+                    "LINE配信完了: 件数=%s(日本語%s/英語%s) http=%s 文字数=%s",
+                    len(ranked), ja_count, en_count, status, len(message),
+                )
         else:
             logging.info("配信対象なし、LINE送信スキップ")
 
-        write_state(state_path, today_key)
-        logging.info("weekly_youtube.py 正常終了")
+        if dry_run:
+            logging.info("[dry-run] state更新をスキップ")
+        else:
+            write_state(state_path, today_key)
+        logging.info("weekly_youtube.py 正常終了%s", "(dry-run)" if dry_run else "")
         return 0
 
     except QuotaExceededError as e:

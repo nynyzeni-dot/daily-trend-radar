@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-23",
+  "date": "2026-08-24",
   "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-23.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-24.html",
   "items": [
-    {"title": "CapCutテロップ、自動キャプション4手順", "why": "自動キャプション機能で白文字+黒縁・1行15文字以内に整える", "url": "https://chiripoteto.com/2026/03/05/capcut_telop/"},
-    {"title": "リール構成、フック→本編→落ちの型", "why": "尺をフック数秒・本編7〜8割・落ち1〜2割に区切って組み立てる", "url": "https://www.socialync.io/blog/short-form-video-structure-guide-2026"},
-    {"title": "リール書き出し、推奨設定の数値が判明", "why": "解像度1080×1920・30fps・ビットレート6〜8Mbpsに揃える", "url": "https://app-tatsujin.com/instagram-reels-editing-2026/"},
-    {"title": "切り抜き編集、バズる構成5パターン", "why": "見せ場の2秒前でわざと間を作る「ズラし」を試す", "url": "https://monocromo.jp/blog/92/"},
-    {"title": "Adobe Firefly、音声3機能を一般提供", "why": "ナレーションや効果音をFireflyで試作してみる", "url": "https://www.framewld.com/adobe20260820/"}
+    {"title": "冒頭フック、5ルールと20の実例", "why": "対象者を先に言い切り、変化を一瞬見せる", "url": "https://hiroshima-video.com/post-2868/"},
+    {"title": "編集の型20選、視聴維持の修正法も", "why": "15〜30秒に一度、ズームや効果音で急な変化を挟む", "url": "https://clippie.ai/blog/video-editing-techniques-creators-2026"},
+    {"title": "テロップ、1行14文字・句読点なし", "why": "字幕を1行14文字以内・句読点なし・中央固定にする", "url": "https://note.com/puzzlink_ryu/n/n17ed09dd1323"},
+    {"title": "CapCut×Express、5分完結の下準備", "why": "素材整理3分→テンプレ流し込み→自動キャプションの流れを真似る", "url": "https://tovigasmaru.co.jp/?p=8614"},
+    {"title": "日本語入力だけでAIアニメ生成開始", "why": "日本語プロンプトだけでアニメ風告知動画を試作できる候補に", "url": "https://prtimes.jp/main/html/rd/p/000000001.000187393.html"}
   ]
 }

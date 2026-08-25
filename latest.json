@@ -1,10 +1,11 @@
 {
-  "date": "2026-08-25",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-25.html",
+  "date": "2026-08-26",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-26.html",
   "items": [
-    {"title": "冒頭フック、企画型と視覚型の2択", "why": "具体的なシチュエーションを言い切るか、完成カットを先に見せるかを選ぶ", "url": "https://note.com/overseas_kanem/n/n9f7144dd368d"},
-    {"title": "ジェットカットで間を削り視聴維持", "why": "「えー」「あのー」の間を削り、不自然な繋ぎ目には別カットを挟む", "url": "https://dougano-madoguchi.com/?p=2917"},
-    {"title": "バズる動画、3段仕掛けを実例分析", "why": "驚き・共感・オチの3つを撮影前にメモしてから作る", "url": "https://herozz.co.jp/blog/list-of-youtube-content-that-went-viral/"}
+    {"title": "フックの言い切りテンプレ20選", "why": "冒頭テロップに20選の中から合う1文をそのまま当てはめる", "url": "https://liartpromotion.co.jp/column/short-video-hook-examples/"},
+    {"title": "カット割り、3〜7秒が黄金比", "why": "1カットを3〜7秒に切り直し、BGMの拍に切り替えを合わせる", "url": "https://note.com/inadigital/n/n842caa48a447"},
+    {"title": "5120×1080の横長リール術", "why": "Canvaで5120×1080のカスタムサイズを作り、CapCutで30fps以上で書き出す", "url": "https://note.com/mirei_ai/n/n721fc6bffd97"},
+    {"title": "Nano Banana Pro、思考モード活用術", "why": "参照画像＋作りたい構図をプロンプトで指定してサムネイル用画像を作る", "url": "https://media.buzzconne.jp/nano-banana-pro/"}
   ]
 }

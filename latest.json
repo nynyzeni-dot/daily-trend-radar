@@ -1,11 +1,10 @@
 {
-  "date": "2026-08-26",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-26.html",
+  "date": "2026-08-27",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-27.html",
   "items": [
-    {"title": "フックの言い切りテンプレ20選", "why": "冒頭テロップに20選の中から合う1文をそのまま当てはめる", "url": "https://liartpromotion.co.jp/column/short-video-hook-examples/"},
-    {"title": "カット割り、3〜7秒が黄金比", "why": "1カットを3〜7秒に切り直し、BGMの拍に切り替えを合わせる", "url": "https://note.com/inadigital/n/n842caa48a447"},
-    {"title": "5120×1080の横長リール術", "why": "Canvaで5120×1080のカスタムサイズを作り、CapCutで30fps以上で書き出す", "url": "https://note.com/mirei_ai/n/n721fc6bffd97"},
-    {"title": "Nano Banana Pro、思考モード活用術", "why": "参照画像＋作りたい構図をプロンプトで指定してサムネイル用画像を作る", "url": "https://media.buzzconne.jp/nano-banana-pro/"}
+    {"title": "冒頭フック、「1.7秒の壁」と4行構成", "why": "台本をHOOK→問題→解決策→行動促進の4行で書き、指摘フックに差し替える", "url": "https://estre-official.com/blog/%E3%80%902026%E5%B9%B4%E7%89%88%E3%80%91%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%AA%E3%83%BC%E3%83%AB-%E3%83%95%E3%83%83%E3%82%AF%E4%BD%9C%E3%82%8A%E3%83%BB%E4%BC%B8%E3%81%B3%E3%82%8B%E5%8B%95/"},
+    {"title": "バズる動画、ギャップと参加型が効く", "why": "予想を裏切る一瞬かコメントで答えを聞く一言を1つ仕込む", "url": "https://2nd-buzz.com/news/viral-video-patterns-guide/"},
+    {"title": "リール編集、テキスト置き場に数値基準", "why": "テキストをUI枠外の中央〜上1/3に置き、BGM切り替えを0.1秒単位で合わせる", "url": "https://www.b-step.net/post/instagram-reel-create"}
   ]
 }

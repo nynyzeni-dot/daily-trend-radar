@@ -1,10 +1,11 @@
 {
-  "date": "2026-08-28",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-28.html",
+  "date": "2026-08-29",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-29.html",
   "items": [
-    {"title": "毎日投稿30本で判明、バズる条件", "why": "投稿は12・15・18・21時のどれかに絞り、ジャンルに合わせた編集を意識する", "url": "https://note.com/nemchan_nel/n/n2feff99fc0a2"},
-    {"title": "業種別、そのまま使える台本例", "why": "美容サロン台本『たった60分でここまで変わります』を自分のメニューに置き換えて使う", "url": "https://0120.co.jp/blog/video-110/"},
-    {"title": "テロップ、コントラスト比4.5:1目安", "why": "テロップを白文字＋黒縁取りに統一し、表示時間を文字数÷4秒で計算し直す", "url": "https://0120.co.jp/blog/video-125/"}
+    {"title": "バズる動画、冒頭1秒に「転」を仕込む法則", "why": "動画の冒頭1〜2秒に驚きの瞬間を置き、3秒に1回新しい情報を足す", "url": "https://gokkoclub.jp/shortdrama-lab/category/knowledge/3830/"},
+    {"title": "美容室動画、BPM95で2.5秒ごとカット", "why": "BGMのBPMから1拍の秒数を出し、その倍数でカットのタイミングを合わせる", "url": "https://omniweb.jp/m124/"},
+    {"title": "AI動画生成「aimotion」、1本55円で開始", "why": "無料クレジットで告知動画やアイキャッチ画像を1本試作してみる", "url": "https://prtimes.jp/main/html/rd/p/000000004.000129089.html"},
+    {"title": "テロップ入力、時短の分割ワークフロー", "why": "テロップは素のテキストを先に全部入れ、装飾は最後にまとめてかける", "url": "https://royspeak.jp/terop_tips2/"}
   ]
 }

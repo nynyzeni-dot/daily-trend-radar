@@ -1,11 +1,10 @@
 {
-  "date": "2026-08-31",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-08-31.html",
+  "date": "2026-09-01",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-01.html",
   "items": [
-    {"title": "リールネタ探し、3ステップの検索術", "why": "再生3万回以上・コメント欄が4週間以内の動画を検索で見つけて構成を参考にする", "url": "https://blog.edugate.jp/%E3%80%902026%E5%B9%B4%E6%9C%80%E6%96%B0%E3%80%91100%E4%BC%B8%E3%81%B3%E3%82%8B%EF%BC%81%E3%83%AA%E3%83%BC%E3%83%AB%E3%81%8C%E3%83%90%E3%82%BA%E3%82%8B%E4%BD%9C%E3%82%8A%E6%96%B9%E3%81%A8%E3%83%AA/"},
-    {"title": "動画フック、6パターンの型を公開", "why": "結果を先に見せる型に組み替え、最初の1秒に一番見せたい絵を持ってくる", "url": "https://www.capcut.com/create/short-form-video-hooks-first-3-second-patterns"},
-    {"title": "映像だけのフック、視聴数1.6倍のデータ", "why": "しゃべる前にビフォーアフターの分割画面か驚きの1カットから始めてみる", "url": "https://www.opus.pro/research/how-to-use-visual-hooks"},
-    {"title": "編集の色味、彩度+15〜25など数値化", "why": "雰囲気に合わせて彩度・コントラストを数値に寄せ、カットを2〜3秒間隔に詰める", "url": "https://techgym.jp/column/doga/"}
+    {"title": "リール自動編集「ファーストドラフト」登場", "why": "撮った複数カットをまず自動組み立てさせてから微調整する", "url": "https://techcrunch.com/2026/08/25/instagrams-first-draft-feature-aims-to-make-editing-reels-less-tedious/"},
+    {"title": "美容室リール、4分野で企画切れ防止", "why": "顧客ニーズ・施術プロセス・ヘアケア・文化発信の手薄な分野を選んで企画する", "url": "https://note.com/luke_skywalk/n/n1d72b2677b57"},
+    {"title": "リール音声、EQ・ダッキング数値公開", "why": "セリフにハイパスフィルター、BGMはセリフ部分だけ2〜4dB下げる", "url": "https://sfxengine.com/blog/reels-audio-editing-tips"}
   ]
 }

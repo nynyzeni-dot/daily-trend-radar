@@ -1,10 +1,8 @@
 {
-  "date": "2026-09-01",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-01.html",
+  "date": "2026-09-02",
+  "count": 1,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-02.html",
   "items": [
-    {"title": "リール自動編集「ファーストドラフト」登場", "why": "撮った複数カットをまず自動組み立てさせてから微調整する", "url": "https://techcrunch.com/2026/08/25/instagrams-first-draft-feature-aims-to-make-editing-reels-less-tedious/"},
-    {"title": "美容室リール、4分野で企画切れ防止", "why": "顧客ニーズ・施術プロセス・ヘアケア・文化発信の手薄な分野を選んで企画する", "url": "https://note.com/luke_skywalk/n/n1d72b2677b57"},
-    {"title": "リール音声、EQ・ダッキング数値公開", "why": "セリフにハイパスフィルター、BGMはセリフ部分だけ2〜4dB下げる", "url": "https://sfxengine.com/blog/reels-audio-editing-tips"}
+    {"title": "リール台本、ChatGPTで4ステップ生成", "why": "次のリール台本作りにAIで黄金構成4ステップのたたき台を作らせる", "url": "https://note.com/oasobi12/n/n0e715c6bb277"}
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-03.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-04.html",
   "items": [
-    {"title": "漫画リール、キャラ固定の具体プロンプト", "why": "キャラ定義を先に作りプロンプト先頭に貼れば、コマごとの顔・髪型のブレを減らせる", "url": "https://note.com/decide/n/n4c2c9a63675b"},
-    {"title": "漫画のコマ割り、AIへの指定文が公開", "why": "サンプル文を流用して「◯コマのレイアウト」と書き足すだけでコマ割りの崩れを減らせる", "url": "https://note.com/kawakijourney_ai/n/nf0c11f227e65"},
-    {"title": "テロップ配置、上下10%避けるだけで見やすく", "why": "画面の上下10%を避けて中央寄りに文字を置けば、Instagram側のUIに文字が隠れなくなる", "url": "https://note.com/pinevalley/n/nc64e3168cb58"}
+    {"title": "AI漫画のコマ割り、ト書きをJSON化して精度アップ", "why": "コマ割りが崩れるとき、ト書きをJSON化してAIに渡し、直したい箇所は赤ペンで書き込んで読み込ませ直せば狙い通りに直せる", "url": "https://note.com/eriqaamy/n/nbaf65535aab3"},
+    {"title": "カット編集、「間」を秒未満の単位で削る・残す", "why": "ffmpegでの組み立てで、テロップ直前は1秒残す・無関係な余白は0.5秒単位で削るなど「間」の長さを意識して詰め直せる", "url": "https://donguri-work.jp/archives/4928"},
+    {"title": "漫画のコマ割り、AI生成モデルで再現度に差", "why": "コマ割りが崩れて困っているなら、比較結果を参考に別の生成モデルへ切り替えて同じプロンプトを試せる", "url": "https://note.com/alpacako/n/n56a748905c4f"}
   ]
 }

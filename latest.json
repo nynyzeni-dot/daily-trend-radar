@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-05",
+  "date": "2026-09-06",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-05.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-06.html",
   "items": [
-    {"title": "ジャンプカット編集、間の残し方に段階的な基準", "why": "次のffmpeg組み立てで、ジャンル別の目安秒数でカット間隔を詰め直し、間が気になる箇所はBロールやズームカットでつないで違和感を消せる", "url": "https://omniweb.jp/m125/"},
-    {"title": "縦型動画、撮影アングルと編集ブレスカットの具体策", "why": "撮影機材が届いてこれから自撮りを始める段階なので、接写やZ軸アングルで撮り、編集では息継ぎをカットしつつ3秒に1回変化を入れて間延びを防げる", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/3812/"},
-    {"title": "動画編集のペーシング、配信前チェック5項目に数値基準", "why": "書き出し前に「1カット6秒以内・45秒に1回リセット・盛り上がりを50〜70%の位置に・終盤は前半よりテンポを速く・無音を厳しくカット」の5項目を順にチェックできる", "url": "https://www.markstudios.com/blog/editing-pacing-and-rhythm-the-invisible-craft-behind-every-great-video"}
+    {"title": "Osmo Pocket 4、縦横切り替えの3手順", "why": "届いた撮影機材で、画面回転だけで素早く縦動画に切り替え、4K画質が欲しいカットだけ横向きで撮って後から縦トリミングする使い分けができる", "url": "https://rikugameblog.com/osmo-pocket4-vertical-horizontal/"},
+    {"title": "Osmo Pocket 4、風切り音対策に指向性設定", "why": "屋外の自撮りで「風切り音低減」をオンにし、指向性オーディオを「フロント」に切り替えて自分の声を拾いやすくできる", "url": "https://panda-times.com/archives/27824"},
+    {"title": "OpenShot 4.0、ローカルAIで自動切り抜き", "why": "実写編集が始まったら、Object Mask機能で人物をクラウド不要・無料でローカル自動切り抜きし、背景差し替えやテロップ用素材づくりに使える", "url": "https://forest.watch.impress.co.jp/docs/news/2137683.html"}
   ]
 }

@@ -289,6 +289,26 @@
       "url": "https://forest.watch.impress.co.jp/docs/news/2137683.html",
       "title": "OpenShot 4.0、ローカルAIで自動切り抜き",
       "date": "2026-09-06"
+    },
+    {
+      "url": "https://note.com/iwamurakazuki/n/ne53ed39e2b73",
+      "title": "テロップ配置、安全マージンは13%と5%",
+      "date": "2026-09-07"
+    },
+    {
+      "url": "https://note.com/maccro55/n/nfa3583ddfa55",
+      "title": "動画の音声調整、EQとラウドネスの目安値",
+      "date": "2026-09-07"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.260",
+      "title": "Claude Code、変更箇所を横並び表示する「/diff」追加",
+      "date": "2026-09-07"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.259",
+      "title": "Claude Code、無人実行向けに確認プロンプト一括拒否を追加",
+      "date": "2026-09-07"
     }
   ]
 }

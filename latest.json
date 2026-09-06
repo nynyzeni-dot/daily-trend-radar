@@ -1,10 +1,11 @@
 {
-  "date": "2026-09-06",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-06.html",
+  "date": "2026-09-07",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-07.html",
   "items": [
-    {"title": "Osmo Pocket 4、縦横切り替えの3手順", "why": "届いた撮影機材で、画面回転だけで素早く縦動画に切り替え、4K画質が欲しいカットだけ横向きで撮って後から縦トリミングする使い分けができる", "url": "https://rikugameblog.com/osmo-pocket4-vertical-horizontal/"},
-    {"title": "Osmo Pocket 4、風切り音対策に指向性設定", "why": "屋外の自撮りで「風切り音低減」をオンにし、指向性オーディオを「フロント」に切り替えて自分の声を拾いやすくできる", "url": "https://panda-times.com/archives/27824"},
-    {"title": "OpenShot 4.0、ローカルAIで自動切り抜き", "why": "実写編集が始まったら、Object Mask機能で人物をクラウド不要・無料でローカル自動切り抜きし、背景差し替えやテロップ用素材づくりに使える", "url": "https://forest.watch.impress.co.jp/docs/news/2137683.html"}
+    {"title": "テロップ配置、安全マージンは13%と5%", "why": "ffmpegのdrawtextでテロップを置くとき、横13%・縦5%内側に収める安全マージンをそのまま使える", "url": "https://note.com/iwamurakazuki/n/ne53ed39e2b73"},
+    {"title": "動画の音声調整、EQとラウドネスの目安値", "why": "実写の音声を書き出すとき、ffmpegのequalizerで1kHz・2kHz持ち上げ300〜800Hz削り、loudnormで-14LUFSに正規化できる", "url": "https://note.com/maccro55/n/nfa3583ddfa55"},
+    {"title": "Claude Code、変更箇所を横並び表示する`/diff`追加", "why": "eyecatch.pyやVPSスクリプトをClaude Codeに直させるとき、`/diff`でその場で変更箇所を横並び確認できる", "url": "https://code.claude.com/docs/en/changelog"},
+    {"title": "Claude Code、無人実行向けに確認プロンプト一括拒否を追加", "why": "VPSで自動実行しているスクリプトに`--permission-prompts none`を付ければ、確認待ちで止まらず完走させられる", "url": "https://code.claude.com/docs/en/changelog"}
   ]
 }

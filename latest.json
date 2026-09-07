@@ -1,11 +1,12 @@
 {
-  "date": "2026-09-07",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-07.html",
+  "date": "2026-09-08",
+  "count": 5,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-08.html",
   "items": [
-    {"title": "テロップ配置、安全マージンは13%と5%", "why": "ffmpegのdrawtextでテロップを置くとき、横13%・縦5%内側に収める安全マージンをそのまま使える", "url": "https://note.com/iwamurakazuki/n/ne53ed39e2b73"},
-    {"title": "動画の音声調整、EQとラウドネスの目安値", "why": "実写の音声を書き出すとき、ffmpegのequalizerで1kHz・2kHz持ち上げ300〜800Hz削り、loudnormで-14LUFSに正規化できる", "url": "https://note.com/maccro55/n/nfa3583ddfa55"},
-    {"title": "Claude Code、変更箇所を横並び表示する`/diff`追加", "why": "eyecatch.pyやVPSスクリプトをClaude Codeに直させるとき、`/diff`でその場で変更箇所を横並び確認できる", "url": "https://code.claude.com/docs/en/changelog"},
-    {"title": "Claude Code、無人実行向けに確認プロンプト一括拒否を追加", "why": "VPSで自動実行しているスクリプトに`--permission-prompts none`を付ければ、確認待ちで止まらず完走させられる", "url": "https://code.claude.com/docs/en/changelog"}
+    {"title": "Osmo Pocket 4の基本設定、数値まで公開", "why": "実写を撮り始めたら暗所はISO400〜800・シャッター1/30秒前後、音声はPROモードでレベルを見ながら音割れを防げる", "url": "https://panda-times.com/archives/27876"},
+    {"title": "リール尺は7〜15秒、離脱率が新指標に", "why": "漫画リールの尺を7〜15秒に収め、他アプリの透かしを消してから投稿する", "url": "https://www.usefastlane.ai/blog/instagram-reels-algorithm-2026"},
+    {"title": "ffmpegノイズ除去、afftdnの数値公開", "why": "実写の音声書き出しでafftdn=nr=12:nf=-25:nt=w:om=oを通せば収録ノイズを削れる", "url": "https://labs.torques.jp/?p=256"},
+    {"title": "見出し画像の文字、10〜15字と中央3分の1", "why": "eyecatch.pyの文字配置を10〜15字・画面中央3分の1・縁取りか帯付きの基準に直す", "url": "https://solezore.co.jp/blog/short-video-thumbnail/"},
+    {"title": "Claude Code、バックグラウンド1時間制限を撤廃", "why": "VPSの長時間自動実行タスクが1時間で打ち切られる心配なく完走できる", "url": "https://code.claude.com/docs/en/changelog#v2.1.261"}
   ]
 }

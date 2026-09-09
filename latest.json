@@ -1,10 +1,12 @@
 {
-  "date": "2026-09-09",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-09.html",
+  "date": "2026-09-10",
+  "count": 5,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-10.html",
   "items": [
-    {"title": "Claude CodeからCodexで画像生成", "why": "note本文の写真をCodex（gpt-image-2）で作る作業を、Claude Codeへの自然言語指示だけで呼び出せる", "url": "https://note.com/mauekusa/n/nf373aedc8664"},
-    {"title": "ChatGPT画像生成、3層テンプレでキャラ固定", "why": "ゴリラ漫画のキャラ画像を「キャラ層・シーン層・出力層」に分けたプロンプトで作ればブレなくなる", "url": "https://shikujiriblogger.com/chatgpt-ai-image-3layer-template/"},
-    {"title": "リール台本、6ステップでAIに書かせる型", "why": "漫画リールの台本をChatGPTに6ステップ＋「保存を促す手順」の出力ルールで先に作らせてから絵コンテに落とす", "url": "https://note.com/oasobi12/n/n3e12f3fc0add"}
+    {"title": "Higgsfield Soul、顔ブレ防止に具体パラメータ", "why": "higgsfieldでのキャラ生成、参照画像20枚以上のSoul IDとcustom_reference_strength0.7〜0.8で顔ブレを抑える", "url": "https://note.com/unikoukokun/n/nee19ff5b6504"},
+    {"title": "リール冒頭フック、6つの型と例文が公開", "why": "漫画リールの台本の冒頭を6テンプレのどれかに当てはめ、テロップ文字は3秒以内・8〜15語に削る", "url": "https://kineclip.com/blog/how-to-write-viral-hooks-short-form-2026/"},
+    {"title": "OpenAI「GPT Image 2.5」、Codexでも解禁", "why": "Codex経由の画像生成をgpt-image-2からGPT Image 2.5に切り替え、待ち時間短縮とキャラのブレにくさを試す", "url": "https://note.com/npaka/n/n44fed9fb168d"},
+    {"title": "ショート動画、視聴維持率60%が壁と判明", "why": "投稿後のインサイトで開始5秒の維持率50%・尺別の完視聴率をチェックする基準に使う", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/4099/"},
+    {"title": "テロップの出し消し、フレーム単位の基準", "why": "漫画リールのテロップをコマ切り替えより1〜4フレーム早く出し、1拍遅らせて消す", "url": "https://video-knowledge.com/character_size_time_timing/"}
   ]
 }

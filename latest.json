@@ -1,12 +1,10 @@
 {
-  "date": "2026-09-10",
-  "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-10.html",
+  "date": "2026-09-11",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-11.html",
   "items": [
-    {"title": "Higgsfield Soul、顔ブレ防止に具体パラメータ", "why": "higgsfieldでのキャラ生成、参照画像20枚以上のSoul IDとcustom_reference_strength0.7〜0.8で顔ブレを抑える", "url": "https://note.com/unikoukokun/n/nee19ff5b6504"},
-    {"title": "リール冒頭フック、6つの型と例文が公開", "why": "漫画リールの台本の冒頭を6テンプレのどれかに当てはめ、テロップ文字は3秒以内・8〜15語に削る", "url": "https://kineclip.com/blog/how-to-write-viral-hooks-short-form-2026/"},
-    {"title": "OpenAI「GPT Image 2.5」、Codexでも解禁", "why": "Codex経由の画像生成をgpt-image-2からGPT Image 2.5に切り替え、待ち時間短縮とキャラのブレにくさを試す", "url": "https://note.com/npaka/n/n44fed9fb168d"},
-    {"title": "ショート動画、視聴維持率60%が壁と判明", "why": "投稿後のインサイトで開始5秒の維持率50%・尺別の完視聴率をチェックする基準に使う", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/4099/"},
-    {"title": "テロップの出し消し、フレーム単位の基準", "why": "漫画リールのテロップをコマ切り替えより1〜4フレーム早く出し、1拍遅らせて消す", "url": "https://video-knowledge.com/character_size_time_timing/"}
+    {"title": "矢印の視線誘導、秒数まで基準化", "why": "コマ送りの合間に挟む矢印・図解の表示秒数とテロップの文字サイズ比をffmpegの演出設定にそのまま使える", "url": "https://omniweb.jp/m123/"},
+    {"title": "Osmo Pocket 4、旅行撮影の設定値公開", "why": "届いたOsmo Pocket 4Pで実写を撮り始める際のSDカード・解像度・ISOの初期設定値になる", "url": "https://panda-times.com/archives/27916"},
+    {"title": "リール再生速度、1.2〜8倍で使い分け", "why": "間延びするコマは速く・見せたいコマは1.2倍程度に抑える、というテンポの強弱をffmpegのsetpts/atempoで再現できる", "url": "https://artwork-by-asami.blog/conditions-for-buzz-in-the-reel/"}
   ]
 }

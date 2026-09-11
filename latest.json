@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-11",
+  "date": "2026-09-12",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-11.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-12.html",
   "items": [
-    {"title": "矢印の視線誘導、秒数まで基準化", "why": "コマ送りの合間に挟む矢印・図解の表示秒数とテロップの文字サイズ比をffmpegの演出設定にそのまま使える", "url": "https://omniweb.jp/m123/"},
-    {"title": "Osmo Pocket 4、旅行撮影の設定値公開", "why": "届いたOsmo Pocket 4Pで実写を撮り始める際のSDカード・解像度・ISOの初期設定値になる", "url": "https://panda-times.com/archives/27916"},
-    {"title": "リール再生速度、1.2〜8倍で使い分け", "why": "間延びするコマは速く・見せたいコマは1.2倍程度に抑える、というテンポの強弱をffmpegのsetpts/atempoで再現できる", "url": "https://artwork-by-asami.blog/conditions-for-buzz-in-the-reel/"}
+    {"title": "コメディ動画のSE、0.2〜0.5秒後が黄金律", "why": "漫画リールのオチの効果音は、コマ切り替わりぴったりじゃなく0.2〜0.5秒後の3パターンで聴き比べて選ぶ", "url": "https://sfxengine.com/blog/sound-effects-timing-in-comedy-videos"},
+    {"title": "リール保存数、5ステップ構成で3.2倍に", "why": "漫画リールを「〇〇する5ステップ」型に構成し、キャプションに「保存して友達にシェアしてな」を添える", "url": "https://marketingone.co.jp/instagram-reels-cvr-creative-guide-2026/"},
+    {"title": "テロップ用フリーフォント、5選を役割別に", "why": "ボケのセリフは「851チカラヨワク」、ツッコミは「851チカラヅヨク」とコマの役割でフォントを使い分ける", "url": "https://note.com/puzzlink_ryu/n/nc671d8b0f726"}
   ]
 }

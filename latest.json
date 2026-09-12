@@ -1,10 +1,9 @@
 {
-  "date": "2026-09-12",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-12.html",
+  "date": "2026-09-13",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-13.html",
   "items": [
-    {"title": "コメディ動画のSE、0.2〜0.5秒後が黄金律", "why": "漫画リールのオチの効果音は、コマ切り替わりぴったりじゃなく0.2〜0.5秒後の3パターンで聴き比べて選ぶ", "url": "https://sfxengine.com/blog/sound-effects-timing-in-comedy-videos"},
-    {"title": "リール保存数、5ステップ構成で3.2倍に", "why": "漫画リールを「〇〇する5ステップ」型に構成し、キャプションに「保存して友達にシェアしてな」を添える", "url": "https://marketingone.co.jp/instagram-reels-cvr-creative-guide-2026/"},
-    {"title": "テロップ用フリーフォント、5選を役割別に", "why": "ボケのセリフは「851チカラヨワク」、ツッコミは「851チカラヅヨク」とコマの役割でフォントを使い分ける", "url": "https://note.com/puzzlink_ryu/n/nc671d8b0f726"}
+    {"title": "Osmo Pocket 4、ショート専用の基本設定", "why": "新しく届いたOsmo Pocket 4Pでショート動画を撮るとき、基本テンプレ設定をそのまま使える", "url": "https://note.com/nice_dog9512/n/n450553f4993f"},
+    {"title": "声とBGMのダッキング、比率とms値", "why": "実写動画にナレーションとBGMを重ねるとき、ffmpegのsidechaincompressにこの数値をそのまま入れて声を立たせられる", "url": "https://everplay.jp/column/33011"}
   ]
 }

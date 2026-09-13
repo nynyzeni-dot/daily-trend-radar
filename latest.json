@@ -1,9 +1,9 @@
 {
-  "date": "2026-09-13",
+  "date": "2026-09-14",
   "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-13.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-14.html",
   "items": [
-    {"title": "Osmo Pocket 4、ショート専用の基本設定", "why": "新しく届いたOsmo Pocket 4Pでショート動画を撮るとき、基本テンプレ設定をそのまま使える", "url": "https://note.com/nice_dog9512/n/n450553f4993f"},
-    {"title": "声とBGMのダッキング、比率とms値", "why": "実写動画にナレーションとBGMを重ねるとき、ffmpegのsidechaincompressにこの数値をそのまま入れて声を立たせられる", "url": "https://everplay.jp/column/33011"}
+    {"title": "描き文字の配置、音源の有無で決める定石", "why": "ゴリラ漫画のコマに足す効果音の文字を、発生源の近くに置きシーンの雰囲気でひらがな／カタカナを使い分けると説得力が上がる", "url": "https://note.com/lws/n/n7c01130a912d"},
+    {"title": "AI漫画プロンプト、全体×コマの5要素", "why": "ChatGPTにゴリラ漫画を作らせるとき、全体指示＋コマごとに5要素の型で指示すればコマ間のズレが減る", "url": "https://note.com/kenichipanda/n/n6f9d339a1a4f"}
   ]
 }

@@ -1,0 +1,2 @@
+-rwxr-xr-x 1 root root 15061  8月 21 10:11 /usr/local/bin/daily-trend-radar-deliver.py
+-rwxr-xr-x 1 root root 28652  8月 22 10:59 /usr/local/bin/daily-trend-radar-youtube.py

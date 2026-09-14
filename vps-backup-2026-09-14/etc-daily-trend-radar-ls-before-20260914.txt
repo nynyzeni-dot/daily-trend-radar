@@ -1,0 +1,4 @@
+合計 12
+-rw------- 1 root root 375  8月 21 10:35 config.env
+-rw------- 1 root root 478  8月 21 11:01 weekly.env
+-rw------- 1 root root  81  8月 22 11:05 youtube-healthcheck.env

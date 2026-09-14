@@ -1,0 +1,19 @@
+0 9 * * * cd /var/www/apps/withings-sync && venv/bin/python sync.py >> /var/log/withings-sync.log 2>&1
+#0 22 * * * cd /var/www/apps/labossan-news && venv/bin/python main.py >> /var/log/apps/labossan-news.log 2>&1
+#0 23 * * * cd /var/www/apps/labossan-column && venv/bin/python main.py >> /var/log/apps/labossan-column.log 2>&1
+0 3 * * * /root/backup_salon_pos.sh >> /var/log/backup_salon_pos.log 2>&1
+5 3 * * * /root/backup_keirikun.sh >> /var/log/backup_keirikun.log 2>&1
+0 18 * * * /usr/local/bin/kernel-update-check.sh >> /var/log/kernel-update-check.log 2>&1
+10 2 * * * /root/backup_sel_hpb.sh >> /var/log/backup_sel_hpb.log 2>&1
+15 3 * * * XSERVER_BACKUP_HOST=sv13241.xserver.jp XSERVER_BACKUP_PORT=10022 XSERVER_BACKUP_USER=sometsuyangb XSERVER_BACKUP_PATH=staff-survey-db-backups /var/lib/staff-survey/backup.sh daily >> /var/log/staff-survey-backup.log 2>&1
+15 * * * * XSERVER_BACKUP_HOST=sv13241.xserver.jp XSERVER_BACKUP_PORT=10022 XSERVER_BACKUP_USER=sometsuyangb XSERVER_BACKUP_PATH=staff-survey-db-backups /var/lib/staff-survey/backup.sh hourly >> /var/log/staff-survey-backup.log 2>&1
+30 7 * * * /usr/local/bin/vps-intrusion-check.sh >> /var/log/vps-intrusion-check-cron.log 2>&1
+0 8 * * 1 /usr/local/bin/vps-intrusion-check.sh --weekly >> /var/log/vps-intrusion-check-cron.log 2>&1
+30 3 * * * /usr/local/bin/backup-verify.sh >> /var/log/backup-verify.log 2>&1
+35 7 * * * /usr/bin/python3 /usr/local/bin/daily-trend-radar-deliver.py >> /var/log/daily-trend-radar-cron.log 2>&1
+0 9 * * 6 /usr/bin/python3 /usr/local/bin/daily-trend-radar-youtube.py >> /var/log/daily-trend-radar-youtube-cron.log 2>&1
+15 8 * * 1 /bin/sh -c 'DAILY_TREND_RADAR_CONFIG=/etc/daily-trend-radar/weekly.env /usr/bin/python3 /usr/local/bin/daily-trend-radar-deliver.py' >> /var/log/daily-trend-radar-weekly-cron.log 2>&1
+7,22,37,52 * * * * flock -n /var/lib/line-notify-log/shipper.lock -c "timeout 60 /usr/bin/python3 /usr/local/bin/line-log-shipper.py" >> /var/log/line-log-shipper-cron.log 2>&1
+10 8 * * * /usr/local/bin/cron-watchdog.sh >> /var/log/cron-watchdog.log 2>&1
+40 2 * * * /root/backup_docs.sh >> /var/log/backup_docs.log 2>&1
+40 7 * * * /usr/bin/python3 /usr/local/bin/daily-trend-radar-youtube-ai.py >> /var/log/daily-trend-radar-youtube-ai-cron.log 2>&1

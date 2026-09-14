@@ -1,9 +1,11 @@
 {
-  "date": "2026-09-14",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-14.html",
+  "date": "2026-09-15",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-15.html",
   "items": [
-    {"title": "描き文字の配置、音源の有無で決める定石", "why": "ゴリラ漫画のコマに足す効果音の文字を、発生源の近くに置きシーンの雰囲気でひらがな／カタカナを使い分けると説得力が上がる", "url": "https://note.com/lws/n/n7c01130a912d"},
-    {"title": "AI漫画プロンプト、全体×コマの5要素", "why": "ChatGPTにゴリラ漫画を作らせるとき、全体指示＋コマごとに5要素の型で指示すればコマ間のズレが減る", "url": "https://note.com/kenichipanda/n/n6f9d339a1a4f"}
+    {"title": "画像生成2.5、キャラ再現度と速度が向上", "why": "note写真もゴリラ漫画も生成が速くなり、キャラや構図のブレが減る", "url": "https://www.unite.ai/openai-releases-chatgpt-images-2-5-with-sketch-and-two-new-api-models/"},
+    {"title": "自然光撮影、窓際1〜2mとループ光の型", "why": "自撮り動画は照明を消して窓から1〜2m・斜め前光にするだけで顔映りが良くなる", "url": "https://www.b-merit.jp/magazine/hairphotosmartphonetips/"},
+    {"title": "AI漫画のキャラ固定、プロンプト語順の法則", "why": "ゴリラ漫画の指示文で「キャラの核→表情ポーズ→背景」の順に書くとブレをもう一段減らせる", "url": "https://note.com/ai_hakase/n/n8010df738f31"},
+    {"title": "音声コンプレッサー、しきい値と比率の数値", "why": "声を録るようになったらffmpegのacompressorにしきい値-20〜-16dB・比率3:1をまず入れる", "url": "https://piko-mix.com/blog/obs-compressor-guide/"}
   ]
 }

@@ -1,10 +1,9 @@
 {
-  "date": "2026-09-16",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-16.html",
+  "date": "2026-09-17",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-17.html",
   "items": [
-    {"title": "リール冒頭ひとこと、6分類30フレーズ", "why": "漫画リール1コマ目のセリフに悩んだら6分類のフレーズをそのまま借りて当てはめられる", "url": "https://note.com/mayz_factory/n/nd324cb8febcf"},
-    {"title": "バズる動画、5要素の設計図と実例", "why": "タイトルを数字入りのベネフィット型に変え、尺を15〜25秒に寄せると再生が伸びやすい", "url": "https://necfru.com/blog/%E3%83%90%E3%82%BA%E3%82%8B%E5%8B%95%E7%94%BB/%E3%83%90%E3%82%BA%E3%82%8B%E5%8B%95%E7%94%BB%E3%81%AB%E8%A8%AD%E8%A8%88%E5%9B%B3%E3%81%82%E3%82%8A%EF%BC%81youtube%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%92%E8%87%AA%E7%84%B6/"},
-    {"title": "ショート動画、視聴維持と投稿頻度の基準", "why": "コマ切り替えを1秒1カット目安にし、投稿1時間後の反応5%を伸びたかの目安にできる", "url": "https://ai-yomiage.com/blog/2026youtube-Ev4cc5"}
+    {"title": "AI漫画の効果線、9シーン別プロンプト集", "why": "ゴリラ漫画のオチのコマに効果線プロンプトを一言足すだけで迫力が出せる", "url": "https://note.com/yudo_tanaka/n/n1828037624f5"},
+    {"title": "カット採用の判断、5項目スコア化で迷い解消", "why": "実写撮影はマスター→カバー→インサートの順で撮ると撮り逃しを防げる", "url": "https://reelgrow.jp/blog/criteria-for-deciding-when-to-video-cut/"}
   ]
 }

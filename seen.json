@@ -489,6 +489,26 @@
       "url": "https://gihyo.jp/article/2026/09/claude-plugin-eval",
       "title": "Claude Code、自作プラグインを数値評価する新機能",
       "date": "2026-09-18"
+    },
+    {
+      "url": "https://tovigasmaru.co.jp/?p=6904",
+      "title": "リール音声のこもり取り、EQ数値が判明",
+      "date": "2026-09-19"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/color-correction/",
+      "title": "Log素材の色補正、ffmpegコマンドが判明",
+      "date": "2026-09-19"
+    },
+    {
+      "url": "https://nico-lab.net/drawtext_with_ffmpeg/",
+      "title": "ffmpegのテロップ、動きの実装コマンドが判明",
+      "date": "2026-09-19"
+    },
+    {
+      "url": "https://note.com/meec/n/n2185e77c3cba",
+      "title": "テロップの動かし方、16パターンの図鑑",
+      "date": "2026-09-19"
     }
   ]
 }

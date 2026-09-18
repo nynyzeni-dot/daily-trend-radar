@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-19",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-18.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-19.html",
   "items": [
-    {"title": "ChatGPT画像、顔ブレを防ぐ文脈制御3ステップ", "why": "ゴリラ漫画のキャラ固定作業で、プロンプトを固定して書き換え禁止を念押しすると顔ブレを抑えられる", "url": "https://media.tcdigital.jp/ai-knowledge-flow/articles/chatgpt-character-consistency-context-control/"},
-    {"title": "リール保存を促す訴求文言、心理トリガー別6型", "why": "キャプション末尾の「保存して」の一文を、心理トリガー別6パターンから選んで差し替えるだけで済む", "url": "https://mujinkp.co.jp/blog/instagram-cta"},
-    {"title": "美容室リール台本13選、時間配分の型が判明", "why": "台本を0-4秒フック/5-20秒本編/21-30秒CTAの時間配分に当てはめて書けば、毎回の構成迷いが減る", "url": "https://salowin.jp/note/archives/5419"},
-    {"title": "Claude Code、自作プラグインを数値評価する新機能", "why": "自作した指示書（スキル）の変更前後を数値スコアで比較してから本番運用に反映できる", "url": "https://gihyo.jp/article/2026/09/claude-plugin-eval"}
+    {"title": "リール音声のこもり取り、EQ数値が判明", "why": "実写の自撮り音声を、ffmpegのhighpass/equalizerフィルタにこの数値をそのまま入れれば声のこもりとサ行のキツさを削れる", "url": "https://tovigasmaru.co.jp/?p=6904"},
+    {"title": "Log素材の色補正、ffmpegコマンドが判明", "why": "Osmo Pocket 4のD-Log素材を、新しいソフトを覚えなくてもいつものffmpegコマンドに数値を入れるだけで自然な色味に補正できる", "url": "https://ffmpeg-cookbook.com/ja/articles/color-correction/"},
+    {"title": "ffmpegのテロップ、動きの実装コマンドが判明", "why": "自作スクリプトのテロップ部分にフェードイン・アウトのコマンドをそのまま足せば、静止表示だけのテロップに動きを付けられる", "url": "https://nico-lab.net/drawtext_with_ffmpeg/"},
+    {"title": "テロップの動かし方、16パターンの図鑑", "why": "テロップの動きを選ぶとき、コマの感情に合わせて記事内の型から選ぶという基準を使える", "url": "https://note.com/meec/n/n2185e77c3cba"}
   ]
 }

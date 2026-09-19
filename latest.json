@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-19",
+  "date": "2026-09-20",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-19.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-20.html",
   "items": [
-    {"title": "リール音声のこもり取り、EQ数値が判明", "why": "実写の自撮り音声を、ffmpegのhighpass/equalizerフィルタにこの数値をそのまま入れれば声のこもりとサ行のキツさを削れる", "url": "https://tovigasmaru.co.jp/?p=6904"},
-    {"title": "Log素材の色補正、ffmpegコマンドが判明", "why": "Osmo Pocket 4のD-Log素材を、新しいソフトを覚えなくてもいつものffmpegコマンドに数値を入れるだけで自然な色味に補正できる", "url": "https://ffmpeg-cookbook.com/ja/articles/color-correction/"},
-    {"title": "ffmpegのテロップ、動きの実装コマンドが判明", "why": "自作スクリプトのテロップ部分にフェードイン・アウトのコマンドをそのまま足せば、静止表示だけのテロップに動きを付けられる", "url": "https://nico-lab.net/drawtext_with_ffmpeg/"},
-    {"title": "テロップの動かし方、16パターンの図鑑", "why": "テロップの動きを選ぶとき、コマの感情に合わせて記事内の型から選ぶという基準を使える", "url": "https://note.com/meec/n/n2185e77c3cba"}
+    {"title": "Codex画像生成、公式プロンプト8原則", "why": "note本文の写真をCodexで作るとき、この8原則を順にチェックしてから生成に回せば直しの回数を減らせる", "url": "https://www.ai-orchestra.ai/codex-training/columns/codex-gazo-prompt"},
+    {"title": "Higgsfield、Soul ID保存の3手順", "why": "higgsfieldでそれ以外の画像を作るとき、Soul IDを1回保存しておけば同じキャラで別カットを量産する作業が時短になる", "url": "https://moodime.com/vgai/higgsfield-soul-id/"},
+    {"title": "動画の構図、9パターンと練習法", "why": "実写の自撮り動画を撮り始める今、まず日の丸構図で1本撮ってみるを次に撮るカットの決め方に使える", "url": "https://even-though-not-brave-i-wanna-adventure.com/camera-composition/"},
+    {"title": "Claude、チャットとCoworkが統合発表", "why": "展開が来たら顧客向け資料やアンケート集計の下書きをClaudeのチャット内のDocs機能だけで一通り形にできる", "url": "https://gihyo.jp/article/2026/09/claude-cowork-and-chat-are-one-claude"}
   ]
 }

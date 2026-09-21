@@ -1,11 +1,10 @@
 {
-  "date": "2026-09-21",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-21.html",
+  "date": "2026-09-22",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-22.html",
   "items": [
-    {"title": "リール保存率、計算式とベンチマーク法", "why": "保存数÷リーチ×100の保存率を出して自分の中央値と比べれば、施策が効いたかどうかを数字で見比べられる", "url": "https://www.cocomarke.com/blog/instagram-reels-saves-increase/"},
-    {"title": "リールBGM、公式音楽検索の5ステップ", "why": "Instagram公式の音楽検索とトレンドマークの見方を使えば、BGM選びにかかる時間を削れる", "url": "https://find-model.jp/insta-lab/instagram-music-search/"},
-    {"title": "テロップの大きさ、ジャンル別pt数基準", "why": "テロップの大きさをジャンル別pt数を出発点にすれば、毎回のサイズ選びで迷わなくなる", "url": "https://videosalon.jp/series/telop_vol12/"},
-    {"title": "Notion、Agent Skills発表", "why": "Notionで作ったスキルをそのままClaude Codeに持ち込んで手順を使い回せる", "url": "https://www.notion.com/releases/2026-09-15"}
+    {"title": "視聴維持率、離脱地点を特定し打つ手", "why": "インサイトで視聴維持率が急落する地点を特定し、その5秒前のカットを切るか差し替えれば離脱を減らせる", "url": "https://shortzly.com/blog/short-form-video-retention-strategies"},
+    {"title": "テロップ、px単位でサイズ基準化", "why": "テロップのサイズ・余白・表示秒数を役割別のpx数値から逆算して決められる", "url": "https://omniweb.jp/m25/"},
+    {"title": "Claude Code、メッセージ一括送信キー追加", "why": "応答を待たずに指示をキューに入れておき、Ctrl+Enterでまとめて送信すれば待ち時間を挟まず作業を進められる", "url": "https://code.claude.com/docs/en/changelog#v2.1.275"}
   ]
 }

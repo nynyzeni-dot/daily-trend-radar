@@ -549,6 +549,21 @@
       "url": "https://www.notion.com/releases/2026-09-15",
       "title": "Notion、Agent Skills発表",
       "date": "2026-09-21"
+    },
+    {
+      "url": "https://shortzly.com/blog/short-form-video-retention-strategies",
+      "title": "視聴維持率、離脱地点を特定し打つ手",
+      "date": "2026-09-22"
+    },
+    {
+      "url": "https://omniweb.jp/m25/",
+      "title": "テロップ、px単位でサイズ基準化",
+      "date": "2026-09-22"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.275",
+      "title": "Claude Code、メッセージ一括送信キー追加",
+      "date": "2026-09-22"
     }
   ]
 }

@@ -1,10 +1,11 @@
 {
-  "date": "2026-09-22",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-22.html",
+  "date": "2026-09-23",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-23.html",
   "items": [
-    {"title": "視聴維持率、離脱地点を特定し打つ手", "why": "インサイトで視聴維持率が急落する地点を特定し、その5秒前のカットを切るか差し替えれば離脱を減らせる", "url": "https://shortzly.com/blog/short-form-video-retention-strategies"},
-    {"title": "テロップ、px単位でサイズ基準化", "why": "テロップのサイズ・余白・表示秒数を役割別のpx数値から逆算して決められる", "url": "https://omniweb.jp/m25/"},
-    {"title": "Claude Code、メッセージ一括送信キー追加", "why": "応答を待たずに指示をキューに入れておき、Ctrl+Enterでまとめて送信すれば待ち時間を挟まず作業を進められる", "url": "https://code.claude.com/docs/en/changelog#v2.1.275"}
+    {"title": "自分の声、無料ローカルでクローン化", "why": "ffmpegの変換コマンドと検証済み設定値で自分の声を30秒だけクローン化しておけば、テキストを打つだけでナレーションを作れる", "url": "https://note.com/qrozier/n/nf6b99816648b"},
+    {"title": "リール尺、72時間後の検証で調整", "why": "尺は迷ったら45〜60秒を基準にし、投稿72時間後の完全視聴率・保存率を見て次回±5秒調整する検証サイクルに置き換えられる", "url": "https://www.cocomarke.com/blog/instagram-reels-length-optimal/"},
+    {"title": "Osmo Pocket 4、充電と容量の実測値", "why": "充電時間とストレージ容量の実測値から撮影前に何分撮れるか逆算でき、明るいシーンのEV補正値も基準にできる", "url": "https://note.com/nice_dog9512/n/n00efaf4ac03c"},
+    {"title": "Claude Code、Opus 5.5が既定モデルに", "why": "コンテキストが100万トークンに増え、Proプランでも大きめの資料を分割せず一度にまとめて読み込ませられる", "url": "https://code.claude.com/docs/en/changelog#v2.1.280"}
   ]
 }

@@ -1,11 +1,9 @@
 {
-  "date": "2026-09-23",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-23.html",
+  "date": "2026-09-24",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-24.html",
   "items": [
-    {"title": "自分の声、無料ローカルでクローン化", "why": "ffmpegの変換コマンドと検証済み設定値で自分の声を30秒だけクローン化しておけば、テキストを打つだけでナレーションを作れる", "url": "https://note.com/qrozier/n/nf6b99816648b"},
-    {"title": "リール尺、72時間後の検証で調整", "why": "尺は迷ったら45〜60秒を基準にし、投稿72時間後の完全視聴率・保存率を見て次回±5秒調整する検証サイクルに置き換えられる", "url": "https://www.cocomarke.com/blog/instagram-reels-length-optimal/"},
-    {"title": "Osmo Pocket 4、充電と容量の実測値", "why": "充電時間とストレージ容量の実測値から撮影前に何分撮れるか逆算でき、明るいシーンのEV補正値も基準にできる", "url": "https://note.com/nice_dog9512/n/n00efaf4ac03c"},
-    {"title": "Claude Code、Opus 5.5が既定モデルに", "why": "コンテキストが100万トークンに増え、Proプランでも大きめの資料を分割せず一度にまとめて読み込ませられる", "url": "https://code.claude.com/docs/en/changelog#v2.1.280"}
+    {"title": "Osmo Pocket 4、失敗しない撮影設定", "why": "フレームレートの2倍にシャッタースピードを合わせ、屋外はND16やND32、歩く時はフォローモード固定とすり足の忍者歩きで映像の縦揺れを防げる", "url": "https://butsu.jp/labo/464"},
+    {"title": "カット割り、基本7種と30度ルール", "why": "同じ画角が続くときはカメラ角度を30度以上変える30度ルールを意識し、イマジナリーラインをまたがないよう注意しながらジャンプカットやLカット・Jカットを使い分けられる", "url": "https://shibuyamovie.tokyo/column/3171/"}
   ]
 }

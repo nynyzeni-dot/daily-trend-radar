@@ -1,9 +1,10 @@
 {
-  "date": "2026-09-24",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-24.html",
+  "date": "2026-09-25",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-25.html",
   "items": [
-    {"title": "Osmo Pocket 4、失敗しない撮影設定", "why": "フレームレートの2倍にシャッタースピードを合わせ、屋外はND16やND32、歩く時はフォローモード固定とすり足の忍者歩きで映像の縦揺れを防げる", "url": "https://butsu.jp/labo/464"},
-    {"title": "カット割り、基本7種と30度ルール", "why": "同じ画角が続くときはカメラ角度を30度以上変える30度ルールを意識し、イマジナリーラインをまたがないよう注意しながらジャンプカットやLカット・Jカットを使い分けられる", "url": "https://shibuyamovie.tokyo/column/3171/"}
+    {"title": "カットのリズム、BPM別に秒数基準化", "why": "BGMのテンポがスローかアップかに応じて0.5秒〜5秒でカットの長さを変え、6秒に1回は画面に変化を起こせば間延びを防げる", "url": "https://www.itto-create.co.jp/column/douga_seisaku-pacing/"},
+    {"title": "映画っぽい画作り、13%クロップで再現", "why": "シャッタースピードをフレームレートの2倍（24fpsなら1/50秒）に合わせて撮り、書き出しで上下を13%クロップして2.35:1にすれば映画っぽい質感になる", "url": "https://omniweb.jp/m150/"},
+    {"title": "テロップ、助詞は75〜90%に縮小", "why": "テロップの助詞だけ本文より75〜90%小さくし、縁取りの透明度を20〜30%まで下げれば文字の主従がはっきりして読みやすくなる", "url": "https://video-knowledge.com/telop-mibae/"}
   ]
 }

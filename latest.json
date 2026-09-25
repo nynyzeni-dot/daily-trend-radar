@@ -1,10 +1,11 @@
 {
-  "date": "2026-09-25",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-25.html",
+  "date": "2026-09-26",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-26.html",
   "items": [
-    {"title": "カットのリズム、BPM別に秒数基準化", "why": "BGMのテンポがスローかアップかに応じて0.5秒〜5秒でカットの長さを変え、6秒に1回は画面に変化を起こせば間延びを防げる", "url": "https://www.itto-create.co.jp/column/douga_seisaku-pacing/"},
-    {"title": "映画っぽい画作り、13%クロップで再現", "why": "シャッタースピードをフレームレートの2倍（24fpsなら1/50秒）に合わせて撮り、書き出しで上下を13%クロップして2.35:1にすれば映画っぽい質感になる", "url": "https://omniweb.jp/m150/"},
-    {"title": "テロップ、助詞は75〜90%に縮小", "why": "テロップの助詞だけ本文より75〜90%小さくし、縁取りの透明度を20〜30%まで下げれば文字の主従がはっきりして読みやすくなる", "url": "https://video-knowledge.com/telop-mibae/"}
+    {"title": "静止画のズーム、ジッター無しで滑らかに", "why": "見出し画像やAIで生成した静止画をリールに使うとき、scaleで先に拡大してからzoompanの増分を(Z-1)/Nで計算して指定すれば、カクつきの無い滑らかなズームを付けられる", "url": "https://www.ffmpeg-micro.com/blog/ffmpeg-zoompan-filter-ken-burns-zoom-and-pan-without-the-jitter"},
+    {"title": "カット間の切り替え、xfadeで50種類から選ぶ", "why": "漫画リールのカットのつなぎ目に、xfadeのtransitionでfadeやwipeleft、dissolveなどを指定し、durationで継続秒数を決めれば、単純な切り替え以外の演出を足せる", "url": "https://nico-lab.net/xfade_with_ffmpeg/"},
+    {"title": "手ブレ補正、ffmpegの2段階処理で解決", "why": "手持ちで撮った実写素材にブレが出ているとき、vidstabdetectで解析してからvidstabtransformで補正をかければ、新しいアプリを増やさずffmpegだけでブレを抑えられる", "url": "https://note.com/951/n/n5a37bc811a92"},
+    {"title": "サムネ候補、シーン検出フィルタで自動抽出", "why": "リールの中から見出しやカバーに使えそうなカットを探しているところを、selectフィルターでシーン変化の値を0.1程度に指定して自動で候補画像を出力し、選ぶだけにできる", "url": "https://qiita.com/otakoma/items/842b7417b1012fab9097"}
   ]
 }

@@ -609,6 +609,26 @@
       "url": "https://video-knowledge.com/telop-mibae/",
       "title": "テロップ、助詞は75〜90%に縮小",
       "date": "2026-09-25"
+    },
+    {
+      "url": "https://www.ffmpeg-micro.com/blog/ffmpeg-zoompan-filter-ken-burns-zoom-and-pan-without-the-jitter",
+      "title": "静止画のズーム、ジッター無しで滑らかに",
+      "date": "2026-09-26"
+    },
+    {
+      "url": "https://nico-lab.net/xfade_with_ffmpeg/",
+      "title": "カット間の切り替え、xfadeで50種類から選ぶ",
+      "date": "2026-09-26"
+    },
+    {
+      "url": "https://note.com/951/n/n5a37bc811a92",
+      "title": "手ブレ補正、ffmpegの2段階処理で解決",
+      "date": "2026-09-26"
+    },
+    {
+      "url": "https://qiita.com/otakoma/items/842b7417b1012fab9097",
+      "title": "サムネ候補、シーン検出フィルタで自動抽出",
+      "date": "2026-09-26"
     }
   ]
 }

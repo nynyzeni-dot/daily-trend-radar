@@ -1,11 +1,11 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-09-27",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-26.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-27.html",
   "items": [
-    {"title": "静止画のズーム、ジッター無しで滑らかに", "why": "見出し画像やAIで生成した静止画をリールに使うとき、scaleで先に拡大してからzoompanの増分を(Z-1)/Nで計算して指定すれば、カクつきの無い滑らかなズームを付けられる", "url": "https://www.ffmpeg-micro.com/blog/ffmpeg-zoompan-filter-ken-burns-zoom-and-pan-without-the-jitter"},
-    {"title": "カット間の切り替え、xfadeで50種類から選ぶ", "why": "漫画リールのカットのつなぎ目に、xfadeのtransitionでfadeやwipeleft、dissolveなどを指定し、durationで継続秒数を決めれば、単純な切り替え以外の演出を足せる", "url": "https://nico-lab.net/xfade_with_ffmpeg/"},
-    {"title": "手ブレ補正、ffmpegの2段階処理で解決", "why": "手持ちで撮った実写素材にブレが出ているとき、vidstabdetectで解析してからvidstabtransformで補正をかければ、新しいアプリを増やさずffmpegだけでブレを抑えられる", "url": "https://note.com/951/n/n5a37bc811a92"},
-    {"title": "サムネ候補、シーン検出フィルタで自動抽出", "why": "リールの中から見出しやカバーに使えそうなカットを探しているところを、selectフィルターでシーン変化の値を0.1程度に指定して自動で候補画像を出力し、選ぶだけにできる", "url": "https://qiita.com/otakoma/items/842b7417b1012fab9097"}
+    {"title": "Higgsfield、好みの画風をMoodboardに保存", "why": "higgsfieldで生成する画像は、気に入った参考画像を10〜30枚集めてMoodboardとしてアップロードすれば、毎回プロンプトで画風を説明し直さなくても同じテイストの画像を安定して出せる", "url": "https://higgsfield.ai/blog/create-custom-ai-moodboard-soul-2"},
+    {"title": "音量正規化、loudnormの2パス処理", "why": "実写動画の音声を書き出すとき、いきなりloudnormで正規化せず、まず解析用コマンドで実測値を取ってから2回目のコマンドで書き出せば、感覚に頼らず狙ったラウドネスに揃えられる", "url": "https://nico-lab.net/loudnorm_with_ffmpeg/"},
+    {"title": "動画の速度変更、setptsとatempoの併用", "why": "実写動画の一部をスローや早送りにするとき、setptsとatempoを同じコマンドで指定すれば映像と音声のズレを防げ、2倍を超える変更はatempoを複数回チェーンして対応できる", "url": "https://www.ffmpeg-micro.com/blog/ffmpeg-speed-up-slow-down-video"},
+    {"title": "Claude Code、prompt-audit追加", "why": "Claude Codeで「/doctor prompt-audit」を実行すれば、CLAUDE.mdやSkillsに残っている古いモデル向けの書き方をコマンド一つでまとめて見つけられる", "url": "https://code.claude.com/docs/en/changelog#v2.1.283"}
   ]
 }

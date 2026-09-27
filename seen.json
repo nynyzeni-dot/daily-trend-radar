@@ -649,6 +649,21 @@
       "url": "https://code.claude.com/docs/en/changelog#v2.1.283",
       "title": "Claude Code、prompt-audit追加",
       "date": "2026-09-27"
+    },
+    {
+      "url": "https://techgym.jp/column/doga-39/",
+      "title": "動画の冒頭フック、5パターンに秒数化",
+      "date": "2026-09-28"
+    },
+    {
+      "url": "https://www.jeffgeerling.com/blog/2026/apply-lut-color-grade-with-ffmpeg/",
+      "title": "ffmpegでLUT適用、DJI純正の発色に",
+      "date": "2026-09-28"
+    },
+    {
+      "url": "https://bluebirdofoz.hatenablog.com/entry/2026/09/15/234644",
+      "title": "SRT字幕、ffmpegで焼き込むコマンド",
+      "date": "2026-09-28"
     }
   ]
 }

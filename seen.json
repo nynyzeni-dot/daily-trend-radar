@@ -664,6 +664,21 @@
       "url": "https://bluebirdofoz.hatenablog.com/entry/2026/09/15/234644",
       "title": "SRT字幕、ffmpegで焼き込むコマンド",
       "date": "2026-09-28"
+    },
+    {
+      "url": "https://unitymemories.jp/osmo-pocket-4-recommended-settings/",
+      "title": "Osmo Pocket、シャッターとWBに数値基準",
+      "date": "2026-09-30"
+    },
+    {
+      "url": "https://zenn.dev/glisan/articles/ab080968556908",
+      "title": "静止画と音声、ffmpeg一発で動画化",
+      "date": "2026-09-30"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.285",
+      "title": "Claude Code、CLIからデスクトップ直接起動",
+      "date": "2026-09-30"
     }
   ]
 }

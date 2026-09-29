@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-30",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-28.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-30.html",
   "items": [
-    {"title": "動画の冒頭フック、5パターンに秒数化", "why": "漫画リールの冒頭を、結果先出し型なら0〜3秒に一番見せたい結果、数字インパクト型なら0〜3秒にインパクトのある数字を置く、という形で秒数配分ごと当てはめて組み立てられる", "url": "https://techgym.jp/column/doga-39/"},
-    {"title": "ffmpegでLUT適用、DJI純正の発色に", "why": "DJI Osmo Pocket 4Pで撮った実写素材を、編集ソフトを開かずにffmpegのlut3dフィルタとDJI純正のvivid LUTファイルだけで色味を仕上げられる", "url": "https://www.jeffgeerling.com/blog/2026/apply-lut-color-grade-with-ffmpeg/"},
-    {"title": "SRT字幕、ffmpegで焼き込むコマンド", "why": "実写の自撮り動画で自動文字起こしからSRT形式の字幕ファイルができたとき、ffmpegのsubtitlesフィルタにそのファイルを指定するコマンド一つでテロップとして焼き込める", "url": "https://bluebirdofoz.hatenablog.com/entry/2026/09/15/234644"}
+    {"title": "Osmo Pocket、シャッターとWBに数値基準", "why": "Osmo Pocket 4Pで実写を撮るとき、フレームレートに合わせてシャッタースピードを180度シャッタールール通りに合わせ、ホワイトバランスを5600Kに設定するだけで、毎回勘に頼らず同じ発色とノイズ感で撮れる", "url": "https://unitymemories.jp/osmo-pocket-4-recommended-settings/"},
+    {"title": "静止画と音声、ffmpeg一発で動画化", "why": "画像1枚と音声ファイルだけを用意した場面で、動画編集ソフトを開かずこのコマンド一つを実行すれば動画化できる", "url": "https://zenn.dev/glisan/articles/ab080968556908"},
+    {"title": "Claude Code、CLIからデスクトップ直接起動", "why": "Claude Codeをターミナルで使っていて途中からデスクトップアプリに切り替えたいとき、claude --desktopと打つだけで今の作業をそのままデスクトップアプリで開ける", "url": "https://code.claude.com/docs/en/changelog#v2.1.285"}
   ]
 }

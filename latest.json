@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-09-30.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-01.html",
   "items": [
-    {"title": "Osmo Pocket、シャッターとWBに数値基準", "why": "Osmo Pocket 4Pで実写を撮るとき、フレームレートに合わせてシャッタースピードを180度シャッタールール通りに合わせ、ホワイトバランスを5600Kに設定するだけで、毎回勘に頼らず同じ発色とノイズ感で撮れる", "url": "https://unitymemories.jp/osmo-pocket-4-recommended-settings/"},
-    {"title": "静止画と音声、ffmpeg一発で動画化", "why": "画像1枚と音声ファイルだけを用意した場面で、動画編集ソフトを開かずこのコマンド一つを実行すれば動画化できる", "url": "https://zenn.dev/glisan/articles/ab080968556908"},
-    {"title": "Claude Code、CLIからデスクトップ直接起動", "why": "Claude Codeをターミナルで使っていて途中からデスクトップアプリに切り替えたいとき、claude --desktopと打つだけで今の作業をそのままデスクトップアプリで開ける", "url": "https://code.claude.com/docs/en/changelog#v2.1.285"}
+    {"title": "無音カット、ffmpegのsilenceremove", "why": "実写動画の無音部分を、ffmpegのsilenceremoveに-45dB〜-50dBの閾値を指定するだけで自動カットできる", "url": "https://ffmpeg-cookbook.com/ja/articles/silence-remove/"},
+    {"title": "Osmo Pocket、スロー撮影でもD-Log対応", "why": "Osmo Pocket 4Pのスローモーション撮影もD-Logで撮っておけば、v2.0のLUTを当てるだけで発色を揃えられる", "url": "https://www.cined.com/jp/dji-osmo-pocket-4-and-4p-firmware-updates-released-cloud-uploads-d-log-slow-motion-and-frame-tracking/"},
+    {"title": "バズる動画、色味と投稿曜日をAIで解析", "why": "リールのキャプションを長めに書き、投稿を土日か月曜にするだけでバズりやすい条件に近づけられる", "url": "https://zenn.dev/starai/articles/58c4b5b6c80276"}
   ]
 }

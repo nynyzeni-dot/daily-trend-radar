@@ -1,10 +1,11 @@
 {
-  "date": "2026-10-01",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-01.html",
+  "date": "2026-10-02",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-02.html",
   "items": [
-    {"title": "無音カット、ffmpegのsilenceremove", "why": "実写動画の無音部分を、ffmpegのsilenceremoveに-45dB〜-50dBの閾値を指定するだけで自動カットできる", "url": "https://ffmpeg-cookbook.com/ja/articles/silence-remove/"},
-    {"title": "Osmo Pocket、スロー撮影でもD-Log対応", "why": "Osmo Pocket 4Pのスローモーション撮影もD-Logで撮っておけば、v2.0のLUTを当てるだけで発色を揃えられる", "url": "https://www.cined.com/jp/dji-osmo-pocket-4-and-4p-firmware-updates-released-cloud-uploads-d-log-slow-motion-and-frame-tracking/"},
-    {"title": "バズる動画、色味と投稿曜日をAIで解析", "why": "リールのキャプションを長めに書き、投稿を土日か月曜にするだけでバズりやすい条件に近づけられる", "url": "https://zenn.dev/starai/articles/58c4b5b6c80276"}
+    {"title": "リールのカバー、安全範囲は1080×1440", "why": "リールのカバー画像は、中央寄りの1080×1440の範囲しか実際には表示されないと意識して、文字や顔を中央に収めて選ぶ", "url": "https://remolabo.co.jp/magazine/10352/"},
+    {"title": "ffmpegで画質アップスケール、シャープ化も", "why": "画質の粗い素材は、ffmpegのscaleフィルタにflags=lanczosを指定して引き伸ばし、hqdn3dとunsharpを組み合わせると粗さを抑えて底上げできる", "url": "https://wavespeed.ai/blog/posts/blog-how-to-upscale-enhance-video-quality-ffmpeg/"},
+    {"title": "ffmpegのhueフィルタ、色味を演出で調整", "why": "漫画リールの一部カットに、ffmpegのhue=s=1.5前後の彩度アップを1行足すだけで色味の演出ができる（メイクや商品のカットは除く）", "url": "https://ffmpeg-cookbook.com/ja/articles/hue-filter/"},
+    {"title": "Claude Code、見落とし防止モッド登場", "why": "Claude Codeで「/plugin enable cc-plugin-you-should-know@builtin」を実行しておくと、見落としをサイドエージェントが自動でフラグしてくれる", "url": "https://kingy.ai/news/claude-code-2-1-287-mods-permissions-rollout/"}
   ]
 }

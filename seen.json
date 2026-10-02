@@ -714,6 +714,26 @@
       "url": "https://kingy.ai/news/claude-code-2-1-287-mods-permissions-rollout/",
       "title": "Claude Code、見落とし防止モッド登場",
       "date": "2026-10-02"
+    },
+    {
+      "url": "https://eliro.pro/blog/short-form-video-hooks-script-guide-2026",
+      "title": "冒頭フック、プラットフォーム別の秒数が判明",
+      "date": "2026-10-03"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/loop-video/",
+      "title": "ffmpegでブーメラン演出、1コマンドで完結",
+      "date": "2026-10-03"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/side-by-side-video/",
+      "title": "ffmpegで2本の映像を横並びに1コマンド",
+      "date": "2026-10-03"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.288",
+      "title": "Claude Code、消した入力を上矢印で復元",
+      "date": "2026-10-03"
     }
   ]
 }

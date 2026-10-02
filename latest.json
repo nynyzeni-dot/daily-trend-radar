@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-02.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-03.html",
   "items": [
-    {"title": "リールのカバー、安全範囲は1080×1440", "why": "リールのカバー画像は、中央寄りの1080×1440の範囲しか実際には表示されないと意識して、文字や顔を中央に収めて選ぶ", "url": "https://remolabo.co.jp/magazine/10352/"},
-    {"title": "ffmpegで画質アップスケール、シャープ化も", "why": "画質の粗い素材は、ffmpegのscaleフィルタにflags=lanczosを指定して引き伸ばし、hqdn3dとunsharpを組み合わせると粗さを抑えて底上げできる", "url": "https://wavespeed.ai/blog/posts/blog-how-to-upscale-enhance-video-quality-ffmpeg/"},
-    {"title": "ffmpegのhueフィルタ、色味を演出で調整", "why": "漫画リールの一部カットに、ffmpegのhue=s=1.5前後の彩度アップを1行足すだけで色味の演出ができる（メイクや商品のカットは除く）", "url": "https://ffmpeg-cookbook.com/ja/articles/hue-filter/"},
-    {"title": "Claude Code、見落とし防止モッド登場", "why": "Claude Codeで「/plugin enable cc-plugin-you-should-know@builtin」を実行しておくと、見落としをサイドエージェントが自動でフラグしてくれる", "url": "https://kingy.ai/news/claude-code-2-1-287-mods-permissions-rollout/"}
+    {"title": "冒頭フック、プラットフォーム別の秒数が判明", "why": "漫画リールの冒頭テキストを「疑問形」や「数字」などの型に当てはめ、最初の3秒に結論や数字を置く秒数配分の目安にできる", "url": "https://eliro.pro/blog/short-form-video-hooks-script-guide-2026"},
+    {"title": "ffmpegでブーメラン演出、1コマンドで完結", "why": "漫画リールの印象的な1カットを、ffmpegのsplit・reverse・concatを使ったブーメランのコマンド一つで順→逆に往復させる演出にできる", "url": "https://ffmpeg-cookbook.com/ja/articles/loop-video/"},
+    {"title": "ffmpegで2本の映像を横並びに1コマンド", "why": "2つの素材を比較で見せたい場面で、ffmpegのhstack（縦ならvstack）のコマンド一つで1つの画面に並べて書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/side-by-side-video/"},
+    {"title": "Claude Code、消した入力を上矢印で復元", "why": "Claude Codeで入力中のプロンプトをCtrl+Cで誤って消しても、上矢印キーを押すだけで元の下書きに戻せるようになる", "url": "https://code.claude.com/docs/en/changelog#v2.1.288"}
   ]
 }

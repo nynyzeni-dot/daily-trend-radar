@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-03.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-04.html",
   "items": [
-    {"title": "冒頭フック、プラットフォーム別の秒数が判明", "why": "漫画リールの冒頭テキストを「疑問形」や「数字」などの型に当てはめ、最初の3秒に結論や数字を置く秒数配分の目安にできる", "url": "https://eliro.pro/blog/short-form-video-hooks-script-guide-2026"},
-    {"title": "ffmpegでブーメラン演出、1コマンドで完結", "why": "漫画リールの印象的な1カットを、ffmpegのsplit・reverse・concatを使ったブーメランのコマンド一つで順→逆に往復させる演出にできる", "url": "https://ffmpeg-cookbook.com/ja/articles/loop-video/"},
-    {"title": "ffmpegで2本の映像を横並びに1コマンド", "why": "2つの素材を比較で見せたい場面で、ffmpegのhstack（縦ならvstack）のコマンド一つで1つの画面に並べて書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/side-by-side-video/"},
-    {"title": "Claude Code、消した入力を上矢印で復元", "why": "Claude Codeで入力中のプロンプトをCtrl+Cで誤って消しても、上矢印キーを押すだけで元の下書きに戻せるようになる", "url": "https://code.claude.com/docs/en/changelog#v2.1.288"}
+    {"title": "ffmpegのpad、9:16変換が1コマンド", "why": "横長の素材をリール用の縦長に書き出すとき、ffmpegのscaleとpadを組み合わせたコマンド一つで余白ごと1080×1920に収められる", "url": "https://dev.to/javidjamae/ffmpeg-pad-filter-letterbox-and-pillarbox-video-for-any-aspect-ratio-1bn5"},
+    {"title": "ffmpeg結合、再エンコードなしで1本に", "why": "数カット分の短いクリップに分けて作った日、クリップ名を並べたテキストファイルとffmpegのconcatコマンド一つで、画質を落とさず1本の動画につなぎ直せる", "url": "https://www.junian.dev/tech/ffmpeg-concat-videos/"},
+    {"title": "ffmpegでPNG合成、表示タイミングも指定", "why": "ロゴやバッジのようなPNG画像を乗せたいとき、ffmpegのoverlayフィルタに配置座標と表示秒数を指定するコマンド一つで重ねたり切り替え表示したりできる", "url": "https://www.bannerbear.com/blog/how-to-add-a-png-overlay-on-a-video-using-ffmpeg/"},
+    {"title": "ffmpegのchromakey、背景を透過処理", "why": "グリーンバックを敷いて撮った素材の緑色部分を、ffmpegのchromakeyコマンド一つで透明にして抜ける", "url": "https://zenn.dev/j1ngzoue/articles/461113070db710"}
   ]
 }

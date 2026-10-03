@@ -734,6 +734,26 @@
       "url": "https://code.claude.com/docs/en/changelog#v2.1.288",
       "title": "Claude Code、消した入力を上矢印で復元",
       "date": "2026-10-03"
+    },
+    {
+      "url": "https://dev.to/javidjamae/ffmpeg-pad-filter-letterbox-and-pillarbox-video-for-any-aspect-ratio-1bn5",
+      "title": "ffmpegのpad、9:16変換が1コマンド",
+      "date": "2026-10-04"
+    },
+    {
+      "url": "https://www.junian.dev/tech/ffmpeg-concat-videos/",
+      "title": "ffmpeg結合、再エンコードなしで1本に",
+      "date": "2026-10-04"
+    },
+    {
+      "url": "https://www.bannerbear.com/blog/how-to-add-a-png-overlay-on-a-video-using-ffmpeg/",
+      "title": "ffmpegでPNG合成、表示タイミングも指定",
+      "date": "2026-10-04"
+    },
+    {
+      "url": "https://zenn.dev/j1ngzoue/articles/461113070db710",
+      "title": "ffmpegのchromakey、背景を透過処理",
+      "date": "2026-10-04"
     }
   ]
 }

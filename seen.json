@@ -754,6 +754,26 @@
       "url": "https://zenn.dev/j1ngzoue/articles/461113070db710",
       "title": "ffmpegのchromakey、背景を透過処理",
       "date": "2026-10-04"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/mosaic-blur-region/",
+      "title": "ffmpegのモザイク処理、動く対象も追跡",
+      "date": "2026-10-05"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/audio-ducking/",
+      "title": "ffmpegのダッキング、声でBGMが自動に下がる",
+      "date": "2026-10-05"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/crop-black-bars/",
+      "title": "ffmpegで黒帯検出、数値を入れるだけで除去",
+      "date": "2026-10-05"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/reverse-video/",
+      "title": "ffmpegで逆再生、倍速との組み合わせも1行",
+      "date": "2026-10-05"
     }
   ]
 }

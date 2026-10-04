@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-04.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-05.html",
   "items": [
-    {"title": "ffmpegのpad、9:16変換が1コマンド", "why": "横長の素材をリール用の縦長に書き出すとき、ffmpegのscaleとpadを組み合わせたコマンド一つで余白ごと1080×1920に収められる", "url": "https://dev.to/javidjamae/ffmpeg-pad-filter-letterbox-and-pillarbox-video-for-any-aspect-ratio-1bn5"},
-    {"title": "ffmpeg結合、再エンコードなしで1本に", "why": "数カット分の短いクリップに分けて作った日、クリップ名を並べたテキストファイルとffmpegのconcatコマンド一つで、画質を落とさず1本の動画につなぎ直せる", "url": "https://www.junian.dev/tech/ffmpeg-concat-videos/"},
-    {"title": "ffmpegでPNG合成、表示タイミングも指定", "why": "ロゴやバッジのようなPNG画像を乗せたいとき、ffmpegのoverlayフィルタに配置座標と表示秒数を指定するコマンド一つで重ねたり切り替え表示したりできる", "url": "https://www.bannerbear.com/blog/how-to-add-a-png-overlay-on-a-video-using-ffmpeg/"},
-    {"title": "ffmpegのchromakey、背景を透過処理", "why": "グリーンバックを敷いて撮った素材の緑色部分を、ffmpegのchromakeyコマンド一つで透明にして抜ける", "url": "https://zenn.dev/j1ngzoue/articles/461113070db710"}
+    {"title": "ffmpegのモザイク処理、動く対象も追跡", "why": "通りがかりの人やよその看板が映り込んだとき、cropでpixelizeかgblurを重ねるコマンド一つでその部分だけぼかせる。動く対象は時間変数tで座標指定して追いかけられる", "url": "https://ffmpeg-cookbook.com/ja/articles/mosaic-blur-region/"},
+    {"title": "ffmpegのダッキング、声でBGMが自動に下がる", "why": "自分の声にBGMを重ねるとき、sidechaincompressのコマンド一つでしゃべってる間だけBGMが自動で下がり、黙ったら元の音量に戻る", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-ducking/"},
+    {"title": "ffmpegで黒帯検出、数値を入れるだけで除去", "why": "上下左右に黒帯が入っている動画は、cropdetectで検出した数値をそのままcropフィルタに入れるだけで黒帯部分だけ取り除ける", "url": "https://ffmpeg-cookbook.com/ja/articles/crop-black-bars/"},
+    {"title": "ffmpegで逆再生、倍速との組み合わせも1行", "why": "巻き戻し演出を入れたいカットは、reverseとareverseを指定するコマンド一つで逆再生にでき、setptsとatempoを組み合わせれば逆再生しながら倍速にする演出も1行で作れる", "url": "https://ffmpeg-cookbook.com/ja/articles/reverse-video/"}
   ]
 }

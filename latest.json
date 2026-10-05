@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-05.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-06.html",
   "items": [
-    {"title": "ffmpegのモザイク処理、動く対象も追跡", "why": "通りがかりの人やよその看板が映り込んだとき、cropでpixelizeかgblurを重ねるコマンド一つでその部分だけぼかせる。動く対象は時間変数tで座標指定して追いかけられる", "url": "https://ffmpeg-cookbook.com/ja/articles/mosaic-blur-region/"},
-    {"title": "ffmpegのダッキング、声でBGMが自動に下がる", "why": "自分の声にBGMを重ねるとき、sidechaincompressのコマンド一つでしゃべってる間だけBGMが自動で下がり、黙ったら元の音量に戻る", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-ducking/"},
-    {"title": "ffmpegで黒帯検出、数値を入れるだけで除去", "why": "上下左右に黒帯が入っている動画は、cropdetectで検出した数値をそのままcropフィルタに入れるだけで黒帯部分だけ取り除ける", "url": "https://ffmpeg-cookbook.com/ja/articles/crop-black-bars/"},
-    {"title": "ffmpegで逆再生、倍速との組み合わせも1行", "why": "巻き戻し演出を入れたいカットは、reverseとareverseを指定するコマンド一つで逆再生にでき、setptsとatempoを組み合わせれば逆再生しながら倍速にする演出も1行で作れる", "url": "https://ffmpeg-cookbook.com/ja/articles/reverse-video/"}
+    {"title": "ffmpegの透過ウォーターマーク、overlayに1行足すだけ", "why": "LP制作や顧客向け資料用の動画に、overlayのコマンド一つでロゴを好きな位置・好きな透け具合で重ねられる", "url": "https://www.bannerbear.com/blog/how-to-add-watermark-to-videos-using-ffmpeg"},
+    {"title": "ffmpegのminterpolate、スローモーションがなめらかに", "why": "実写カットをスローモーションにしたいとき、minterpolateのコマンド一つでフレームを補間でき、間引く/複製するだけの方法よりガタつきの少ない仕上がりになる", "url": "https://forum.level1techs.com/t/converting-videos-to-60-fps-with-ffmpeg/223600"},
+    {"title": "ffmpegのdrawtext、文字に半透明の背景box", "why": "漫画リールの文字が背景の絵と重なって読みにくい場面で、drawtextにbox=1とboxcolorを足すだけで文字の後ろに半透明の背景を敷けて読みやすくなる", "url": "https://ottverse.com/ffmpeg-drawtext-filter-dynamic-overlays-timecode-scrolling-text-credits/"},
+    {"title": "ffmpegのxstack、複数動画を1枚のグリッドに", "why": "顧客向け資料やLP制作で複数の施術動画や写真を並べたいとき、xstackのlayoutに座標を指定するコマンド一つで1枚のグリッド画面にまとめられる", "url": "https://www.phpied.com/video-grids-with-ffmpeg"}
   ]
 }

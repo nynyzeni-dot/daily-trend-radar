@@ -774,6 +774,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/reverse-video/",
       "title": "ffmpegで逆再生、倍速との組み合わせも1行",
       "date": "2026-10-05"
+    },
+    {
+      "url": "https://www.bannerbear.com/blog/how-to-add-watermark-to-videos-using-ffmpeg",
+      "title": "ffmpegの透過ウォーターマーク、overlayに1行足すだけ",
+      "date": "2026-10-06"
+    },
+    {
+      "url": "https://forum.level1techs.com/t/converting-videos-to-60-fps-with-ffmpeg/223600",
+      "title": "ffmpegのminterpolate、スローモーションがなめらかに",
+      "date": "2026-10-06"
+    },
+    {
+      "url": "https://ottverse.com/ffmpeg-drawtext-filter-dynamic-overlays-timecode-scrolling-text-credits/",
+      "title": "ffmpegのdrawtext、文字に半透明の背景box",
+      "date": "2026-10-06"
+    },
+    {
+      "url": "https://www.phpied.com/video-grids-with-ffmpeg",
+      "title": "ffmpegのxstack、複数動画を1枚のグリッドに",
+      "date": "2026-10-06"
     }
   ]
 }

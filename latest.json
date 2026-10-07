@@ -1,11 +1,9 @@
 {
-  "date": "2026-10-07",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-07.html",
+  "date": "2026-10-08",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-08.html",
   "items": [
-    {"title": "Codex画像生成、プロンプトは5要素で仕上がり激変", "why": "note本文の写真をCodexで作るとき、用途・主役・スタイル・構図・制約の5つを一文に入れて指示すると仕上がりが変わる", "url": "https://youmind.com/ja-JP/landing/x-viral-articles/codex-imagegen-prompting-guide"},
-    {"title": "フラッシュカット、1〜3フレームで強いインパクト", "why": "漫画リールの決め台詞やオチのコマの直前に、1〜3フレームだけの短いカットを連続で挟むと、めくり時の視覚的インパクトが強くなる", "url": "https://www.cined.com/jp/?p=427200"},
-    {"title": "テロップ配置、Reelsは上14%・下20〜35%回避", "why": "漫画リールのテロップを置くとき、Instagram Reelsなら画面上部14%・下部20〜35%の範囲を避けて配置すると、画面端と重ならなくなる", "url": "https://www.nemovideo.com/ja-JP/blog/text-overlay-design-guide-jp"},
-    {"title": "バズる構成、セリフ10〜12往復で30秒に", "why": "漫画リールの構成を考えるとき、冒頭のコマを「転（ハプニング）」から始め、セリフの往復を10〜12回くらいに収めると、だいたい30秒の尺の目安になる", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/4336/"}
+    {"title": "カット選び、見せたい内容で3パターン化", "why": "漫画リールのコマ送りで、次のコマをすぐ見せたいかで素早く切り替え、気分や時間の変化を感じさせたいならゆっくり切り替え、間延びした部分は詰めて繋ぐ、を選び分けられる", "url": "https://www.capcut.com/create/video-transitions-crossfade-hard-cut-jump-cut"},
+    {"title": "音声収録の下準備、無音20〜30秒を録る", "why": "実写の自撮り動画を撮り始めたら、撮影の最初か最後に部屋の無音を20〜30秒録っておくと、編集時の隙間埋め用の音声素材として使える", "url": "https://www.opus.pro/blog/video-editing-tips"}
   ]
 }

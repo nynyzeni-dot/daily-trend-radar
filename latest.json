@@ -1,9 +1,10 @@
 {
-  "date": "2026-10-08",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-08.html",
+  "date": "2026-10-09",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-09.html",
   "items": [
-    {"title": "カット選び、見せたい内容で3パターン化", "why": "漫画リールのコマ送りで、次のコマをすぐ見せたいかで素早く切り替え、気分や時間の変化を感じさせたいならゆっくり切り替え、間延びした部分は詰めて繋ぐ、を選び分けられる", "url": "https://www.capcut.com/create/video-transitions-crossfade-hard-cut-jump-cut"},
-    {"title": "音声収録の下準備、無音20〜30秒を録る", "why": "実写の自撮り動画を撮り始めたら、撮影の最初か最後に部屋の無音を20〜30秒録っておくと、編集時の隙間埋め用の音声素材として使える", "url": "https://www.opus.pro/blog/video-editing-tips"}
+    {"title": "冒頭フック、3段仕込みで視聴維持", "why": "漫画リールの1コマ目で絵の驚き、最初のテロップで疑問、2〜3コマ目で見返りを仄めかす3段仕込みで作れる", "url": "https://www.socialync.io/blog/content-hooks-stop-scrolling-2026"},
+    {"title": "Jカット・Lカット、フレーム数まで公開", "why": "実写動画で次の音声を0.2〜0.4秒先出しするか前の声を少し残すだけで、カットの繋ぎが不自然に途切れなくなる", "url": "https://www.capcut.com/create/j-cuts-and-l-cuts-dialogue-edits"},
+    {"title": "話し言葉フック、3秒の語数に基準", "why": "実写動画の台本で、冒頭のひとことを3秒・7〜10語に区切って本編と分けて書くと間延びを防げる", "url": "https://www.bigvu.tv/blog/social-media-hooks-scroll-stopping-video/"}
   ]
 }

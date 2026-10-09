@@ -1,10 +1,11 @@
 {
-  "date": "2026-10-09",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-09.html",
+  "date": "2026-10-10",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-10.html",
   "items": [
-    {"title": "冒頭フック、3段仕込みで視聴維持", "why": "漫画リールの1コマ目で絵の驚き、最初のテロップで疑問、2〜3コマ目で見返りを仄めかす3段仕込みで作れる", "url": "https://www.socialync.io/blog/content-hooks-stop-scrolling-2026"},
-    {"title": "Jカット・Lカット、フレーム数まで公開", "why": "実写動画で次の音声を0.2〜0.4秒先出しするか前の声を少し残すだけで、カットの繋ぎが不自然に途切れなくなる", "url": "https://www.capcut.com/create/j-cuts-and-l-cuts-dialogue-edits"},
-    {"title": "話し言葉フック、3秒の語数に基準", "why": "実写動画の台本で、冒頭のひとことを3秒・7〜10語に区切って本編と分けて書くと間延びを防げる", "url": "https://www.bigvu.tv/blog/social-media-hooks-scroll-stopping-video/"}
+    {"title": "ffmpegのテロップ、force_styleで5スタイルに", "why": "漫画リールの文字入れで、force_styleの指定を足すだけでYouTube風の半透明ボックスやNetflix風の影付き文字にコマンド一つで切り替えられる", "url": "https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/"},
+    {"title": "縦動画が横向きになる問題、transposeで解決", "why": "実写の自撮り動画で縦撮りがffmpegで横向きに出てきたとき、ffprobeで回転メタデータを確認してtransposeを使うか判断するだけで直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/rotate-video/"},
+    {"title": "声のノイズゲート、agateの数値公開", "why": "実写の自撮り動画の声を録ったとき、agateのthreshold・attack・releaseにこの記事の数値を入れるだけで背景ノイズを下げられる", "url": "https://ffmpeg-cookbook.com/ja/articles/agate-filter/"},
+    {"title": "unsharpのマイナス値、ポートレートぼかしに", "why": "実写の自撮り動画で肌を柔らかく見せたいとき、unsharpのlaの値をマイナスにしたコマンド一つでポートレート向けのソフトブラーがかけられる", "url": "https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/"}
   ]
 }

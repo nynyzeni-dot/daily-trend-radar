@@ -1,1 +1,390 @@
-PLACEHOLDER_DAY
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンドレーダー 第50回｜2026.10.10</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第50回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップの5スタイルと縦動画回転・ノイズゲート</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は全部ffmpegの小技や。テロップはforce_styleで5スタイルを一発切り替え、縦動画が横向きになる問題もtransposeとメタデータの見分け方で直せる、声のノイズゲートと肌をやわらかくするぼかしまで数値つきで拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2022-08-17</span>
+    </div>
+    <h2>ffmpegのテロップ、force_styleで5スタイルに</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Bannerbearのブログ記事。ffmpegの「subtitles」フィルタにある「force_style」オプションを使うと、字幕ファイル自体を書き換えずにコマンドラインから見た目を変えられるという解説。YouTube風（OutlineColour=&H40000000・BorderStyle=3で黒の半透明ボックス）、Netflix風（Outline=0・Shadow=0.75・Spacing=0.2で縁取りの代わりに影をつける）、黄色イタリックのビンテージ風（PrimaryColour=&H03fcff・Italic=1・Spacing=0.8）、アニメ風（Fontname=Trebuchet MSだけ変更）という具体的な指定例が載っている。ASSの色は&HBBGGRRの順（HTMLのRRGGBBと逆）で指定する点も説明されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの文字入れをするとき、force_styleに「OutlineColour=&H40000000,BorderStyle=3」を足すだけでYouTube風の半透明の背景ボックスに、「Outline=0,Shadow=0.75」に変えるだけでNetflix風の影付き文字に、コマンド一つで切り替えられる。</p>
+    </div>
+    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-04-08</span>
+    </div>
+    <h2>縦動画が横向きになる問題、transposeで解決</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの「transpose」フィルタと回転メタデータの扱いを解説した記事。回転の種類ごとに「transpose=1」（時計回りに90度）「transpose=2」（反時計回りに90度）などの対応表が示されている。iPhoneの縦撮り動画が横向きになる問題は、「ffprobe」で回転メタデータ（rotation）の値を確認し、値が付いている場合はtransposeを使わずそのまま再エンコードすればffmpegが自動で回転してくれる、値が付いていない場合はtransposeを使う、という切り分け手順が書かれている。再エンコードせずメタデータだけ直す「-display_rotation」というオプションも紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画で縦に撮った素材がffmpegで横向きに出てきたとき、まずffprobeで回転メタデータの値を確認し、値が付いていればtransposeを付けずに再エンコードする、値が付いていなければtranspose=1か2を使う、という手順で直せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/rotate-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/rotate-video
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-09</span>
+    </div>
+    <h2>声のノイズゲート、agateの数値公開</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの「agate」フィルタでポッドキャストやボイスオーバー向けに背景ノイズを下げる設定を解説した記事。「threshold=0.015」前後（小さい声なら0.01、大きい声なら0.025程度）、「attack=5」（長すぎると語頭が切れる）、「release=200」（長めにすると自然に聞こえる）という具体的な数値が示されている。しきい値を決める方法として、「astats」フィルタで声のない部分と話している部分のRMSを測り、その中間の値を使うという手順も紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画の声を録ったとき、agateのthreshold・attack・releaseにこの記事の数値（threshold 0.015前後、attack 5、release 200）を入れるコマンド一つで、声の合間に入る背景ノイズを下げられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/agate-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/agate-filter
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-25</span>
+    </div>
+    <h2>unsharpのマイナス値、ポートレートぼかしに</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの「unsharp」フィルタの数値設定を解説した記事。「la」の値を正にするとシャープに、負にするとブラーになるという説明で、「unsharp=9:9:-0.5:5:5:0.0」というポートレート向けのソフトブラーの具体例と、「unsharp=3:3:2.0:3:3:0.0」というアクション映像向けの強シャープの例が示されている。輝度マトリクスの幅（lx・ly）と彩度マトリクスの幅（cx・cy）はそれぞれ合計26を超えるとエラーになる、という数値上の制限も書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画で肌を柔らかく見せたいとき、unsharpのlaの値をマイナスにした「unsharp=9:9:-0.5:5:5:0.0」というコマンド一つでポートレート向けのソフトブラーがかけられる。同じフィルタでlaをプラスにすればシャープにもできる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/unsharp-filter
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第50回<br>
+    2026年10月10日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../days/2026-10-09.html">2026-10-09（第49回）</a>
+      <a href="../days/2026-10-08.html">2026-10-08（第48回）</a>
+      <a href="../days/2026-10-07.html">2026-10-07（第47回）</a>
+      <a href="../days/2026-10-06.html">2026-10-06（第46回）</a>
+      <a href="../days/2026-10-05.html">2026-10-05（第45回）</a>
+      <a href="../days/2026-10-04.html">2026-10-04（第44回）</a>
+      <a href="../days/2026-10-03.html">2026-10-03（第43回）</a>
+      <a href="../days/2026-10-02.html">2026-10-02（第42回）</a>
+      <a href="../days/2026-10-01.html">2026-10-01（第41回）</a>
+      <a href="../days/2026-09-30.html">2026-09-30（第40回）</a>
+      <a href="../days/2026-09-28.html">2026-09-28（第39回）</a>
+      <a href="../days/2026-09-27.html">2026-09-27（第38回）</a>
+      <a href="../days/2026-09-26.html">2026-09-26（第37回）</a>
+      <a href="../days/2026-09-25.html">2026-09-25（第36回）</a>
+      <a href="../days/2026-09-24.html">2026-09-24（第35回）</a>
+      <a href="../days/2026-09-23.html">2026-09-23（第34回）</a>
+      <a href="../days/2026-09-22.html">2026-09-22（第33回）</a>
+      <a href="../days/2026-09-21.html">2026-09-21（第32回）</a>
+      <a href="../days/2026-09-20.html">2026-09-20（第31回）</a>
+      <a href="../days/2026-09-19.html">2026-09-19（第30回）</a>
+      <a href="../days/2026-09-18.html">2026-09-18（第29回）</a>
+      <a href="../days/2026-09-17.html">2026-09-17（第28回）</a>
+      <a href="../days/2026-09-16.html">2026-09-16（第27回）</a>
+      <a href="../days/2026-09-15.html">2026-09-15（第26回）</a>
+      <a href="../days/2026-09-14.html">2026-09-14（第25回）</a>
+      <a href="../days/2026-09-13.html">2026-09-13（第24回）</a>
+      <a href="../days/2026-09-12.html">2026-09-12（第23回）</a>
+      <a href="../days/2026-09-11.html">2026-09-11（第22回）</a>
+      <a href="../days/2026-09-10.html">2026-09-10（第21回）</a>
+      <a href="../days/2026-09-09.html">2026-09-09（第20回）</a>
+      <a href="../days/2026-09-08.html">2026-09-08（第19回）</a>
+      <a href="../days/2026-09-07.html">2026-09-07（第18回）</a>
+      <a href="../days/2026-09-06.html">2026-09-06（第17回）</a>
+      <a href="../days/2026-09-05.html">2026-09-05（第16回）</a>
+      <a href="../days/2026-09-04.html">2026-09-04（第15回）</a>
+      <a href="../days/2026-09-03.html">2026-09-03（第14回）</a>
+      <a href="../days/2026-09-02.html">2026-09-02（第13回）</a>
+      <a href="../days/2026-09-01.html">2026-09-01（第12回）</a>
+      <a href="../days/2026-08-31.html">2026-08-31（第11回）</a>
+      <a href="../days/2026-08-30.html">2026-08-30（第10回）</a>
+      <a href="../days/2026-08-29.html">2026-08-29（第9回）</a>
+      <a href="../days/2026-08-28.html">2026-08-28（第8回）</a>
+      <a href="../days/2026-08-27.html">2026-08-27（第7回）</a>
+      <a href="../days/2026-08-26.html">2026-08-26（第6回）</a>
+      <a href="../days/2026-08-25.html">2026-08-25（第5回）</a>
+      <a href="../days/2026-08-24.html">2026-08-24（第4回）</a>
+      <a href="../days/2026-08-23.html">2026-08-23（第3回）</a>
+      <a href="../days/2026-08-22.html">2026-08-22（第2回）</a>
+      <a href="../days/2026-08-21.html">2026-08-21（第1回）</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -839,6 +839,26 @@
       "url": "https://www.bigvu.tv/blog/social-media-hooks-scroll-stopping-video/",
       "title": "話し言葉フック、3秒の語数に基準",
       "date": "2026-10-09"
+    },
+    {
+      "url": "https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/",
+      "title": "ffmpegのテロップ、force_styleで5スタイルに",
+      "date": "2026-10-10"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/rotate-video/",
+      "title": "縦動画が横向きになる問題、transposeで解決",
+      "date": "2026-10-10"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/agate-filter/",
+      "title": "声のノイズゲート、agateの数値公開",
+      "date": "2026-10-10"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/",
+      "title": "unsharpのマイナス値、ポートレートぼかしに",
+      "date": "2026-10-10"
     }
   ]
 }

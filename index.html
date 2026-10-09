@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第49回｜2026.10.9</title>
+<title>デイリートレンドレーダー 第50回｜2026.10.10</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第49回</span>
-    <h1>今日のトレンド調査<br><span class="accent">フックの3段仕込みとJ・Lカットの秒数</span></h1>
-    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第50回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップの5スタイルと縦動画回転・ノイズゲート</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は3本、冒頭フックを3段に仕込む型と、Jカット・Lカットの秒数、話し言葉フックの語数という、どれも数字で判断できるネタを拾った。</p>
+    <p>今日は全部ffmpegの小技や。テロップはforce_styleで5スタイルを一発切り替え、縦動画が横向きになる問題もtransposeとメタデータの見分け方で直せる、声のノイズゲートと肌をやわらかくするぼかしまで数値つきで拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-02-07</span>
+      <span class="date">2022-08-17</span>
     </div>
-    <h2>冒頭フック、3段仕込みで視聴維持</h2>
+    <h2>ffmpegのテロップ、force_styleで5スタイルに</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Socialyncのブログ記事。動画の冒頭数秒を1つのフックで済ませず、「ビジュアルフック」（最初の約0.5秒、急な動きや鮮やかな色で視線を止める）→「テキスト・音声フック」（1〜2秒、疑問や矛盾、具体的な問題提起の文字や声）→「感情フック」（3秒、価値の約束や共感できる悩み、驚きの提示）の3段を重ねて仕込む「3-Hook Rule」を紹介している。</p>
+      <p>Bannerbearのブログ記事。ffmpegの「subtitles」フィルタにある「force_style」オプションを使うと、字幕ファイル自体を書き換えずにコマンドラインから見た目を変えられるという解説。YouTube風（OutlineColour=&H40000000・BorderStyle=3で黒の半透明ボックス）、Netflix風（Outline=0・Shadow=0.75・Spacing=0.2で縁取りの代わりに影をつける）、黄色イタリックのビンテージ風（PrimaryColour=&H03fcff・Italic=1・Spacing=0.8）、アニメ風（Fontname=Trebuchet MSだけ変更）という具体的な指定例が載っている。ASSの色は&HBBGGRRの順（HTMLのRRGGBBと逆）で指定する点も説明されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの1コマ目の絵でパターンを崩し（ビジュアルフック）、最初のテロップやセリフで疑問や矛盾を投げ（テキストフック）、2〜3コマ目で価値や共感の見返りを仄めかす（感情フック）、という3段仕込みの型に当てはめて作れる。</p>
+      <p>漫画リールの文字入れをするとき、force_styleに「OutlineColour=&H40000000,BorderStyle=3」を足すだけでYouTube風の半透明の背景ボックスに、「Outline=0,Shadow=0.75」に変えるだけでNetflix風の影付き文字に、コマンド一つで切り替えられる。</p>
     </div>
-    <a class="source-link" href="https://www.socialync.io/blog/content-hooks-stop-scrolling-2026" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> socialync.io/blog/content-hooks-stop-scrolling-2026
+    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-06-12</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>Jカット・Lカット、フレーム数まで公開</h2>
+    <h2>縦動画が横向きになる問題、transposeで解決</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>CapCutの編集ガイド記事。前のカットの音声を次の映像の上に残す「Lカット」と、次のカットの音声を映像の切り替え前に先出しする「Jカット」の作り方を、6ステップの手順と具体的なフレーム数つきで解説している。30fpsのタイムラインなら、短いセリフでは6〜12フレーム（約0.2〜0.4秒）、ゆっくりしたナレーションなら0.5〜1秒の先行・残しが目安とされている。</p>
+      <p>ffmpegの「transpose」フィルタと回転メタデータの扱いを解説した記事。回転の種類ごとに「transpose=1」（時計回りに90度）「transpose=2」（反時計回りに90度）などの対応表が示されている。iPhoneの縦撮り動画が横向きになる問題は、「ffprobe」で回転メタデータ（rotation）の値を確認し、値が付いている場合はtransposeを使わずそのまま再エンコードすればffmpegが自動で回転してくれる、値が付いていない場合はtransposeを使う、という切り分け手順が書かれている。再エンコードせずメタデータだけ直す「-display_rotation」というオプションも紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、セリフの切り替わりで次のカットの音声を0.2〜0.4秒先に出す（Jカット）、前のカットの声を次の映像に少し重ねて残す（Lカット）ことで、カットのつながりを不自然に途切れさせない声の編集ができる。</p>
+      <p>実写の自撮り動画で縦に撮った素材がffmpegで横向きに出てきたとき、まずffprobeで回転メタデータの値を確認し、値が付いていればtransposeを付けずに再エンコードする、値が付いていなければtranspose=1か2を使う、という手順で直せる。</p>
     </div>
-    <a class="source-link" href="https://www.capcut.com/create/j-cuts-and-l-cuts-dialogue-edits" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> capcut.com/create/j-cuts-and-l-cuts-dialogue-edits
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/rotate-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/rotate-video
     </a>
   </div>
 
@@ -291,27 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-07-02</span>
+      <span class="date">2026-04-09</span>
     </div>
-    <h2>話し言葉フック、3秒の語数に基準</h2>
+    <h2>声のノイズゲート、agateの数値公開</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>BIGVUのブログ記事。動画冒頭の話し言葉のフックは長さ約3秒・7〜10語程度に収めるべきだとし、話す速さ別に「落ち着いた話し方なら6〜7語」「会話調なら7〜8語」「歯切れよく元気な話し方なら8〜10語」という目安を数値で示している。フックは問いを投げて本編がそれに答える形にし、フックに本編の内容まで詰め込んではいけないとも指摘している。</p>
+      <p>ffmpegの「agate」フィルタでポッドキャストやボイスオーバー向けに背景ノイズを下げる設定を解説した記事。「threshold=0.015」前後（小さい声なら0.01、大きい声なら0.025程度）、「attack=5」（長すぎると語頭が切れる）、「release=200」（長めにすると自然に聞こえる）という具体的な数値が示されている。しきい値を決める方法として、「astats」フィルタで声のない部分と話している部分のRMSを測り、その中間の値を使うという手順も紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画の台本を書くとき、冒頭のひとことを3秒・7〜10語に区切って本編と分けて書き、残りの説明は本編側に回すことで、フックが長くなって間延びするのを防げる。</p>
+      <p>実写の自撮り動画の声を録ったとき、agateのthreshold・attack・releaseにこの記事の数値（threshold 0.015前後、attack 5、release 200）を入れるコマンド一つで、声の合間に入る背景ノイズを下げられる。</p>
     </div>
-    <a class="source-link" href="https://www.bigvu.tv/blog/social-media-hooks-scroll-stopping-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> bigvu.tv/blog/social-media-hooks-scroll-stopping-video
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/agate-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/agate-filter
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-25</span>
+    </div>
+    <h2>unsharpのマイナス値、ポートレートぼかしに</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの「unsharp」フィルタの数値設定を解説した記事。「la」の値を正にするとシャープに、負にするとブラーになるという説明で、「unsharp=9:9:-0.5:5:5:0.0」というポートレート向けのソフトブラーの具体例と、「unsharp=3:3:2.0:3:3:0.0」というアクション映像向けの強シャープの例が示されている。輝度マトリクスの幅（lx・ly）と彩度マトリクスの幅（cx・cy）はそれぞれ合計26を超えるとエラーになる、という数値上の制限も書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画で肌を柔らかく見せたいとき、unsharpのlaの値をマイナスにした「unsharp=9:9:-0.5:5:5:0.0」というコマンド一つでポートレート向けのソフトブラーがかけられる。同じフィルタでlaをプラスにすればシャープにもできる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/unsharp-filter
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第49回<br>
-    2026年10月9日分
+    デイリートレンドレーダー 第50回<br>
+    2026年10月10日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-10.html">2026-10-10（第50回）</a>
       <a href="days/2026-10-09.html">2026-10-09（第49回）</a>
       <a href="days/2026-10-08.html">2026-10-08（第48回）</a>
       <a href="days/2026-10-07.html">2026-10-07（第47回）</a>

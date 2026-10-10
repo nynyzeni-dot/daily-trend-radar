@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-10.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-11.html",
   "items": [
-    {"title": "ffmpegのテロップ、force_styleで5スタイルに", "why": "漫画リールの文字入れで、force_styleの指定を足すだけでYouTube風の半透明ボックスやNetflix風の影付き文字にコマンド一つで切り替えられる", "url": "https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/"},
-    {"title": "縦動画が横向きになる問題、transposeで解決", "why": "実写の自撮り動画で縦撮りがffmpegで横向きに出てきたとき、ffprobeで回転メタデータを確認してtransposeを使うか判断するだけで直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/rotate-video/"},
-    {"title": "声のノイズゲート、agateの数値公開", "why": "実写の自撮り動画の声を録ったとき、agateのthreshold・attack・releaseにこの記事の数値を入れるだけで背景ノイズを下げられる", "url": "https://ffmpeg-cookbook.com/ja/articles/agate-filter/"},
-    {"title": "unsharpのマイナス値、ポートレートぼかしに", "why": "実写の自撮り動画で肌を柔らかく見せたいとき、unsharpのlaの値をマイナスにしたコマンド一つでポートレート向けのソフトブラーがかけられる", "url": "https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/"}
+    {"title": "静止画にズーム、ffmpegでワンコマンド", "why": "noteに使う1枚の静止画をそのまま置くだけでなく、zoompanフィルタの指定一つでゆっくりズームインする動きをつけられる", "url": "https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg"},
+    {"title": "無音カット、Claude Codeで自動スクリプト化", "why": "実写の自撮り動画の録音を編集する前に、Claude Codeにsilencedetectで無音を検出して分割するスクリプトを作ってもらえば手作業で探さずに自動で切り出せる", "url": "https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/"},
+    {"title": "ffmpegのxfade、場面転換を型で選べる", "why": "漫画リールのシーン転換が単純なカットだけになっているところを、xfadeのtransitionを1つ選んで指定するだけで見え方を変えられる", "url": "https://github.com/wxbool/xfade-ffmpeg-script"},
+    {"title": "冒頭フック、5つの型と3秒保持率60%", "why": "漫画リールの冒頭1文を5つの型のどれかに当てはめて書き直し、3秒保持率を測って60%を目安に改善点を探せる", "url": "https://www.opus.pro/blog/instagram-reels-hook-formulas"}
   ]
 }

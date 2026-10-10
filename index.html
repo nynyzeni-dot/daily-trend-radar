@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第50回｜2026.10.10</title>
+<title>デイリートレンドレーダー 第51回｜2026.10.11</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第50回</span>
-    <h1>今日のトレンド調査<br><span class="accent">テロップの5スタイルと縦動画回転・ノイズゲート</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第51回</span>
+    <h1>今日のトレンド調査<br><span class="accent">静止画ズームと場面転換、Claude Codeで無音カット</span></h1>
     <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日は全部ffmpegの小技や。テロップはforce_styleで5スタイルを一発切り替え、縦動画が横向きになる問題もtransposeとメタデータの見分け方で直せる、声のノイズゲートと肌をやわらかくするぼかしまで数値つきで拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
+    <p>今日はffmpegの小技とフックの型が中心や。静止画にzoompanでズームをつけたり、xfadeで場面転換の型を選んだり、Claude Codeに無音カットのスクリプトを作らせたり、どれもすぐ試せる話を拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2022-08-17</span>
+      <span class="date">2022-05-17</span>
     </div>
-    <h2>ffmpegのテロップ、force_styleで5スタイルに</h2>
+    <h2>静止画にズーム、ffmpegでワンコマンド</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Bannerbearのブログ記事。ffmpegの「subtitles」フィルタにある「force_style」オプションを使うと、字幕ファイル自体を書き換えずにコマンドラインから見た目を変えられるという解説。YouTube風（OutlineColour=&H40000000・BorderStyle=3で黒の半透明ボックス）、Netflix風（Outline=0・Shadow=0.75・Spacing=0.2で縁取りの代わりに影をつける）、黄色イタリックのビンテージ風（PrimaryColour=&H03fcff・Italic=1・Spacing=0.8）、アニメ風（Fontname=Trebuchet MSだけ変更）という具体的な指定例が載っている。ASSの色は&HBBGGRRの順（HTMLのRRGGBBと逆）で指定する点も説明されている。</p>
+      <p>Bannerbearのブログ記事。ffmpegの「zoompan」フィルタで1枚の静止画からゆっくりズームインする動画（Ken Burns効果）を作る手順の解説。左上・上部中央・中央の3パターンのズーム位置それぞれについて、x・yの式が示されている。ズームの速さは「z='zoom+0.001'」の数値を変えて調整し、「scale=1200:-2」で幅1200にリサイズしたあと「crop=1200:670」で切り出す、という具体的なコマンドの組み方が書かれている。ズームのカクつきを抑えるには前段に「scale=8000:-1」を入れるとよい、という補足もある。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの文字入れをするとき、force_styleに「OutlineColour=&H40000000,BorderStyle=3」を足すだけでYouTube風の半透明の背景ボックスに、「Outline=0,Shadow=0.75」に変えるだけでNetflix風の影付き文字に、コマンド一つで切り替えられる。</p>
+      <p>noteに使う1枚の静止画をそのまま置くだけでなく、zoompanフィルタに「z='zoom+0.001'」を指定したコマンド一つで、ゆっくりズームインする動きをつけられる。</p>
     </div>
-    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-add-subtitles-to-a-video-with-ffmpeg-5-different-styles
+    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-04-27</span>
     </div>
-    <h2>縦動画が横向きになる問題、transposeで解決</h2>
+    <h2>無音カット、Claude Codeで自動スクリプト化</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの「transpose」フィルタと回転メタデータの扱いを解説した記事。回転の種類ごとに「transpose=1」（時計回りに90度）「transpose=2」（反時計回りに90度）などの対応表が示されている。iPhoneの縦撮り動画が横向きになる問題は、「ffprobe」で回転メタデータ（rotation）の値を確認し、値が付いている場合はtransposeを使わずそのまま再エンコードすればffmpegが自動で回転してくれる、値が付いていない場合はtransposeを使う、という切り分け手順が書かれている。再エンコードせずメタデータだけ直す「-display_rotation」というオプションも紹介されている。</p>
+      <p>Classmethodの記事。ffmpegの「silencedetect」フィルタ（例：silencedetect=noise=-30dB:d=1.0で、-30dB以下が1秒以上続く区間を無音と判定）で音声の無音区間を検出し、その結果をPythonで解析して自動で分割するスクリプトを、Claude Codeと一緒に作った過程が書かれている。しきい値のnoise（既定-30dB、ノイズが多ければ-45dBなどに下げる）とmin-silence（既定1.0秒）を調整できる引数、近接する無音を1つにまとめるmerge-gap（既定0.1秒）、切り口が不自然にならないよう前後に余白を残すpadding（既定0.04秒＝40ms）という具体的なパラメータが示されている。実際に切る前に境界を確認できるdry-runオプションもある。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画で縦に撮った素材がffmpegで横向きに出てきたとき、まずffprobeで回転メタデータの値を確認し、値が付いていればtransposeを付けずに再エンコードする、値が付いていなければtranspose=1か2を使う、という手順で直せる。</p>
+      <p>実写の自撮り動画の録音を編集する前に、Claude Codeに同じ発想（silencedetectで無音を検出し、Pythonで解析して、paddingを残して分割する）のスクリプトを作ってもらえば、無音区間を手作業で探さずに自動で切り出せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/rotate-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/rotate-video
+    <a class="source-link" href="https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-09</span>
+      <span class="date">不明（GitHub公開中）</span>
     </div>
-    <h2>声のノイズゲート、agateの数値公開</h2>
+    <h2>ffmpegのxfade、場面転換を型で選べる</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの「agate」フィルタでポッドキャストやボイスオーバー向けに背景ノイズを下げる設定を解説した記事。「threshold=0.015」前後（小さい声なら0.01、大きい声なら0.025程度）、「attack=5」（長すぎると語頭が切れる）、「release=200」（長めにすると自然に聞こえる）という具体的な数値が示されている。しきい値を決める方法として、「astats」フィルタで声のない部分と話している部分のRMSを測り、その中間の値を使うという手順も紹介されている。</p>
+      <p>GitHub上で公開されているbashスクリプト「xfade-ffmpeg-script」の解説。ffmpegの「xfade」フィルタで複数の動画をつなぐ構文がまとめられている。基本は「ffmpeg -i first.mp4 -i second.mp4 -filter_complex xfade=transition=fade:duration=2:offset=5 output.mp4」のように、transition（種類）・duration（切り替えの秒数、既定1秒）・offset（開始タイミング、既定0秒）を指定する形。transitionに指定できる型として、既定の「fade」のほか、wipeleftなどの拭き取り系、slideleftなどのスライド系、circlecrop・rectcropなどの切り抜き系、smoothleftなどの滑らか系、pixelize・dissolve・radialなど約30種類が一覧になっている。独自の効果を式で作れる「expr」も紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画の声を録ったとき、agateのthreshold・attack・releaseにこの記事の数値（threshold 0.015前後、attack 5、release 200）を入れるコマンド一つで、声の合間に入る背景ノイズを下げられる。</p>
+      <p>漫画リールのシーン転換が単純なカットだけになっているところを、xfadeのtransitionに一覧の中から「wipeleft」や「circlecrop」「dissolve」を1つ選んでコマンドに指定するだけで、場面転換の見え方を変えられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/agate-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/agate-filter
+    <a class="source-link" href="https://github.com/wxbool/xfade-ffmpeg-script" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> github.com/wxbool/xfade-ffmpeg-script
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-25</span>
+      <span class="date">2026-05-06</span>
     </div>
-    <h2>unsharpのマイナス値、ポートレートぼかしに</h2>
+    <h2>冒頭フック、5つの型と3秒保持率60%</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの「unsharp」フィルタの数値設定を解説した記事。「la」の値を正にするとシャープに、負にするとブラーになるという説明で、「unsharp=9:9:-0.5:5:5:0.0」というポートレート向けのソフトブラーの具体例と、「unsharp=3:3:2.0:3:3:0.0」というアクション映像向けの強シャープの例が示されている。輝度マトリクスの幅（lx・ly）と彩度マトリクスの幅（cx・cy）はそれぞれ合計26を超えるとエラーになる、という数値上の制限も書かれている。</p>
+      <p>Opusのブログ記事。リールの冒頭フックを「Contrarian（逆説）」「Mistake（失敗談）」「Numbered list（番号付きリスト）」「Time-based（期限型）」「Question（質問）」という5つの型に分類し、それぞれ構文の例（「Everyone says [よくある説], but [逆説]」など）を示している。作り方は、伝えたい価値をはっきりさせる→心理トリガーを選ぶ→型に当てはめる→最初の1秒の見せ方を決める→データで検証する、という5ステップ。目安として「3秒保持率60%以上」、50%未満は改善が必要、上位は70〜80%という数値が示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画で肌を柔らかく見せたいとき、unsharpのlaの値をマイナスにした「unsharp=9:9:-0.5:5:5:0.0」というコマンド一つでポートレート向けのソフトブラーがかけられる。同じフィルタでlaをプラスにすればシャープにもできる。</p>
+      <p>漫画リールの冒頭1文を書くとき、「Contrarian」「Mistake」「Numbered list」「Time-based」「Question」の5つの型のどれかに当てはめて書き直し、自分の動画の3秒保持率を測って60%を目安に改善点を探せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/unsharp-filter
+    <a class="source-link" href="https://www.opus.pro/blog/instagram-reels-hook-formulas" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/instagram-reels-hook-formulas
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第50回<br>
-    2026年10月10日分
+    デイリートレンドレーダー 第51回<br>
+    2026年10月11日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-11.html">2026-10-11（第51回）</a>
       <a href="days/2026-10-10.html">2026-10-10（第50回）</a>
       <a href="days/2026-10-09.html">2026-10-09（第49回）</a>
       <a href="days/2026-10-08.html">2026-10-08（第48回）</a>

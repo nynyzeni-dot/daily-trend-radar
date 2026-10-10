@@ -859,6 +859,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/unsharp-filter/",
       "title": "unsharpのマイナス値、ポートレートぼかしに",
       "date": "2026-10-10"
+    },
+    {
+      "url": "https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg",
+      "title": "静止画にズーム、ffmpegでワンコマンド",
+      "date": "2026-10-11"
+    },
+    {
+      "url": "https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/",
+      "title": "無音カット、Claude Codeで自動スクリプト化",
+      "date": "2026-10-11"
+    },
+    {
+      "url": "https://github.com/wxbool/xfade-ffmpeg-script",
+      "title": "ffmpegのxfade、場面転換を型で選べる",
+      "date": "2026-10-11"
+    },
+    {
+      "url": "https://www.opus.pro/blog/instagram-reels-hook-formulas",
+      "title": "冒頭フック、5つの型と3秒保持率60%",
+      "date": "2026-10-11"
     }
   ]
 }

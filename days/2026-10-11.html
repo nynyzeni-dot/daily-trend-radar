@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンドレーダー 第51回｜2026.10.11</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第51回</span>
+    <h1>今日のトレンド調査<br><span class="accent">静止画ズームと場面転換、Claude Codeで無音カット</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はffmpegの小技とフックの型が中心や。静止画にzoompanでズームをつけたり、xfadeで場面転換の型を選んだり、Claude Codeに無音カットのスクリプトを作らせたり、どれもすぐ試せる話を拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2022-05-17</span>
+    </div>
+    <h2>静止画にズーム、ffmpegでワンコマンド</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Bannerbearのブログ記事。ffmpegの「zoompan」フィルタで1枚の静止画からゆっくりズームインする動画（Ken Burns効果）を作る手順の解説。左上・上部中央・中央の3パターンのズーム位置それぞれについて、x・yの式が示されている。ズームの速さは「z='zoom+0.001'」の数値を変えて調整し、「scale=1200:-2」で幅1200にリサイズしたあと「crop=1200:670」で切り出す、という具体的なコマンドの組み方が書かれている。ズームのカクつきを抑えるには前段に「scale=8000:-1」を入れるとよい、という補足もある。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>noteに使う1枚の静止画をそのまま置くだけでなく、zoompanフィルタに「z='zoom+0.001'」を指定したコマンド一つで、ゆっくりズームインする動きをつけられる。</p>
+    </div>
+    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-04-27</span>
+    </div>
+    <h2>無音カット、Claude Codeで自動スクリプト化</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Classmethodの記事。ffmpegの「silencedetect」フィルタ（例：silencedetect=noise=-30dB:d=1.0で、-30dB以下が1秒以上続く区間を無音と判定）で音声の無音区間を検出し、その結果をPythonで解析して自動で分割するスクリプトを、Claude Codeと一緒に作った過程が書かれている。しきい値のnoise（既定-30dB、ノイズが多ければ-45dBなどに下げる）とmin-silence（既定1.0秒）を調整できる引数、近接する無音を1つにまとめるmerge-gap（既定0.1秒）、切り口が不自然にならないよう前後に余白を残すpadding（既定0.04秒＝40ms）という具体的なパラメータが示されている。実際に切る前に境界を確認できるdry-runオプションもある。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画の録音を編集する前に、Claude Codeに同じ発想（silencedetectで無音を検出し、Pythonで解析して、paddingを残して分割する）のスクリプトを作ってもらえば、無音区間を手作業で探さずに自動で切り出せる。</p>
+    </div>
+    <a class="source-link" href="https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">不明（GitHub公開中）</span>
+    </div>
+    <h2>ffmpegのxfade、場面転換を型で選べる</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>GitHub上で公開されているbashスクリプト「xfade-ffmpeg-script」の解説。ffmpegの「xfade」フィルタで複数の動画をつなぐ構文がまとめられている。基本は「ffmpeg -i first.mp4 -i second.mp4 -filter_complex xfade=transition=fade:duration=2:offset=5 output.mp4」のように、transition（種類）・duration（切り替えの秒数、既定1秒）・offset（開始タイミング、既定0秒）を指定する形。transitionに指定できる型として、既定の「fade」のほか、wipeleftなどの拭き取り系、slideleftなどのスライド系、circlecrop・rectcropなどの切り抜き系、smoothleftなどの滑らか系、pixelize・dissolve・radialなど約30種類が一覧になっている。独自の効果を式で作れる「expr」も紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのシーン転換が単純なカットだけになっているところを、xfadeのtransitionに一覧の中から「wipeleft」や「circlecrop」「dissolve」を1つ選んでコマンドに指定するだけで、場面転換の見え方を変えられる。</p>
+    </div>
+    <a class="source-link" href="https://github.com/wxbool/xfade-ffmpeg-script" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> github.com/wxbool/xfade-ffmpeg-script
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-06</span>
+    </div>
+    <h2>冒頭フック、5つの型と3秒保持率60%</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Opusのブログ記事。リールの冒頭フックを「Contrarian（逆説）」「Mistake（失敗談）」「Numbered list（番号付きリスト）」「Time-based（期限型）」「Question（質問）」という5つの型に分類し、それぞれ構文の例（「Everyone says [よくある説], but [逆説]」など）を示している。作り方は、伝えたい価値をはっきりさせる→心理トリガーを選ぶ→型に当てはめる→最初の1秒の見せ方を決める→データで検証する、という5ステップ。目安として「3秒保持率60%以上」、50%未満は改善が必要、上位は70〜80%という数値が示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの冒頭1文を書くとき、「Contrarian」「Mistake」「Numbered list」「Time-based」「Question」の5つの型のどれかに当てはめて書き直し、自分の動画の3秒保持率を測って60%を目安に改善点を探せる。</p>
+    </div>
+    <a class="source-link" href="https://www.opus.pro/blog/instagram-reels-hook-formulas" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/instagram-reels-hook-formulas
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第51回<br>
+    2026年10月11日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">トップに戻る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

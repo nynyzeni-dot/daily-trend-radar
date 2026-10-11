@@ -1,11 +1,1 @@
-{
-  "date": "2026-10-11",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-11.html",
-  "items": [
-    {"title": "静止画にズーム、ffmpegでワンコマンド", "why": "noteに使う1枚の静止画をそのまま置くだけでなく、zoompanフィルタの指定一つでゆっくりズームインする動きをつけられる", "url": "https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg"},
-    {"title": "無音カット、Claude Codeで自動スクリプト化", "why": "実写の自撮り動画の録音を編集する前に、Claude Codeにsilencedetectで無音を検出して分割するスクリプトを作ってもらえば手作業で探さずに自動で切り出せる", "url": "https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/"},
-    {"title": "ffmpegのxfade、場面転換を型で選べる", "why": "漫画リールのシーン転換が単純なカットだけになっているところを、xfadeのtransitionを1つ選んで指定するだけで見え方を変えられる", "url": "https://github.com/wxbool/xfade-ffmpeg-script"},
-    {"title": "冒頭フック、5つの型と3秒保持率60%", "why": "漫画リールの冒頭1文を5つの型のどれかに当てはめて書き直し、3秒保持率を測って60%を目安に改善点を探せる", "url": "https://www.opus.pro/blog/instagram-reels-hook-formulas"}
-  ]
-}
+{"date": "2026-10-12", "count": 0, "items": []}

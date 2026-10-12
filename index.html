@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第51回｜2026.10.11</title>
+<title>デイリートレンドレーダー 第52回｜2026.10.13</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第51回</span>
-    <h1>今日のトレンド調査<br><span class="accent">静止画ズームと場面転換、Claude Codeで無音カット</span></h1>
-    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第52回</span>
+    <h1>今日のトレンド調査<br><span class="accent">アクションカットの繋ぎ方と投稿前チェックリスト14項目</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はffmpegの小技とフックの型が中心や。静止画にzoompanでズームをつけたり、xfadeで場面転換の型を選んだり、Claude Codeに無音カットのスクリプトを作らせたり、どれもすぐ試せる話を拾えた。AIツールは週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかったから該当なしや。</p>
+    <p>今日はAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は2本、動きの途中でアングルを切り替える「アクションカット」のつなぎ方と、投稿前に自分でチェックできる14項目のリストを拾った。数値がはっきりしてる方は、漫画リールの仕上げ確認にそのまま使えるで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,90 +249,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2022-05-17</span>
+      <span class="date">2026-08-24</span>
     </div>
-    <h2>静止画にズーム、ffmpegでワンコマンド</h2>
+    <h2>投稿前チェックリスト、14項目に数値基準</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Bannerbearのブログ記事。ffmpegの「zoompan」フィルタで1枚の静止画からゆっくりズームインする動画（Ken Burns効果）を作る手順の解説。左上・上部中央・中央の3パターンのズーム位置それぞれについて、x・yの式が示されている。ズームの速さは「z='zoom+0.001'」の数値を変えて調整し、「scale=1200:-2」で幅1200にリサイズしたあと「crop=1200:670」で切り出す、という具体的なコマンドの組み方が書かれている。ズームのカクつきを抑えるには前段に「scale=8000:-1」を入れるとよい、という補足もある。</p>
+      <p>ショートドラマ制作会社GOKKOが運営する「ショートドラマLAB」の記事。ショート動画を投稿する前に確認する14項目のチェックリストを、企画・冒頭1〜2秒・構成編集テンポ・音・画面設計・コメント欄・投稿後の7つの工程に分けて公開している。「3秒に1回は視覚か聴覚に新しい刺激（カット・テロップ・効果音など）を置く」「9:16の画面を上下の黒帯なしで使い切る」「再生数ではなく、開始5秒の視聴維持率で振り返る」といった数値つきの基準が示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>noteに使う1枚の静止画をそのまま置くだけでなく、zoompanフィルタに「z='zoom+0.001'」を指定したコマンド一つで、ゆっくりズームインする動きをつけられる。</p>
+      <p>漫画リールを投稿する前に、3秒に1回は新しい展開（カット・テロップ・効果音など）が入っているか、9:16の画面を黒帯なしで使い切れているかをこのチェックリストで確認し、投稿後は再生数ではなく開始5秒の視聴維持率を基準に振り返られる。</p>
     </div>
-    <a class="source-link" href="https://www.bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> bannerbear.com/blog/how-to-do-a-ken-burns-style-effect-with-ffmpeg
+    <a class="source-link" href="https://gokkoclub.jp/shortdrama-lab/category/study/4703/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gokkoclub.jp/shortdrama-lab/category/study/4703
     </a>
   </div>
 
-  <!-- 2: A 高 -->
-  <div class="card high">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-27</span>
-    </div>
-    <h2>無音カット、Claude Codeで自動スクリプト化</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>Classmethodの記事。ffmpegの「silencedetect」フィルタ（例：silencedetect=noise=-30dB:d=1.0で、-30dB以下が1秒以上続く区間を無音と判定）で音声の無音区間を検出し、その結果をPythonで解析して自動で分割するスクリプトを、Claude Codeと一緒に作った過程が書かれている。しきい値のnoise（既定-30dB、ノイズが多ければ-45dBなどに下げる）とmin-silence（既定1.0秒）を調整できる引数、近接する無音を1つにまとめるmerge-gap（既定0.1秒）、切り口が不自然にならないよう前後に余白を残すpadding（既定0.04秒＝40ms）という具体的なパラメータが示されている。実際に切る前に境界を確認できるdry-runオプションもある。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画の録音を編集する前に、Claude Codeに同じ発想（silencedetectで無音を検出し、Pythonで解析して、paddingを残して分割する）のスクリプトを作ってもらえば、無音区間を手作業で探さずに自動で切り出せる。</p>
-    </div>
-    <a class="source-link" href="https://dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> dev.classmethod.jp/articles/split-audio-at-silence-python-ffmpeg-claude-code
-    </a>
-  </div>
-
-  <!-- 3: A 中 -->
+  <!-- 2: A 中 -->
   <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">不明（GitHub公開中）</span>
+      <span class="date">2025-05-15</span>
     </div>
-    <h2>ffmpegのxfade、場面転換を型で選べる</h2>
+    <h2>アクションカット、動きの途中で繋ぐ4手順</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>GitHub上で公開されているbashスクリプト「xfade-ffmpeg-script」の解説。ffmpegの「xfade」フィルタで複数の動画をつなぐ構文がまとめられている。基本は「ffmpeg -i first.mp4 -i second.mp4 -filter_complex xfade=transition=fade:duration=2:offset=5 output.mp4」のように、transition（種類）・duration（切り替えの秒数、既定1秒）・offset（開始タイミング、既定0秒）を指定する形。transitionに指定できる型として、既定の「fade」のほか、wipeleftなどの拭き取り系、slideleftなどのスライド系、circlecrop・rectcropなどの切り抜き系、smoothleftなどの滑らか系、pixelize・dissolve・radialなど約30種類が一覧になっている。独自の効果を式で作れる「expr」も紹介されている。</p>
+      <p>CapCutの編集ガイド記事。「アクションカット」（＝人物や物の動きの途中で、複数のアングルから撮った映像に切り替えてつなぐ編集技法のこと）の作り方を、切り替えポイントとなる動きを計画する→複数の角度やショットから動きを撮影する→動きのポイントでカットを入れて編集する→全体を見直し切り替えのタイミングを調整する、という4手順で解説している。パンチ、ジャンプ、ドアの開閉、キック、物を投げる動きなど6種類の具体例が挙げられている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのシーン転換が単純なカットだけになっているところを、xfadeのtransitionに一覧の中から「wipeleft」や「circlecrop」「dissolve」を1つ選んでコマンドに指定するだけで、場面転換の見え方を変えられる。</p>
+      <p>実写の自撮り動画を撮り始めたら、ドアの開閉やキックのような一つの動作を複数アングルから撮っておき、動きの途中でカットを割って繋ぐと、画面が切り替わっても勢いが途切れにくくなる。</p>
     </div>
-    <a class="source-link" href="https://github.com/wxbool/xfade-ffmpeg-script" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> github.com/wxbool/xfade-ffmpeg-script
-    </a>
-  </div>
-
-  <!-- 4: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-06</span>
-    </div>
-    <h2>冒頭フック、5つの型と3秒保持率60%</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>Opusのブログ記事。リールの冒頭フックを「Contrarian（逆説）」「Mistake（失敗談）」「Numbered list（番号付きリスト）」「Time-based（期限型）」「Question（質問）」という5つの型に分類し、それぞれ構文の例（「Everyone says [よくある説], but [逆説]」など）を示している。作り方は、伝えたい価値をはっきりさせる→心理トリガーを選ぶ→型に当てはめる→最初の1秒の見せ方を決める→データで検証する、という5ステップ。目安として「3秒保持率60%以上」、50%未満は改善が必要、上位は70〜80%という数値が示されている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>漫画リールの冒頭1文を書くとき、「Contrarian」「Mistake」「Numbered list」「Time-based」「Question」の5つの型のどれかに当てはめて書き直し、自分の動画の3秒保持率を測って60%を目安に改善点を探せる。</p>
-    </div>
-    <a class="source-link" href="https://www.opus.pro/blog/instagram-reels-hook-formulas" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> opus.pro/blog/instagram-reels-hook-formulas
+    <a class="source-link" href="https://www.capcut.com/ja-jp/resource/master-the-cutting-on-action" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/ja-jp/resource/master-the-cutting-on-action
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第51回<br>
-    2026年10月11日分
+    デイリートレンドレーダー 第52回<br>
+    2026年10月13日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-13.html">2026-10-13（第52回）</a>
       <a href="days/2026-10-11.html">2026-10-11（第51回）</a>
       <a href="days/2026-10-10.html">2026-10-10（第50回）</a>
       <a href="days/2026-10-09.html">2026-10-09（第49回）</a>

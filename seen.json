@@ -889,6 +889,21 @@
       "url": "https://www.capcut.com/ja-jp/resource/master-the-cutting-on-action",
       "title": "アクションカット、動きの途中で繋ぐ4手順",
       "date": "2026-10-13"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/watermark-overlay/",
+      "title": "ロゴ合成、位置と透明度を数値で指定",
+      "date": "2026-10-14"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/drawtext-filter/",
+      "title": "テロップの表示タイミング、秒数指定で制御",
+      "date": "2026-10-14"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/drawbox-filter/",
+      "title": "三分割構図ガイド線、処理時間も実測",
+      "date": "2026-10-14"
     }
   ]
 }

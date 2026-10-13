@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第52回｜2026.10.13</title>
+<title>デイリートレンドレーダー 第53回｜2026.10.14</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第52回</span>
-    <h1>今日のトレンド調査<br><span class="accent">アクションカットの繋ぎ方と投稿前チェックリスト14項目</span></h1>
-    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第53回</span>
+    <h1>今日のトレンド調査<br><span class="accent">ffmpegでロゴ合成・テロップ表示・構図ガイドの小技3つ</span></h1>
+    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は2本、動きの途中でアングルを切り替える「アクションカット」のつなぎ方と、投稿前に自分でチェックできる14項目のリストを拾った。数値がはっきりしてる方は、漫画リールの仕上げ確認にそのまま使えるで。</p>
+    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は3本、どれもffmpegの小技。ロゴ合成の透明度の数値、テロップを秒数で出し入れする指定、構図ガイド線を重ねる処理時間の実測値を拾った。今の編集にそのまま1行足せるやつばっかりやで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-08-24</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>投稿前チェックリスト、14項目に数値基準</h2>
+    <h2>ロゴ合成、位置と透明度を数値で指定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ショートドラマ制作会社GOKKOが運営する「ショートドラマLAB」の記事。ショート動画を投稿する前に確認する14項目のチェックリストを、企画・冒頭1〜2秒・構成編集テンポ・音・画面設計・コメント欄・投稿後の7つの工程に分けて公開している。「3秒に1回は視覚か聴覚に新しい刺激（カット・テロップ・効果音など）を置く」「9:16の画面を上下の黒帯なしで使い切る」「再生数ではなく、開始5秒の視聴維持率で振り返る」といった数値つきの基準が示されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。overlayフィルタ（＝動画に別の画像を重ねる機能のこと）でロゴやウォーターマークを合成する書き方を解説している。左上に置く場合は`overlay=10:10`、右下に置く場合は`main_w-overlay_w-20:main_h-overlay_h-20`という座標の式が示され、`colorchannelmixer=aa=0.5`でロゴの透明度を50%にする指定、`scale=150:-1`でロゴ画像自体を縮小する例も載っている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールを投稿する前に、3秒に1回は新しい展開（カット・テロップ・効果音など）が入っているか、9:16の画面を黒帯なしで使い切れているかをこのチェックリストで確認し、投稿後は再生数ではなく開始5秒の視聴維持率を基準に振り返られる。</p>
+      <p>自分のリール動画やクライアント向けの資料動画に、決まった位置・決まった透明度でロゴを合成する作業が、この座標の式と0.5という透明度の数値をそのまま当てはめるだけでできる。</p>
     </div>
-    <a class="source-link" href="https://gokkoclub.jp/shortdrama-lab/category/study/4703/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> gokkoclub.jp/shortdrama-lab/category/study/4703
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/watermark-overlay/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/watermark-overlay
     </a>
   </div>
 
@@ -270,27 +270,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2025-05-15</span>
+      <span class="date">2026-05-03</span>
     </div>
-    <h2>アクションカット、動きの途中で繋ぐ4手順</h2>
+    <h2>テロップの表示タイミング、秒数指定で制御</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>CapCutの編集ガイド記事。「アクションカット」（＝人物や物の動きの途中で、複数のアングルから撮った映像に切り替えてつなぐ編集技法のこと）の作り方を、切り替えポイントとなる動きを計画する→複数の角度やショットから動きを撮影する→動きのポイントでカットを入れて編集する→全体を見直し切り替えのタイミングを調整する、という4手順で解説している。パンチ、ジャンプ、ドアの開閉、キック、物を投げる動きなど6種類の具体例が挙げられている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。drawtextフィルタ（＝動画に文字を描画する機能のこと）で、テロップを決まった秒数だけ表示する書き方（`enable='between(t,2,5)'`で2〜5秒の間だけ表示）と、画面を横に流れるスクロールテロップの書き方（1秒あたり200px動く速度で`x=w-200*t`と指定）を、座標の計算式つきで解説している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、ドアの開閉やキックのような一つの動作を複数アングルから撮っておき、動きの途中でカットを割って繋ぐと、画面が切り替わっても勢いが途切れにくくなる。</p>
+      <p>漫画リールの文字を、せりふごとに決まった秒数だけ出す出し方や、画面を流れるクレジット風の出し方に変えられる。声もBGMも焼き込まん今の作り方のまま、文字の出し方の型を増やせる。</p>
     </div>
-    <a class="source-link" href="https://www.capcut.com/ja-jp/resource/master-the-cutting-on-action" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> capcut.com/ja-jp/resource/master-the-cutting-on-action
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/drawtext-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/drawtext-filter
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-02</span>
+    </div>
+    <h2>三分割構図ガイド線、処理時間も実測</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。drawbox・drawgridフィルタ（＝動画に矩形や格子線を描画する機能のこと）で、三分割構図のガイド線や画面中央の十字線を映像に重ねる書き方を解説している。1080p・30fps・120秒の素材に枠を3つ描いたときの処理時間は31.68秒で、フィルタなしの再エンコード（27.97秒）より1.9%長いという実測値も載っている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写の自撮り動画を撮り始めたら、編集前に撮った映像へ三分割のガイド線を一時的に重ねて構図を確認できる。処理時間が1.9%延びる程度と分かっているので、確認用に使うかどうか迷わんでええ。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/drawbox-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/drawbox-filter
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第52回<br>
-    2026年10月13日分
+    デイリートレンドレーダー 第53回<br>
+    2026年10月14日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-14.html">2026-10-14（第53回）</a>
       <a href="days/2026-10-13.html">2026-10-13（第52回）</a>
       <a href="days/2026-10-11.html">2026-10-11（第51回）</a>
       <a href="days/2026-10-10.html">2026-10-10（第50回）</a>

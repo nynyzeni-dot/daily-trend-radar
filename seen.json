@@ -904,6 +904,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/drawbox-filter/",
       "title": "三分割構図ガイド線、処理時間も実測",
       "date": "2026-10-14"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/lut3d-filter/",
+      "title": "LUT合成、彩度とコントラストを後から調整",
+      "date": "2026-10-15"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/chromakey-filter/",
+      "title": "グリーンバック合成、静止画背景は-framerate必須",
+      "date": "2026-10-15"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/vmaf-quality/",
+      "title": "画質をVMAFで点数化、CRFとの対応表",
+      "date": "2026-10-15"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/volume-detect/",
+      "title": "音量をdBFSで確認、音割れ・小声の基準値",
+      "date": "2026-10-15"
     }
   ]
 }

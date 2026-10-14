@@ -1,10 +1,11 @@
 {
-  "date": "2026-10-14",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-14.html",
+  "date": "2026-10-15",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-15.html",
   "items": [
-    {"title": "ロゴ合成、位置と透明度を数値で指定", "why": "自分のリールやクライアント向け動画に、座標の式と透明度0.5の数値でロゴを合成できる", "url": "https://ffmpeg-cookbook.com/ja/articles/watermark-overlay/"},
-    {"title": "テロップの表示タイミング、秒数指定で制御", "why": "漫画リールの文字を、決まった秒数だけ出す・画面を流れさせる出し方に変えられる", "url": "https://ffmpeg-cookbook.com/ja/articles/drawtext-filter/"},
-    {"title": "三分割構図ガイド線、処理時間も実測", "why": "実写撮影を始めたら、編集前に構図ガイド線を重ねて確認できる(処理時間は1.9%増で済む)", "url": "https://ffmpeg-cookbook.com/ja/articles/drawbox-filter/"}
+    {"title": "LUT合成、彩度とコントラストを後から調整", "why": "実写の自撮り動画を撮り始めたら、.cubeファイル一つで色味を統一したフィルムルックに加工でき、eqで効き目の強さも調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/lut3d-filter/"},
+    {"title": "グリーンバック合成、静止画背景は-framerate必須", "why": "実写の自撮り動画を撮り始めたら、グリーンバック映像をchromakeyで好きな背景に合成でき、静止画背景は-framerate指定でコマ落ちを防げる", "url": "https://ffmpeg-cookbook.com/ja/articles/chromakey-filter/"},
+    {"title": "画質をVMAFで点数化、CRFとの対応表", "why": "動画を書き出す前に元の動画と比べてlibvmafで画質の落ち具合を点数確認でき、圧縮設定の比較にも使える", "url": "https://ffmpeg-cookbook.com/ja/articles/vmaf-quality/"},
+    {"title": "音量をdBFSで確認、音割れ・小声の基準値", "why": "声を録ったらvolumedetectでmax_volumeとmean_volumeを数値確認し、音割れや録音レベル不足をそのまま判定できる", "url": "https://ffmpeg-cookbook.com/ja/articles/volume-detect/"}
   ]
 }

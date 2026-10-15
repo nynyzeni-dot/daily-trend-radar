@@ -924,6 +924,21 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/volume-detect/",
       "title": "音量をdBFSで確認、音割れ・小声の基準値",
       "date": "2026-10-15"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/loudness-normalization/",
+      "title": "音量をLUFSで揃える、loudnormの2パス手順",
+      "date": "2026-10-16"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/video-stabilization/",
+      "title": "手ブレ補正を2パスで、shakinessの数値調整",
+      "date": "2026-10-16"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/scene-detect/",
+      "title": "シーン切り替わり自動検出、scdetのしきい値",
+      "date": "2026-10-16"
     }
   ]
 }

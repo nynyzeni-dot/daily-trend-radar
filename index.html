@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第54回｜2026.10.15</title>
+<title>デイリートレンドレーダー 第55回｜2026.10.16</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第54回</span>
-    <h1>今日のトレンド調査<br><span class="accent">LUT・グリーンバック合成と画質・音量の数値チェック</span></h1>
-    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第55回</span>
+    <h1>今日のトレンド調査<br><span class="accent">音量平準化・シーン検出・手ブレ補正の数値設定</span></h1>
+    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの小技や。LUTで色味を統一する書き方、グリーンバック合成のコマンド、画質をVMAFで点数化する方法、音量をdBFSで確認する基準値を拾った。実写を撮り始めたらすぐ使える道具がまた増えたで。</p>
+    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は3本、どれもffmpegの小技や。声の音量をLUFSという基準で揃える2パスの手順、シーンの切り替わりを自動で探すしきい値設定、手ブレを2パスで補正する数値を拾った。実写を撮り始めたときにそのまま使える道具がまた増えたで。</p>
   </div>
 
-  <!-- 1: A 中 -->
-  <div class="card mid">
+  <!-- 1: A 高 -->
+  <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-11</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>LUT合成、彩度とコントラストを後から調整</h2>
+    <h2>音量をLUFSで揃える、loudnormの2パス手順</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。lut3dフィルタ（＝.cubeなどのLUTファイルを読み込んで映像の色を変換する機能のこと）の使い方を解説している。基本の書き方は`lut3d=file=my_lut.cube`で、`-pix_fmt yuv420p`を付け忘れると多くの機器で再生できない形式になってしまうという注意点が示されている。LUTのあとに`eq=contrast=0.9:saturation=0.8`のようにeqフィルタをつなげば、LUTの効きの強さをあとから弱めたり強めたりできる。</p>
+      <p>ffmpeg-cookbook.comの解説記事。loudnormフィルタ（＝音声の大きさをLUFSという基準値に自動で揃える機能のこと）の使い方を解説している。放送基準のEBU R128では統合ラウドネス(I)の目標値が-23LUFS、配信ではSpotifyが-14LUFSなど基準が違うと紹介されている。1パス目で`-af "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json"`のように計測だけ行い、2パス目でその計測値(measured_I・measured_TP・measured_LRA・measured_thresh)を渡すと、音量のばらつきを保ったまま正確に揃えられるという手順が示されている。クリッピング対策として、TPを-1以下に設定するとピークの割れを防げるとも書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、配布されている.cubeファイルを一つ指定するコマンドで色味を統一したフィルムルックに加工でき、eqを後ろにつなげば効き目の強さも自分で調整できる。</p>
+      <p>実写の自撮り動画を撮り始めたら、声の音量をloudnormの2パスでLUFSの目標値に揃えられ、TPを-1以下に設定すれば音割れも防げる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/lut3d-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/lut3d-filter
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/loudness-normalization/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/loudness-normalization
     </a>
   </div>
 
@@ -270,69 +270,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-17</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>グリーンバック合成、静止画背景は-framerate必須</h2>
+    <h2>手ブレ補正を2パスで、shakinessの数値調整</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。chromakeyフィルタ（＝グリーンバックなど指定した色を透明にして背景と合成する機能のこと）の使い方を解説している。`color:similarity:blend`の順で指定し、推奨値はsimilarityが0.08〜0.2、blendが0.0〜0.3。静止画を背景にする場合は`-framerate`を指定しないと25fpsとして読み込まれ、30fpsの映像が25fpsに落ちてしまうという注意点、緑のにじみが出たときはdespillフィルタを併用するか緑の彩度を下げるとよいという対処も書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。vidstabdetect/vidstabtransform（＝手ブレを検出して補正する2パスの機能のこと）の使い方を解説している。1パス目は`vidstabdetect=shakiness=8:accuracy=15`のように揺れを検出してモーションファイルを書き出し、shakinessは1〜10（既定5、激しい揺れでは値を上げる）、accuracyは1〜15（既定15、高いほど精度は上がるが遅くなる）という数値が示されている。2パス目の`vidstabtransform=smoothing=30:crop=black`で補正をかけ、smoothingは時間的平滑化の半径、cropは既定のkeepの代わりにblackを指定すれば縁を黒で塗れる。zoomで追加の拡大率も指定できる。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、グリーンバックの前で撮った映像をchromakeyで好きな背景画像や映像に合成でき、静止画を背景にするときは`-framerate`を指定すればコマ落ちを防げる。</p>
+      <p>実写の自撮り動画を撮り始めたら、揺れが気になる素材をvidstabdetectとvidstabtransformの2パスにかければ手ブレを補正でき、shakinessの値を上げ下げして効き目を調整できる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/chromakey-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/chromakey-filter
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-stabilization/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-stabilization
     </a>
   </div>
 
-  <!-- 3: A 高 -->
-  <div class="card high">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">2026-09-05</span>
-    </div>
-    <h2>画質をVMAFで点数化、CRFとの対応表</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。Netflixが開発した動画品質の指標VMAF（＝人間の見え方に近い基準で0〜100点をつける仕組みのこと）を、ffmpegのlibvmafフィルタで測る方法を解説している。元動画と圧縮後の動画を比べる書き方`[0:v][1:v]libvmaf`が示され、同じ素材でCRF18だとVMAF96.01、CRF32だと79.70まで下がるという対応表も載っている。ただしUbuntu/Debianのapt版ffmpegはlibvmafが無効でビルドされていることが多く、静的ビルドなどに切り替える必要があるという注意点も書かれている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>動画を書き出す前に、元の動画と書き出し後の動画をlibvmafで比べれば、圧縮でどれくらい画質が落ちたかを点数で確認でき、圧縮設定を変えて書き出し直したときも前の設定とこの点数で見比べられる。使っているffmpegがaptで入れたものなら、先にlibvmafが有効かどうかの確認がいる。</p>
-    </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/vmaf-quality/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/vmaf-quality
-    </a>
-  </div>
-
-  <!-- 4: A 中 -->
+  <!-- 3: A 中 -->
   <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-07-05</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>音量をdBFSで確認、音割れ・小声の基準値</h2>
+    <h2>シーン切り替わり自動検出、scdetのしきい値</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。volumedetectフィルタ（＝音声の平均音量・最大音量をdBFS単位で調べる機能のこと）の使い方を解説している。書き方は`-af volumedetect -f null /dev/null`で、結果は標準エラー出力に表示される。max_volumeが0.0dBに近いと音割れ（クリッピング）の疑いがあり、mean_volumeが-30dBFS以下なら録音レベルが低い可能性がある、という具体的な基準値が示されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。scdetフィルタ（＝前のフレームとの差をスコア化してシーンの切り替わりを探す機能のこと）の使い方を解説している。書き方は`scdet=t=10,metadata=mode=print:key=lavfi.scd.score`で、t=10はスコアが10以上なら切り替わりとみなす指定。デフォルトは10で、値を下げる（例:5）と誤検出が増え、上げる（例:40）と見逃しが増える。ドキュメンタリーや映画では8〜14が目安とされている。検出した時刻をそのまま`-ss`に渡すと失敗しやすいため、前後に0.2〜0.5秒の余白を取ることが勧められている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画で声を録ったら、このコマンド一つでmax_volumeとmean_volumeを数値で確認し、0.0dBに近ければ音割れの疑い、-30dBFS以下なら録音レベルが低い、という基準でそのまま判定できる。</p>
+      <p>実写の自撮り動画を撮り始めたら、長尺の素材をscdetに流すだけでシーンの切り替わり点を自動で探せて、しきい値を8〜14あたりに調整すれば見逃しと誤検出のバランスを取れる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/volume-detect/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/volume-detect
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/scene-detect/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/scene-detect
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第54回<br>
-    2026年10月15日分
+    デイリートレンドレーダー 第55回<br>
+    2026年10月16日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-16.html">2026-10-16（第55回）</a>
       <a href="days/2026-10-15.html">2026-10-15（第54回）</a>
       <a href="days/2026-10-14.html">2026-10-14（第53回）</a>
       <a href="days/2026-10-13.html">2026-10-13（第52回）</a>

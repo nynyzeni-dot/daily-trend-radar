@@ -1,10 +1,11 @@
 {
-  "date": "2026-10-16",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-16.html",
+  "date": "2026-10-17",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-17.html",
   "items": [
-    {"title": "音量をLUFSで揃える、loudnormの2パス手順", "why": "声の音量をloudnormの2パスでLUFSの目標値に揃えられ、TPを-1以下に設定すれば音割れも防げる", "url": "https://ffmpeg-cookbook.com/ja/articles/loudness-normalization/"},
-    {"title": "手ブレ補正を2パスで、shakinessの数値調整", "why": "揺れが気になる素材をvidstabdetectとvidstabtransformの2パスにかければ手ブレを補正でき、shakinessの値を上げ下げして効き目を調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/video-stabilization/"},
-    {"title": "シーン切り替わり自動検出、scdetのしきい値", "why": "長尺の素材をscdetに流すだけでシーンの切り替わり点を自動で探せて、しきい値を8〜14あたりに調整すれば見逃しと誤検出のバランスを取れる", "url": "https://ffmpeg-cookbook.com/ja/articles/scene-detect/"}
+    {"title": "連番画像を動画化、表示秒数を数値で指定", "why": "コマ画像を動画にするとき、-framerateの値で1枚ごとの表示秒数を数値で決められる", "url": "https://ffmpeg-cookbook.com/ja/articles/slideshow-timelapse/"},
+    {"title": "BGMを重ねる、ダッキングで声を守る型", "why": "BGMをamixで重ねる前にvolumeで下げておけば声を潰さずに音量バランスが取れ、声が入る場面だけsidechaincompressでダッキングも組める", "url": "https://ffmpeg-cookbook.com/ja/articles/add-bgm/"},
+    {"title": "動画のつなぎ目、xfadeでフェード/ワイプ", "why": "xfadeのtransitionをfadeやslideleftなどに指定し、offsetを「クリップ1の長さ－duration」で計算すれば場面転換に動きを付けられる", "url": "https://ffmpeg-cookbook.com/ja/articles/xfade/"},
+    {"title": "横長素材を9:16縦動画に、ぼかし背景で変換", "why": "ぼかし背景パディングのコマンドでboxblurした背景に縮小した映像を重ねれば、黒帯を目立たせずに9:16の縦動画に変換できる", "url": "https://ffmpeg-cookbook.com/ja/articles/vertical-video/"}
   ]
 }

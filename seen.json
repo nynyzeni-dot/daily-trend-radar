@@ -939,6 +939,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/scene-detect/",
       "title": "シーン切り替わり自動検出、scdetのしきい値",
       "date": "2026-10-16"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/slideshow-timelapse/",
+      "title": "連番画像を動画化、表示秒数を数値で指定",
+      "date": "2026-10-17"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/add-bgm/",
+      "title": "BGMを重ねる、ダッキングで声を守る型",
+      "date": "2026-10-17"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/xfade/",
+      "title": "動画のつなぎ目、xfadeでフェード/ワイプ",
+      "date": "2026-10-17"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/vertical-video/",
+      "title": "横長素材を9:16縦動画に、ぼかし背景で変換",
+      "date": "2026-10-17"
     }
   ]
 }

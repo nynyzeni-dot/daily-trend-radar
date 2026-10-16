@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第55回｜2026.10.16</title>
+<title>デイリートレンドレーダー 第56回｜2026.10.17</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第55回</span>
-    <h1>今日のトレンド調査<br><span class="accent">音量平準化・シーン検出・手ブレ補正の数値設定</span></h1>
-    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第56回</span>
+    <h1>今日のトレンド調査<br><span class="accent">静止画動画化・場面転換・BGMミックス・縦動画変換の手口</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は3本、どれもffmpegの小技や。声の音量をLUFSという基準で揃える2パスの手順、シーンの切り替わりを自動で探すしきい値設定、手ブレを2パスで補正する数値を拾った。実写を撮り始めたときにそのまま使える道具がまた増えたで。</p>
+    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。コマ画像を動画にする基本の設定から、場面転換・BGMミックス・縦動画への変換まで拾えたから、実写が始まってもそのまま使える道具がまた増えたで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -251,17 +251,17 @@
       <span class="badge high">重要度：高</span>
       <span class="date">2026-04-08</span>
     </div>
-    <h2>音量をLUFSで揃える、loudnormの2パス手順</h2>
+    <h2>連番画像を動画化、表示秒数を数値で指定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。loudnormフィルタ（＝音声の大きさをLUFSという基準値に自動で揃える機能のこと）の使い方を解説している。放送基準のEBU R128では統合ラウドネス(I)の目標値が-23LUFS、配信ではSpotifyが-14LUFSなど基準が違うと紹介されている。1パス目で`-af "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json"`のように計測だけ行い、2パス目でその計測値(measured_I・measured_TP・measured_LRA・measured_thresh)を渡すと、音量のばらつきを保ったまま正確に揃えられるという手順が示されている。クリッピング対策として、TPを-1以下に設定するとピークの割れを防げるとも書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。静止画から動画を作る手順を解説している。連番画像を`-framerate 1 -i img%03d.png`のように読み込めば1枚1秒で表示でき、`-framerate 1/3`にすると1枚3秒になるなど、入力側のframerateの値で1枚あたりの表示秒数を指定できる。1枚の画像だけなら`-loop 1 -i image.png -t 5`で5秒の動画にできる。大きさの違う画像を混ぜるとフィルタが途中で再初期化されるため、scaleとpadで先に同じ大きさへ揃える必要があるとも説明されている。動きを付けたい場合はzoompanフィルタで「Ken Burnsズーム」も使える。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、声の音量をloudnormの2パスでLUFSの目標値に揃えられ、TPを-1以下に設定すれば音割れも防げる。</p>
+      <p>コマ画像を動画にするとき、-framerateの値で1枚ごとの表示秒数を数値で決められ、間を置きたいコマだけ-loopと-tで長さを変えられる。動かしたいコマだけKen Burnsズームでじわっと拡大する見せ方も試せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/loudness-normalization/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/loudness-normalization
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/slideshow-timelapse/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/slideshow-timelapse
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-04-24</span>
     </div>
-    <h2>手ブレ補正を2パスで、shakinessの数値調整</h2>
+    <h2>BGMを重ねる、ダッキングで声を守る型</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。vidstabdetect/vidstabtransform（＝手ブレを検出して補正する2パスの機能のこと）の使い方を解説している。1パス目は`vidstabdetect=shakiness=8:accuracy=15`のように揺れを検出してモーションファイルを書き出し、shakinessは1〜10（既定5、激しい揺れでは値を上げる）、accuracyは1〜15（既定15、高いほど精度は上がるが遅くなる）という数値が示されている。2パス目の`vidstabtransform=smoothing=30:crop=black`で補正をかけ、smoothingは時間的平滑化の半径、cropは既定のkeepの代わりにblackを指定すれば縁を黒で塗れる。zoomで追加の拡大率も指定できる。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画にBGMを重ねる手順を解説している。amixフィルタ（＝複数の音声を1本に合成する機能のこと）で動画の音声とBGMを合成し、先に`volume=0.3`のようにBGMだけ音量を下げてから合成するとバランスが取れると説明されている。目安として、Vlog（環境音を残す映像）では元音声1.0に対しBGMを0.15〜0.25にする例が示されている。ナレーションのときだけBGMを下げる「ダッキング」はsidechaincompressフィルタで実現でき、設定例として`threshold=0.02:ratio=6:attack=200:release=1000`が挙げられている。BGMが短い場合はaloopでループさせ、afadeで冒頭と末尾にフェードを入れる方法も紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、揺れが気になる素材をvidstabdetectとvidstabtransformの2パスにかければ手ブレを補正でき、shakinessの値を上げ下げして効き目を調整できる。</p>
+      <p>Vlogのような声入りの動画を撮るようになったら、BGMをamixで重ねる前にvolumeで下げておけば声を潰さずに音量バランスが取れるし、声が入る場面だけsidechaincompressで自動的にBGMを下げるダッキングも組める。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-stabilization/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-stabilization
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/add-bgm/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/add-bgm
     </a>
   </div>
 
@@ -291,27 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-07-06</span>
     </div>
-    <h2>シーン切り替わり自動検出、scdetのしきい値</h2>
+    <h2>動画のつなぎ目、xfadeでフェード/ワイプ</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。scdetフィルタ（＝前のフレームとの差をスコア化してシーンの切り替わりを探す機能のこと）の使い方を解説している。書き方は`scdet=t=10,metadata=mode=print:key=lavfi.scd.score`で、t=10はスコアが10以上なら切り替わりとみなす指定。デフォルトは10で、値を下げる（例:5）と誤検出が増え、上げる（例:40）と見逃しが増える。ドキュメンタリーや映画では8〜14が目安とされている。検出した時刻をそのまま`-ss`に渡すと失敗しやすいため、前後に0.2〜0.5秒の余白を取ることが勧められている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。xfadeフィルタで2本の動画をつなぐ際に、クロスフェードやワイプなどのトランジション（＝場面の切り替え効果のこと）を付ける方法を解説している。transition（種類）・duration（長さ・秒）・offset（開始位置）の3つのパラメータで効果を指定し、offsetは「クリップ1の長さ－duration」で計算するという式が示されている。fade・slideleft・wipeleft・zoominなど複数の種類が挙げられ、音声も同時につなぐにはacrossfadeフィルタを組み合わせる必要があるとも説明されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の自撮り動画を撮り始めたら、長尺の素材をscdetに流すだけでシーンの切り替わり点を自動で探せて、しきい値を8〜14あたりに調整すれば見逃しと誤検出のバランスを取れる。</p>
+      <p>場面を切り替えるところを今はただのカットでつないでいるなら、xfadeのtransitionをfadeやslideleftなどに指定し、offsetを「クリップ1の長さ－duration」で計算すれば、場面転換にフェードやスライドの動きを付けられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/scene-detect/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/scene-detect
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/xfade/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/xfade
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-26</span>
+    </div>
+    <h2>横長素材を9:16縦動画に、ぼかし背景で変換</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。横長(16:9)の動画を9:16の縦動画(1080×1920px)に変換する方法を4つ解説している。中央を切り出すcrop、上下に黒帯を付けるpad、元の映像をぼかして背景にして縮小した映像を重ねる「ぼかし背景パディング」（記事内で推奨されている方法）、切り出す位置をx座標で指定する方法が紹介されている。ぼかし背景の例では`boxblur=20:3`で背景をぼかし、overlayフィルタで中央に重ねるコマンドが示されている。出力後はffprobeでSAR（画素の縦横比）を確認し、1:1でなければsetsarで補正する手順も書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>横長で撮ってしまった素材があるときは、ぼかし背景パディングのコマンドでboxblurした背景に縮小した映像を重ねれば、黒帯を目立たせずに9:16の縦動画に変換できる。出力後はffprobeでSARを確認しておくと安全。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/vertical-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/vertical-video
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第55回<br>
-    2026年10月16日分
+    デイリートレンドレーダー 第56回<br>
+    2026年10月17日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-17.html">2026-10-17（第56回）</a>
       <a href="days/2026-10-16.html">2026-10-16（第55回）</a>
       <a href="days/2026-10-15.html">2026-10-15（第54回）</a>
       <a href="days/2026-10-14.html">2026-10-14（第53回）</a>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第56回｜2026.10.17</title>
+<title>デイリートレンドレーダー 第57回｜2026.10.18</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第56回</span>
-    <h1>今日のトレンド調査<br><span class="accent">静止画動画化・場面転換・BGMミックス・縦動画変換の手口</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第57回</span>
+    <h1>今日のトレンド調査<br><span class="accent">色味調整・音声フェード・複合フィルタ・暗転検出の手口</span></h1>
     <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。コマ画像を動画にする基本の設定から、場面転換・BGMミックス・縦動画への変換まで拾えたから、実写が始まってもそのまま使える道具がまた増えたで。</p>
+    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。色味の数値調整・BGMや声のフェード・複数処理の一括化・暗転の自動検出と、漫画リールの編集をもう一段細かく詰められる道具が増えたで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-05-04</span>
     </div>
-    <h2>連番画像を動画化、表示秒数を数値で指定</h2>
+    <h2>映像の明るさ・彩度、eqで数値調整</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。静止画から動画を作る手順を解説している。連番画像を`-framerate 1 -i img%03d.png`のように読み込めば1枚1秒で表示でき、`-framerate 1/3`にすると1枚3秒になるなど、入力側のframerateの値で1枚あたりの表示秒数を指定できる。1枚の画像だけなら`-loop 1 -i image.png -t 5`で5秒の動画にできる。大きさの違う画像を混ぜるとフィルタが途中で再初期化されるため、scaleとpadで先に同じ大きさへ揃える必要があるとも説明されている。動きを付けたい場合はzoompanフィルタで「Ken Burnsズーム」も使える。</p>
+      <p>ffmpeg-cookbook.comの解説記事。eqフィルタで明るさ・コントラスト・ガンマ（＝中間調の明るさを補正する値のこと）・彩度を数値で調整する方法を解説している。brightness（明るさ）は-1.0〜1.0、contrastは実用的には0.8〜1.5程度、gammaは0.1〜10.0、saturation（彩度）は0.0〜3.0の範囲で指定できる。「暗い映像を明るくする」には`eq=brightness=0.1:contrast=1.1:gamma=1.3`、「色あせた映像を鮮やかにする」には`eq=saturation=1.4:contrast=1.15`というコマンドが例として示されている。brightnessを上げすぎると白飛びするため0.03〜0.05程度に抑えてgamma=1.1と組み合わせるよう勧められており、eqは画素を書き換えるため必ず再エンコードになり`-c:v copy`は使えないとも説明されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>コマ画像を動画にするとき、-framerateの値で1枚ごとの表示秒数を数値で決められ、間を置きたいコマだけ-loopと-tで長さを変えられる。動かしたいコマだけKen Burnsズームでじわっと拡大する見せ方も試せる。</p>
+      <p>漫画リールの素材が暗い・色が薄いと感じたら、eqのbrightness・contrast・saturation・gammaを本文の数値（暗い映像なら brightness=0.1:contrast=1.1:gamma=1.3、色あせなら saturation=1.4:contrast=1.15）のまま当てて調整できる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/slideshow-timelapse/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/slideshow-timelapse
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/eq-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/eq-filter
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-24</span>
+      <span class="date">2026-04-13</span>
     </div>
-    <h2>BGMを重ねる、ダッキングで声を守る型</h2>
+    <h2>BGMや声のフェード、afadeのカーブ指定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画にBGMを重ねる手順を解説している。amixフィルタ（＝複数の音声を1本に合成する機能のこと）で動画の音声とBGMを合成し、先に`volume=0.3`のようにBGMだけ音量を下げてから合成するとバランスが取れると説明されている。目安として、Vlog（環境音を残す映像）では元音声1.0に対しBGMを0.15〜0.25にする例が示されている。ナレーションのときだけBGMを下げる「ダッキング」はsidechaincompressフィルタで実現でき、設定例として`threshold=0.02:ratio=6:attack=200:release=1000`が挙げられている。BGMが短い場合はaloopでループさせ、afadeで冒頭と末尾にフェードを入れる方法も紹介されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。afadeフィルタで音声の冒頭・末尾を滑らかに増減させる方法を解説している。t=in/outで方向、st（開始位置・秒）、d（長さ・秒）を指定し、フェードアウトの開始位置は「全体の長さ－フェードの長さ」で計算する（例：60秒の音声を10秒かけて終わらせるなら`st=50:d=10`）。カーブの種類も選べ、tri（直線・既定）のほかqsin（サイン波の1/4で自然に聞こえる）、hsin（緩やかなS字）、exp（急激）、log（最初が急で後が緩やか）が紹介されている。推奨の長さとして、会話はフェードイン0.3〜0.5秒・フェードアウト1〜2秒、音楽はフェードイン1〜2秒・フェードアウト2〜4秒という目安も示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>Vlogのような声入りの動画を撮るようになったら、BGMをamixで重ねる前にvolumeで下げておけば声を潰さずに音量バランスが取れるし、声が入る場面だけsidechaincompressで自動的にBGMを下げるダッキングも組める。</p>
+      <p>漫画リールの声やBGMの出入りが唐突だと感じたら、`afade=t=in:st=0:d=3`のように秒数を指定し`curve=qsin`を付ければサイン波の自然なカーブで始められる。会話には0.3〜0.5秒、音楽には1〜2秒という本文の目安の秒数をそのまま当てて試せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/add-bgm/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/add-bgm
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/audio-fade/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/audio-fade
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-07-06</span>
+      <span class="date">2026-05-06</span>
     </div>
-    <h2>動画のつなぎ目、xfadeでフェード/ワイプ</h2>
+    <h2>複数の処理を1コマンドに、filter_complex</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。xfadeフィルタで2本の動画をつなぐ際に、クロスフェードやワイプなどのトランジション（＝場面の切り替え効果のこと）を付ける方法を解説している。transition（種類）・duration（長さ・秒）・offset（開始位置）の3つのパラメータで効果を指定し、offsetは「クリップ1の長さ－duration」で計算するという式が示されている。fade・slideleft・wipeleft・zoominなど複数の種類が挙げられ、音声も同時につなぐにはacrossfadeフィルタを組み合わせる必要があるとも説明されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。複数の入出力や処理の分岐・合流があるときに使う`-filter_complex`の書き方を解説している。単純な処理は`-vf`/`-af`で足りるが、ロゴ画像を重ねる（overlay）、1つの映像から本編用とサムネイル用の2種類を同時に書き出す（scaleを2本）、映像と音声を別々のチェーンで同時に処理するといった場合に`-filter_complex`を使うと説明されている。`,`は同じチェーン内で次のフィルタへつなぐ記号、`;`は別のチェーンを始める記号で、`[0:v]`のように入力番号と種類でストリームを指定し、`[名前]`でラベルを付けて`-map`で出力に割り当てる、という書き方の基本も示されている。同じ映像を複数回使うときはsplitで複製する必要があるとも書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>場面を切り替えるところを今はただのカットでつないでいるなら、xfadeのtransitionをfadeやslideleftなどに指定し、offsetを「クリップ1の長さ－duration」で計算すれば、場面転換にフェードやスライドの動きを付けられる。</p>
+      <p>ロゴ合成・BGM合成・サムネ書き出しなどを今は別々のコマンドで済ませているなら、`-filter_complex`で`[0:v]`に`[名前]`のラベルを付けてつなげば、overlayやscaleを使った複数の処理を1回のffmpeg実行にまとめられる。同じ映像を2つの用途に使うときはsplitで複製すればいい。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/xfade/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/xfade
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/filtergraph-basics/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/filtergraph-basics
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-26</span>
+      <span class="date">2026-04-15</span>
     </div>
-    <h2>横長素材を9:16縦動画に、ぼかし背景で変換</h2>
+    <h2>暗転の区切り、blackdetectで自動検出</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。横長(16:9)の動画を9:16の縦動画(1080×1920px)に変換する方法を4つ解説している。中央を切り出すcrop、上下に黒帯を付けるpad、元の映像をぼかして背景にして縮小した映像を重ねる「ぼかし背景パディング」（記事内で推奨されている方法）、切り出す位置をx座標で指定する方法が紹介されている。ぼかし背景の例では`boxblur=20:3`で背景をぼかし、overlayフィルタで中央に重ねるコマンドが示されている。出力後はffprobeでSAR（画素の縦横比）を確認し、1:1でなければsetsarで補正する手順も書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。blackdetectフィルタで、映像内の画面がほぼ真っ黒な区間（暗転やシーンの区切り）を自動で見つける方法を解説している。デフォルトはd（最短の長さ）=2.0秒、pic_th（黒とみなす画面の割合）=0.98、pix_th（黒とみなす画素のしきい値）=0.10で、結果は開始時刻・終了時刻・長さとして標準エラー出力に出る。短い暗転も拾いたいときはdを下げる（1フレームだけならd=0）、圧縮ノイズで完全な黒にならない場合はpix_thを0.15〜0.20に上げる、暗転演出や黒背景のテロップによる誤検出を減らすにはpic_thを0.99に上げる、という調整の目安も示されている。結果をgrepしてファイルに保存すれば自動分割などの処理にそのまま使えるとも説明されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>横長で撮ってしまった素材があるときは、ぼかし背景パディングのコマンドでboxblurした背景に縮小した映像を重ねれば、黒帯を目立たせずに9:16の縦動画に変換できる。出力後はffprobeでSARを確認しておくと安全。</p>
+      <p>複数のカットをつないだ漫画リールで暗転や場面の区切りを目で探しているなら、blackdetectを流せば黒い区間の開始・終了時刻を自動で一覧にできる。短い暗転も拾いたいときは`d=0`、誤検出が多いときは`pic_th=0.99`のように本文の数値で調整できる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/vertical-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/vertical-video
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/black-detect/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/black-detect
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第56回<br>
-    2026年10月17日分
+    デイリートレンドレーダー 第57回<br>
+    2026年10月18日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-18.html">2026-10-18（第57回）</a>
       <a href="days/2026-10-17.html">2026-10-17（第56回）</a>
       <a href="days/2026-10-16.html">2026-10-16（第55回）</a>
       <a href="days/2026-10-15.html">2026-10-15（第54回）</a>

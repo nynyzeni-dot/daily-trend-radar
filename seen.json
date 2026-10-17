@@ -959,6 +959,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/vertical-video/",
       "title": "横長素材を9:16縦動画に、ぼかし背景で変換",
       "date": "2026-10-17"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/eq-filter/",
+      "title": "映像の明るさ・彩度、eqで数値調整",
+      "date": "2026-10-18"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/audio-fade/",
+      "title": "BGMや声のフェード、afadeのカーブ指定",
+      "date": "2026-10-18"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/filtergraph-basics/",
+      "title": "複数の処理を1コマンドに、filter_complex",
+      "date": "2026-10-18"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/black-detect/",
+      "title": "暗転の区切り、blackdetectで自動検出",
+      "date": "2026-10-18"
     }
   ]
 }

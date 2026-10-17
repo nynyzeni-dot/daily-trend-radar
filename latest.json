@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-17.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-18.html",
   "items": [
-    {"title": "連番画像を動画化、表示秒数を数値で指定", "why": "コマ画像を動画にするとき、-framerateの値で1枚ごとの表示秒数を数値で決められる", "url": "https://ffmpeg-cookbook.com/ja/articles/slideshow-timelapse/"},
-    {"title": "BGMを重ねる、ダッキングで声を守る型", "why": "BGMをamixで重ねる前にvolumeで下げておけば声を潰さずに音量バランスが取れ、声が入る場面だけsidechaincompressでダッキングも組める", "url": "https://ffmpeg-cookbook.com/ja/articles/add-bgm/"},
-    {"title": "動画のつなぎ目、xfadeでフェード/ワイプ", "why": "xfadeのtransitionをfadeやslideleftなどに指定し、offsetを「クリップ1の長さ－duration」で計算すれば場面転換に動きを付けられる", "url": "https://ffmpeg-cookbook.com/ja/articles/xfade/"},
-    {"title": "横長素材を9:16縦動画に、ぼかし背景で変換", "why": "ぼかし背景パディングのコマンドでboxblurした背景に縮小した映像を重ねれば、黒帯を目立たせずに9:16の縦動画に変換できる", "url": "https://ffmpeg-cookbook.com/ja/articles/vertical-video/"}
+    {"title": "映像の明るさ・彩度、eqで数値調整", "why": "eqのbrightness・contrast・saturation・gammaを本文の数値のまま当てて、暗い・色あせた素材を調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/eq-filter/"},
+    {"title": "BGMや声のフェード、afadeのカーブ指定", "why": "afade=t=in:st=0:d=3にcurve=qsinを付ければ自然なカーブで始まり、会話0.3〜0.5秒・音楽1〜2秒の目安で試せる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-fade/"},
+    {"title": "複数の処理を1コマンドに、filter_complex", "why": "-filter_complexで[0:v]に[名前]のラベルを付けてつなげば、overlayやscaleの複数処理を1回のffmpeg実行にまとめられる", "url": "https://ffmpeg-cookbook.com/ja/articles/filtergraph-basics/"},
+    {"title": "暗転の区切り、blackdetectで自動検出", "why": "blackdetectを流せば黒い区間の開始・終了時刻を自動で一覧にでき、d=0やpic_th=0.99で調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/black-detect/"}
   ]
 }

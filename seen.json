@@ -979,6 +979,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/black-detect/",
       "title": "暗転の区切り、blackdetectで自動検出",
       "date": "2026-10-18"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/boxblur-filter/",
+      "title": "指定範囲だけぼかす、cropと重ねる型",
+      "date": "2026-10-19"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/two-pass-encoding/",
+      "title": "ファイルサイズ、2パスで狙った値に",
+      "date": "2026-10-19"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/change-video-speed/",
+      "title": "再生速度の変更、setptsの係数は逆数",
+      "date": "2026-10-19"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/subtitles/",
+      "title": "SRT字幕の焼き込み、位置とサイズ指定",
+      "date": "2026-10-19"
     }
   ]
 }

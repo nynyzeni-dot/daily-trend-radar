@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-18.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-19.html",
   "items": [
-    {"title": "映像の明るさ・彩度、eqで数値調整", "why": "eqのbrightness・contrast・saturation・gammaを本文の数値のまま当てて、暗い・色あせた素材を調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/eq-filter/"},
-    {"title": "BGMや声のフェード、afadeのカーブ指定", "why": "afade=t=in:st=0:d=3にcurve=qsinを付ければ自然なカーブで始まり、会話0.3〜0.5秒・音楽1〜2秒の目安で試せる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-fade/"},
-    {"title": "複数の処理を1コマンドに、filter_complex", "why": "-filter_complexで[0:v]に[名前]のラベルを付けてつなげば、overlayやscaleの複数処理を1回のffmpeg実行にまとめられる", "url": "https://ffmpeg-cookbook.com/ja/articles/filtergraph-basics/"},
-    {"title": "暗転の区切り、blackdetectで自動検出", "why": "blackdetectを流せば黒い区間の開始・終了時刻を自動で一覧にでき、d=0やpic_th=0.99で調整できる", "url": "https://ffmpeg-cookbook.com/ja/articles/black-detect/"}
+    {"title": "指定範囲だけぼかす、cropと重ねる型", "why": "cropで範囲を切り出してboxblurをかけoverlayで重ねれば、映像の一部だけ隠したり背景をぼかせる。半径は8〜15が目安", "url": "https://ffmpeg-cookbook.com/ja/articles/boxblur-filter/"},
+    {"title": "ファイルサイズ、2パスで狙った値に", "why": "目標サイズからビットレートを計算し、同じ値で2パスのコマンドに当てればファイルサイズをぴったり近づけて書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/two-pass-encoding/"},
+    {"title": "再生速度の変更、setptsの係数は逆数", "why": "音声が無い作りなら`-vf \"setpts=0.5*PTS\"`のように映像だけの指定で2倍速・半分速をそのまま試せる", "url": "https://ffmpeg-cookbook.com/ja/articles/change-video-speed/"},
+    {"title": "SRT字幕の焼き込み、位置とサイズ指定", "why": "せりふをSRTファイルにまとめてsubtitlesフィルタで一括焼き込みにでき、Alignmentで位置もまとめて指定できる", "url": "https://ffmpeg-cookbook.com/ja/articles/subtitles/"}
   ]
 }

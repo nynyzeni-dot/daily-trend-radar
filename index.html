@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第57回｜2026.10.18</title>
+<title>デイリートレンドレーダー 第58回｜2026.10.19</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第57回</span>
-    <h1>今日のトレンド調査<br><span class="accent">色味調整・音声フェード・複合フィルタ・暗転検出の手口</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第58回</span>
+    <h1>今日のトレンド調査<br><span class="accent">部分ぼかし・2パスでサイズ指定・速度変更・字幕焼き込みの手口</span></h1>
     <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。色味の数値調整・BGMや声のフェード・複数処理の一括化・暗転の自動検出と、漫画リールの編集をもう一段細かく詰められる道具が増えたで。</p>
+    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。範囲指定でのぼかし、ファイルサイズをぴったり収める2パス計算、音声処理いらずの速度変更、字幕ファイルの一括焼き込みと、今のPC作業にそのまま足せる道具が増えたで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-05-04</span>
+      <span class="date">2026-04-16</span>
     </div>
-    <h2>映像の明るさ・彩度、eqで数値調整</h2>
+    <h2>指定範囲だけぼかす、cropと重ねる型</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。eqフィルタで明るさ・コントラスト・ガンマ（＝中間調の明るさを補正する値のこと）・彩度を数値で調整する方法を解説している。brightness（明るさ）は-1.0〜1.0、contrastは実用的には0.8〜1.5程度、gammaは0.1〜10.0、saturation（彩度）は0.0〜3.0の範囲で指定できる。「暗い映像を明るくする」には`eq=brightness=0.1:contrast=1.1:gamma=1.3`、「色あせた映像を鮮やかにする」には`eq=saturation=1.4:contrast=1.15`というコマンドが例として示されている。brightnessを上げすぎると白飛びするため0.03〜0.05程度に抑えてgamma=1.1と組み合わせるよう勧められており、eqは画素を書き換えるため必ず再エンコードになり`-c:v copy`は使えないとも説明されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。boxblurフィルタ（＝ボックス状に画素を平均化してぼかす機能のこと）の使い方を解説している。輝度のぼかし半径(luma_radius)と繰り返し回数(luma_power)を指定する書き方で、軽いぼかしは`boxblur=2:1`、強いぼかしは`boxblur=10:3`。映像全体ではなく一部だけぼかしたい場合は、`crop`で範囲を切り出してboxblurをかけ、`overlay`で元の位置に重ねる書き方（`[0]crop=200:100:50:50,boxblur=10[b];[0][b]overlay=50:50`）が示されている。1080pの輝度では半径の上限が540で、はっきりぼかすには8〜15程度が目安とされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの素材が暗い・色が薄いと感じたら、eqのbrightness・contrast・saturation・gammaを本文の数値（暗い映像なら brightness=0.1:contrast=1.1:gamma=1.3、色あせなら saturation=1.4:contrast=1.15）のまま当てて調整できる。</p>
+      <p>映像の一部だけ隠したり背景をぼかしたいとき、cropで範囲を切り出してboxblurをかけoverlayで重ねる型をそのまま使え、半径は8〜15を目安に調整できる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/eq-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/eq-filter
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/boxblur-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/boxblur-filter
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-13</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>BGMや声のフェード、afadeのカーブ指定</h2>
+    <h2>ファイルサイズ、2パスで狙った値に</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。afadeフィルタで音声の冒頭・末尾を滑らかに増減させる方法を解説している。t=in/outで方向、st（開始位置・秒）、d（長さ・秒）を指定し、フェードアウトの開始位置は「全体の長さ－フェードの長さ」で計算する（例：60秒の音声を10秒かけて終わらせるなら`st=50:d=10`）。カーブの種類も選べ、tri（直線・既定）のほかqsin（サイン波の1/4で自然に聞こえる）、hsin（緩やかなS字）、exp（急激）、log（最初が急で後が緩やか）が紹介されている。推奨の長さとして、会話はフェードイン0.3〜0.5秒・フェードアウト1〜2秒、音楽はフェードイン1〜2秒・フェードアウト2〜4秒という目安も示されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。2パスエンコード（＝1回目で映像を分析し、2回目でその結果を使って本番のエンコードを行う方式のこと）の書き方を解説している。目標ファイルサイズから必要なビットレートを計算する式（合計ビットレート(kbps)=目標サイズ(MB)×8000÷動画時間(秒)）が示され、240秒の動画を音声128kbps込みで50MBに収めたい場合、映像ビットレートを1500kbpsに設定する計算例が載っている。1パス目は`-pass 1 -an -f null /dev/null`で分析だけ行い、2パス目に同じ`-b:v`の値で`-pass 2`の本番書き出しをする、という手順。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの声やBGMの出入りが唐突だと感じたら、`afade=t=in:st=0:d=3`のように秒数を指定し`curve=qsin`を付ければサイン波の自然なカーブで始められる。会話には0.3〜0.5秒、音楽には1〜2秒という本文の目安の秒数をそのまま当てて試せる。</p>
+      <p>動画のファイルサイズを狙った値に収めたいとき、この計算式で必要な映像ビットレートを出し、同じ値を使った2パスのコマンドにそのまま当てれば、サイズをぴったり近づけて書き出せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/audio-fade/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/audio-fade
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/two-pass-encoding/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/two-pass-encoding
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-06</span>
+      <span class="date">2026-04-24</span>
     </div>
-    <h2>複数の処理を1コマンドに、filter_complex</h2>
+    <h2>再生速度の変更、setptsの係数は逆数</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。複数の入出力や処理の分岐・合流があるときに使う`-filter_complex`の書き方を解説している。単純な処理は`-vf`/`-af`で足りるが、ロゴ画像を重ねる（overlay）、1つの映像から本編用とサムネイル用の2種類を同時に書き出す（scaleを2本）、映像と音声を別々のチェーンで同時に処理するといった場合に`-filter_complex`を使うと説明されている。`,`は同じチェーン内で次のフィルタへつなぐ記号、`;`は別のチェーンを始める記号で、`[0:v]`のように入力番号と種類でストリームを指定し、`[名前]`でラベルを付けて`-map`で出力に割り当てる、という書き方の基本も示されている。同じ映像を複数回使うときはsplitで複製する必要があるとも書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画の再生速度を変える書き方を解説している。映像は`setpts`で、音声は`atempo`で別々に指定し、係数の向きが違う点（映像は速度倍率の逆数、音声は倍率そのまま）を説明している。2倍速なら`setpts=0.5*PTS`と`atempo=2.0`、4倍速なら`setpts=0.25*PTS`と`atempo=4.0`という組み合わせの例が載っている。音声を使わない場合は`-vf "setpts=0.25*PTS" -an`のように映像だけ変更すればよいとも書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>ロゴ合成・BGM合成・サムネ書き出しなどを今は別々のコマンドで済ませているなら、`-filter_complex`で`[0:v]`に`[名前]`のラベルを付けてつなげば、overlayやscaleを使った複数の処理を1回のffmpeg実行にまとめられる。同じ映像を2つの用途に使うときはsplitで複製すればいい。</p>
+      <p>声もBGMも無い今の作り方でテンポを変えたい場面があれば、音声処理は不要なので`-vf "setpts=0.5*PTS"`のように映像だけの指定で、2倍速や半分速をそのまま試せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/filtergraph-basics/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/filtergraph-basics
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/change-video-speed/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/change-video-speed
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-15</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>暗転の区切り、blackdetectで自動検出</h2>
+    <h2>SRT字幕の焼き込み、位置とサイズ指定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。blackdetectフィルタで、映像内の画面がほぼ真っ黒な区間（暗転やシーンの区切り）を自動で見つける方法を解説している。デフォルトはd（最短の長さ）=2.0秒、pic_th（黒とみなす画面の割合）=0.98、pix_th（黒とみなす画素のしきい値）=0.10で、結果は開始時刻・終了時刻・長さとして標準エラー出力に出る。短い暗転も拾いたいときはdを下げる（1フレームだけならd=0）、圧縮ノイズで完全な黒にならない場合はpix_thを0.15〜0.20に上げる、暗転演出や黒背景のテロップによる誤検出を減らすにはpic_thを0.99に上げる、という調整の目安も示されている。結果をgrepしてファイルに保存すれば自動分割などの処理にそのまま使えるとも説明されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。subtitlesフィルタでSRT字幕ファイルを動画に焼き込む方法を解説している。基本は`-vf subtitles=subtitle.srt`で、`force_style='FontSize=24'`のように文字サイズを指定でき、位置は`Alignment`の数値（2が下中央＝既定、6が上中央、10が中央）で変えられる。ASS形式専用の`ass`フィルタも紹介されており、見た目は同じだが`force_style`は使えず、独自フォントを使う場合は`fontsdir`でフォルダを指定するとされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>複数のカットをつないだ漫画リールで暗転や場面の区切りを目で探しているなら、blackdetectを流せば黒い区間の開始・終了時刻を自動で一覧にできる。短い暗転も拾いたいときは`d=0`、誤検出が多いときは`pic_th=0.99`のように本文の数値で調整できる。</p>
+      <p>せりふを1行ずつ指定して焼き込んでいる作業なら、SRTファイルにまとめて`subtitles`フィルタで一括焼き込みに変えられる。`Alignment=6`で上中央に出すなど、位置をまとめて指定できる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/black-detect/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/black-detect
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/subtitles/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/subtitles
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第57回<br>
-    2026年10月18日分
+    デイリートレンドレーダー 第58回<br>
+    2026年10月19日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-19.html">2026-10-19（第58回）</a>
       <a href="days/2026-10-18.html">2026-10-18（第57回）</a>
       <a href="days/2026-10-17.html">2026-10-17（第56回）</a>
       <a href="days/2026-10-16.html">2026-10-16（第55回）</a>

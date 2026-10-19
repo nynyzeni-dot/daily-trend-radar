@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-19.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-20.html",
   "items": [
-    {"title": "指定範囲だけぼかす、cropと重ねる型", "why": "cropで範囲を切り出してboxblurをかけoverlayで重ねれば、映像の一部だけ隠したり背景をぼかせる。半径は8〜15が目安", "url": "https://ffmpeg-cookbook.com/ja/articles/boxblur-filter/"},
-    {"title": "ファイルサイズ、2パスで狙った値に", "why": "目標サイズからビットレートを計算し、同じ値で2パスのコマンドに当てればファイルサイズをぴったり近づけて書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/two-pass-encoding/"},
-    {"title": "再生速度の変更、setptsの係数は逆数", "why": "音声が無い作りなら`-vf \"setpts=0.5*PTS\"`のように映像だけの指定で2倍速・半分速をそのまま試せる", "url": "https://ffmpeg-cookbook.com/ja/articles/change-video-speed/"},
-    {"title": "SRT字幕の焼き込み、位置とサイズ指定", "why": "せりふをSRTファイルにまとめてsubtitlesフィルタで一括焼き込みにでき、Alignmentで位置もまとめて指定できる", "url": "https://ffmpeg-cookbook.com/ja/articles/subtitles/"}
+    {"title": "Claude Code、放置セッションを自動圧縮", "why": "Claude Codeに自動アイドル圧縮が入り、20万トークン超のセッションを54分放置しても1時間のキャッシュ切れ前に圧縮され、次のメッセージが重い再処理にならない", "url": "https://code.claude.com/docs/en/changelog#v2.1.299"},
+    {"title": "GIF作成、パレット生成の2パス手順", "why": "ffmpegのpalettegen→paletteuseの2パスでfps10〜15・幅320〜480pxにすればSNS共有向けのGIFプレビューを作れ、動きの多い場面はbayerディザでサイズを抑えられる", "url": "https://ffmpeg-cookbook.com/ja/articles/gif-creation/"},
+    {"title": "動画の代表フレーム、thumbnailフィルタの仕組み", "why": "ffmpegのthumbnailフィルタに流せば明るさ・色が平均的な1枚を自動で選べ、-q:v 2のような画質指定でJPEGとして書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/extract-thumbnail/"},
+    {"title": "長尺素材の分割、segmentで再エンコードなし", "why": "ffmpegの-f segment -segment_time 60 -reset_timestamps 1で長尺素材を60秒ごとの連番ファイルに再エンコードなしで自動分割できる", "url": "https://ffmpeg-cookbook.com/ja/articles/split-video/"}
   ]
 }

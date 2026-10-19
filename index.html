@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第58回｜2026.10.19</title>
+<title>デイリートレンドレーダー 第59回｜2026.10.20</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第58回</span>
-    <h1>今日のトレンド調査<br><span class="accent">部分ぼかし・2パスでサイズ指定・速度変更・字幕焼き込みの手口</span></h1>
-    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第59回</span>
+    <h1>今日のトレンド調査<br><span class="accent">放置セッション自動圧縮・GIF作成・代表フレーム選出・長尺分割の手口</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールのニュースは該当なしやった。週報との重複チェックも含めて探したけど、直近7日以内で具体性のある新顔が見つからんかった。動画の作り方は4本、どれもffmpegの手口や。範囲指定でのぼかし、ファイルサイズをぴったり収める2パス計算、音声処理いらずの速度変更、字幕ファイルの一括焼き込みと、今のPC作業にそのまま足せる道具が増えたで。</p>
+    <p>今日はAIツールのネタも1本拾えたで。Claude Codeに放置したセッションを自動で圧縮する機能が入って、長い作業を休憩で離れても次が重くならへんようになった。動画の作り方はffmpegの手口を3本、GIFのプレビュー作り・代表フレームの自動選び・長尺素材の自動分割と、どれも今の制作にそのまま足せる道具や。</p>
   </div>
 
-  <!-- 1: A 高 -->
+  <!-- 1: B 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-16</span>
+      <span class="date">2026-10-14</span>
     </div>
-    <h2>指定範囲だけぼかす、cropと重ねる型</h2>
+    <h2>Claude Code、放置セッションを自動圧縮</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。boxblurフィルタ（＝ボックス状に画素を平均化してぼかす機能のこと）の使い方を解説している。輝度のぼかし半径(luma_radius)と繰り返し回数(luma_power)を指定する書き方で、軽いぼかしは`boxblur=2:1`、強いぼかしは`boxblur=10:3`。映像全体ではなく一部だけぼかしたい場合は、`crop`で範囲を切り出してboxblurをかけ、`overlay`で元の位置に重ねる書き方（`[0]crop=200:100:50:50,boxblur=10[b];[0][b]overlay=50:50`）が示されている。1080pの輝度では半径の上限が540で、はっきりぼかすには8〜15程度が目安とされている。</p>
+      <p>10月14日付のClaude Codeの更新（バージョン2.1.299）で「アイドル圧縮」（＝操作せず放置した会話を、自動で要約・圧縮する機能のこと）が追加された。20万トークンを超える会話を約54分放置すると、1時間で切れるプロンプトキャッシュ（＝直前までの会話を安く再利用できる仕組みのこと）が切れる前に自動で圧縮され、次にメッセージを送ったときに会話全体を読み直す処理が発生しなくなる。`CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS`で圧縮が始まるトークン数の基準を変更でき、設定ファイルの`"idleCompaction": false`で機能自体を無効にもできる。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>映像の一部だけ隠したり背景をぼかしたいとき、cropで範囲を切り出してboxblurをかけoverlayで重ねる型をそのまま使え、半径は8〜15を目安に調整できる。</p>
+      <p>議事録整理やアンケート集計のような長いやり取りをClaude Codeで進めている最中に昼休みなどで1時間近く放置しても、設定を何もしなくても会話が自動で圧縮され、次のメッセージが重い再処理にならずそのまま続けられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/boxblur-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/boxblur-filter
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.299" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.299
     </a>
   </div>
 
@@ -272,38 +272,38 @@
       <span class="badge high">重要度：高</span>
       <span class="date">2026-04-08</span>
     </div>
-    <h2>ファイルサイズ、2パスで狙った値に</h2>
+    <h2>GIF作成、パレット生成の2パス手順</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。2パスエンコード（＝1回目で映像を分析し、2回目でその結果を使って本番のエンコードを行う方式のこと）の書き方を解説している。目標ファイルサイズから必要なビットレートを計算する式（合計ビットレート(kbps)=目標サイズ(MB)×8000÷動画時間(秒)）が示され、240秒の動画を音声128kbps込みで50MBに収めたい場合、映像ビットレートを1500kbpsに設定する計算例が載っている。1パス目は`-pass 1 -an -f null /dev/null`で分析だけ行い、2パス目に同じ`-b:v`の値で`-pass 2`の本番書き出しをする、という手順。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画をGIFに変換する方法を解説している。GIFは1フレームにつき256色しか使えないため、素材専用のパレットを作る「2パス処理」（＝1回目に動画から最適な256色のパレット画像を作り、2回目にそのパレットを当てて書き出す方式のこと）が勧められている。1080p・30fpsの素材で比較すると、fps15・幅480pxで6.8MB、fps12・幅320pxで2.4MB、fps10・幅240pxで1.1MBという実測のファイルサイズが示されている。ディザリング（＝色の段差をなじませる処理のこと）の種類も紹介され、`bayer`は動きの多い動画でサイズを一番小さくできる、`floyd_steinberg`はグラデーションが滑らかになる、と使い分けが書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>動画のファイルサイズを狙った値に収めたいとき、この計算式で必要な映像ビットレートを出し、同じ値を使った2パスのコマンドにそのまま当てれば、サイズをぴったり近づけて書き出せる。</p>
+      <p>漫画リールの一部を切り出してGIFのプレビューを作りたいとき、fpsを10〜15・幅を320〜480pxにしたコマンドでSNS共有向けのサイズに収められ、動きの多い場面は`bayer`を指定すればファイルサイズを抑えられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/two-pass-encoding/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/two-pass-encoding
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/gif-creation/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/gif-creation
     </a>
   </div>
 
-  <!-- 3: A 中 -->
-  <div class="card mid">
+  <!-- 3: A 高 -->
+  <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-24</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>再生速度の変更、setptsの係数は逆数</h2>
+    <h2>動画の代表フレーム、thumbnailフィルタの仕組み</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画の再生速度を変える書き方を解説している。映像は`setpts`で、音声は`atempo`で別々に指定し、係数の向きが違う点（映像は速度倍率の逆数、音声は倍率そのまま）を説明している。2倍速なら`setpts=0.5*PTS`と`atempo=2.0`、4倍速なら`setpts=0.25*PTS`と`atempo=4.0`という組み合わせの例が載っている。音声を使わない場合は`-vf "setpts=0.25*PTS" -an`のように映像だけ変更すればよいとも書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画からサムネイル画像を抽出する方法を解説している。基本は`-ss`で位置を指定し`-vframes 1`で1枚だけ書き出す書き方。`thumbnail`フィルタ（＝既定で100フレームを1グループにして、明るさや色の分布がそのグループの平均に一番近いフレームを自動で選ぶ機能のこと）も紹介されており、`thumbnail=300`のように数値でグループの大きさを変えられる（大きいほど広い範囲から選ぶが処理は遅くなる）。JPEGの画質は`-q:v`で2〜31の範囲で指定でき、値が小さいほど高画質になるとされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>声もBGMも無い今の作り方でテンポを変えたい場面があれば、音声処理は不要なので`-vf "setpts=0.5*PTS"`のように映像だけの指定で、2倍速や半分速をそのまま試せる。</p>
+      <p>投稿する動画の代表的な1枚を目で探して選んでいるなら、`thumbnail`フィルタに流せば明るさや色が平均的な1枚を自動で選べ、`-q:v 2`のような画質指定でJPEGとして書き出せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/change-video-speed/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/change-video-speed
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/extract-thumbnail/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/extract-thumbnail
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-06-27</span>
     </div>
-    <h2>SRT字幕の焼き込み、位置とサイズ指定</h2>
+    <h2>長尺素材の分割、segmentで再エンコードなし</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。subtitlesフィルタでSRT字幕ファイルを動画に焼き込む方法を解説している。基本は`-vf subtitles=subtitle.srt`で、`force_style='FontSize=24'`のように文字サイズを指定でき、位置は`Alignment`の数値（2が下中央＝既定、6が上中央、10が中央）で変えられる。ASS形式専用の`ass`フィルタも紹介されており、見た目は同じだが`force_style`は使えず、独自フォントを使う場合は`fontsdir`でフォルダを指定するとされている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画を再エンコードせずに複数のファイルへ分割する方法を解説している。`-f segment -segment_time 60 -reset_timestamps 1`という書き方で、60秒ごとに連番ファイルへ自動で分割できる。`-c copy`を使うため画質はそのまま保たれるが、キーフレーム単位でしか切れず、60秒指定でも実際は58秒や62秒になることがあるという注意点も書かれている。正確な時刻で切りたい場合は`-ss`と`-t`を使い再エンコードする方法も紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>せりふを1行ずつ指定して焼き込んでいる作業なら、SRTファイルにまとめて`subtitles`フィルタで一括焼き込みに変えられる。`Alignment=6`で上中央に出すなど、位置をまとめて指定できる。</p>
+      <p>長く撮った素材から複数のコマ・カット分を切り出す作業があれば、`-f segment -segment_time 60 -reset_timestamps 1`のコマンド一つで連番ファイルに自動分割でき、画質を保ったまま済ませられる。正確な秒数で切りたいときは`-ss`と`-t`を使う方法に切り替えられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/subtitles/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/subtitles
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/split-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/split-video
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第58回<br>
-    2026年10月19日分
+    デイリートレンドレーダー 第59回<br>
+    2026年10月20日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-20.html">2026-10-20（第59回）</a>
       <a href="days/2026-10-19.html">2026-10-19（第58回）</a>
       <a href="days/2026-10-18.html">2026-10-18（第57回）</a>
       <a href="days/2026-10-17.html">2026-10-17（第56回）</a>

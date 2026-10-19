@@ -999,6 +999,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/subtitles/",
       "title": "SRT字幕の焼き込み、位置とサイズ指定",
       "date": "2026-10-19"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.299",
+      "title": "Claude Code、放置セッションを自動圧縮",
+      "date": "2026-10-20"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/gif-creation/",
+      "title": "GIF作成、パレット生成の2パス手順",
+      "date": "2026-10-20"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/extract-thumbnail/",
+      "title": "動画の代表フレーム、thumbnailフィルタの仕組み",
+      "date": "2026-10-20"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/split-video/",
+      "title": "長尺素材の分割、segmentで再エンコードなし",
+      "date": "2026-10-20"
     }
   ]
 }

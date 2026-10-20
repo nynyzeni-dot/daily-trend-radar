@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第59回｜2026.10.20</title>
+<title>デイリートレンドレーダー 第60回｜2026.10.21</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第59回</span>
-    <h1>今日のトレンド調査<br><span class="accent">放置セッション自動圧縮・GIF作成・代表フレーム選出・長尺分割の手口</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第60回</span>
+    <h1>今日のトレンド調査<br><span class="accent">自動モード対話設定・画面録画・色味補正・一括変換の手口</span></h1>
     <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのネタも1本拾えたで。Claude Codeに放置したセッションを自動で圧縮する機能が入って、長い作業を休憩で離れても次が重くならへんようになった。動画の作り方はffmpegの手口を3本、GIFのプレビュー作り・代表フレームの自動選び・長尺素材の自動分割と、どれも今の制作にそのまま足せる道具や。</p>
+    <p>今日はAIツールのネタも1本拾えたで。Claude Codeに自動モードの初期設定を対話形式で案内してくれる新コマンドが入った。動画の作り方はffmpegの手口を3本、画面録画・色味の演出・複数ファイルの一括変換と、制作や資料作りにそのまま足せる道具がまた増えたで。</p>
   </div>
 
   <!-- 1: B 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-14</span>
+      <span class="date">2026-10-19</span>
     </div>
-    <h2>Claude Code、放置セッションを自動圧縮</h2>
+    <h2>Claude Code、自動モード設定を対話形式で案内</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>10月14日付のClaude Codeの更新（バージョン2.1.299）で「アイドル圧縮」（＝操作せず放置した会話を、自動で要約・圧縮する機能のこと）が追加された。20万トークンを超える会話を約54分放置すると、1時間で切れるプロンプトキャッシュ（＝直前までの会話を安く再利用できる仕組みのこと）が切れる前に自動で圧縮され、次にメッセージを送ったときに会話全体を読み直す処理が発生しなくなる。`CLAUDE_CODE_IDLE_COMPACT_MIN_TOKENS`で圧縮が始まるトークン数の基準を変更でき、設定ファイルの`"idleCompaction": false`で機能自体を無効にもできる。</p>
+      <p>10月19日付のClaude Codeの更新（バージョン2.1.304）で、新しいスラッシュコマンド「/auto-mode-setup」が追加された。実行すると、今のプロジェクトの内容や直前までの会話を見た上で、普段の作業の特徴を踏まえて自動モード（＝確認を一つずつ聞かずに指示をそのまま実行させる設定のこと）の組み方を対話形式で案内してくれる。Amazon Bedrock・Google Vertex AI・Microsoft Foundry経由の利用や、テレメトリーを切った状態でも使えるようになった、とも書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>議事録整理やアンケート集計のような長いやり取りをClaude Codeで進めている最中に昼休みなどで1時間近く放置しても、設定を何もしなくても会話が自動で圧縮され、次のメッセージが重い再処理にならずそのまま続けられる。</p>
+      <p>Claude Codeで普段の作業を進める中で自動モードの設定を自分で一つずつ詰めなくても、`/auto-mode-setup`と打つだけで直前までの使い方に合わせた設定を対話形式で組んでもらえる。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.299" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.299
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.304" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.304
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-04-24</span>
     </div>
-    <h2>GIF作成、パレット生成の2パス手順</h2>
+    <h2>画面録画、ffmpegでOS別の具体コマンド</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画をGIFに変換する方法を解説している。GIFは1フレームにつき256色しか使えないため、素材専用のパレットを作る「2パス処理」（＝1回目に動画から最適な256色のパレット画像を作り、2回目にそのパレットを当てて書き出す方式のこと）が勧められている。1080p・30fpsの素材で比較すると、fps15・幅480pxで6.8MB、fps12・幅320pxで2.4MB、fps10・幅240pxで1.1MBという実測のファイルサイズが示されている。ディザリング（＝色の段差をなじませる処理のこと）の種類も紹介され、`bayer`は動きの多い動画でサイズを一番小さくできる、`floyd_steinberg`はグラデーションが滑らかになる、と使い分けが書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。パソコンの画面をffmpegで直接録画する方法を解説している。Windowsは`gdigrab`（画面全体や指定ウィンドウを録る機能）か`ddagrab`（GPUを使うDesktop Duplication API）、Macは`avfoundation`、Linuxは`x11grab`（Wayland環境では別ツールが必要）と、OSごとに使う名前が違うと紹介されている。録画時の数値例として、フレームレート30・`-preset ultrafast -crf 23`（画質と処理負荷のバランス）が示され、再生互換性のため`-pix_fmt yuv420p`を付ける点や、カーソルを除きたいときの`-draw_mouse 0`も挙げられている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの一部を切り出してGIFのプレビューを作りたいとき、fpsを10〜15・幅を320〜480pxにしたコマンドでSNS共有向けのサイズに収められ、動きの多い場面は`bayer`を指定すればファイルサイズを抑えられる。</p>
+      <p>顧客向け資料やLP制作、Notion・LINE Botの操作をそのまま動画で見せたいとき、使っているパソコンに合わせて`gdigrab`や`avfoundation`のコマンドを打つだけで画面を直接録画でき、`-preset ultrafast -crf 23`の数値をそのまま使える。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/gif-creation/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/gif-creation
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/screen-recording/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/screen-recording
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-05-07</span>
     </div>
-    <h2>動画の代表フレーム、thumbnailフィルタの仕組み</h2>
+    <h2>色味の演出、curvesフィルタのS字カーブ</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画からサムネイル画像を抽出する方法を解説している。基本は`-ss`で位置を指定し`-vframes 1`で1枚だけ書き出す書き方。`thumbnail`フィルタ（＝既定で100フレームを1グループにして、明るさや色の分布がそのグループの平均に一番近いフレームを自動で選ぶ機能のこと）も紹介されており、`thumbnail=300`のように数値でグループの大きさを変えられる（大きいほど広い範囲から選ぶが処理は遅くなる）。JPEGの画質は`-q:v`で2〜31の範囲で指定でき、値が小さいほど高画質になるとされている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。curvesフィルタ（＝画面の明暗ごとに色の出方を個別に調整できる機能のこと）の使い方を解説している。`curves=master='0/0 0.25/0.15 0.5/0.5 0.75/0.85 1/1'`のように入力値／出力値の制御点をS字に並べるとコントラストが上がり、`curves=red='0/0 0.5/0.6 1/1'`のようにRGBの1色だけを調整することもできる。組み込みプリセットとして`vintage`や`cross_process`など11種類が用意されている。強いカーブをかけるとブロックノイズや白飛びが出やすいため、`0.25/0.2`・`0.75/0.8`程度の控えめな値から試すことが勧められている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>投稿する動画の代表的な1枚を目で探して選んでいるなら、`thumbnail`フィルタに流せば明るさや色が平均的な1枚を自動で選べ、`-q:v 2`のような画質指定でJPEGとして書き出せる。</p>
+      <p>漫画リールの背景や実写素材の色味を演出したいとき、curvesフィルタのS字の制御点を`0.25/0.2`程度の控えめな値から入れればコントラストを上げられ、`vintage`などのプリセットを指定するだけでも質感を変えられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/extract-thumbnail/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/extract-thumbnail
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/curves-filter/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/curves-filter
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-06-27</span>
+      <span class="date">2026-04-14</span>
     </div>
-    <h2>長尺素材の分割、segmentで再エンコードなし</h2>
+    <h2>複数ファイル一括変換、並列処理の具体例</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画を再エンコードせずに複数のファイルへ分割する方法を解説している。`-f segment -segment_time 60 -reset_timestamps 1`という書き方で、60秒ごとに連番ファイルへ自動で分割できる。`-c copy`を使うため画質はそのまま保たれるが、キーフレーム単位でしか切れず、60秒指定でも実際は58秒や62秒になることがあるという注意点も書かれている。正確な時刻で切りたい場合は`-ss`と`-t`を使い再エンコードする方法も紹介されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。複数の動画ファイルを一括で変換する方法をシェルスクリプトで解説している。forループで指定フォルダの動画をまとめて変換する基本形に加え、GNU parallelの`-j 4`や`xargs -P 4`で並列数を指定して処理を速める方法が紹介されている。変換済みのファイルは判定してスキップできるため、処理が途中で止まっても再実行で続きから進められる。上書き事故を防ぐため、初回は`-n`を付けて試すこと、入力と同じ拡張子・同じパスで出力しないことが注意点として挙げられている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>長く撮った素材から複数のコマ・カット分を切り出す作業があれば、`-f segment -segment_time 60 -reset_timestamps 1`のコマンド一つで連番ファイルに自動分割でき、画質を保ったまま済ませられる。正確な秒数で切りたいときは`-ss`と`-t`を使う方法に切り替えられる。</p>
+      <p>複数のリール素材をまとめて書き出す作業があるとき、forループのシェルスクリプトに`xargs -P 4`や`-j 4`を組み合わせれば一括で並列処理でき、`-n`を付けて試してから本番実行すれば上書き事故も防げる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/split-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/split-video
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/batch-convert/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/batch-convert
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第59回<br>
-    2026年10月20日分
+    デイリートレンドレーダー 第60回<br>
+    2026年10月21日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-21.html">2026-10-21（第60回）</a>
       <a href="days/2026-10-20.html">2026-10-20（第59回）</a>
       <a href="days/2026-10-19.html">2026-10-19（第58回）</a>
       <a href="days/2026-10-18.html">2026-10-18（第57回）</a>

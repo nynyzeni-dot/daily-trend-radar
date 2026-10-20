@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-20.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-21.html",
   "items": [
-    {"title": "Claude Code、放置セッションを自動圧縮", "why": "Claude Codeに自動アイドル圧縮が入り、20万トークン超のセッションを54分放置しても1時間のキャッシュ切れ前に圧縮され、次のメッセージが重い再処理にならない", "url": "https://code.claude.com/docs/en/changelog#v2.1.299"},
-    {"title": "GIF作成、パレット生成の2パス手順", "why": "ffmpegのpalettegen→paletteuseの2パスでfps10〜15・幅320〜480pxにすればSNS共有向けのGIFプレビューを作れ、動きの多い場面はbayerディザでサイズを抑えられる", "url": "https://ffmpeg-cookbook.com/ja/articles/gif-creation/"},
-    {"title": "動画の代表フレーム、thumbnailフィルタの仕組み", "why": "ffmpegのthumbnailフィルタに流せば明るさ・色が平均的な1枚を自動で選べ、-q:v 2のような画質指定でJPEGとして書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/extract-thumbnail/"},
-    {"title": "長尺素材の分割、segmentで再エンコードなし", "why": "ffmpegの-f segment -segment_time 60 -reset_timestamps 1で長尺素材を60秒ごとの連番ファイルに再エンコードなしで自動分割できる", "url": "https://ffmpeg-cookbook.com/ja/articles/split-video/"}
+    {"title": "Claude Code、自動モード設定を対話形式で案内", "why": "Claude Codeに/auto-mode-setupコマンドが入り、直前までの使い方に合わせた自動モードの設定を対話形式で組んでもらえる", "url": "https://code.claude.com/docs/en/changelog#v2.1.304"},
+    {"title": "画面録画、ffmpegでOS別の具体コマンド", "why": "顧客向け資料やLP制作、Notion・LINE Botの操作を見せたいとき、パソコンに合わせてgdigrabやavfoundationのコマンドで画面を直接録画できる", "url": "https://ffmpeg-cookbook.com/ja/articles/screen-recording/"},
+    {"title": "色味の演出、curvesフィルタのS字カーブ", "why": "漫画リールの背景や実写素材の色味を演出したいとき、curvesフィルタのS字の制御点を控えめな値から入れればコントラストを上げられる", "url": "https://ffmpeg-cookbook.com/ja/articles/curves-filter/"},
+    {"title": "複数ファイル一括変換、並列処理の具体例", "why": "複数のリール素材をまとめて書き出す作業で、forループのシェルスクリプトにxargs -P 4を組み合わせれば一括で並列処理できる", "url": "https://ffmpeg-cookbook.com/ja/articles/batch-convert/"}
   ]
 }

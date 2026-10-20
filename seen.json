@@ -1019,6 +1019,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/split-video/",
       "title": "長尺素材の分割、segmentで再エンコードなし",
       "date": "2026-10-20"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.304",
+      "title": "Claude Code、自動モード設定を対話形式で案内",
+      "date": "2026-10-21"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/screen-recording/",
+      "title": "画面録画、ffmpegでOS別の具体コマンド",
+      "date": "2026-10-21"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/curves-filter/",
+      "title": "色味の演出、curvesフィルタのS字カーブ",
+      "date": "2026-10-21"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/batch-convert/",
+      "title": "複数ファイル一括変換、並列処理の具体例",
+      "date": "2026-10-21"
     }
   ]
 }

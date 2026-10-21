@@ -1039,6 +1039,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/batch-convert/",
       "title": "複数ファイル一括変換、並列処理の具体例",
       "date": "2026-10-21"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/",
+      "title": "画質と容量、CRFの数値を実測比較",
+      "date": "2026-10-22"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/",
+      "title": "動画の位置情報、タグの確認と削除の手順",
+      "date": "2026-10-22"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/",
+      "title": "メール添付の動画、容量を逆算して圧縮",
+      "date": "2026-10-22"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/",
+      "title": "iPhone動画が開けない時の切り分け方",
+      "date": "2026-10-22"
     }
   ]
 }

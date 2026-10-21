@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第60回｜2026.10.21</title>
+<title>デイリートレンドレーダー 第61回｜2026.10.22</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第60回</span>
-    <h1>今日のトレンド調査<br><span class="accent">自動モード対話設定・画面録画・色味補正・一括変換の手口</span></h1>
-    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第61回</span>
+    <h1>今日のトレンド調査<br><span class="accent">CRF実測・位置情報タグ削除・メール添付圧縮・iPhone動画の切り分け</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのネタも1本拾えたで。Claude Codeに自動モードの初期設定を対話形式で案内してくれる新コマンドが入った。動画の作り方はffmpegの手口を3本、画面録画・色味の演出・複数ファイルの一括変換と、制作や資料作りにそのまま足せる道具がまた増えたで。</p>
+    <p>今日はAIツールのニュースは拾えんかったわ。動画の作り方はffmpegの地味な実務ネタを4本、CRFの数値実測・位置情報タグの消し方・メール添付の圧縮・iPhone動画が開けん時の切り分け手順と並んだで。資料作りや動画のやり取りでそのまま使える系やね。</p>
   </div>
 
-  <!-- 1: B 高 -->
+  <!-- 1: A 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
+      <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-19</span>
+      <span class="date">2026-09-10</span>
     </div>
-    <h2>Claude Code、自動モード設定を対話形式で案内</h2>
+    <h2>画質と容量、CRFの数値を実測比較</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>10月19日付のClaude Codeの更新（バージョン2.1.304）で、新しいスラッシュコマンド「/auto-mode-setup」が追加された。実行すると、今のプロジェクトの内容や直前までの会話を見た上で、普段の作業の特徴を踏まえて自動モード（＝確認を一つずつ聞かずに指示をそのまま実行させる設定のこと）の組み方を対話形式で案内してくれる。Amazon Bedrock・Google Vertex AI・Microsoft Foundry経由の利用や、テレメトリーを切った状態でも使えるようになった、とも書かれている。</p>
+      <p>ffmpeg-cookbook.comの検証記事。同じ10秒・1080pの動画をffmpegのH.264（preset fast）でCRF23・28・36の3段階に書き出し、3秒地点の画像を拡大して見比べている。ファイルサイズはCRF23で3,686,686バイト（元から84.2%減）、CRF28で1,827,517バイト（92.2%減）、CRF36で734,363バイト（96.8%減）という具体的な数値で示されている。再圧縮した動画をさらに圧縮すると失った精細さは戻らないこと、小さい文字が読めるか・動く場面を一時停止して確認することが、自分の動画を確認する際のポイントとして挙げられている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>Claude Codeで普段の作業を進める中で自動モードの設定を自分で一つずつ詰めなくても、`/auto-mode-setup`と打つだけで直前までの使い方に合わせた設定を対話形式で組んでもらえる。</p>
+      <p>書き出すときに画質と容量のどちらを優先するか迷ったら、CRFを23・28・36のどれにするかで容量がどれくらい変わるかの目安にそのまま使える。元のファイルから書き出す（圧縮済みのコピーをさらに圧縮しない）ことと、小さい文字が読めるか・動く場面を一時停止して確認するという2点も、自分の書き出しの確認にそのまま使える。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.304" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.304
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-compression-quality
     </a>
   </div>
 
@@ -270,40 +270,40 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-04-24</span>
+      <span class="date">2026-05-19</span>
     </div>
-    <h2>画面録画、ffmpegでOS別の具体コマンド</h2>
+    <h2>動画の位置情報、タグの確認と削除の手順</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。パソコンの画面をffmpegで直接録画する方法を解説している。Windowsは`gdigrab`（画面全体や指定ウィンドウを録る機能）か`ddagrab`（GPUを使うDesktop Duplication API）、Macは`avfoundation`、Linuxは`x11grab`（Wayland環境では別ツールが必要）と、OSごとに使う名前が違うと紹介されている。録画時の数値例として、フレームレート30・`-preset ultrafast -crf 23`（画質と処理負荷のバランス）が示され、再生互換性のため`-pix_fmt yuv420p`を付ける点や、カーソルを除きたいときの`-draw_mouse 0`も挙げられている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画ファイルに埋め込まれた位置情報などのタグを確認・削除する方法を扱っている。確認はffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`で行い、削除は`ffmpeg -map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`で再エンコードせずに書き出す方法が示されている。架空の位置情報や独自タグを付けた動画での検証では、「タグを一括削除」を使うとMKVとMP4の両方でタグが残らなかったが、「既知の個人タグを削除」ではMKVで独自タグが残ったと報告されている。回転情報や映像データに埋め込まれた情報（H.264のSEIなど）は`-c copy`では消えないとも書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>顧客向け資料やLP制作、Notion・LINE Botの操作をそのまま動画で見せたいとき、使っているパソコンに合わせて`gdigrab`や`avfoundation`のコマンドを打つだけで画面を直接録画でき、`-preset ultrafast -crf 23`の数値をそのまま使える。</p>
+      <p>動画のファイルに位置情報が残っていないか不安なときは、まずffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`でタグを確認し、`-map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`のコマンドで再エンコードせずに位置情報とチャプターを落として書き出せる。「タグを一括削除」の方が「既知の個人タグを削除」より確実にタグが残らないという違いも、使い分けの判断にそのまま使える。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/screen-recording/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/screen-recording
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove
     </a>
   </div>
 
-  <!-- 3: A 高 -->
-  <div class="card high">
+  <!-- 3: A 中 -->
+  <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">2026-05-07</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-30</span>
     </div>
-    <h2>色味の演出、curvesフィルタのS字カーブ</h2>
+    <h2>メール添付の動画、容量を逆算して圧縮</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。curvesフィルタ（＝画面の明暗ごとに色の出方を個別に調整できる機能のこと）の使い方を解説している。`curves=master='0/0 0.25/0.15 0.5/0.5 0.75/0.85 1/1'`のように入力値／出力値の制御点をS字に並べるとコントラストが上がり、`curves=red='0/0 0.5/0.6 1/1'`のようにRGBの1色だけを調整することもできる。組み込みプリセットとして`vintage`や`cross_process`など11種類が用意されている。強いカーブをかけるとブロックノイズや白飛びが出やすいため、`0.25/0.2`・`0.75/0.8`程度の控えめな値から試すことが勧められている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。メールに動画を添付して送るときの容量の抑え方を扱っている。個人用Gmailの添付上限は合計25MB、Outlookは条件により20MBや10MBとされ、上限から逆算してビットレートを決める式として「合計＝目標MB×8000÷秒数」「映像＝合計−音声」が示されている。ffmpegコマンド例として`ffmpeg -i input.mp4 -vcodec libx264 -crf 28 -preset slow -acodec aac -b:a 96k output.mp4`でのCRF圧縮や、`-vf scale=-2:720`で解像度を720pに落とす方法、`-b:v 1000k`のように目標ビットレートを指定する2パスエンコードのコマンドも載っている。10秒・音声なしの動画で23.28MBから1.83MBまで縮んだ例も示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの背景や実写素材の色味を演出したいとき、curvesフィルタのS字の制御点を`0.25/0.2`程度の控えめな値から入れればコントラストを上げられ、`vintage`などのプリセットを指定するだけでも質感を変えられる。</p>
+      <p>動画をメールに添付して送りたいときは、Gmailなら25MB・Outlookなら20MBや10MBという上限を踏まえて、「合計＝目標MB×8000÷秒数」の式で映像のビットレートを逆算してから、`-crf 28`や`-vf scale=-2:720`のコマンドで容量を抑えて書き出せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/curves-filter/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/curves-filter
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email
     </a>
   </div>
 
@@ -312,27 +312,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-14</span>
+      <span class="date">2026-05-19</span>
     </div>
-    <h2>複数ファイル一括変換、並列処理の具体例</h2>
+    <h2>iPhone動画が開けない時の切り分け方</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。複数の動画ファイルを一括で変換する方法をシェルスクリプトで解説している。forループで指定フォルダの動画をまとめて変換する基本形に加え、GNU parallelの`-j 4`や`xargs -P 4`で並列数を指定して処理を速める方法が紹介されている。変換済みのファイルは判定してスキップできるため、処理が途中で止まっても再実行で続きから進められる。上書き事故を防ぐため、初回は`-n`を付けて試すこと、入力と同じ拡張子・同じパスで出力しないことが注意点として挙げられている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。iPhoneで撮った動画がWindowsで再生できないときの原因の切り分け方を扱っている。iPhone本体で元動画を確認する→PCに動画全体をコピーし直して長さとファイルサイズを確認する→別のプレーヤーで試す、という順で切り分け、コーデックが原因の場合や横倒しになる場合、色が白っぽい場合など症状別の対処が示されている。変換コマンド例として`ffmpeg -i input.mov -map 0:v:0 -map "0:a:0?" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`が載っている。拡張子を.movから.mp4に変えても中の映像形式は変わらない、10bitの映像がすべてHDRとは限らない、といった注意点も書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>複数のリール素材をまとめて書き出す作業があるとき、forループのシェルスクリプトに`xargs -P 4`や`-j 4`を組み合わせれば一括で並列処理でき、`-n`を付けて試してから本番実行すれば上書き事故も防げる。</p>
+      <p>iPhoneで撮った動画がパソコンで開けない・再生できないときは、iPhone本体で元動画を確認する→PCに動画全体をコピーし直す→別のプレーヤーで試す、の順で原因を切り分けてから、`ffmpeg -i input.mov -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`で変換すれば開けるようになる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/batch-convert/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/batch-convert
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第60回<br>
-    2026年10月21日分
+    デイリートレンドレーダー 第61回<br>
+    2026年10月22日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-22.html">2026-10-22（第61回）</a>
       <a href="days/2026-10-21.html">2026-10-21（第60回）</a>
       <a href="days/2026-10-20.html">2026-10-20（第59回）</a>
       <a href="days/2026-10-19.html">2026-10-19（第58回）</a>

@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-21.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-22.html",
   "items": [
-    {"title": "Claude Code、自動モード設定を対話形式で案内", "why": "Claude Codeに/auto-mode-setupコマンドが入り、直前までの使い方に合わせた自動モードの設定を対話形式で組んでもらえる", "url": "https://code.claude.com/docs/en/changelog#v2.1.304"},
-    {"title": "画面録画、ffmpegでOS別の具体コマンド", "why": "顧客向け資料やLP制作、Notion・LINE Botの操作を見せたいとき、パソコンに合わせてgdigrabやavfoundationのコマンドで画面を直接録画できる", "url": "https://ffmpeg-cookbook.com/ja/articles/screen-recording/"},
-    {"title": "色味の演出、curvesフィルタのS字カーブ", "why": "漫画リールの背景や実写素材の色味を演出したいとき、curvesフィルタのS字の制御点を控えめな値から入れればコントラストを上げられる", "url": "https://ffmpeg-cookbook.com/ja/articles/curves-filter/"},
-    {"title": "複数ファイル一括変換、並列処理の具体例", "why": "複数のリール素材をまとめて書き出す作業で、forループのシェルスクリプトにxargs -P 4を組み合わせれば一括で並列処理できる", "url": "https://ffmpeg-cookbook.com/ja/articles/batch-convert/"}
+    {"title": "画質と容量、CRFの数値を実測比較", "why": "書き出すときにCRFを23・28・36のどれにするかで容量がどれくらい変わるかの目安に使え、圧縮済みのコピーをさらに圧縮しない点も確認に使える", "url": "https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/"},
+    {"title": "動画の位置情報、タグの確認と削除の手順", "why": "ffprobeやExifToolでタグを確認し、-map_metadata -1などのコマンドで再エンコードせずに位置情報とチャプターを落として書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/"},
+    {"title": "メール添付の動画、容量を逆算して圧縮", "why": "Gmailは25MB・Outlookは20MBや10MBという上限から、合計＝目標MB×8000÷秒数の式でビットレートを逆算して-crf 28などで書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/"},
+    {"title": "iPhone動画が開けない時の切り分け方", "why": "iPhone本体で確認→PCにコピーし直す→別のプレーヤーで試す、の順で原因を切り分けてから、変換コマンドで開けるようにできる", "url": "https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/"}
   ]
 }

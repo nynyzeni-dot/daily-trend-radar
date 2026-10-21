@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンドレーダー 第61回｜2026.10.22</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第61回</span>
+    <h1>今日のトレンド調査<br><span class="accent">CRF実測・位置情報タグ削除・メール添付圧縮・iPhone動画の切り分け</span></h1>
+    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はAIツールのニュースは拾えんかったわ。動画の作り方はffmpegの地味な実務ネタを4本、CRFの数値実測・位置情報タグの消し方・メール添付の圧縮・iPhone動画が開けん時の切り分け手順と並んだで。資料作りや動画のやり取りでそのまま使える系やね。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-09-10</span>
+    </div>
+    <h2>画質と容量、CRFの数値を実測比較</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの検証記事。同じ10秒・1080pの動画をffmpegのH.264（preset fast）でCRF23・28・36の3段階に書き出し、3秒地点の画像を拡大して見比べている。ファイルサイズはCRF23で3,686,686バイト（元から84.2%減）、CRF28で1,827,517バイト（92.2%減）、CRF36で734,363バイト（96.8%減）という具体的な数値で示されている。再圧縮した動画をさらに圧縮すると失った精細さは戻らないこと、小さい文字が読めるか・動く場面を一時停止して確認することが、自分の動画を確認する際のポイントとして挙げられている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>書き出すときに画質と容量のどちらを優先するか迷ったら、CRFを23・28・36のどれにするかで容量がどれくらい変わるかの目安にそのまま使える。元のファイルから書き出す（圧縮済みのコピーをさらに圧縮しない）ことと、小さい文字が読めるか・動く場面を一時停止して確認するという2点も、自分の書き出しの確認にそのまま使える。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-compression-quality
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-05-19</span>
+    </div>
+    <h2>動画の位置情報、タグの確認と削除の手順</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画ファイルに埋め込まれた位置情報などのタグを確認・削除する方法を扱っている。確認はffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`で行い、削除は`ffmpeg -map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`で再エンコードせずに書き出す方法が示されている。架空の位置情報や独自タグを付けた動画での検証では、「タグを一括削除」を使うとMKVとMP4の両方でタグが残らなかったが、「既知の個人タグを削除」ではMKVで独自タグが残ったと報告されている。回転情報や映像データに埋め込まれた情報（H.264のSEIなど）は`-c copy`では消えないとも書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>動画のファイルに位置情報が残っていないか不安なときは、まずffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`でタグを確認し、`-map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`のコマンドで再エンコードせずに位置情報とチャプターを落として書き出せる。「タグを一括削除」の方が「既知の個人タグを削除」より確実にタグが残らないという違いも、使い分けの判断にそのまま使える。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-30</span>
+    </div>
+    <h2>メール添付の動画、容量を逆算して圧縮</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。メールに動画を添付して送るときの容量の抑え方を扱っている。個人用Gmailの添付上限は合計25MB、Outlookは条件により20MBや10MBとされ、上限から逆算してビットレートを決める式として「合計＝目標MB×8000÷秒数」「映像＝合計−音声」が示されている。ffmpegコマンド例として`ffmpeg -i input.mp4 -vcodec libx264 -crf 28 -preset slow -acodec aac -b:a 96k output.mp4`でのCRF圧縮や、`-vf scale=-2:720`で解像度を720pに落とす方法、`-b:v 1000k`のように目標ビットレートを指定する2パスエンコードのコマンドも載っている。10秒・音声なしの動画で23.28MBから1.83MBまで縮んだ例も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>動画をメールに添付して送りたいときは、Gmailなら25MB・Outlookなら20MBや10MBという上限を踏まえて、「合計＝目標MB×8000÷秒数」の式で映像のビットレートを逆算してから、`-crf 28`や`-vf scale=-2:720`のコマンドで容量を抑えて書き出せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-19</span>
+    </div>
+    <h2>iPhone動画が開けない時の切り分け方</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。iPhoneで撮った動画がWindowsで再生できないときの原因の切り分け方を扱っている。iPhone本体で元動画を確認する→PCに動画全体をコピーし直して長さとファイルサイズを確認する→別のプレーヤーで試す、という順で切り分け、コーデックが原因の場合や横倒しになる場合、色が白っぽい場合など症状別の対処が示されている。変換コマンド例として`ffmpeg -i input.mov -map 0:v:0 -map "0:a:0?" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`が載っている。拡張子を.movから.mp4に変えても中の映像形式は変わらない、10bitの映像がすべてHDRとは限らない、といった注意点も書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>iPhoneで撮った動画がパソコンで開けない・再生できないときは、iPhone本体で元動画を確認する→PCに動画全体をコピーし直す→別のプレーヤーで試す、の順で原因を切り分けてから、`ffmpeg -i input.mov -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`で変換すれば開けるようになる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第61回<br>
+    2026年10月22日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回を見る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

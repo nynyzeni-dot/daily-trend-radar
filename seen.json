@@ -1059,6 +1059,31 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/",
       "title": "iPhone動画が開けない時の切り分け方",
       "date": "2026-10-22"
+    },
+    {
+      "url": "https://higgsfield.ai/blog/higgsfield-cli",
+      "title": "Higgsfield、画像生成までCLIで呼べる",
+      "date": "2026-10-23"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/",
+      "title": "crop後のエラー、高さ偶数化で解決",
+      "date": "2026-10-23"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/",
+      "title": "NVENC書き出し、画質ほぼ同じで速度2.8倍",
+      "date": "2026-10-23"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/scale-video/",
+      "title": "scaleフィルタ、解像度変更の使い分けと速度",
+      "date": "2026-10-23"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/",
+      "title": "HDR映像をSDRに変換、トーンマップの型",
+      "date": "2026-10-23"
     }
   ]
 }

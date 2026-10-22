@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンドレーダー 第62回｜2026.10.23</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第62回</span>
+    <h1>今日のトレンド調査<br><span class="accent">NVENC書き出し高速化・cropの偶数エラー解決・解像度変更実測・HDR→SDR変換・HiggsfieldのCLI化</span></h1>
+    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はHiggsfieldが画像生成までターミナルから呼べるCLIを出してきて、自作スクリプト勢には地味に効くネタやったわ。ffmpeg側はNVENCでの書き出し高速化、crop後の偶数エラーの直し方、解像度変更の使い分けと、実務で詰まりがちなとこを拾えたで。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-10-19</span>
+    </div>
+    <h2>Higgsfield、画像生成までCLIで呼べる</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>画像・動画生成AI「Higgsfield」が、ターミナルやスクリプトから直接生成を呼び出せるコマンドラインツール「Higgsfield CLI」を公開した（10月19日付）。Web版と同じアカウント・クレジット残高を使い、APIキーは不要でブラウザからログインするだけで使える。対応モデルには画像生成の「Soul 2.0」（モデルID：text2image_soul_v2）が含まれ、`higgsfield generate create text2image_soul_v2 --prompt "..." --soul-id &lt;soul_id&gt; --wait`のようなコマンドで呼び出せる。インストールはcurl・Homebrew・npmの3方法があり、Windowsを含む全プラットフォームはnpmで対応する。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>いつもWeb版の画面を開いて手動で生成しているSoul 2.0の画像生成を、自作のスクリプトやターミナルからそのまま呼び出せるようになり、higgsfield担当分の画像作りを自分のスクリプトの流れに組み込める。</p>
+    </div>
+    <a class="source-link" href="https://higgsfield.ai/blog/higgsfield-cli" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> higgsfield.ai/blog/higgsfield-cli
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-06-27</span>
+    </div>
+    <h2>crop後のエラー、高さ偶数化で解決</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画を好きな大きさに切り出す（crop）や余白を足す（pad）をしたときに、高さや幅が奇数になって「height not divisible by 2」というエラーで止まる原因と直し方を扱っている。H.264などで使われるyuv420p（映像の色情報の持ち方の一種）は幅と高さの両方が偶数である必要があり、`scale=trunc(iw/2)*2:trunc(ih/2)*2`で奇数側を最大1px切り下げる、`scale=-2:720`のように片方だけ数値を指定してもう片方を自動で偶数に計算させる、`pad=ceil(iw/2)*2:ceil(ih/2)*2`で余白を足して元の映像を残す、という3つの直し方が具体的なコマンドで示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>自分で切り出しサイズを決めてcrop・padしたときにこのエラーで止まったら、上の3つのコマンドのどれかにそのまま置き換えれば、比率を保ったまま（-2指定）か、映像を欠けさせずに（pad）、すぐに書き出しを通せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-10-22</span>
+    </div>
+    <h2>NVENC書き出し、画質ほぼ同じで速度2.8倍</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの検証記事。GPUで動画を書き出す方式「NVENC」と、通常のCPUエンコードを、画質を点数化する指標「VMAF」が同じ約93になるようにそろえて比較している。H.264ではNVENCの方が実写で2〜5%・アニメで11〜18%ファイルサイズが大きくなるが、書き出し速度はおよそ2.8倍（434fps対156fps）。H.265ではファイルサイズの差がほぼ無く（実写で-2〜+1%）、速度は約2.5倍という実測結果が載っている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>書き出しに時間がかかって困っているとき、`libx264`や`libx265`で使っているコマンドを`h264_nvenc`や`hevc_nvenc`に変えるだけで、画質をほぼ変えずに書き出し時間を半分以下に縮められる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-08</span>
+    </div>
+    <h2>scaleフィルタ、解像度変更の使い分けと速度</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画の解像度を変えるscaleフィルタの使い分けを、実測の処理時間つきで整理している。`-2`を指定すると比率を保ったまま、もう片方の辺を自動で偶数に丸めて計算してくれる。`iw`・`ih`で元のサイズを基準にした相対指定もできる。`force_original_aspect_ratio=decrease`と`pad`を組み合わせると、サイズの違う素材を黒帯付きで同じ枠に揃えられる。1920×1080・30fps・120秒の素材で解像度変更込みの書き出しが18.43秒・41.14MB（フィルタなしの場合は27.97秒・86.26MBで、サイズは52.3%減）という実測値も載っている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>サイズの違う素材をリール用に揃えたいとき、`scale=1280:-2`のように比率を保つ指定か、`force_original_aspect_ratio=decrease`と`pad`を組み合わせて黒帯で揃える指定かを、場面に応じてそのまま使い分けられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/scale-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/scale-video
+    </a>
+  </div>
+
+  <!-- 5: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-14</span>
+    </div>
+    <h2>HDR映像をSDRに変換、トーンマップの型</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。HDR10やHLGで撮った映像を、普通のSDR（標準の明るさ・色の範囲）の映像に変換する方法を扱っている。`zscale`フィルタで一度色の情報を線形に展開し、`tonemap`フィルタで明るさの範囲を圧縮してから`bt709`（SDRで使う色域）に戻す、という流れのコマンドが示されている。トーンマッピングの方式は`hable`（細部を残す）、`mobius`（色の正確さを優先）、`reinhard`（全体の明るさを保つ）、`clip`（速いが白飛びしやすい）から選べる。`colorspace`フィルタをHDR10の映像にそのまま使うと「Unsupported input transfer characteristics」というエラーで止まることも書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>これから始める実写の撮影でカメラがHDRで撮っていた場合、このコマンドでSDRに変換すれば、今のffmpegでの編集・書き出しの流れにそのまま乗せられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/hdr-to-sdr
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第62回<br>
+    2026年10月23日分
+  </footer>
+
+</div>
+</body>
+</html>

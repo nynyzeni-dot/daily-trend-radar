@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第61回｜2026.10.22</title>
+<title>デイリートレンドレーダー 第62回｜2026.10.23</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第61回</span>
-    <h1>今日のトレンド調査<br><span class="accent">CRF実測・位置情報タグ削除・メール添付圧縮・iPhone動画の切り分け</span></h1>
-    <p class="period">全4件・動画の作り方4件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第62回</span>
+    <h1>今日のトレンド調査<br><span class="accent">NVENC書き出し高速化・cropの偶数エラー解決・解像度変更実測・HDR→SDR変換・HiggsfieldのCLI化</span></h1>
+    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースは拾えんかったわ。動画の作り方はffmpegの地味な実務ネタを4本、CRFの数値実測・位置情報タグの消し方・メール添付の圧縮・iPhone動画が開けん時の切り分け手順と並んだで。資料作りや動画のやり取りでそのまま使える系やね。</p>
+    <p>今日はHiggsfieldが画像生成までターミナルから呼べるCLIを出してきて、自作スクリプト勢には地味に効くネタやったわ。ffmpeg側はNVENCでの書き出し高速化、crop後の偶数エラーの直し方、解像度変更の使い分けと、実務で詰まりがちなとこを拾えたで。</p>
   </div>
 
-  <!-- 1: A 高 -->
+  <!-- 1: B 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-09-10</span>
+      <span class="date">2026-10-19</span>
     </div>
-    <h2>画質と容量、CRFの数値を実測比較</h2>
+    <h2>Higgsfield、画像生成までCLIで呼べる</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの検証記事。同じ10秒・1080pの動画をffmpegのH.264（preset fast）でCRF23・28・36の3段階に書き出し、3秒地点の画像を拡大して見比べている。ファイルサイズはCRF23で3,686,686バイト（元から84.2%減）、CRF28で1,827,517バイト（92.2%減）、CRF36で734,363バイト（96.8%減）という具体的な数値で示されている。再圧縮した動画をさらに圧縮すると失った精細さは戻らないこと、小さい文字が読めるか・動く場面を一時停止して確認することが、自分の動画を確認する際のポイントとして挙げられている。</p>
+      <p>画像・動画生成AI「Higgsfield」が、ターミナルやスクリプトから直接生成を呼び出せるコマンドラインツール「Higgsfield CLI」を公開した（10月19日付）。Web版と同じアカウント・クレジット残高を使い、APIキーは不要でブラウザからログインするだけで使える。対応モデルには画像生成の「Soul 2.0」（モデルID：text2image_soul_v2）が含まれ、`higgsfield generate create text2image_soul_v2 --prompt "..." --soul-id &lt;soul_id&gt; --wait`のようなコマンドで呼び出せる。インストールはcurl・Homebrew・npmの3方法があり、Windowsを含む全プラットフォームはnpmで対応する。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>書き出すときに画質と容量のどちらを優先するか迷ったら、CRFを23・28・36のどれにするかで容量がどれくらい変わるかの目安にそのまま使える。元のファイルから書き出す（圧縮済みのコピーをさらに圧縮しない）ことと、小さい文字が読めるか・動く場面を一時停止して確認するという2点も、自分の書き出しの確認にそのまま使える。</p>
+      <p>いつもWeb版の画面を開いて手動で生成しているSoul 2.0の画像生成を、自作のスクリプトやターミナルからそのまま呼び出せるようになり、higgsfield担当分の画像作りを自分のスクリプトの流れに組み込める。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-compression-quality
+    <a class="source-link" href="https://higgsfield.ai/blog/higgsfield-cli" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> higgsfield.ai/blog/higgsfield-cli
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-05-19</span>
+      <span class="date">2026-06-27</span>
     </div>
-    <h2>動画の位置情報、タグの確認と削除の手順</h2>
+    <h2>crop後のエラー、高さ偶数化で解決</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画ファイルに埋め込まれた位置情報などのタグを確認・削除する方法を扱っている。確認はffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`で行い、削除は`ffmpeg -map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`で再エンコードせずに書き出す方法が示されている。架空の位置情報や独自タグを付けた動画での検証では、「タグを一括削除」を使うとMKVとMP4の両方でタグが残らなかったが、「既知の個人タグを削除」ではMKVで独自タグが残ったと報告されている。回転情報や映像データに埋め込まれた情報（H.264のSEIなど）は`-c copy`では消えないとも書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画を好きな大きさに切り出す（crop）や余白を足す（pad）をしたときに、高さや幅が奇数になって「height not divisible by 2」というエラーで止まる原因と直し方を扱っている。H.264などで使われるyuv420p（映像の色情報の持ち方の一種）は幅と高さの両方が偶数である必要があり、`scale=trunc(iw/2)*2:trunc(ih/2)*2`で奇数側を最大1px切り下げる、`scale=-2:720`のように片方だけ数値を指定してもう片方を自動で偶数に計算させる、`pad=ceil(iw/2)*2:ceil(ih/2)*2`で余白を足して元の映像を残す、という3つの直し方が具体的なコマンドで示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>動画のファイルに位置情報が残っていないか不安なときは、まずffprobeの`-show_format -show_streams -show_chapters`やExifToolの`-a -ee -G1 -s`でタグを確認し、`-map_metadata -1 -map_metadata:s -1 -map_chapters -1 -c copy`のコマンドで再エンコードせずに位置情報とチャプターを落として書き出せる。「タグを一括削除」の方が「既知の個人タグを削除」より確実にタグが残らないという違いも、使い分けの判断にそのまま使える。</p>
+      <p>自分で切り出しサイズを決めてcrop・padしたときにこのエラーで止まったら、上の3つのコマンドのどれかにそのまま置き換えれば、比率を保ったまま（-2指定）か、映像を欠けさせずに（pad）、すぐに書き出しを通せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-06-30</span>
+      <span class="date">2026-10-22</span>
     </div>
-    <h2>メール添付の動画、容量を逆算して圧縮</h2>
+    <h2>NVENC書き出し、画質ほぼ同じで速度2.8倍</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。メールに動画を添付して送るときの容量の抑え方を扱っている。個人用Gmailの添付上限は合計25MB、Outlookは条件により20MBや10MBとされ、上限から逆算してビットレートを決める式として「合計＝目標MB×8000÷秒数」「映像＝合計−音声」が示されている。ffmpegコマンド例として`ffmpeg -i input.mp4 -vcodec libx264 -crf 28 -preset slow -acodec aac -b:a 96k output.mp4`でのCRF圧縮や、`-vf scale=-2:720`で解像度を720pに落とす方法、`-b:v 1000k`のように目標ビットレートを指定する2パスエンコードのコマンドも載っている。10秒・音声なしの動画で23.28MBから1.83MBまで縮んだ例も示されている。</p>
+      <p>ffmpeg-cookbook.comの検証記事。GPUで動画を書き出す方式「NVENC」と、通常のCPUエンコードを、画質を点数化する指標「VMAF」が同じ約93になるようにそろえて比較している。H.264ではNVENCの方が実写で2〜5%・アニメで11〜18%ファイルサイズが大きくなるが、書き出し速度はおよそ2.8倍（434fps対156fps）。H.265ではファイルサイズの差がほぼ無く（実写で-2〜+1%）、速度は約2.5倍という実測結果が載っている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>動画をメールに添付して送りたいときは、Gmailなら25MB・Outlookなら20MBや10MBという上限を踏まえて、「合計＝目標MB×8000÷秒数」の式で映像のビットレートを逆算してから、`-crf 28`や`-vf scale=-2:720`のコマンドで容量を抑えて書き出せる。</p>
+      <p>書き出しに時間がかかって困っているとき、`libx264`や`libx265`で使っているコマンドを`h264_nvenc`や`hevc_nvenc`に変えるだけで、画質をほぼ変えずに書き出し時間を半分以下に縮められる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding
     </a>
   </div>
 
@@ -312,27 +312,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-19</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>iPhone動画が開けない時の切り分け方</h2>
+    <h2>scaleフィルタ、解像度変更の使い分けと速度</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。iPhoneで撮った動画がWindowsで再生できないときの原因の切り分け方を扱っている。iPhone本体で元動画を確認する→PCに動画全体をコピーし直して長さとファイルサイズを確認する→別のプレーヤーで試す、という順で切り分け、コーデックが原因の場合や横倒しになる場合、色が白っぽい場合など症状別の対処が示されている。変換コマンド例として`ffmpeg -i input.mov -map 0:v:0 -map "0:a:0?" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`が載っている。拡張子を.movから.mp4に変えても中の映像形式は変わらない、10bitの映像がすべてHDRとは限らない、といった注意点も書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画の解像度を変えるscaleフィルタの使い分けを、実測の処理時間つきで整理している。`-2`を指定すると比率を保ったまま、もう片方の辺を自動で偶数に丸めて計算してくれる。`iw`・`ih`で元のサイズを基準にした相対指定もできる。`force_original_aspect_ratio=decrease`と`pad`を組み合わせると、サイズの違う素材を黒帯付きで同じ枠に揃えられる。1920×1080・30fps・120秒の素材で解像度変更込みの書き出しが18.43秒・41.14MB（フィルタなしの場合は27.97秒・86.26MBで、サイズは52.3%減）という実測値も載っている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>iPhoneで撮った動画がパソコンで開けない・再生できないときは、iPhone本体で元動画を確認する→PCに動画全体をコピーし直す→別のプレーヤーで試す、の順で原因を切り分けてから、`ffmpeg -i input.mov -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart output.mp4`で変換すれば開けるようになる。</p>
+      <p>サイズの違う素材をリール用に揃えたいとき、`scale=1280:-2`のように比率を保つ指定か、`force_original_aspect_ratio=decrease`と`pad`を組み合わせて黒帯で揃える指定かを、場面に応じてそのまま使い分けられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/scale-video/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/scale-video
+    </a>
+  </div>
+
+  <!-- 5: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-14</span>
+    </div>
+    <h2>HDR映像をSDRに変換、トーンマップの型</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。HDR10やHLGで撮った映像を、普通のSDR（標準の明るさ・色の範囲）の映像に変換する方法を扱っている。`zscale`フィルタで一度色の情報を線形に展開し、`tonemap`フィルタで明るさの範囲を圧縮してから`bt709`（SDRで使う色域）に戻す、という流れのコマンドが示されている。トーンマッピングの方式は`hable`（細部を残す）、`mobius`（色の正確さを優先）、`reinhard`（全体の明るさを保つ）、`clip`（速いが白飛びしやすい）から選べる。`colorspace`フィルタをHDR10の映像にそのまま使うと「Unsupported input transfer characteristics」というエラーで止まることも書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>これから始める実写の撮影でカメラがHDRで撮っていた場合、このコマンドでSDRに変換すれば、今のffmpegでの編集・書き出しの流れにそのまま乗せられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/hdr-to-sdr
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第61回<br>
-    2026年10月22日分
+    デイリートレンドレーダー 第62回<br>
+    2026年10月23日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-23.html">2026-10-23（第62回）</a>
       <a href="days/2026-10-22.html">2026-10-22（第61回）</a>
       <a href="days/2026-10-21.html">2026-10-21（第60回）</a>
       <a href="days/2026-10-20.html">2026-10-20（第59回）</a>

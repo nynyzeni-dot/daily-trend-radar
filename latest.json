@@ -1,11 +1,12 @@
 {
-  "date": "2026-10-22",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-22.html",
+  "date": "2026-10-23",
+  "count": 5,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-23.html",
   "items": [
-    {"title": "画質と容量、CRFの数値を実測比較", "why": "書き出すときにCRFを23・28・36のどれにするかで容量がどれくらい変わるかの目安に使え、圧縮済みのコピーをさらに圧縮しない点も確認に使える", "url": "https://ffmpeg-cookbook.com/ja/articles/video-compression-quality/"},
-    {"title": "動画の位置情報、タグの確認と削除の手順", "why": "ffprobeやExifToolでタグを確認し、-map_metadata -1などのコマンドで再エンコードせずに位置情報とチャプターを落として書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/video-gps-metadata-check-remove/"},
-    {"title": "メール添付の動画、容量を逆算して圧縮", "why": "Gmailは25MB・Outlookは20MBや10MBという上限から、合計＝目標MB×8000÷秒数の式でビットレートを逆算して-crf 28などで書き出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/reduce-video-size-for-email/"},
-    {"title": "iPhone動画が開けない時の切り分け方", "why": "iPhone本体で確認→PCにコピーし直す→別のプレーヤーで試す、の順で原因を切り分けてから、変換コマンドで開けるようにできる", "url": "https://ffmpeg-cookbook.com/ja/articles/iphone-video-windows-playback/"}
+    {"title": "Higgsfield、画像生成までCLIで呼べる", "why": "Web版で手動生成しているSoul 2.0の画像生成を、自作のスクリプトやターミナルから直接呼び出せるようになる", "url": "https://higgsfield.ai/blog/higgsfield-cli"},
+    {"title": "crop後のエラー、高さ偶数化で解決", "why": "cropやpadで高さ・幅が奇数になって止まるエラーが出たとき、scale=-2やpadのコマンドに変えればすぐ解決できる", "url": "https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/"},
+    {"title": "NVENC書き出し、画質ほぼ同じで速度2.8倍", "why": "書き出しのコマンドをh264_nvencやhevc_nvencに変えるだけで、画質をほぼ変えずに書き出し時間を半分以下にできる", "url": "https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/"},
+    {"title": "scaleフィルタ、解像度変更の使い分けと速度", "why": "サイズの違う素材をリール用に揃えたいとき、scale=-2で比率を保つか、force_original_aspect_ratioとpadで黒帯付きに揃えるかを使い分けられる", "url": "https://ffmpeg-cookbook.com/ja/articles/scale-video/"},
+    {"title": "HDR映像をSDRに変換、トーンマップの型", "why": "これから始める実写撮影でカメラがHDRで撮っていた場合、このコマンドでSDRに変換すれば今までのffmpeg編集にそのまま乗せられる", "url": "https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/"}
   ]
 }

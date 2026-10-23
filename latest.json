@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-23.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-24.html",
   "items": [
-    {"title": "Higgsfield、画像生成までCLIで呼べる", "why": "Web版で手動生成しているSoul 2.0の画像生成を、自作のスクリプトやターミナルから直接呼び出せるようになる", "url": "https://higgsfield.ai/blog/higgsfield-cli"},
-    {"title": "crop後のエラー、高さ偶数化で解決", "why": "cropやpadで高さ・幅が奇数になって止まるエラーが出たとき、scale=-2やpadのコマンドに変えればすぐ解決できる", "url": "https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/"},
-    {"title": "NVENC書き出し、画質ほぼ同じで速度2.8倍", "why": "書き出しのコマンドをh264_nvencやhevc_nvencに変えるだけで、画質をほぼ変えずに書き出し時間を半分以下にできる", "url": "https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/"},
-    {"title": "scaleフィルタ、解像度変更の使い分けと速度", "why": "サイズの違う素材をリール用に揃えたいとき、scale=-2で比率を保つか、force_original_aspect_ratioとpadで黒帯付きに揃えるかを使い分けられる", "url": "https://ffmpeg-cookbook.com/ja/articles/scale-video/"},
-    {"title": "HDR映像をSDRに変換、トーンマップの型", "why": "これから始める実写撮影でカメラがHDRで撮っていた場合、このコマンドでSDRに変換すれば今までのffmpeg編集にそのまま乗せられる", "url": "https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/"}
+    {"title": "さくらVPS、カーネル脆弱性で新規停止中", "why": "VPSを自分でOS管理しているなら、カーネルのバージョンを確認して提供元のセキュリティ更新をすぐ当てる", "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html"},
+    {"title": "HEVC→H264変換、古い機器対策の3設定", "why": "実写素材がHEVCで古い環境で開けない・真っ黒になるときは、crf 20とpix_fmt yuv420pを付けて変換すれば直る", "url": "https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/"},
+    {"title": "LP動画の再生待ち、1コマンドで解消", "why": "LPやnoteに貼った動画の再生開始が遅いときは、movflags +faststartを通すだけで数秒・無劣化で直る", "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/"},
+    {"title": "音ズレが徐々に進む問題、倍率計算で直す", "why": "実写動画の音声が録画の後半ほどズレるときは、ズレた時間と地点から倍率を計算してatempoに入れれば直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/"},
+    {"title": "Claude Codeのグラフ、文字色の判定が向上", "why": "顧客向け資料やLP用のグラフを作らせるとき、色帯の上の文字が自動でちゃんと読める色に選ばれるようになった", "url": "https://code.claude.com/docs/en/changelog#v2.1.309"}
   ]
 }

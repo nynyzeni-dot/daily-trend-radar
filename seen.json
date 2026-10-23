@@ -1084,6 +1084,31 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/",
       "title": "HDR映像をSDRに変換、トーンマップの型",
       "date": "2026-10-23"
+    },
+    {
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html",
+      "title": "さくらVPS、カーネル脆弱性で新規停止中",
+      "date": "2026-10-24"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/",
+      "title": "HEVC→H264変換、古い機器対策の3設定",
+      "date": "2026-10-24"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/",
+      "title": "LP動画の再生待ち、1コマンドで解消",
+      "date": "2026-10-24"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/",
+      "title": "音ズレが徐々に進む問題、倍率計算で直す",
+      "date": "2026-10-24"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.309",
+      "title": "Claude Codeのグラフ、文字色の判定が向上",
+      "date": "2026-10-24"
     }
   ]
 }

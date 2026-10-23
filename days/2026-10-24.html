@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第63回｜2026.10.24</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第63回</span>
+    <h1>今日のトレンド調査<br><span class="accent">さくらVPSの脆弱性対応・HEVC→H264変換・LP動画の再生待ち解消・音ズレの直し方・Claude Codeのグラフ精度向上</span></h1>
+    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はさくらのVPSでカーネルの重大な脆弱性が出て新規受付が止まってもうたから、VPS触ってる人はまず確認してな。ffmpeg側はHEVC変換・LP動画の再生待ち解消・音ズレ直しと、実写が絡む詰まりどころを拾えたで。Claude Codeのグラフもコントラストの判定が地味に賢くなっとったわ。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-10-20</span>
+    </div>
+    <h2>さくらVPS、カーネル脆弱性で新規停止中</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Linuxカーネルの脆弱性「CVE-2026-99999」（通称PwnEscape、緊急度を示すCVSSスコアは9.3）が報告され、さくらインターネットは2026年10月16日から「さくらのVPS」を含む5サービスで、新規申込・スケールアップ・ISOイメージでのインストールなどの受付を停止している（再開時期は未定）。既存契約のVPSはそのまま稼働中で、今すぐ使えなくなるわけではない。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>自分でOSやカーネルを管理しているVPSを使っているなら、カーネルのバージョンを確認して、提供元から来るセキュリティ更新をすぐ当てる。さくらのVPSを使っているなら、今は新規契約・スケールアップ系の操作が止まっていることだけ覚えておけばいい。</p>
+    </div>
+    <a class="source-link" href="https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-30</span>
+    </div>
+    <h2>HEVC→H264変換、古い機器対策の3設定</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。HEVC（H.265）で撮った動画が、古いテレビやHEVC非対応のWindows機、古い編集ソフトで再生・読み込みができない場合に、ffmpegでH.264に変換する手順をまとめている。基本コマンドは`ffmpeg -i input.mp4 -c:v libx264 -crf 20 -preset medium -c:a aac output.mp4`で、CRF（画質を決める数値、0〜51で小さいほど高画質）は無劣化に近い18、推奨は20が目安。10bitのHEVCをそのまま変換すると古い機器で映像が真っ黒になることがあり、`-pix_fmt yuv420p`を足して8bitに揃えれば直るという落とし穴も具体的に書かれている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写撮影の素材がHEVCで撮られていて、古い編集環境やWindows機で開けない・映像が真っ黒になるときは、上のコマンドに`-pix_fmt yuv420p`を足して変換すれば、今までのffmpeg編集の流れにそのまま乗せられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-27</span>
+    </div>
+    <h2>LP動画の再生待ち、1コマンドで解消</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。Webページに貼ったMP4がなかなか再生されない・読み込みが遅い原因として、動画の管理情報（moovアトム）がファイルの末尾にあることを挙げている。ブラウザは先頭から順にデータを読むため、moovが末尾にあるとそこまで待たされる。`ffmpeg -i input.mp4 -c copy -movflags +faststart output.mp4`を通すと、再エンコードなし・数秒でmoovを先頭に移せる。適用済みかは`ffprobe -v trace input.mp4 2&gt;&amp;1 | grep "parent:'root'"`でmoovとmdatの順番を確認できるとも書かれている。faststartが効くのは.mp4と.movの出力のみで、短いクリップより長いファイルほど効果が目立つ。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>顧客向けのLPやnoteに貼った動画の再生開始が遅いと感じたら、上の1コマンドを通すだけで（画質劣化なし・数秒で完了）直せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-30</span>
+    </div>
+    <h2>音ズレが徐々に進む問題、倍率計算で直す</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画の音声が録画時間とともにだんだんズレていく「ドリフト」という問題は、一定時間だけずらす`-itsoffset`では直らず、音声の再生速度そのものを比率で調整する必要があると説明している。たとえば10分（600秒）地点で音声が0.5秒遅れている場合、倍率は(600+0.5)/600=1.00083で、`ffmpeg -i input.mp4 -af atempo=1.00083 -c:v copy output.mp4`のように当てる。編集ソフト側だけでズレる場合は可変フレームレート（VFR）が原因のことが多く、`-fps_mode cfr -r 30`で固定フレームレートに変換する方法も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>実写動画の音声が録画の後半になるほど映像とズレていくときは、ズレた時間と地点から倍率を計算して`atempo`に入れれば、映像をそのまま使って音声の速さだけ直せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-audio-drift
+    </a>
+  </div>
+
+  <!-- 5: B 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-10-22</span>
+    </div>
+    <h2>Claude Codeのグラフ、文字色の判定が向上</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeの「dataviz」（グラフやダッシュボードを作る際の設計ルール集）スキルがアップデートされ、テキストの読みやすさを計算する方式「APCA」が追加された（`apca(text, background)`という関数で判定）。色付きの帯やバッジにラベルを乗せるとき、背景色に対して白文字・黒文字のどちらが読みやすいかを、より正確に自動選択できるようになった。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>Claude Codeに顧客向け資料やLP用のグラフ・ダッシュボードを作らせるとき、色帯の上に乗せた文字が自動でちゃんと読める色に選ばれるようになり、配色を自分でチェックし直す手間が減る。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.309" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.309
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第63回<br>
+    2026年10月24日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">トップに戻る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

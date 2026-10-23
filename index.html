@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンドレーダー 第62回｜2026.10.23</title>
+<title>デイリートレンド調査レポート 第63回｜2026.10.24</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第62回</span>
-    <h1>今日のトレンド調査<br><span class="accent">NVENC書き出し高速化・cropの偶数エラー解決・解像度変更実測・HDR→SDR変換・HiggsfieldのCLI化</span></h1>
-    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第63回</span>
+    <h1>今日のトレンド調査<br><span class="accent">さくらVPSの脆弱性対応・HEVC→H264変換・LP動画の再生待ち解消・音ズレの直し方・Claude Codeのグラフ精度向上</span></h1>
+    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はHiggsfieldが画像生成までターミナルから呼べるCLIを出してきて、自作スクリプト勢には地味に効くネタやったわ。ffmpeg側はNVENCでの書き出し高速化、crop後の偶数エラーの直し方、解像度変更の使い分けと、実務で詰まりがちなとこを拾えたで。</p>
+    <p>今日はさくらのVPSでカーネルの重大な脆弱性が出て新規受付が止まってもうたから、VPS触ってる人はまず確認してな。ffmpeg側はHEVC変換・LP動画の再生待ち解消・音ズレ直しと、実写が絡む詰まりどころを拾えたで。Claude Codeのグラフもコントラストの判定が地味に賢くなっとったわ。</p>
   </div>
 
   <!-- 1: B 高 -->
@@ -249,40 +249,40 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-19</span>
+      <span class="date">2026-10-20</span>
     </div>
-    <h2>Higgsfield、画像生成までCLIで呼べる</h2>
+    <h2>さくらVPS、カーネル脆弱性で新規停止中</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>画像・動画生成AI「Higgsfield」が、ターミナルやスクリプトから直接生成を呼び出せるコマンドラインツール「Higgsfield CLI」を公開した（10月19日付）。Web版と同じアカウント・クレジット残高を使い、APIキーは不要でブラウザからログインするだけで使える。対応モデルには画像生成の「Soul 2.0」（モデルID：text2image_soul_v2）が含まれ、`higgsfield generate create text2image_soul_v2 --prompt "..." --soul-id &lt;soul_id&gt; --wait`のようなコマンドで呼び出せる。インストールはcurl・Homebrew・npmの3方法があり、Windowsを含む全プラットフォームはnpmで対応する。</p>
+      <p>Linuxカーネルの脆弱性「CVE-2026-99999」（通称PwnEscape、緊急度を示すCVSSスコアは9.3）が報告され、さくらインターネットは2026年10月16日から「さくらのVPS」を含む5サービスで、新規申込・スケールアップ・ISOイメージでのインストールなどの受付を停止している（再開時期は未定）。既存契約のVPSはそのまま稼働中で、今すぐ使えなくなるわけではない。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>いつもWeb版の画面を開いて手動で生成しているSoul 2.0の画像生成を、自作のスクリプトやターミナルからそのまま呼び出せるようになり、higgsfield担当分の画像作りを自分のスクリプトの流れに組み込める。</p>
+      <p>自分でOSやカーネルを管理しているVPSを使っているなら、カーネルのバージョンを確認して、提供元から来るセキュリティ更新をすぐ当てる。さくらのVPSを使っているなら、今は新規契約・スケールアップ系の操作が止まっていることだけ覚えておけばいい。</p>
     </div>
-    <a class="source-link" href="https://higgsfield.ai/blog/higgsfield-cli" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> higgsfield.ai/blog/higgsfield-cli
+    <a class="source-link" href="https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html
     </a>
   </div>
 
-  <!-- 2: A 高 -->
-  <div class="card high">
+  <!-- 2: A 中 -->
+  <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">2026-06-27</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-30</span>
     </div>
-    <h2>crop後のエラー、高さ偶数化で解決</h2>
+    <h2>HEVC→H264変換、古い機器対策の3設定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画を好きな大きさに切り出す（crop）や余白を足す（pad）をしたときに、高さや幅が奇数になって「height not divisible by 2」というエラーで止まる原因と直し方を扱っている。H.264などで使われるyuv420p（映像の色情報の持ち方の一種）は幅と高さの両方が偶数である必要があり、`scale=trunc(iw/2)*2:trunc(ih/2)*2`で奇数側を最大1px切り下げる、`scale=-2:720`のように片方だけ数値を指定してもう片方を自動で偶数に計算させる、`pad=ceil(iw/2)*2:ceil(ih/2)*2`で余白を足して元の映像を残す、という3つの直し方が具体的なコマンドで示されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。HEVC（H.265）で撮った動画が、古いテレビやHEVC非対応のWindows機、古い編集ソフトで再生・読み込みができない場合に、ffmpegでH.264に変換する手順をまとめている。基本コマンドは`ffmpeg -i input.mp4 -c:v libx264 -crf 20 -preset medium -c:a aac output.mp4`で、CRF（画質を決める数値、0〜51で小さいほど高画質）は無劣化に近い18、推奨は20が目安。10bitのHEVCをそのまま変換すると古い機器で映像が真っ黒になることがあり、`-pix_fmt yuv420p`を足して8bitに揃えれば直るという落とし穴も具体的に書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>自分で切り出しサイズを決めてcrop・padしたときにこのエラーで止まったら、上の3つのコマンドのどれかにそのまま置き換えれば、比率を保ったまま（-2指定）か、映像を欠けさせずに（pad）、すぐに書き出しを通せる。</p>
+      <p>実写撮影の素材がHEVCで撮られていて、古い編集環境やWindows機で開けない・映像が真っ黒になるときは、上のコマンドに`-pix_fmt yuv420p`を足して変換すれば、今までのffmpeg編集の流れにそのまま乗せられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-height-not-divisible-by-2
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264
     </a>
   </div>
 
@@ -291,19 +291,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-10-22</span>
+      <span class="date">2026-06-27</span>
     </div>
-    <h2>NVENC書き出し、画質ほぼ同じで速度2.8倍</h2>
+    <h2>LP動画の再生待ち、1コマンドで解消</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの検証記事。GPUで動画を書き出す方式「NVENC」と、通常のCPUエンコードを、画質を点数化する指標「VMAF」が同じ約93になるようにそろえて比較している。H.264ではNVENCの方が実写で2〜5%・アニメで11〜18%ファイルサイズが大きくなるが、書き出し速度はおよそ2.8倍（434fps対156fps）。H.265ではファイルサイズの差がほぼ無く（実写で-2〜+1%）、速度は約2.5倍という実測結果が載っている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。Webページに貼ったMP4がなかなか再生されない・読み込みが遅い原因として、動画の管理情報（moovアトム）がファイルの末尾にあることを挙げている。ブラウザは先頭から順にデータを読むため、moovが末尾にあるとそこまで待たされる。`ffmpeg -i input.mp4 -c copy -movflags +faststart output.mp4`を通すと、再エンコードなし・数秒でmoovを先頭に移せる。適用済みかは`ffprobe -v trace input.mp4 2&gt;&amp;1 | grep "parent:'root'"`でmoovとmdatの順番を確認できるとも書かれている。faststartが効くのは.mp4と.movの出力のみで、短いクリップより長いファイルほど効果が目立つ。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>書き出しに時間がかかって困っているとき、`libx264`や`libx265`で使っているコマンドを`h264_nvenc`や`hevc_nvenc`に変えるだけで、画質をほぼ変えずに書き出し時間を半分以下に縮められる。</p>
+      <p>顧客向けのLPやnoteに貼った動画の再生開始が遅いと感じたら、上の1コマンドを通すだけで（画質劣化なし・数秒で完了）直せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/nvenc-vs-cpu-encoding
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback
     </a>
   </div>
 
@@ -312,48 +312,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-08</span>
+      <span class="date">2026-06-30</span>
     </div>
-    <h2>scaleフィルタ、解像度変更の使い分けと速度</h2>
+    <h2>音ズレが徐々に進む問題、倍率計算で直す</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画の解像度を変えるscaleフィルタの使い分けを、実測の処理時間つきで整理している。`-2`を指定すると比率を保ったまま、もう片方の辺を自動で偶数に丸めて計算してくれる。`iw`・`ih`で元のサイズを基準にした相対指定もできる。`force_original_aspect_ratio=decrease`と`pad`を組み合わせると、サイズの違う素材を黒帯付きで同じ枠に揃えられる。1920×1080・30fps・120秒の素材で解像度変更込みの書き出しが18.43秒・41.14MB（フィルタなしの場合は27.97秒・86.26MBで、サイズは52.3%減）という実測値も載っている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画の音声が録画時間とともにだんだんズレていく「ドリフト」という問題は、一定時間だけずらす`-itsoffset`では直らず、音声の再生速度そのものを比率で調整する必要があると説明している。たとえば10分（600秒）地点で音声が0.5秒遅れている場合、倍率は(600+0.5)/600=1.00083で、`ffmpeg -i input.mp4 -af atempo=1.00083 -c:v copy output.mp4`のように当てる。編集ソフト側だけでズレる場合は可変フレームレート（VFR）が原因のことが多く、`-fps_mode cfr -r 30`で固定フレームレートに変換する方法も示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>サイズの違う素材をリール用に揃えたいとき、`scale=1280:-2`のように比率を保つ指定か、`force_original_aspect_ratio=decrease`と`pad`を組み合わせて黒帯で揃える指定かを、場面に応じてそのまま使い分けられる。</p>
+      <p>実写動画の音声が録画の後半になるほど映像とズレていくときは、ズレた時間と地点から倍率を計算して`atempo`に入れれば、映像をそのまま使って音声の速さだけ直せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/scale-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/scale-video
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-audio-drift
     </a>
   </div>
 
-  <!-- 5: A 中 -->
+  <!-- 5: B 中 -->
   <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-14</span>
+      <span class="date">2026-10-22</span>
     </div>
-    <h2>HDR映像をSDRに変換、トーンマップの型</h2>
+    <h2>Claude Codeのグラフ、文字色の判定が向上</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。HDR10やHLGで撮った映像を、普通のSDR（標準の明るさ・色の範囲）の映像に変換する方法を扱っている。`zscale`フィルタで一度色の情報を線形に展開し、`tonemap`フィルタで明るさの範囲を圧縮してから`bt709`（SDRで使う色域）に戻す、という流れのコマンドが示されている。トーンマッピングの方式は`hable`（細部を残す）、`mobius`（色の正確さを優先）、`reinhard`（全体の明るさを保つ）、`clip`（速いが白飛びしやすい）から選べる。`colorspace`フィルタをHDR10の映像にそのまま使うと「Unsupported input transfer characteristics」というエラーで止まることも書かれている。</p>
+      <p>Claude Codeの「dataviz」（グラフやダッシュボードを作る際の設計ルール集）スキルがアップデートされ、テキストの読みやすさを計算する方式「APCA」が追加された（`apca(text, background)`という関数で判定）。色付きの帯やバッジにラベルを乗せるとき、背景色に対して白文字・黒文字のどちらが読みやすいかを、より正確に自動選択できるようになった。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>これから始める実写の撮影でカメラがHDRで撮っていた場合、このコマンドでSDRに変換すれば、今のffmpegでの編集・書き出しの流れにそのまま乗せられる。</p>
+      <p>Claude Codeに顧客向け資料やLP用のグラフ・ダッシュボードを作らせるとき、色帯の上に乗せた文字が自動でちゃんと読める色に選ばれるようになり、配色を自分でチェックし直す手間が減る。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/hdr-to-sdr/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/hdr-to-sdr
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.309" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.309
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第62回<br>
-    2026年10月23日分
+    デイリートレンドレーダー 第63回<br>
+    2026年10月24日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-24.html">2026-10-24（第63回）</a>
       <a href="days/2026-10-23.html">2026-10-23（第62回）</a>
       <a href="days/2026-10-22.html">2026-10-22（第61回）</a>
       <a href="days/2026-10-21.html">2026-10-21（第60回）</a>

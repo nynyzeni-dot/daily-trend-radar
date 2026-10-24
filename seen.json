@@ -1109,6 +1109,31 @@
       "url": "https://code.claude.com/docs/en/changelog#v2.1.309",
       "title": "Claude Codeのグラフ、文字色の判定が向上",
       "date": "2026-10-24"
+    },
+    {
+      "url": "https://www.notion.com/releases/2026-10-19",
+      "title": "NotionのAIエージェント、コスト9割減で刷新",
+      "date": "2026-10-25"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/av1-encode/",
+      "title": "AV1変換、同画質でサイズ最大6割減",
+      "date": "2026-10-25"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/extract-frames/",
+      "title": "動画の1コマ抜き出し、秒指定で1枚保存",
+      "date": "2026-10-25"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/change-framerate/",
+      "title": "フレームレート変換、-rとfpsの使い分け",
+      "date": "2026-10-25"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/silence-detect/",
+      "title": "無音区間の自動検出、しきい値の具体例",
+      "date": "2026-10-25"
     }
   ]
 }

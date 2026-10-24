@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第64回｜2026.10.25</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第64回</span>
+    <h1>今日のトレンド調査<br><span class="accent">NotionのAIエージェント刷新・AV1での動画圧縮・動画の1コマ抜き出し・フレームレート変換・無音区間の自動検出</span></h1>
+    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はNotionのAIエージェントがコスト9割減で刷新されたから、議事録整理とかで使うてる人は軽く触ってみてな。ffmpeg側はAV1での圧縮・1コマ抜き出し・フレームレート変換・無音区間の検出と、動画の仕込みに効くネタを拾えたで。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-10-19</span>
+    </div>
+    <h2>NotionのAIエージェント、コスト9割減で刷新</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Notionが2026年10月19日、文章やタスクを自動で進める「Notion Agent」を刷新した。タスクごとに最適なモデルを自動で選ぶ「Auto」が改善され、Opus 5.5などの高性能モデルと同等の結果を、約20種類の一般的なタスクで平均約90%低いコストで出せるようになったという。エージェントは専用のブラウザと作業環境を持ち、最長24時間まで作業を続けられる。モバイルでのチャット読み込みも最大50%速くなった。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>議事録整理や顧客管理などでNotionのAgentを使うとき、モデルを自分で選ばなくても「Auto」が自動で安く済ませてくれるようになり、まとまった作業も24時間預けっぱなしにできる。</p>
+    </div>
+    <a class="source-link" href="https://www.notion.com/releases/2026-10-19" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> notion.com/releases/2026-10-19
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-14</span>
+    </div>
+    <h2>AV1変換、同画質でサイズ最大6割減</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画をAV1（新しい圧縮形式）でエンコードする手順を、実測値つきでまとめている。`libsvtav1`エンコーダで`-crf 35 -preset 6`のように指定すると、同じ画質（VMAFという指標で比較）のままファイルサイズがH.264の27〜63%まで小さくなるという結果が載っている。presetの数値を上げると書き出しは速くなるがサイズは大きくなり、preset 6はpreset 8より実写で18〜27%、アニメで34〜46%小さくなるとのこと。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>LPやnoteに貼る動画の容量を減らしたいときは、`-crf`や`preset`の数値を変えてAV1で書き出せば、画質を落とさずにH.264より小さいファイルサイズにできる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/av1-encode/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/av1-encode
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-06-27</span>
+    </div>
+    <h2>動画の1コマ抜き出し、秒指定で1枚保存</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画から指定した時点の1枚だけをPNGやJPGで抜き出す方法を具体的なコマンドでまとめている。`ffmpeg -ss 00:00:05 -i input.mp4 -frames:v 1 output.png`で5秒地点の1枚を保存できる。一定間隔で連続して抜く場合は`-vf fps=1`（1秒に1枚）のように指定し、JPGで保存するときは`-q:v 2`（数値は2〜31で小さいほど高画質）で高画質に保てるという。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>自分で組み立てた動画の中から気に入った1コマだけを静止画として抜きたいときは、秒数を指定した1行のコマンドだけで取り出せる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/extract-frames/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/extract-frames
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-08</span>
+    </div>
+    <h2>フレームレート変換、-rとfpsの使い分け</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画のフレームレート（1秒あたりの画像の数）を変える方法を、`-r`オプションと`fps`フィルタの違いで整理している。`-vf fps=30`のようにフィルタで指定すれば60fpsの素材を30fpsに変換でき、音声は`-c:a copy`でそのまま残せる。連番画像から動画を作るときは`-framerate 1 -i img%03d.png -r 30`のように指定し、`setpts=PTS/30,fps=30`を使えば60秒の動画を2秒に短縮できるという実例も載っている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>静止画をつなげて動画にするときは、`-framerate`で元の表示間隔、`-r`で書き出し後のフレームレートを別々に指定すれば、思った速さの動画に組み立てられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/change-framerate/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/change-framerate
+    </a>
+  </div>
+
+  <!-- 5: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-15</span>
+    </div>
+    <h2>無音区間の自動検出、しきい値の具体例</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpeg-cookbook.comの解説記事。`silencedetect`フィルタで、動画や音声の中の無音区間がどこにあるかを調べる方法をまとめている。`ffmpeg -i input.mp3 -af silencedetect -f null /dev/null`を実行すると、`silence_start`・`silence_end`・`silence_duration`（いずれも秒）がログに出力される。しきい値は`noise=-40dB`、継続時間は`duration=0.5`のように調整でき、1920x1080・120秒の素材での検出は16.97倍速（7.07秒）で終わったという実測値も載っている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>これから実写の動画を編集するようになったら、カットする前にまず`silencedetect`で無音区間の時刻を洗い出しておけば、どこを切るか判断する下準備ができる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/silence-detect/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/silence-detect
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第64回<br>
+    2026年10月25日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">トップに戻る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第63回｜2026.10.24</title>
+<title>デイリートレンド調査レポート 第64回｜2026.10.25</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第63回</span>
-    <h1>今日のトレンド調査<br><span class="accent">さくらVPSの脆弱性対応・HEVC→H264変換・LP動画の再生待ち解消・音ズレの直し方・Claude Codeのグラフ精度向上</span></h1>
-    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第64回</span>
+    <h1>今日のトレンド調査<br><span class="accent">NotionのAIエージェント刷新・AV1での動画圧縮・動画の1コマ抜き出し・フレームレート変換・無音区間の自動検出</span></h1>
+    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はさくらのVPSでカーネルの重大な脆弱性が出て新規受付が止まってもうたから、VPS触ってる人はまず確認してな。ffmpeg側はHEVC変換・LP動画の再生待ち解消・音ズレ直しと、実写が絡む詰まりどころを拾えたで。Claude Codeのグラフもコントラストの判定が地味に賢くなっとったわ。</p>
+    <p>今日はNotionのAIエージェントがコスト9割減で刷新されたから、議事録整理とかで使うてる人は軽く触ってみてな。ffmpeg側はAV1での圧縮・1コマ抜き出し・フレームレート変換・無音区間の検出と、動画の仕込みに効くネタを拾えたで。</p>
   </div>
 
   <!-- 1: B 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-20</span>
+      <span class="date">2026-10-19</span>
     </div>
-    <h2>さくらVPS、カーネル脆弱性で新規停止中</h2>
+    <h2>NotionのAIエージェント、コスト9割減で刷新</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Linuxカーネルの脆弱性「CVE-2026-99999」（通称PwnEscape、緊急度を示すCVSSスコアは9.3）が報告され、さくらインターネットは2026年10月16日から「さくらのVPS」を含む5サービスで、新規申込・スケールアップ・ISOイメージでのインストールなどの受付を停止している（再開時期は未定）。既存契約のVPSはそのまま稼働中で、今すぐ使えなくなるわけではない。</p>
+      <p>Notionが2026年10月19日、文章やタスクを自動で進める「Notion Agent」を刷新した。タスクごとに最適なモデルを自動で選ぶ「Auto」が改善され、Opus 5.5などの高性能モデルと同等の結果を、約20種類の一般的なタスクで平均約90%低いコストで出せるようになったという。エージェントは専用のブラウザと作業環境を持ち、最長24時間まで作業を続けられる。モバイルでのチャット読み込みも最大50%速くなった。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>自分でOSやカーネルを管理しているVPSを使っているなら、カーネルのバージョンを確認して、提供元から来るセキュリティ更新をすぐ当てる。さくらのVPSを使っているなら、今は新規契約・スケールアップ系の操作が止まっていることだけ覚えておけばいい。</p>
+      <p>議事録整理や顧客管理などでNotionのAgentを使うとき、モデルを自分で選ばなくても「Auto」が自動で安く済ませてくれるようになり、まとまった作業も24時間預けっぱなしにできる。</p>
     </div>
-    <a class="source-link" href="https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html
+    <a class="source-link" href="https://www.notion.com/releases/2026-10-19" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> notion.com/releases/2026-10-19
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-06-30</span>
+      <span class="date">2026-04-14</span>
     </div>
-    <h2>HEVC→H264変換、古い機器対策の3設定</h2>
+    <h2>AV1変換、同画質でサイズ最大6割減</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。HEVC（H.265）で撮った動画が、古いテレビやHEVC非対応のWindows機、古い編集ソフトで再生・読み込みができない場合に、ffmpegでH.264に変換する手順をまとめている。基本コマンドは`ffmpeg -i input.mp4 -c:v libx264 -crf 20 -preset medium -c:a aac output.mp4`で、CRF（画質を決める数値、0〜51で小さいほど高画質）は無劣化に近い18、推奨は20が目安。10bitのHEVCをそのまま変換すると古い機器で映像が真っ黒になることがあり、`-pix_fmt yuv420p`を足して8bitに揃えれば直るという落とし穴も具体的に書かれている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画をAV1（新しい圧縮形式）でエンコードする手順を、実測値つきでまとめている。`libsvtav1`エンコーダで`-crf 35 -preset 6`のように指定すると、同じ画質（VMAFという指標で比較）のままファイルサイズがH.264の27〜63%まで小さくなるという結果が載っている。presetの数値を上げると書き出しは速くなるがサイズは大きくなり、preset 6はpreset 8より実写で18〜27%、アニメで34〜46%小さくなるとのこと。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写撮影の素材がHEVCで撮られていて、古い編集環境やWindows機で開けない・映像が真っ黒になるときは、上のコマンドに`-pix_fmt yuv420p`を足して変換すれば、今までのffmpeg編集の流れにそのまま乗せられる。</p>
+      <p>LPやnoteに貼る動画の容量を減らしたいときは、`-crf`や`preset`の数値を変えてAV1で書き出せば、画質を落とさずにH.264より小さいファイルサイズにできる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/av1-encode/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/av1-encode
     </a>
   </div>
 
@@ -293,17 +293,17 @@
       <span class="badge mid">重要度：中</span>
       <span class="date">2026-06-27</span>
     </div>
-    <h2>LP動画の再生待ち、1コマンドで解消</h2>
+    <h2>動画の1コマ抜き出し、秒指定で1枚保存</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。Webページに貼ったMP4がなかなか再生されない・読み込みが遅い原因として、動画の管理情報（moovアトム）がファイルの末尾にあることを挙げている。ブラウザは先頭から順にデータを読むため、moovが末尾にあるとそこまで待たされる。`ffmpeg -i input.mp4 -c copy -movflags +faststart output.mp4`を通すと、再エンコードなし・数秒でmoovを先頭に移せる。適用済みかは`ffprobe -v trace input.mp4 2&gt;&amp;1 | grep "parent:'root'"`でmoovとmdatの順番を確認できるとも書かれている。faststartが効くのは.mp4と.movの出力のみで、短いクリップより長いファイルほど効果が目立つ。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画から指定した時点の1枚だけをPNGやJPGで抜き出す方法を具体的なコマンドでまとめている。`ffmpeg -ss 00:00:05 -i input.mp4 -frames:v 1 output.png`で5秒地点の1枚を保存できる。一定間隔で連続して抜く場合は`-vf fps=1`（1秒に1枚）のように指定し、JPGで保存するときは`-q:v 2`（数値は2〜31で小さいほど高画質）で高画質に保てるという。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>顧客向けのLPやnoteに貼った動画の再生開始が遅いと感じたら、上の1コマンドを通すだけで（画質劣化なし・数秒で完了）直せる。</p>
+      <p>自分で組み立てた動画の中から気に入った1コマだけを静止画として抜きたいときは、秒数を指定した1行のコマンドだけで取り出せる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/extract-frames/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/extract-frames
     </a>
   </div>
 
@@ -312,48 +312,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-06-30</span>
+      <span class="date">2026-04-08</span>
     </div>
-    <h2>音ズレが徐々に進む問題、倍率計算で直す</h2>
+    <h2>フレームレート変換、-rとfpsの使い分け</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画の音声が録画時間とともにだんだんズレていく「ドリフト」という問題は、一定時間だけずらす`-itsoffset`では直らず、音声の再生速度そのものを比率で調整する必要があると説明している。たとえば10分（600秒）地点で音声が0.5秒遅れている場合、倍率は(600+0.5)/600=1.00083で、`ffmpeg -i input.mp4 -af atempo=1.00083 -c:v copy output.mp4`のように当てる。編集ソフト側だけでズレる場合は可変フレームレート（VFR）が原因のことが多く、`-fps_mode cfr -r 30`で固定フレームレートに変換する方法も示されている。</p>
+      <p>ffmpeg-cookbook.comの解説記事。動画のフレームレート（1秒あたりの画像の数）を変える方法を、`-r`オプションと`fps`フィルタの違いで整理している。`-vf fps=30`のようにフィルタで指定すれば60fpsの素材を30fpsに変換でき、音声は`-c:a copy`でそのまま残せる。連番画像から動画を作るときは`-framerate 1 -i img%03d.png -r 30`のように指定し、`setpts=PTS/30,fps=30`を使えば60秒の動画を2秒に短縮できるという実例も載っている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写動画の音声が録画の後半になるほど映像とズレていくときは、ズレた時間と地点から倍率を計算して`atempo`に入れれば、映像をそのまま使って音声の速さだけ直せる。</p>
+      <p>静止画をつなげて動画にするときは、`-framerate`で元の表示間隔、`-r`で書き出し後のフレームレートを別々に指定すれば、思った速さの動画に組み立てられる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/fix-audio-drift
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/change-framerate/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/change-framerate
     </a>
   </div>
 
-  <!-- 5: B 中 -->
+  <!-- 5: A 中 -->
   <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
+      <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-10-22</span>
+      <span class="date">2026-05-15</span>
     </div>
-    <h2>Claude Codeのグラフ、文字色の判定が向上</h2>
+    <h2>無音区間の自動検出、しきい値の具体例</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Claude Codeの「dataviz」（グラフやダッシュボードを作る際の設計ルール集）スキルがアップデートされ、テキストの読みやすさを計算する方式「APCA」が追加された（`apca(text, background)`という関数で判定）。色付きの帯やバッジにラベルを乗せるとき、背景色に対して白文字・黒文字のどちらが読みやすいかを、より正確に自動選択できるようになった。</p>
+      <p>ffmpeg-cookbook.comの解説記事。`silencedetect`フィルタで、動画や音声の中の無音区間がどこにあるかを調べる方法をまとめている。`ffmpeg -i input.mp3 -af silencedetect -f null /dev/null`を実行すると、`silence_start`・`silence_end`・`silence_duration`（いずれも秒）がログに出力される。しきい値は`noise=-40dB`、継続時間は`duration=0.5`のように調整でき、1920x1080・120秒の素材での検出は16.97倍速（7.07秒）で終わったという実測値も載っている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>Claude Codeに顧客向け資料やLP用のグラフ・ダッシュボードを作らせるとき、色帯の上に乗せた文字が自動でちゃんと読める色に選ばれるようになり、配色を自分でチェックし直す手間が減る。</p>
+      <p>これから実写の動画を編集するようになったら、カットする前にまず`silencedetect`で無音区間の時刻を洗い出しておけば、どこを切るか判断する下準備ができる。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.309" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.309
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/silence-detect/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/silence-detect
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第63回<br>
-    2026年10月24日分
+    デイリートレンドレーダー 第64回<br>
+    2026年10月25日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-25.html">2026-10-25（第64回）</a>
       <a href="days/2026-10-24.html">2026-10-24（第63回）</a>
       <a href="days/2026-10-23.html">2026-10-23（第62回）</a>
       <a href="days/2026-10-22.html">2026-10-22（第61回）</a>

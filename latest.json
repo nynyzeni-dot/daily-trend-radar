@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-24.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-25.html",
   "items": [
-    {"title": "さくらVPS、カーネル脆弱性で新規停止中", "why": "VPSを自分でOS管理しているなら、カーネルのバージョンを確認して提供元のセキュリティ更新をすぐ当てる", "url": "https://atmarkit.itmedia.co.jp/ait/articles/2610/20/news024.html"},
-    {"title": "HEVC→H264変換、古い機器対策の3設定", "why": "実写素材がHEVCで古い環境で開けない・真っ黒になるときは、crf 20とpix_fmt yuv420pを付けて変換すれば直る", "url": "https://ffmpeg-cookbook.com/ja/articles/convert-hevc-to-h264/"},
-    {"title": "LP動画の再生待ち、1コマンドで解消", "why": "LPやnoteに貼った動画の再生開始が遅いときは、movflags +faststartを通すだけで数秒・無劣化で直る", "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-faststart-web-playback/"},
-    {"title": "音ズレが徐々に進む問題、倍率計算で直す", "why": "実写動画の音声が録画の後半ほどズレるときは、ズレた時間と地点から倍率を計算してatempoに入れれば直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/fix-audio-drift/"},
-    {"title": "Claude Codeのグラフ、文字色の判定が向上", "why": "顧客向け資料やLP用のグラフを作らせるとき、色帯の上の文字が自動でちゃんと読める色に選ばれるようになった", "url": "https://code.claude.com/docs/en/changelog#v2.1.309"}
+    {"title": "NotionのAIエージェント、コスト9割減で刷新", "why": "NotionのAgentを使うとき、モデルを自分で選ばなくてもAutoが自動で安く済ませてくれ、まとまった作業も24時間預けっぱなしにできる", "url": "https://www.notion.com/releases/2026-10-19"},
+    {"title": "AV1変換、同画質でサイズ最大6割減", "why": "LPやnoteに貼る動画の容量を減らしたいときは、crfやpresetの数値を変えてAV1で書き出せば画質を落とさずファイルサイズを小さくできる", "url": "https://ffmpeg-cookbook.com/ja/articles/av1-encode/"},
+    {"title": "動画の1コマ抜き出し、秒指定で1枚保存", "why": "組み立てた動画の中から気に入った1コマだけを静止画として抜きたいときは、秒数を指定した1行のコマンドで取り出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/extract-frames/"},
+    {"title": "フレームレート変換、-rとfpsの使い分け", "why": "静止画をつなげて動画にするときは、framerateで元の表示間隔、rで書き出し後のフレームレートを別々に指定すれば思った速さに組み立てられる", "url": "https://ffmpeg-cookbook.com/ja/articles/change-framerate/"},
+    {"title": "無音区間の自動検出、しきい値の具体例", "why": "実写の動画を編集するようになったら、カットする前にsilencedetectで無音区間の時刻を洗い出しておけば、どこを切るか判断する下準備ができる", "url": "https://ffmpeg-cookbook.com/ja/articles/silence-detect/"}
   ]
 }

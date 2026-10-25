@@ -1,12 +1,9 @@
 {
-  "date": "2026-10-25",
-  "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-25.html",
+  "date": "2026-10-26",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-26.html",
   "items": [
-    {"title": "NotionのAIエージェント、コスト9割減で刷新", "why": "NotionのAgentを使うとき、モデルを自分で選ばなくてもAutoが自動で安く済ませてくれ、まとまった作業も24時間預けっぱなしにできる", "url": "https://www.notion.com/releases/2026-10-19"},
-    {"title": "AV1変換、同画質でサイズ最大6割減", "why": "LPやnoteに貼る動画の容量を減らしたいときは、crfやpresetの数値を変えてAV1で書き出せば画質を落とさずファイルサイズを小さくできる", "url": "https://ffmpeg-cookbook.com/ja/articles/av1-encode/"},
-    {"title": "動画の1コマ抜き出し、秒指定で1枚保存", "why": "組み立てた動画の中から気に入った1コマだけを静止画として抜きたいときは、秒数を指定した1行のコマンドで取り出せる", "url": "https://ffmpeg-cookbook.com/ja/articles/extract-frames/"},
-    {"title": "フレームレート変換、-rとfpsの使い分け", "why": "静止画をつなげて動画にするときは、framerateで元の表示間隔、rで書き出し後のフレームレートを別々に指定すれば思った速さに組み立てられる", "url": "https://ffmpeg-cookbook.com/ja/articles/change-framerate/"},
-    {"title": "無音区間の自動検出、しきい値の具体例", "why": "実写の動画を編集するようになったら、カットする前にsilencedetectで無音区間の時刻を洗い出しておけば、どこを切るか判断する下準備ができる", "url": "https://ffmpeg-cookbook.com/ja/articles/silence-detect/"}
+    {"title": "フックの型、対比と早送りで離脱防止", "why": "漫画リールの1コマ目のセリフを対比型・変化の早送り型などに当てはめて3〜5パターン作り、音を消して3秒だけ見て伝わるか確かめられる", "url": "https://www.capcut.com/create/short-form-video-hooks"},
+    {"title": "バズる動画、2秒に1カットが目安", "why": "実写動画を編集するとき「2秒に1カット」のペースを目安に入れてみて、そこから間延びした部分を削っていける", "url": "https://gentosha-go.com/articles/-/60079"}
   ]
 }

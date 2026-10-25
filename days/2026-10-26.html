@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第65回｜2026.10.26</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第65回</span>
+    <h1>今日のトレンド調査<br><span class="accent">フックの型（対比・早送り）とバズる動画の2秒カット</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は動画の作り方系を2本だけ拾えたで。CapCutのフック6型は漫画リールの1コマ目にそのまま使えるし、バズる動画の「2秒に1カット」も編集の目安になる。AIツールのニュースは既出とかぶりばっかりやったから、今日は無理に載せんかったわ。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-06-12</span>
+    </div>
+    <h2>フックの型、対比と早送りで離脱防止</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>CapCut公式ブログが、動画冒頭3秒の「フック」を6つの型に整理した記事。問題提起型・好奇心ギャップ型・証拠提示型・対比型（編集前後などの違いを見せる）・変化の早送り型（完成形を先に見せてから過程を説明する）・対象者呼びかけ型の6つで、それぞれに例文が付く。音を消した状態で最初の3秒だけを見て「内容・対象者・続きを見る理由」が伝わるか確かめる「3秒テスト」と、3〜5案を1変数だけ変えて作り、保持率で比較する検証方法も紹介している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの1コマ目のセリフを、この6つの型（特に対比型・変化の早送り型）に当てはめて3〜5パターン作り、音を消したまま3秒だけ見て伝わるかを確かめる、という具体的な決め方に変えられる。</p>
+    </div>
+    <a class="source-link" href="https://www.capcut.com/create/short-form-video-hooks" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/short-form-video-hooks
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2024-05-26</span>
+    </div>
+    <h2>バズる動画、2秒に1カットが目安</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>バズるクリエイターに共通する特徴を分析した記事。筆者の経験から「最初の10秒で5カットは欲しい」、つまり2秒に1カットのペースで編集するとテンポが速く飽きにくくなる、という目安を紹介している。不要な部分を削っていくと結果的にカット数が自然と増える、という編集の順序にも触れている。ただし著者自身「私見」と断っており、再生数などのデータによる裏付けは示されていない。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>これから編集する実写の動画で、最初は「2秒に1カット」のペースを目安にカットを入れてみて、そこから間延びした部分をさらに削っていく、という具体的な編集の順番に使える。</p>
+    </div>
+    <a class="source-link" href="https://gentosha-go.com/articles/-/60079" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gentosha-go.com/articles/-/60079
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第65回<br>
+    2026年10月26日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">トップに戻る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第64回｜2026.10.25</title>
+<title>デイリートレンド調査レポート 第65回｜2026.10.26</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第64回</span>
-    <h1>今日のトレンド調査<br><span class="accent">NotionのAIエージェント刷新・AV1での動画圧縮・動画の1コマ抜き出し・フレームレート変換・無音区間の自動検出</span></h1>
-    <p class="period">全5件・動画の作り方4件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第65回</span>
+    <h1>今日のトレンド調査<br><span class="accent">フックの型（対比・早送り）とバズる動画の2秒カット</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はNotionのAIエージェントがコスト9割減で刷新されたから、議事録整理とかで使うてる人は軽く触ってみてな。ffmpeg側はAV1での圧縮・1コマ抜き出し・フレームレート変換・無音区間の検出と、動画の仕込みに効くネタを拾えたで。</p>
+    <p>今日は動画の作り方系を2本だけ拾えたで。CapCutのフック6型は漫画リールの1コマ目にそのまま使えるし、バズる動画の「2秒に1カット」も編集の目安になる。AIツールのニュースは既出とかぶりばっかりやったから、今日は無理に載せんかったわ。</p>
   </div>
 
-  <!-- 1: B 高 -->
+  <!-- 1: A 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
+      <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-19</span>
+      <span class="date">2026-06-12</span>
     </div>
-    <h2>NotionのAIエージェント、コスト9割減で刷新</h2>
+    <h2>フックの型、対比と早送りで離脱防止</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Notionが2026年10月19日、文章やタスクを自動で進める「Notion Agent」を刷新した。タスクごとに最適なモデルを自動で選ぶ「Auto」が改善され、Opus 5.5などの高性能モデルと同等の結果を、約20種類の一般的なタスクで平均約90%低いコストで出せるようになったという。エージェントは専用のブラウザと作業環境を持ち、最長24時間まで作業を続けられる。モバイルでのチャット読み込みも最大50%速くなった。</p>
+      <p>CapCut公式ブログが、動画冒頭3秒の「フック」を6つの型に整理した記事。問題提起型・好奇心ギャップ型・証拠提示型・対比型（編集前後などの違いを見せる）・変化の早送り型（完成形を先に見せてから過程を説明する）・対象者呼びかけ型の6つで、それぞれに例文が付く。音を消した状態で最初の3秒だけを見て「内容・対象者・続きを見る理由」が伝わるか確かめる「3秒テスト」と、3〜5案を1変数だけ変えて作り、保持率で比較する検証方法も紹介している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>議事録整理や顧客管理などでNotionのAgentを使うとき、モデルを自分で選ばなくても「Auto」が自動で安く済ませてくれるようになり、まとまった作業も24時間預けっぱなしにできる。</p>
+      <p>漫画リールの1コマ目のセリフを、この6つの型（特に対比型・変化の早送り型）に当てはめて3〜5パターン作り、音を消したまま3秒だけ見て伝わるかを確かめる、という具体的な決め方に変えられる。</p>
     </div>
-    <a class="source-link" href="https://www.notion.com/releases/2026-10-19" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> notion.com/releases/2026-10-19
+    <a class="source-link" href="https://www.capcut.com/create/short-form-video-hooks" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/short-form-video-hooks
     </a>
   </div>
 
@@ -270,90 +270,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-14</span>
+      <span class="date">2024-05-26</span>
     </div>
-    <h2>AV1変換、同画質でサイズ最大6割減</h2>
+    <h2>バズる動画、2秒に1カットが目安</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画をAV1（新しい圧縮形式）でエンコードする手順を、実測値つきでまとめている。`libsvtav1`エンコーダで`-crf 35 -preset 6`のように指定すると、同じ画質（VMAFという指標で比較）のままファイルサイズがH.264の27〜63%まで小さくなるという結果が載っている。presetの数値を上げると書き出しは速くなるがサイズは大きくなり、preset 6はpreset 8より実写で18〜27%、アニメで34〜46%小さくなるとのこと。</p>
+      <p>バズるクリエイターに共通する特徴を分析した記事。筆者の経験から「最初の10秒で5カットは欲しい」、つまり2秒に1カットのペースで編集するとテンポが速く飽きにくくなる、という目安を紹介している。不要な部分を削っていくと結果的にカット数が自然と増える、という編集の順序にも触れている。ただし著者自身「私見」と断っており、再生数などのデータによる裏付けは示されていない。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>LPやnoteに貼る動画の容量を減らしたいときは、`-crf`や`preset`の数値を変えてAV1で書き出せば、画質を落とさずにH.264より小さいファイルサイズにできる。</p>
+      <p>これから編集する実写の動画で、最初は「2秒に1カット」のペースを目安にカットを入れてみて、そこから間延びした部分をさらに削っていく、という具体的な編集の順番に使える。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/av1-encode/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/av1-encode
-    </a>
-  </div>
-
-  <!-- 3: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-06-27</span>
-    </div>
-    <h2>動画の1コマ抜き出し、秒指定で1枚保存</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画から指定した時点の1枚だけをPNGやJPGで抜き出す方法を具体的なコマンドでまとめている。`ffmpeg -ss 00:00:05 -i input.mp4 -frames:v 1 output.png`で5秒地点の1枚を保存できる。一定間隔で連続して抜く場合は`-vf fps=1`（1秒に1枚）のように指定し、JPGで保存するときは`-q:v 2`（数値は2〜31で小さいほど高画質）で高画質に保てるという。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>自分で組み立てた動画の中から気に入った1コマだけを静止画として抜きたいときは、秒数を指定した1行のコマンドだけで取り出せる。</p>
-    </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/extract-frames/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/extract-frames
-    </a>
-  </div>
-
-  <!-- 4: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-08</span>
-    </div>
-    <h2>フレームレート変換、-rとfpsの使い分け</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。動画のフレームレート（1秒あたりの画像の数）を変える方法を、`-r`オプションと`fps`フィルタの違いで整理している。`-vf fps=30`のようにフィルタで指定すれば60fpsの素材を30fpsに変換でき、音声は`-c:a copy`でそのまま残せる。連番画像から動画を作るときは`-framerate 1 -i img%03d.png -r 30`のように指定し、`setpts=PTS/30,fps=30`を使えば60秒の動画を2秒に短縮できるという実例も載っている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>静止画をつなげて動画にするときは、`-framerate`で元の表示間隔、`-r`で書き出し後のフレームレートを別々に指定すれば、思った速さの動画に組み立てられる。</p>
-    </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/change-framerate/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/change-framerate
-    </a>
-  </div>
-
-  <!-- 5: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">2026-05-15</span>
-    </div>
-    <h2>無音区間の自動検出、しきい値の具体例</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>ffmpeg-cookbook.comの解説記事。`silencedetect`フィルタで、動画や音声の中の無音区間がどこにあるかを調べる方法をまとめている。`ffmpeg -i input.mp3 -af silencedetect -f null /dev/null`を実行すると、`silence_start`・`silence_end`・`silence_duration`（いずれも秒）がログに出力される。しきい値は`noise=-40dB`、継続時間は`duration=0.5`のように調整でき、1920x1080・120秒の素材での検出は16.97倍速（7.07秒）で終わったという実測値も載っている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>これから実写の動画を編集するようになったら、カットする前にまず`silencedetect`で無音区間の時刻を洗い出しておけば、どこを切るか判断する下準備ができる。</p>
-    </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/silence-detect/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/silence-detect
+    <a class="source-link" href="https://gentosha-go.com/articles/-/60079" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gentosha-go.com/articles/-/60079
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第64回<br>
-    2026年10月25日分
+    デイリートレンドレーダー 第65回<br>
+    2026年10月26日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-26.html">2026-10-26（第65回）</a>
       <a href="days/2026-10-25.html">2026-10-25（第64回）</a>
       <a href="days/2026-10-24.html">2026-10-24（第63回）</a>
       <a href="days/2026-10-23.html">2026-10-23（第62回）</a>

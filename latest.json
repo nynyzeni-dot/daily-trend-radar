@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-26.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-27.html",
   "items": [
-    {"title": "フックの型、対比と早送りで離脱防止", "why": "漫画リールの1コマ目のセリフを対比型・変化の早送り型などに当てはめて3〜5パターン作り、音を消して3秒だけ見て伝わるか確かめられる", "url": "https://www.capcut.com/create/short-form-video-hooks"},
-    {"title": "バズる動画、2秒に1カットが目安", "why": "実写動画を編集するとき「2秒に1カット」のペースを目安に入れてみて、そこから間延びした部分を削っていける", "url": "https://gentosha-go.com/articles/-/60079"}
+    {"title": "実況テロップ、「ツッコミ」で笑いを増幅", "why": "漫画リールのセリフテロップに、黄色やピンクの「ツッコミ」テロップを1行足すだけで第三者目線の一言を添えられる", "url": "https://omniweb.jp/m109/"},
+    {"title": "音をスペクトログラム化、ノイズ帯を目で確認", "why": "ffmpegで声やBGMを調整するとき、showspectrumで音を色の帯にすればノイズ帯や音の削れを目で確認できる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-waveform-video/"}
   ]
 }

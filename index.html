@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第66回｜2026.10.27</title>
+<title>デイリートレンド調査レポート 第67回｜2026.10.28</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第66回</span>
-    <h1>今日のトレンド調査<br><span class="accent">音のスペクトログラム化と、実況テロップの「ツッコミ」演出</span></h1>
-    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第67回</span>
+    <h1>今日のトレンド調査<br><span class="accent">無音テロップ設計の鉄則と、RoutineのEffort設定追加</span></h1>
+    <p class="period">全2件・動画の作り方1件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースが週報と丸かぶりか抽象論ばっかりで、無理に載せんかったわ。動画の作り方系は2本。ffmpegで音を画像にして目で確認するやつと、ゲーム実況のツッコミテロップの型、どっちも地味やけど明日すぐ使えるやつやで。</p>
+    <p>今日は2本だけやけど、どっちも明日から効くやつやったで。無音の漫画リールでも通じるテロップ設計の鉄則と、Claude CodeのクラウドRoutineにeffort設定が増えた話。AIツール系の他の候補はほとんど抽象論か日付切れで落としたわ。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -251,46 +251,47 @@
       <span class="badge high">重要度：高</span>
       <span class="date">2026.1.29</span>
     </div>
-    <h2>実況テロップ、「ツッコミ」で笑いを増幅</h2>
+    <h2>無音でも伝わる、テロップ設計の鉄則</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ゲーム実況動画の編集ノウハウを扱うサイトの記事。プレイヤーの発言に第三者視点でツッコミを入れるテロップ（＝字幕）の型を4種類に整理している。後出しツッコミ（＝結果が出た後に過去の発言を拾う）、リアルタイムツッコミ（＝プレイ中の行動に即座に反応する）、解説ツッコミ（＝状況を面白おかしく説明する）、視聴者代弁ツッコミ（＝視聴者の心の声を言葉にする）の4つ。通常の発言テロップは白地に黒縁取り、ツッコミは黄色・ピンク・水色などの色で目立たせ、画面高さの5〜8%程度のサイズで画面下部に置く、という配色とサイズの基準も示されている。</p>
+      <p>音を出せないイベント会場向けの動画編集を解説する記事。テロップ（＝字幕）だけで内容を伝える「サイレント動画」の設計基準をまとめている。1画面は15文字以内・1メッセージだけにする、フォントは游ゴシックなど視認性の高いゴシック体を使う、文字サイズは1080pの動画で70〜100px程度にする、といった具体的な数値が示されている。表示時間も文字数に応じて1.5〜4秒、配色は赤と緑の組み合わせを避けるなど色覚への配慮も書かれている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのセリフテロップに、黄色やピンクで色を変えた「ツッコミ」のテロップをもう1行足すだけで、キャラのセリフに第三者目線の一言を添える演出を増やせる。</p>
+      <p>声が入ってへん漫画リールのテロップも、1画面15文字以内・游ゴシックなど見やすいフォント・1080pで70〜100px程度のサイズに揃え、文字数に応じて1.5〜4秒の表示時間にすれば、声なしでも内容がもっと伝わりやすくなる。赤と緑の組み合わせを避ける配色チェックにも使える。</p>
     </div>
-    <a class="source-link" href="https://omniweb.jp/m109/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> omniweb.jp/m109
+    <a class="source-link" href="https://omniweb.jp/m110/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> omniweb.jp/m110
     </a>
   </div>
 
-  <!-- 2: A 中 -->
+  <!-- 2: B 中 -->
   <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">不明（ffmpeg解説サイト）</span>
+      <span class="date">2026.10.27</span>
     </div>
-    <h2>音をスペクトログラム化、ノイズ帯を目で確認</h2>
+    <h2>クラウドRoutineに「考える深さ」設定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの解説サイトが、音声ファイルから波形や周波数を映像化するフィルタの使い方をまとめた記事。showwavespic（＝音声全体の波形を1枚の画像にする機能）なら`ffmpeg -i input.mp3 -filter_complex "showwavespic=s=1920x480" -frames:v 1 waveform.png`の1行で透明背景の波形画像が書き出せる。showspectrum（＝音を色の帯で示すスペクトログラムにする機能）を使うと、ノイズ帯やMP3特有の高音域の削れ（16kHz付近のカットオフ）を目で見て確認できるとしている。showwaves（＝波形が動く動画にする機能）やshowfreqs（＝周波数ごとの強さを棒グラフで示す機能）で動く映像にすることも可能。</p>
+      <p>Claude Codeの変更履歴（バージョン2.1.312）に、クラウドで動くRoutine（＝定期的に自動実行されるタスク設定）を作成・編集する画面に、使うモデルと一緒にeffort（＝AIがどれくらい深く考えるかのレベル）も指定できる項目が追加されたと載った。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>ffmpegで声やBGMを調整するときに、showspectrumで音を色の帯（スペクトログラム）にした画像を書き出せば、ノイズ帯や音が削れている場所を目で見て確認できる。</p>
+      <p>クラウドで動かしているRoutineの設定を開くときに、モデルの指定と合わせてeffort（考える深さ）のレベルも選べるようになったので、次に設定を見直すタイミングで一度確認してみるとよい。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/audio-waveform-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/audio-waveform-video
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.312" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.312
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第66回<br>
-    2026年10月27日分
+    デイリートレンドレーダー 第67回<br>
+    2026年10月28日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-28.html">2026-10-28（第67回）</a>
       <a href="days/2026-10-27.html">2026-10-27（第66回）</a>
       <a href="days/2026-10-26.html">2026-10-26（第65回）</a>
       <a href="days/2026-10-25.html">2026-10-25（第64回）</a>

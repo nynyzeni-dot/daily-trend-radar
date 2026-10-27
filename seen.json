@@ -1154,6 +1154,16 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/audio-waveform-video/",
       "title": "音をスペクトログラム化、ノイズ帯を目で確認",
       "date": "2026-10-27"
+    },
+    {
+      "url": "https://omniweb.jp/m110/",
+      "title": "無音でも伝わる、テロップ設計の鉄則",
+      "date": "2026-10-28"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.312",
+      "title": "クラウドRoutineに「考える深さ」設定",
+      "date": "2026-10-28"
     }
   ]
 }

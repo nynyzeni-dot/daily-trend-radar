@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-28.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-29.html",
   "items": [
-    {"title": "無音でも伝わる、テロップ設計の鉄則", "why": "声なし漫画リールのテロップも、15文字以内・游ゴシック等・1080pで70〜100px・1.5〜4秒表示に揃えると伝わりやすくなる", "url": "https://omniweb.jp/m110/"},
-    {"title": "クラウドRoutineに「考える深さ」設定", "why": "クラウドのRoutine設定で、モデルと一緒にeffort（考える深さ）のレベルも選べるようになった", "url": "https://code.claude.com/docs/en/changelog#v2.1.312"}
+    {"title": "動画が再生されない9つのNG行動", "why": "テロップの高さを画面縦幅の1/15以上・フォント2〜3種類まで・縦横比(9:16)の確認など、漫画リールの投稿前チェックリストに使える", "url": "https://omniweb.jp/m112/"},
+    {"title": "AI漫画のセリフ、後から文字入れ", "why": "生成AIには吹き出しの枠だけ描かせて空白にし、セリフ・効果音・モノローグをフォントで分けて後から別に載せると文字崩れを防げる", "url": "https://aipicks.jp/mag/ai-manga-pro-quality-tips"}
   ]
 }

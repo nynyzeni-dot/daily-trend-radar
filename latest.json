@@ -1,9 +1,10 @@
 {
-  "date": "2026-10-29",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-29.html",
+  "date": "2026-10-30",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-30.html",
   "items": [
-    {"title": "動画が再生されない9つのNG行動", "why": "テロップの高さを画面縦幅の1/15以上・フォント2〜3種類まで・縦横比(9:16)の確認など、漫画リールの投稿前チェックリストに使える", "url": "https://omniweb.jp/m112/"},
-    {"title": "AI漫画のセリフ、後から文字入れ", "why": "生成AIには吹き出しの枠だけ描かせて空白にし、セリフ・効果音・モノローグをフォントで分けて後から別に載せると文字崩れを防げる", "url": "https://aipicks.jp/mag/ai-manga-pro-quality-tips"}
+    {"title": "テロップ配置の鉄則、下3分の1はUIと重なる", "why": "漫画リールのテロップは画面上部〜中央に置き、1コマの表示は2〜3秒を目安に、同じコマが5秒以上続かないよう切り替える", "url": "https://tatap.jp/knowledge/vertical-video-production/"},
+    {"title": "声の仕上げ、ノイズ除去は50%から試す", "why": "実写動画の声を編集するとき、ノイズ除去は50%程度から試し、5〜8kHz帯のディエッサー・100Hz以下カット・3kHz+2dB・4:1圧縮・-0.3dBTPで仕上げる", "url": "https://jisaku.com/posts/podcast-editing-workflow"},
+    {"title": "対話で指示、動くグラフやロゴを編集", "why": "顧客向け資料やLPの数値グラフ・ロゴ演出を、チャットで「数値を150から180に修正して」のように直したい部分だけ指示して直せる", "url": "https://aipicks.jp/mag/magnific-move-what-is-2026"}
   ]
 }

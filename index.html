@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第69回｜2026.10.30</title>
+<title>デイリートレンド調査レポート 第70回｜2026.10.31</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第69回</span>
-    <h1>今日のトレンド調査<br><span class="accent">縦動画のテロップ配置ルールと、声の仕上げの数値目安</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第70回</span>
+    <h1>今日のトレンド調査<br><span class="accent">リール「お試し投稿」機能と、声の左右差を直すffmpegの技</span></h1>
     <p class="period">全3件・動画の作り方2件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日は縦動画の基本ルールが一本にまとまった記事が今日いちやったわ。テロップは上部〜中央、カットは2〜3秒が目安、ってだけでチェックリストに使える。声の編集の数値目安も拾えたし、資料作りの方はチャットで指示するだけでグラフやロゴを動かせる新しいツールも出てきたで。</p>
+    <p>今日はリールをいきなり全員に出さんでも「トライアル」で反応だけ先に見れる、ってのが地味に使えるネタやったわ。マイクの左右差も、ffmpegのpanフィルタで録り直さんでも直せるんは覚えときたい。Claude CodeとHiggsfieldがMCPでつながって、動画生成までチャットで頼める時代にもなってきたで。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026-10-28</span>
+      <span class="date">2026-10-30</span>
     </div>
-    <h2>テロップ配置の鉄則、下3分の1はUIと重なる</h2>
+    <h2>投稿前に試せる「トライアルリール」の使い方</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>縦型動画制作の完全ガイド記事。TikTok・Instagramリール・YouTube Shortsに共通する基本仕様（9:16・1080×1920px・30fps）と、編集の基準を整理している。画面下部3分の1はいいね・コメントなどのUIと重なることを想定し、重要な情報は上部〜中央に置く、テロップのフォントサイズは画面幅の1/3以上にする、カットは基本2〜3秒（情報密度の高いハウツーは1.5〜2秒、ストーリー調は3〜4秒）、同じ画面が5秒以上続くと離脱率が上がる、といった具体的な基準が載っている。</p>
+      <p>Instagramの「トライアルリール」（＝フォロワー以外に先出しして反応を見られる投稿方法のこと）の使い方を解説する記事。共有直前の画面に出る設定からトライアルとして公開すると、フォロワーのフィードやリールタブ・自分のプロフィールには表示されず、再生数・保存数・共有数などのインサイトだけが公開から約24時間後に確認できるようになる。そこで結果がよければ「全員に共有」を選んで通常のリールとして公開する、という2段階の仕組みになっている。ただし公開から72時間以内に成績がよいと、設定によってはそのまま自動でフォロワーに共有されてしまうため、この設定は事前に確認しておく必要があるとされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのテロップ位置を画面上部〜中央にそろえ、画面下3分の1には置かないように配置を見直せる。1コマの表示時間も2〜3秒を目安にそろえ、同じコマが5秒以上続かないように切り替えのタイミングを調整できる。</p>
+      <p>新しい形式の漫画リールをいきなり通常投稿せず、まずトライアルリールとして出し、24時間後にインサイト（再生数・保存数・共有数）を見てから、よければ「全員に共有」で本採用する、という2段階の出し方に変えられる。72時間以内の自動共有設定がオンになっていないかも、投稿前に確認できる。</p>
     </div>
-    <a class="source-link" href="https://tatap.jp/knowledge/vertical-video-production/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> tatap.jp/knowledge/vertical-video-production
+    <a class="source-link" href="https://techgym.jp/column/trial-reel/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> techgym.jp/column/trial-reel
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-04-14</span>
+      <span class="date">2026-09-02</span>
     </div>
-    <h2>声の仕上げ、ノイズ除去は50%から試す</h2>
+    <h2>声の左右差、ffmpegのpanで均す</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ポッドキャスト編集のワークフローを解説する記事。ノイズ除去は強度100%だと不自然な音になるため、50%程度の強さから試すとよいとしている。歯擦音（サ行などの耳に刺さる音）は5〜8kHz帯を抑えるディエッサーで対処し、仕上げでは100Hzより低い帯域をカットしつつ3kHz帯を+2dBほど持ち上げ、圧縮比4:1（アタック10〜30ms・リリース50〜100ms）でまとめた上で、音量のピークが-0.3dBTPを超えないように抑える、という具体的な数値の目安が示されている。</p>
+      <p>ffmpegの音声チャンネル変換を扱う記事。ステレオの音声をモノラル（1本の音声チャンネルのこと）にまとめる際、`-ac 1`だけで変換すると左右の音量を単純に足し合わせてしまい、約6dB（デシベル＝音の大きさの単位のこと）ほど音量が上がって音割れすることがあると説明している。`pan=mono|c0=0.5*c0+0.5*c1`のように左右それぞれ0.5の比率で混ぜれば、音量を変えずに1本のチャンネルにまとめられる。左右どちらか一方だけを残したい場合は`pan=mono|c0=c0`という書き方も使えるとしている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>これから実写動画の声を編集するようになったら、ノイズ除去はまず50%程度の強さから試し、歯擦音が気になる部分は5〜8kHz帯を抑え、100Hzより低い帯域のカットと3kHz帯を+2dBほど上げる調整、4:1（アタック10〜30ms・リリース50〜100ms）の圧縮、ピークを-0.3dBTP以下に抑える仕上げ、という数値の目安に沿って整えられる。</p>
+      <p>実写動画の撮影で左右のマイクの録れ方に差が出てしまった音声を、録り直さずに`pan=mono|c0=0.5*c0+0.5*c1`で音量を保ったまま1本のチャンネルにまとめたり、`pan=mono|c0=c0`で状態のよい側だけを残したりして整えられるようになる。</p>
     </div>
-    <a class="source-link" href="https://jisaku.com/posts/podcast-editing-workflow" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> jisaku.com/posts/podcast-editing-workflow
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/audio-channels-mono-stereo/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/audio-channels-mono-stereo
     </a>
   </div>
 
@@ -291,27 +291,28 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-10-29</span>
+      <span class="date">2026-10-27</span>
     </div>
-    <h2>対話で指示、動くグラフやロゴを編集</h2>
+    <h2>Claude Code、会話でHiggsfield動画生成</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>2026年10月29日、対話形式の指示だけで動くグラフ・ロゴ・製品紹介の短い動画を作れる「Magnific Move」という機能が紹介された。背景・テキスト・図形などが別々のレイヤーとして残るため、「棒グラフの数値を150から180に修正して」「ロゴの回転を止めて左からスライドインさせて」のように直したい部分だけを指示すると、該当レイヤーだけが再計算される。数秒から十数秒程度の短尺向けで、月額はPremium約16ドル・Premium+約37ドル・Pro約90ドルの3プランとされている。</p>
+      <p>10月27日、AI動画生成サービスHiggsfieldが、Claude（AnthropicのAIチャットのこと）から直接動画生成を呼び出せるMCPコネクタ（＝Claudeと外部サービスをつなぐ接続機能のこと）を公開した。claude.aiやClaude Desktopでは接続先に専用URLを登録するだけで使えるほか、Claude CodeではHiggsfield CLIを使うルートが用意されており、`npm i -g @higgsfield/cli`でインストールして`higgsfield auth login`でログインしたあと`npx skills add higgsfield-ai/skills`を実行すると、Soul Charactersなどの機能を会話から呼び出せるようになる。生成ごとにクレジットを消費するため、記事はClaudeに費用を先に提示させてから承認する使い方を勧めている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>顧客向け資料やLPに使う売上推移などの数値グラフや、ロゴの登場演出を作るとき、素材と数値をチャットで渡し、「数値を150から180に修正して」のような言い方で直したい部分だけを指示して直す、という作り方に使える。</p>
+      <p>Claude Codeに`npm i -g @higgsfield/cli`でHiggsfield CLIを入れ、`higgsfield auth login`でログインしたうえで`npx skills add higgsfield-ai/skills`を実行すれば、Soul Charactersを使った動画生成をClaude Codeの会話の中から呼び出せるようになる。生成前にClaudeへコストを提示させてから進める、という使い方になる。</p>
     </div>
-    <a class="source-link" href="https://aipicks.jp/mag/magnific-move-what-is-2026" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> aipicks.jp/mag/magnific-move-what-is-2026
+    <a class="source-link" href="https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第69回<br>
-    2026年10月30日分
+    デイリートレンドレーダー 第70回<br>
+    2026年10月31日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-10-31.html">2026-10-31（第70回）</a>
       <a href="days/2026-10-30.html">2026-10-30（第69回）</a>
       <a href="days/2026-10-29.html">2026-10-29（第68回）</a>
       <a href="days/2026-10-28.html">2026-10-28（第67回）</a>

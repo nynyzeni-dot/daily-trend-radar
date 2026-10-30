@@ -1189,6 +1189,21 @@
       "url": "https://aipicks.jp/mag/magnific-move-what-is-2026",
       "title": "対話で指示、動くグラフやロゴを編集",
       "date": "2026-10-30"
+    },
+    {
+      "url": "https://techgym.jp/column/trial-reel/",
+      "title": "投稿前に試せる「トライアルリール」の使い方",
+      "date": "2026-10-31"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/audio-channels-mono-stereo/",
+      "title": "声の左右差、ffmpegのpanで均す",
+      "date": "2026-10-31"
+    },
+    {
+      "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP",
+      "title": "Claude Code、会話でHiggsfield動画生成",
+      "date": "2026-10-31"
     }
   ]
 }

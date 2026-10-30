@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-30.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-31.html",
   "items": [
-    {"title": "テロップ配置の鉄則、下3分の1はUIと重なる", "why": "漫画リールのテロップは画面上部〜中央に置き、1コマの表示は2〜3秒を目安に、同じコマが5秒以上続かないよう切り替える", "url": "https://tatap.jp/knowledge/vertical-video-production/"},
-    {"title": "声の仕上げ、ノイズ除去は50%から試す", "why": "実写動画の声を編集するとき、ノイズ除去は50%程度から試し、5〜8kHz帯のディエッサー・100Hz以下カット・3kHz+2dB・4:1圧縮・-0.3dBTPで仕上げる", "url": "https://jisaku.com/posts/podcast-editing-workflow"},
-    {"title": "対話で指示、動くグラフやロゴを編集", "why": "顧客向け資料やLPの数値グラフ・ロゴ演出を、チャットで「数値を150から180に修正して」のように直したい部分だけ指示して直せる", "url": "https://aipicks.jp/mag/magnific-move-what-is-2026"}
+    {"title": "投稿前に試せる「トライアルリール」の使い方", "why": "新しい形式のリールをまずトライアルリールで出し、24時間後にインサイトを見てよければ全員に共有する、という2段階の出し方に変えられる", "url": "https://techgym.jp/column/trial-reel/"},
+    {"title": "声の左右差、ffmpegのpanで均す", "why": "左右のマイクの録れ方に差が出た音声を、録り直さずにpan=mono|c0=0.5*c0+0.5*c1で音量を保ったまま1本にまとめられる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-channels-mono-stereo/"},
+    {"title": "Claude Code、会話でHiggsfield動画生成", "why": "Claude CodeにHiggsfield CLIを入れてnpx skills add higgsfield-ai/skillsを実行すれば、Soul Charactersを使った動画生成を会話の中から呼び出せる", "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP"}
   ]
 }

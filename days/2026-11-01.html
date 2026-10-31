@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第71回｜2026.11.01</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第71回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップは要点だけ、冒頭はオチから見せる</span></h1>
+    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はテロップ、全部書き起こすのやめて要点だけ130%に拡大する、ってだけでグッと見やすくなるんがわかったわ。冒頭も前置き抜きでオチから見せる、3パターン作って比べる発想もすぐ使えそうやな。声入りの編集はまだ先やけど、無音の詰め方は先に頭に入れとくで。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-05-17</span>
+    </div>
+    <h2>テロップ、要点だけに絞る緩急術</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>話した内容を全部文字にする「フルテロップ」をやめて、発話の3〜5割だけに絞る「要点テロップ」（＝結論やキーワードなど要点だけを拾うテロップのこと）を勧める記事。普段は白や薄いグレーでやや小さめに表示し、結論・重要キーワード・数字の部分だけフォントサイズを通常の130%に拡大して赤や黄色などの目立つ色に切り替える、という緩急の付け方を紹介している。台本や音声を聞いて核となる一言を探し、そこだけにテロップを当てる、という手順も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのテロップを全部同じ大きさ・同じ色で並べるのをやめ、オチや数字の部分だけフォントサイズを130%に拡大して赤や黄色にする、という強弱のつけ方に変えられる。</p>
+    </div>
+    <a class="source-link" href="https://library.libecity.com/articles/01KRT6C899FFCWPQZ7PF3CHD2G" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> library.libecity.com/articles/01KRT6C899FFCWPQZ7PF3CHD2G
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-10-11</span>
+    </div>
+    <h2>冒頭フック、3パターンを比べて選ぶ</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画冒頭の「フック」（＝視聴者を引き込む最初の数秒のこと）の作り方を解説する記事。「今日は〜を紹介します」のような前置きをやめて、結論や見せ場をいきなり冒頭に出すことを勧めている。オープニングの一文・最初のカット・画面上のテキストだけを変えた3パターンを同じ動画で作って比べる、という検証方法も紹介されており、冒頭の「フック率」（＝そのまま見続けた割合のこと）が35〜40%なら良好、40%以上なら優秀という目安が挙げられている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの冒頭で前置きを言うのをやめて、オチや結果をいきなり最初に見せる構成に変えられる。同じネタで冒頭の一文・最初のカット・テキストだけを変えた3パターンを作って比べ、どれが残りやすいか試すこともできる。</p>
+    </div>
+    <a class="source-link" href="https://www.gofaceless.ai/en/blog/how-to-write-a-video-hook" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gofaceless.ai/en/blog/how-to-write-a-video-hook
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-05-17</span>
+    </div>
+    <h2>ジェットカット、無音詰めの基準値</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>「ジェットカット」と呼ぶジャンプカット（＝無音部分などを切り詰めて間延びを無くす編集のこと）で、動画のテンポを上げる基準を解説する記事。声が出始める波形の直前、1〜2フレーム（約0.05秒）手前で切り、言葉と言葉の間は0.1〜0.2秒（まばたき一回分）を目安に詰める、という具体的な基準を示している。音声だけを切ると顔が不自然にワープする場合は境目を110%にズームしてごまかす方法や、重要な結論の直後・トーンが変わる場面・ギャグの直後はあえて0.5〜1.0秒の間を残す、という使い分けも紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>声の入った動画を編集するとき、タイムライン上で0.3秒以上の無音を探して0.1秒まで詰め、フィラーを切った境目は110%ズームで顔のワープを隠す、という具体的な基準で編集時間を削れる。</p>
+    </div>
+    <a class="source-link" href="https://library.libecity.com/articles/01KRT3QWB9VT3TC1D621RDD3SN" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> library.libecity.com/articles/01KRT3QWB9VT3TC1D621RDD3SN
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第71回<br>
+    2026年11月01日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">トップに戻る</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

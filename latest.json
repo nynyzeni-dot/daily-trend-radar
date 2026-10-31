@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-10-31.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-01.html",
   "items": [
-    {"title": "投稿前に試せる「トライアルリール」の使い方", "why": "新しい形式のリールをまずトライアルリールで出し、24時間後にインサイトを見てよければ全員に共有する、という2段階の出し方に変えられる", "url": "https://techgym.jp/column/trial-reel/"},
-    {"title": "声の左右差、ffmpegのpanで均す", "why": "左右のマイクの録れ方に差が出た音声を、録り直さずにpan=mono|c0=0.5*c0+0.5*c1で音量を保ったまま1本にまとめられる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-channels-mono-stereo/"},
-    {"title": "Claude Code、会話でHiggsfield動画生成", "why": "Claude CodeにHiggsfield CLIを入れてnpx skills add higgsfield-ai/skillsを実行すれば、Soul Charactersを使った動画生成を会話の中から呼び出せる", "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP"}
+    {"title": "テロップ、要点だけに絞る緩急術", "why": "テロップを全部同じ大きさ・同じ色で並べるのをやめ、オチや数字の部分だけフォントサイズを130%に拡大して赤や黄色にする、という強弱のつけ方に変えられる", "url": "https://library.libecity.com/articles/01KRT6C899FFCWPQZ7PF3CHD2G"},
+    {"title": "冒頭フック、3パターンを比べて選ぶ", "why": "冒頭で前置きを言うのをやめてオチや結果をいきなり見せる構成に変え、冒頭の一文・最初のカット・テキストだけを変えた3パターンを作って比べられる", "url": "https://www.gofaceless.ai/en/blog/how-to-write-a-video-hook"},
+    {"title": "ジェットカット、無音詰めの基準値", "why": "声の入った動画を編集するとき、0.3秒以上の無音を0.1秒まで詰め、フィラーを切った境目は110%ズームで顔のワープを隠す、という具体的な基準で編集時間を削れる", "url": "https://library.libecity.com/articles/01KRT3QWB9VT3TC1D621RDD3SN"}
   ]
 }

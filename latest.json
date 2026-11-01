@@ -1,10 +1,8 @@
 {
-  "date": "2026-11-01",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-01.html",
+  "date": "2026-11-02",
+  "count": 1,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-02.html",
   "items": [
-    {"title": "テロップ、要点だけに絞る緩急術", "why": "テロップを全部同じ大きさ・同じ色で並べるのをやめ、オチや数字の部分だけフォントサイズを130%に拡大して赤や黄色にする、という強弱のつけ方に変えられる", "url": "https://library.libecity.com/articles/01KRT6C899FFCWPQZ7PF3CHD2G"},
-    {"title": "冒頭フック、3パターンを比べて選ぶ", "why": "冒頭で前置きを言うのをやめてオチや結果をいきなり見せる構成に変え、冒頭の一文・最初のカット・テキストだけを変えた3パターンを作って比べられる", "url": "https://www.gofaceless.ai/en/blog/how-to-write-a-video-hook"},
-    {"title": "ジェットカット、無音詰めの基準値", "why": "声の入った動画を編集するとき、0.3秒以上の無音を0.1秒まで詰め、フィラーを切った境目は110%ズームで顔のワープを隠す、という具体的な基準で編集時間を削れる", "url": "https://library.libecity.com/articles/01KRT3QWB9VT3TC1D621RDD3SN"}
+    {"title": "声入り動画、確認は5秒→主張前→CTA", "why": "声の入る実写動画を編集するとき、仕上げ前の確認を最初の5秒→主張の直前の一文→最後のCTAの3点に絞り、足すグラフィックスはラベル1つ・ズーム1回・スクリーンショット1つ・CTA1つまでに抑えられる", "url": "https://www.nemovideo.com/ja-JP/blog/ai-video-workflows/chatcut-ai-talking-head-workflow"}
   ]
 }

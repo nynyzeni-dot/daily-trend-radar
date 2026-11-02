@@ -1,8 +1,10 @@
 {
-  "date": "2026-11-02",
-  "count": 1,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-02.html",
+  "date": "2026-11-03",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-03.html",
   "items": [
-    {"title": "声入り動画、確認は5秒→主張前→CTA", "why": "声の入る実写動画を編集するとき、仕上げ前の確認を最初の5秒→主張の直前の一文→最後のCTAの3点に絞り、足すグラフィックスはラベル1つ・ズーム1回・スクリーンショット1つ・CTA1つまでに抑えられる", "url": "https://www.nemovideo.com/ja-JP/blog/ai-video-workflows/chatcut-ai-talking-head-workflow"}
+    {"title": "吹き出し配置、最終作画前に9項目チェック", "why": "漫画リールのコマを本番作画する前に、話者の明確さ・顔の保護・読み順などの9項目チェックリストで吹き出しの位置を確認し、引っかかった時はセリフを短くする→ネガティブスペースへ移す→構図を調整する、という順番で直せる", "url": "https://llamagen.ai/ja/blogs/speech-bubble-placement-checklist"},
+    {"title": "キャプション、1行2〜3語に絞る", "why": "漫画リールのセリフ・テロップを1行2〜3語程度に絞り、フォントを大きめにして画面中央の3分の1あたりに置き、仕上げに音を消して内容が伝わるか確認する「mute test」を加えられる", "url": "https://async.com/blog/how-to-edit-instagram-reels/"},
+    {"title": "CTA配置、1分未満は前半4分の1に", "why": "リールは大半が1分未満なので、フォローや保存を呼びかけるCTAを動画の最後ではなく最初の4分の1以内の位置に動かすよう見直せる", "url": "https://wistia.com/library/using-video-ctas"}
   ]
 }

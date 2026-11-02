@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第73回｜2026.11.03</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第73回</span>
+    <h1>今日のトレンド調査<br><span class="accent">吹き出し・キャプション・CTA、配置の基準を見直す</span></h1>
+    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は「どこに置くか」系のネタがまとまって来たで。吹き出しは最終の線入れる前に位置を決める、キャプションは1行2〜3語に絞って音なしでも伝わるようにする、CTAは最後やなくて前半の4分の1あたりに置く。どれも今の作り方にそのまま乗せられそうやな。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-08-13</span>
+    </div>
+    <h2>吹き出し配置、最終作画前に9項目チェック</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作の解説記事。吹き出し（セリフを囲む枠のこと）は最終的な作画の前に配置すべきだとして、ネーム→コマ割り→吹き出しのセーフゾーン確保→下描き→本番作画→レタリング仕上げ、という制作順序を提示している。話者の明確さ・顔の保護・読み順・ネガティブスペース・コマ端の安全性・モバイルでの読みやすさ・絵の優先度・しっぽの角度・リズムの9項目チェックリストと、2項目以上で引っかかったら文字を小さくするのではなくネームや構図を直すという判定基準、セリフが長い場合はセリフを短くする→ネガティブスペースへ移す→構図を調整する→コマを分ける→セリフを外す→再生成・描き直す、という6段階の直し方の優先順位を紹介している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのコマを本番作画する前に、話者の明確さ・顔の保護・読み順などの9項目チェックリストで吹き出しの位置を確認し、引っかかった時はまず文字を小さくするのでなく、セリフを短くする→ネガティブスペースへ移す→構図を調整する、という順番で直す手順に変えられる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/speech-bubble-placement-checklist" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/speech-bubble-placement-checklist
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026-08-11</span>
+    </div>
+    <h2>キャプション、1行2〜3語に絞る</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Instagramリールの編集ノウハウ記事。視聴維持率を上げる17個のコツを紹介しており、画面上のキャプション（字幕のテキストのこと）は読むものではなく一目で把握できるようにする、として1行あたり2〜3語に絞り、フォントサイズを約2倍にし、画面中央の3分の1に配置する、という基準を挙げている。強調する語も1行につき1語まで、全体の10分の1以下に抑えるべきだとしている。仕上げに音を消して通して見る「mute test」で、音がなくても内容が伝わるか確認する方法も紹介している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのセリフ・テロップを1行2〜3語程度に絞り、フォントを今より大きめにして画面中央の3分の1あたりに置くよう見直せる。強調する語も1行1語・全体の10分の1以下に抑え、仕上げに「mute test」として音を消した状態で一通り見て内容が伝わるか確認する工程を加えられる。</p>
+    </div>
+    <a class="source-link" href="https://async.com/blog/how-to-edit-instagram-reels/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> async.com/blog/how-to-edit-instagram-reels
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-04-22</span>
+    </div>
+    <h2>CTA配置、1分未満は前半4分の1に</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画配信サービスのブログ記事。2024年にホストされた動画のCTA（行動喚起のボタンやリンクのこと）36,000件超を分析したデータを紹介しており、動画の長さごとにCTAを置く位置の目安が異なるとしている。1分未満の動画では最初の4分の1以内に置くのが良く、1〜3分の動画では最後の4分の1、3〜5分では中盤付近が目安だという。CTAの文言には、Click・Download・Register・Sign up・Buy・Tryのような行動を促す動詞を使うことが勧められている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>リールは大半が1分未満なので、フォローや保存を呼びかけるCTAを動画の最後ではなく、最初の4分の1以内の位置に動かすよう見直せる。</p>
+    </div>
+    <a class="source-link" href="https://wistia.com/library/using-video-ctas" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> wistia.com/library/using-video-ctas
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第73回<br>
+    2026年11月03日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回はこちら</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第74回｜2026.11.04</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第74回</span>
+    <h1>今日のトレンド調査<br><span class="accent">ループで見返される仕掛けと、撮影素材の下ごしらえ</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は「もう一度見てもらう」系と「編集に回す前の下ごしらえ」系やな。最後と最初を同じ構図でそろえてループを狙うやつと、撮った素材のフレームレートを編集前に確認するやつ、どっちも今の作り方にそのまま足せそうや。Claude Codeはメール送る前に確認してくれるようになったで。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">2026.1.21</span>
+    </div>
+    <h2>最後と冒頭を同じ構図、ループ再生狙う</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>TikTok向け動画編集の解説記事。視聴者はおよそ0.5〜1秒で見るかスワイプかを判断し、2秒までに見続けるかを決めるとした上で、動画の最後と最初を同じシーン・同じポーズ・同じ構図でそろえ、最後の0.2〜0.5秒を最初にクロスフェードでつなぐと、再生が終わった瞬間に自動でループ再生されても切れ目の違和感がなく、もう一度見てもらいやすくなるという編集の仕掛けを紹介している。カットは2秒に1回切り替える、冒頭3秒に3回以上カットを入れる、といった数値の目安も挙げている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの最後のコマと冒頭のコマを同じポーズ・同じ構図でそろえ、最後の0.2〜0.5秒を最初にクロスフェードでつなぐようにすると、自動でループ再生されたときの切れ目が気にならなくなり、最初から見返してもらいやすくなる。</p>
+    </div>
+    <a class="source-link" href="https://omniweb.jp/m116/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> omniweb.jp/m116
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-06-30・更新2026-10-09</span>
+    </div>
+    <h2>撮影素材、編集前にフレームレート確認</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの解説記事。可変フレームレート（VFR＝フレームの表示間隔が一定でない動画）のまま編集に回すと、編集ソフトがCFR（固定フレームレート）を求める場合やタイムスタンプが壊れている場合に、映像と音声がズレたり読み込めなかったりすることがあるとして、`ffprobe`でr_frame_rateとavg_frame_rateの値を比べて食い違いがあればVFRの手がかりになると説明している。固定フレームレートに直すコマンドとして`ffmpeg -i input.mp4 -fps_mode cfr -r 30 -c:v libx264 -c:a copy output.mp4`（30fps化）を示し、ffmpeg 8.x系では非推奨になった`-vsync`の代わりに`-fps_mode`を使うとしている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>新しく撮った動画の素材をffmpegで編集に回す前に、`ffprobe`でr_frame_rateとavg_frame_rateが食い違っていないか確認し、食い違っていたら`-fps_mode cfr -r 30`のコマンドで固定フレームレートに直してから作業を始められる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-05-16・更新2026-09-27</span>
+    </div>
+    <h2>音声だけ差し替え、再エンコードなしで</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegの`-map`オプションの解説記事。出力に入れる映像・音声・字幕のストリームを自分で指定できるとして、`-map 0:v -map 1:a -c copy`で別ファイルの音声に差し替えられる、`-map 0:v:0 -map 0:a:1 -c copy`で2本目の音声だけを抽出できる、といったコマンド例を紹介している。実測では、2分・1920×1080の映像に音声を2本加えた素材で`-c copy`の処理が0.41秒、同じ素材を再エンコードすると27.97秒かかったという数値も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>動画の音声だけを別の音声ファイルに差し替えたいとき、`-map 0:v -map 1:a -c copy`のコマンドを使えば、映像を再エンコードせず音声だけ入れ替えられる。</p>
+    </div>
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/stream-mapping/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/stream-mapping
+    </a>
+  </div>
+
+  <!-- 4: B 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-11-03</span>
+    </div>
+    <h2>Claude Code、メール送信前に確認追加</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeの更新情報（v2.1.317、2026年11月3日公開）。追加された項目の一つとして、Webツールやシェルツールの呼び出しがアカウントのメールアドレスをネットワークへ送ろうとする前に、必ず確認を求めるようになったことが挙げられている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>クラウドで自動実行させているClaude Codeのルーティンが、作業の途中でメールアドレスを外部へ送ろうとする場面があっても、黙って送らず確認が入るようになったので、無人実行させている作業でも安心感が増す。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.317" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.317
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第74回<br>
+    2026年11月04日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回はこちら</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,10 +1,11 @@
 {
-  "date": "2026-11-03",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-03.html",
+  "date": "2026-11-04",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-04.html",
   "items": [
-    {"title": "吹き出し配置、最終作画前に9項目チェック", "why": "漫画リールのコマを本番作画する前に、話者の明確さ・顔の保護・読み順などの9項目チェックリストで吹き出しの位置を確認し、引っかかった時はセリフを短くする→ネガティブスペースへ移す→構図を調整する、という順番で直せる", "url": "https://llamagen.ai/ja/blogs/speech-bubble-placement-checklist"},
-    {"title": "キャプション、1行2〜3語に絞る", "why": "漫画リールのセリフ・テロップを1行2〜3語程度に絞り、フォントを大きめにして画面中央の3分の1あたりに置き、仕上げに音を消して内容が伝わるか確認する「mute test」を加えられる", "url": "https://async.com/blog/how-to-edit-instagram-reels/"},
-    {"title": "CTA配置、1分未満は前半4分の1に", "why": "リールは大半が1分未満なので、フォローや保存を呼びかけるCTAを動画の最後ではなく最初の4分の1以内の位置に動かすよう見直せる", "url": "https://wistia.com/library/using-video-ctas"}
+    {"title": "最後と冒頭を同じ構図、ループ再生狙う", "why": "漫画リールの最後と冒頭のコマを同じ構図でそろえ、0.2〜0.5秒のクロスフェードでつなぐと、ループ再生時に切れ目が気にならず見返してもらいやすくなる", "url": "https://omniweb.jp/m116/"},
+    {"title": "撮影素材、編集前にフレームレート確認", "why": "新しく撮った動画をffmpegで編集に回す前に、ffprobeでフレームレートの食い違いを確認し、ズレていたらfps_modeで固定フレームレートに直してから作業を始められる", "url": "https://ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant/"},
+    {"title": "音声だけ差し替え、再エンコードなしで", "why": "動画の音声だけを別ファイルに差し替えたいとき、-mapコマンドを使えば映像を再エンコードせず音声だけ入れ替えられる", "url": "https://ffmpeg-cookbook.com/ja/articles/stream-mapping/"},
+    {"title": "Claude Code、メール送信前に確認追加", "why": "クラウドで自動実行させているClaude Codeのルーティンが、メールアドレスを外部へ送ろうとする前に確認するようになったので、無人実行の作業でも安心感が増す", "url": "https://code.claude.com/docs/en/changelog#v2.1.317"}
   ]
 }

@@ -1239,6 +1239,26 @@
       "url": "https://wistia.com/library/using-video-ctas",
       "title": "CTA配置、1分未満は前半4分の1に",
       "date": "2026-11-03"
+    },
+    {
+      "url": "https://omniweb.jp/m116/",
+      "title": "最後と冒頭を同じ構図、ループ再生狙う",
+      "date": "2026-11-04"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant/",
+      "title": "撮影素材、編集前にフレームレート確認",
+      "date": "2026-11-04"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/stream-mapping/",
+      "title": "音声だけ差し替え、再エンコードなしで",
+      "date": "2026-11-04"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.317",
+      "title": "Claude Code、メール送信前に確認追加",
+      "date": "2026-11-04"
     }
   ]
 }

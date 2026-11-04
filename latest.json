@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-04.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-05.html",
   "items": [
-    {"title": "最後と冒頭を同じ構図、ループ再生狙う", "why": "漫画リールの最後と冒頭のコマを同じ構図でそろえ、0.2〜0.5秒のクロスフェードでつなぐと、ループ再生時に切れ目が気にならず見返してもらいやすくなる", "url": "https://omniweb.jp/m116/"},
-    {"title": "撮影素材、編集前にフレームレート確認", "why": "新しく撮った動画をffmpegで編集に回す前に、ffprobeでフレームレートの食い違いを確認し、ズレていたらfps_modeで固定フレームレートに直してから作業を始められる", "url": "https://ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant/"},
-    {"title": "音声だけ差し替え、再エンコードなしで", "why": "動画の音声だけを別ファイルに差し替えたいとき、-mapコマンドを使えば映像を再エンコードせず音声だけ入れ替えられる", "url": "https://ffmpeg-cookbook.com/ja/articles/stream-mapping/"},
-    {"title": "Claude Code、メール送信前に確認追加", "why": "クラウドで自動実行させているClaude Codeのルーティンが、メールアドレスを外部へ送ろうとする前に確認するようになったので、無人実行の作業でも安心感が増す", "url": "https://code.claude.com/docs/en/changelog#v2.1.317"}
+    {"title": "テロップの高さ、画面縦1/12が目安", "why": "漫画リールのテロップを、高さは画面縦の1/12以上・1画面20〜30文字・2行以内にそろえ、表示時間は文字数を4で割った秒数を目安にしてみる", "url": "https://omniweb.jp/m119/"},
+    {"title": "Higgsfieldに漫画生成の新機能追加", "why": "ゴリラ漫画のネタをMangakaに入力してPDFかPNGページで試作し、いつものChatGPTでの作り方と比べて絵柄や早さがどう違うか見てみる", "url": "https://higgsfield.ai/creator-hub/changelog#mangaka"},
+    {"title": "セリフ量はコマ面積の1/3が上限", "why": "ゴリラ漫画の各シーンで、セリフがコマの3分の1を超えたら画面を分割し、配信用に書き出すときは縦1080×1920px・JPEG85%にそろえてみる", "url": "https://lifestyle.assist-all.co.jp/manga-koma-panel-techniques-ai/"},
+    {"title": "Osmo Pocket 4PのVlog設定ガイド", "why": "自撮り撮影では、まず1倍の広角カメラ・4K30fps・シャッタースピード1/60秒・ノーマル10ビットで撮ってみて、編集で色を作り込みたくなったらD-Log 2・ISO100に切り替える", "url": "https://freewellgear.com/ja/blogs/news/dji-pocket-4p-settings-best-setup-for-cinematic-video"}
   ]
 }

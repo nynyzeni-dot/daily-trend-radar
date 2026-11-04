@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第74回｜2026.11.04</title>
+<title>デイリートレンド調査レポート 第75回｜2026.11.05</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第74回</span>
-    <h1>今日のトレンド調査<br><span class="accent">ループで見返される仕掛けと、撮影素材の下ごしらえ</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第75回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップとコマ、「比率」で見やすさを決める</span></h1>
     <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日は「もう一度見てもらう」系と「編集に回す前の下ごしらえ」系やな。最後と最初を同じ構図でそろえてループを狙うやつと、撮った素材のフレームレートを編集前に確認するやつ、どっちも今の作り方にそのまま足せそうや。Claude Codeはメール送る前に確認してくれるようになったで。</p>
+    <p>今日はテロップとコマの「比率」ネタが多かったわ。画面の高さの1/12とかコマの面積の1/3とか、数字で決まっとるんはそのまま真似しやすいで。higgsfieldでマンガが作れるようになったんも、地味やけどゴリラ漫画の作り方が変わりそうな一発やな。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,40 +249,40 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">2026.1.21</span>
+      <span class="date">公開2026-01-21</span>
     </div>
-    <h2>最後と冒頭を同じ構図、ループ再生狙う</h2>
+    <h2>テロップの高さ、画面縦1/12が目安</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>TikTok向け動画編集の解説記事。視聴者はおよそ0.5〜1秒で見るかスワイプかを判断し、2秒までに見続けるかを決めるとした上で、動画の最後と最初を同じシーン・同じポーズ・同じ構図でそろえ、最後の0.2〜0.5秒を最初にクロスフェードでつなぐと、再生が終わった瞬間に自動でループ再生されても切れ目の違和感がなく、もう一度見てもらいやすくなるという編集の仕掛けを紹介している。カットは2秒に1回切り替える、冒頭3秒に3回以上カットを入れる、といった数値の目安も挙げている。</p>
+      <p>縦型動画のテロップを見やすくする解説記事。テロップの高さは画面縦幅の1/12以上（フルHDで約160px）を目安とし、一画面の文字数は20〜30文字・2行程度に抑える、表示時間は「文字数÷4秒」を目安にする、といった具体的な数値を挙げている。記事が例にしているLINE VOOMは2026年9月末で提供終了したが、筆者はこの見やすさの考え方は他の縦型動画にも使えるとしている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの最後のコマと冒頭のコマを同じポーズ・同じ構図でそろえ、最後の0.2〜0.5秒を最初にクロスフェードでつなぐようにすると、自動でループ再生されたときの切れ目が気にならなくなり、最初から見返してもらいやすくなる。</p>
+      <p>漫画リールのテロップを、高さは画面縦の1/12以上・1画面20〜30文字・2行以内にそろえ、表示時間は文字数を4で割った秒数を目安にしてみる。</p>
     </div>
-    <a class="source-link" href="https://omniweb.jp/m116/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> omniweb.jp/m116
+    <a class="source-link" href="https://omniweb.jp/m119/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> omniweb.jp/m119
     </a>
   </div>
 
-  <!-- 2: A 高 -->
+  <!-- 2: B 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-06-30・更新2026-10-09</span>
+      <span class="date">2026-11-02</span>
     </div>
-    <h2>撮影素材、編集前にフレームレート確認</h2>
+    <h2>Higgsfieldに漫画生成の新機能追加</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの解説記事。可変フレームレート（VFR＝フレームの表示間隔が一定でない動画）のまま編集に回すと、編集ソフトがCFR（固定フレームレート）を求める場合やタイムスタンプが壊れている場合に、映像と音声がズレたり読み込めなかったりすることがあるとして、`ffprobe`でr_frame_rateとavg_frame_rateの値を比べて食い違いがあればVFRの手がかりになると説明している。固定フレームレートに直すコマンドとして`ffmpeg -i input.mp4 -fps_mode cfr -r 30 -c:v libx264 -c:a copy output.mp4`（30fps化）を示し、ffmpeg 8.x系では非推奨になった`-vsync`の代わりに`-fps_mode`を使うとしている。</p>
+      <p>普段使っているhiggsfieldに、アイデアや脚本からマンガ・コミック・ウェブトゥーンを作る新機能「Mangaka」が追加された。キャラクター・チャプター・ページを生成し、白黒マンガ・カラーマンガ・コミック・ウェブトゥーンの4スタイルから選べ、できあがった作品はPDF・CBZ・PNGページ・ウェブトゥーン形式で書き出せる。既存の作品を自分のキャストに置き換えて作り直す「Recreate」モードもある。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>新しく撮った動画の素材をffmpegで編集に回す前に、`ffprobe`でr_frame_rateとavg_frame_rateが食い違っていないか確認し、食い違っていたら`-fps_mode cfr -r 30`のコマンドで固定フレームレートに直してから作業を始められる。</p>
+      <p>ゴリラ漫画のネタをMangakaに入力してPDFかPNGページで試作し、いつものChatGPTでの作り方と比べて絵柄や早さがどう違うか見てみる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/variable-framerate-to-constant
+    <a class="source-link" href="https://higgsfield.ai/creator-hub/changelog#mangaka" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> higgsfield.ai/creator-hub/changelog
     </a>
   </div>
 
@@ -291,48 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-05-16・更新2026-09-27</span>
+      <span class="date">公開2025-10-15</span>
     </div>
-    <h2>音声だけ差し替え、再エンコードなしで</h2>
+    <h2>セリフ量はコマ面積の1/3が上限</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegの`-map`オプションの解説記事。出力に入れる映像・音声・字幕のストリームを自分で指定できるとして、`-map 0:v -map 1:a -c copy`で別ファイルの音声に差し替えられる、`-map 0:v:0 -map 0:a:1 -c copy`で2本目の音声だけを抽出できる、といったコマンド例を紹介している。実測では、2分・1920×1080の映像に音声を2本加えた素材で`-c copy`の処理が0.41秒、同じ素材を再エンコードすると27.97秒かかったという数値も示されている。</p>
+      <p>AI漫画のコマ割りに関する解説記事。1ページの標準的なコマ数は6〜7コマとし、セリフの量がコマの面積の3分の1を超えたらコマを分割する、という目安を挙げている。配信用の書き出し解像度は縦1080×1920px・72dpi・JPEG85%、作画原盤は2480×3508px・350dpiが目安とされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>動画の音声だけを別の音声ファイルに差し替えたいとき、`-map 0:v -map 1:a -c copy`のコマンドを使えば、映像を再エンコードせず音声だけ入れ替えられる。</p>
+      <p>ゴリラ漫画の各シーンで、セリフがコマの3分の1を超えたら画面を分割し、配信用に書き出すときは縦1080×1920px・JPEG85%にそろえてみる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/stream-mapping/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/stream-mapping
+    <a class="source-link" href="https://lifestyle.assist-all.co.jp/manga-koma-panel-techniques-ai/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> lifestyle.assist-all.co.jp/manga-koma-panel-techniques-ai
     </a>
   </div>
 
-  <!-- 4: B 中 -->
+  <!-- 4: A 中 -->
   <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
+      <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">2026-11-03</span>
+      <span class="date">公開2026-06-30</span>
     </div>
-    <h2>Claude Code、メール送信前に確認追加</h2>
+    <h2>Osmo Pocket 4PのVlog設定ガイド</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Claude Codeの更新情報（v2.1.317、2026年11月3日公開）。追加された項目の一つとして、Webツールやシェルツールの呼び出しがアカウントのメールアドレスをネットワークへ送ろうとする前に、必ず確認を求めるようになったことが挙げられている。</p>
+      <p>DJI Osmo Pocket 4Pの設定ガイド記事。Vlog向けには1倍の広角カメラを使い、4K・30fps（なめらかにしたいなら60fps）、シャッタースピードは30fpsなら1/60秒・60fpsなら1/120秒にする、という具体的な設定値を挙げている。カラーは手軽に使うならノーマル10ビット、編集の自由度を重視するならD-Log 2（日中はISO100が目安）としている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>クラウドで自動実行させているClaude Codeのルーティンが、作業の途中でメールアドレスを外部へ送ろうとする場面があっても、黙って送らず確認が入るようになったので、無人実行させている作業でも安心感が増す。</p>
+      <p>自撮り撮影では、まず1倍の広角カメラ・4K30fps・シャッタースピード1/60秒・ノーマル10ビットで撮ってみて、編集で色を作り込みたくなったらD-Log 2・ISO100に切り替える。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.317" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.317
+    <a class="source-link" href="https://freewellgear.com/ja/blogs/news/dji-pocket-4p-settings-best-setup-for-cinematic-video" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> freewellgear.com/ja/blogs/news/dji-pocket-4p-settings-best-setup-for-cinematic-video
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第74回<br>
-    2026年11月04日分
+    デイリートレンドレーダー 第75回<br>
+    2026年11月05日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-05.html">2026-11-05（第75回）</a>
       <a href="days/2026-11-04.html">2026-11-04（第74回）</a>
       <a href="days/2026-11-03.html">2026-11-03（第73回）</a>
       <a href="days/2026-11-02.html">2026-11-02（第72回）</a>

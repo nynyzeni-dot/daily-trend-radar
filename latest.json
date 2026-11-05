@@ -1,11 +1,10 @@
 {
-  "date": "2026-11-05",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-05.html",
+  "date": "2026-11-06",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-06.html",
   "items": [
-    {"title": "テロップの高さ、画面縦1/12が目安", "why": "漫画リールのテロップを、高さは画面縦の1/12以上・1画面20〜30文字・2行以内にそろえ、表示時間は文字数を4で割った秒数を目安にしてみる", "url": "https://omniweb.jp/m119/"},
-    {"title": "Higgsfieldに漫画生成の新機能追加", "why": "ゴリラ漫画のネタをMangakaに入力してPDFかPNGページで試作し、いつものChatGPTでの作り方と比べて絵柄や早さがどう違うか見てみる", "url": "https://higgsfield.ai/creator-hub/changelog#mangaka"},
-    {"title": "セリフ量はコマ面積の1/3が上限", "why": "ゴリラ漫画の各シーンで、セリフがコマの3分の1を超えたら画面を分割し、配信用に書き出すときは縦1080×1920px・JPEG85%にそろえてみる", "url": "https://lifestyle.assist-all.co.jp/manga-koma-panel-techniques-ai/"},
-    {"title": "Osmo Pocket 4PのVlog設定ガイド", "why": "自撮り撮影では、まず1倍の広角カメラ・4K30fps・シャッタースピード1/60秒・ノーマル10ビットで撮ってみて、編集で色を作り込みたくなったらD-Log 2・ISO100に切り替える", "url": "https://freewellgear.com/ja/blogs/news/dji-pocket-4p-settings-best-setup-for-cinematic-video"}
+    {"title": "フック3秒・本編22秒・CTA5秒の型", "why": "漫画リールの台本を書くとき、冒頭3秒・本編・CTAの秒数配分を先に決めてから書いてみる", "url": "https://0120.co.jp/blog/video-103/"},
+    {"title": "フックの比べ方、4組以上で判定", "why": "新しい冒頭フックを試すときは、同じ内容で冒頭だけ変えた2パターンを最低4本分作り、投稿順を交互にしつつ数日ずらして同じ経過日数で比べてみる", "url": "https://kineclip.com/blog/how-to-test-hooks-without-fooling-yourself-2026/"},
+    {"title": "弱いフック、12例の書き換え集", "why": "漫画リールの冒頭の一文を、前置きではなく12例にあるような具体的な事実や対比を使った一文に差し替えてみる", "url": "https://kineclip.com/blog/hook-rewrite-clinic-weak-to-strong-examples-2026/"}
   ]
 }

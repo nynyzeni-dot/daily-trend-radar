@@ -1294,6 +1294,26 @@
       "url": "https://kineclip.com/blog/hook-rewrite-clinic-weak-to-strong-examples-2026/",
       "title": "弱いフック、12例の書き換え集",
       "date": "2026-11-06"
+    },
+    {
+      "url": "https://maverickframe.com/blog/gpt-image-2-6/",
+      "title": "画像生成2.6、速さと一貫性で使い分け",
+      "date": "2026-11-07"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/remove-audio-from-video/",
+      "title": "漫画リールの音声だけ消す、画質そのまま",
+      "date": "2026-11-07"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/concat-protocol/",
+      "title": "動画結合、concatデマルチプレクサで劣化なし",
+      "date": "2026-11-07"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/audio-delay-fix/",
+      "title": "音声ズレ、adelayとitsoffsetで手直し",
+      "date": "2026-11-07"
     }
   ]
 }

@@ -1,10 +1,11 @@
 {
-  "date": "2026-11-06",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-06.html",
+  "date": "2026-11-07",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-07.html",
   "items": [
-    {"title": "フック3秒・本編22秒・CTA5秒の型", "why": "漫画リールの台本を書くとき、冒頭3秒・本編・CTAの秒数配分を先に決めてから書いてみる", "url": "https://0120.co.jp/blog/video-103/"},
-    {"title": "フックの比べ方、4組以上で判定", "why": "新しい冒頭フックを試すときは、同じ内容で冒頭だけ変えた2パターンを最低4本分作り、投稿順を交互にしつつ数日ずらして同じ経過日数で比べてみる", "url": "https://kineclip.com/blog/how-to-test-hooks-without-fooling-yourself-2026/"},
-    {"title": "弱いフック、12例の書き換え集", "why": "漫画リールの冒頭の一文を、前置きではなく12例にあるような具体的な事実や対比を使った一文に差し替えてみる", "url": "https://kineclip.com/blog/hook-rewrite-clinic-weak-to-strong-examples-2026/"}
+    {"title": "画像生成2.6、速さと一貫性で使い分け", "why": "note本文の写真をCodexで作るとき、ラフ確認はFlareで素早く出し、最終の1枚はSunburstに切り替えると一貫性が上がる", "url": "https://maverickframe.com/blog/gpt-image-2-6/"},
+    {"title": "漫画リールの音声だけ消す、画質そのまま", "why": "素材動画に音声が入っていたら「-c:v copy -an」で画質を落とさず音声だけ外せる", "url": "https://ffmpeg-cookbook.com/ja/articles/remove-audio-from-video/"},
+    {"title": "動画結合、concatデマルチプレクサで劣化なし", "why": "同じ設定で書き出した素材同士ならconcatデマルチプレクサで結合すれば画質を落とさず高速に1本化できる", "url": "https://ffmpeg-cookbook.com/ja/articles/concat-protocol/"},
+    {"title": "音声ズレ、adelayとitsoffsetで手直し", "why": "声と映像がズレたら、ズレている方向に応じてadelayか-itsoffsetを音声側・動画側のどちらに当てるか決めて直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-delay-fix/"}
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-07.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-08.html",
   "items": [
-    {"title": "画像生成2.6、速さと一貫性で使い分け", "why": "note本文の写真をCodexで作るとき、ラフ確認はFlareで素早く出し、最終の1枚はSunburstに切り替えると一貫性が上がる", "url": "https://maverickframe.com/blog/gpt-image-2-6/"},
-    {"title": "漫画リールの音声だけ消す、画質そのまま", "why": "素材動画に音声が入っていたら「-c:v copy -an」で画質を落とさず音声だけ外せる", "url": "https://ffmpeg-cookbook.com/ja/articles/remove-audio-from-video/"},
-    {"title": "動画結合、concatデマルチプレクサで劣化なし", "why": "同じ設定で書き出した素材同士ならconcatデマルチプレクサで結合すれば画質を落とさず高速に1本化できる", "url": "https://ffmpeg-cookbook.com/ja/articles/concat-protocol/"},
-    {"title": "音声ズレ、adelayとitsoffsetで手直し", "why": "声と映像がズレたら、ズレている方向に応じてadelayか-itsoffsetを音声側・動画側のどちらに当てるか決めて直せる", "url": "https://ffmpeg-cookbook.com/ja/articles/audio-delay-fix/"}
+    {"title": "漫画の台本、Claudeで先に固める", "why": "画像生成にコマ割りを丸ごと頼む前に、Claudeに登場人物設定と各コマの可視アクション・セリフの文字数を箇条書きで作らせてから渡すと、設定の矛盾やオチの早バレを防ぎやすい", "url": "https://llamagen.ai/ja/blogs/claude-comic-script-workflow"},
+    {"title": "完成画像、パーツごとに分解して直す", "why": "完成形の画像が出た後にセリフやキャラの位置を直したいとき、丸ごと作り直さず背景・キャラクター・吹き出しを個別要素に分解してから直す5段階の手順を踏める", "url": "https://llamagen.ai/ja/blogs/flat-image-to-editable-comic-page"},
+    {"title": "テロップの書体、太ゴシックが基本", "why": "主役テロップを太め（ウェイト700以上）のゴシック体に変え、文字サイズを画面幅の8〜12%・1画面15〜25文字以内に収め、個性派フォントは1〜2か所だけアクセントに使う", "url": "https://0120.co.jp/blog/video-82/"},
+    {"title": "権限待ちで詰まらない設定が追加", "why": "クラウドで自動実行させているClaude Codeのルーティンに`permissions.denyInsteadOfPrompting`を加えると、権限確認待ちで止まらず拒否されたまま処理が続く", "url": "https://code.claude.com/docs/en/changelog#v2.1.319"}
   ]
 }

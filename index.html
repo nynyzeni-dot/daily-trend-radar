@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第77回｜2026.11.07</title>
+<title>デイリートレンド調査レポート 第78回｜2026.11.08</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,34 +234,34 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第77回</span>
-    <h1>今日のトレンド調査<br><span class="accent">画像生成2.6刷新、動画はffmpegの地味技3つ</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第78回</span>
+    <h1>今日のトレンド調査<br><span class="accent">漫画の台本はClaudeで先に固める</span></h1>
     <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールの方でちゃんと動きがあったで。note本文の写真で使うてるgpt-image-2が2.6に上がって、下書きはFlareで速く出して仕上げはSunburstに切り替えたら一貫性が上がるらしい。動画の方はffmpegの地味な3本、音声だけ消す・動画をロスレスで繋ぐ・音声ズレを手で直す、どれも明日の素材作りからそのまま使えるやつや。</p>
+    <p>今日はゴリラ漫画がらみのネタが固まったで。コマ割りを画像生成にいきなり丸投げせんと、先にClaudeで台本と各コマの内容を固めてから渡す、っちゅう段取りが地味に効きそうや。完成した画像のパーツ直し方と、テロップの書体選びも、明日からそのまま真似できるで。</p>
   </div>
 
-  <!-- 1: B 高 -->
+  <!-- 1: A 高 -->
   <div class="card high">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
+      <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-04</span>
+      <span class="date">公開2026-10-23</span>
     </div>
-    <h2>画像生成2.6、速さと一貫性で使い分け</h2>
+    <h2>漫画の台本、Claudeで先に固める</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>OpenAIが2026年11月4日、画像生成モデルを「GPT Image 2.6」に更新。ノート本文の写真を作るときに使っているCodex（gpt-image-2）もこの新版に乗る。速度重視の「Flare」は最速6秒（低品質設定時）で出せ、仕上がり重視の「Sunburst」は編集を繰り返しても人物や質感がブレにくい（＝一貫性が高い）。画像に手描きで指示を入れるMarkup編集、SVG書き出し、アニメーションGIF生成も加わり、生成速度は全体で最大50%速くなったという。</p>
+      <p>AIコミック制作の解説記事。画像生成にコマ割りをいきなり丸ごと任せると、設定の捏造やオチの早すぎる解決（＝最後まで見せたい展開が途中のコマで割れてしまうこと）が起きやすいとして、画像生成の前段階でClaudeを使い、長い原稿やキャラクター設定を、コマごとの「可視アクション・ショット・正典アンカー・テキスト予算」を記した承認可能な台本に変換してから画像生成に渡す7ステップの手順を紹介している。台本を作る前に、因果関係・各キャラクターが何を知っているか・絵として描けるかの3点を確認することも勧めている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>note本文の写真をCodexで作るとき、構図のラフ確認はFlareで素早く何パターンも出し、最終的に使う1枚だけSunburstに切り替えて作ると、仕上がりの一貫性が上がる。</p>
+      <p>ゴリラ漫画の次のネタを考えるとき、画像生成にコマ割りをいきなり丸ごと頼む前に、まずClaudeに登場人物の設定と各コマの可視アクション・セリフの文字数を箇条書きで作らせて自分の目で確認し、それを画像生成への指示として渡すようにすると、設定の矛盾やオチがコマの途中でバレてしまうのを防ぎやすくなる。</p>
     </div>
-    <a class="source-link" href="https://maverickframe.com/blog/gpt-image-2-6/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> maverickframe.com/blog/gpt-image-2-6
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/claude-comic-script-workflow" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/claude-comic-script-workflow
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-06-27</span>
+      <span class="date">公開2026-10-28</span>
     </div>
-    <h2>漫画リールの音声だけ消す、画質そのまま</h2>
+    <h2>完成画像、パーツごとに分解して直す</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>FFmpegで動画の音声トラックだけを取り除く方法の解説記事。「-c:v copy -an」なら映像を再エンコードせずに音声だけ削除できるため画質が落ちない。映像トラックだけを選ぶ「-map 0:v」でも同じ結果になり、トラックを消さず無音化だけしたいときは「-af volume=0」で音量をゼロにする方法も紹介している。</p>
+      <p>AI漫画制作の解説記事。生成済みの完成形コミックページ画像を、あとからキャラクターの位置やセリフを直せる状態に戻す5段階の手順を紹介している。直したい内容を先に書き出す→背景・キャラクター・吹き出しなどに分解した結果を確認する→透過と元の位置がずれていないか確認する→キャラクターを動かして露出した背景を修復する→セリフを編集可能な文字として作り直す、という順で進める。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>素材動画に意図しない音声が入っていたときは、漫画リールはもともと無音仕立てやから、「-c:v copy -an」で画質を落とさず音声だけ外せる。</p>
+      <p>ゴリラ漫画の画像が完成形で出てきた後にセリフだけ直したい、キャラの位置を変えたいと思ったとき、丸ごと作り直すのではなく、背景・キャラクター・吹き出しを個別の要素に分解してから直す、という5段階の手順を踏める。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/remove-audio-from-video/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/remove-audio-from-video
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/flat-image-to-editable-comic-page" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/flat-image-to-editable-comic-page
     </a>
   </div>
 
@@ -291,48 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-04-22</span>
+      <span class="date">公開2026-05-16・更新2026-10-20</span>
     </div>
-    <h2>動画結合、concatデマルチプレクサで劣化なし</h2>
+    <h2>テロップの書体、太ゴシックが基本</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>FFmpegで複数の動画を結合する方法の解説記事。同じコーデック・解像度・フレームレートの動画同士なら、concatデマルチプレクサ（「-f concat -safe 0 -i list.txt -c copy」）で再エンコードなしに高速結合できるとし、結合後は合計の入力時間と出力時間を比べて0.5秒以上ズレていないか確認するよう勧めている。</p>
+      <p>縦型ショート動画のテロップフォント選びを解説する記事。主役テロップには細字を避けて太字（ウェイト700以上）のゴシック体を使うのを基本とし、文字サイズは画面幅の8〜12%、白文字に黒縁（または黒文字に白縁）、1画面15〜25文字以内を目安としている。用途別に、字幕全般にはNoto Sans CJK JP、カジュアルなSNS動画にはM PLUS 1、柔らかい印象にはM PLUS Rounded 1cやKosugi Maru、映画風にはしねきゃぷしょん、ニュース風・インパクト重視にはマキナスSquared 4など、10種のフォントの使い分けを紹介している。個性派フォントは1動画に1〜2か所にとどめるべきだとも述べている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのカットをffmpegで組み立てるとき、同じ設定で書き出した素材同士ならconcatデマルチプレクサで結合すれば、画質を落とさず高速に1本化できる。</p>
+      <p>漫画リールの主役テロップのフォントを、今より太め（ウェイト700以上）のゴシック体に変えて、文字サイズを画面幅の8〜12%・1画面15〜25文字以内に収め、場面に応じてM PLUS Rounded 1cやしねきゃぷしょんのような個性派フォントを1〜2か所だけアクセントに使ってみる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/concat-protocol/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/concat-protocol
+    <a class="source-link" href="https://0120.co.jp/blog/video-82/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> 0120.co.jp/blog/video-82
     </a>
   </div>
 
-  <!-- 4: A 中 -->
+  <!-- 4: B 中 -->
   <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge genre">B：AIツール</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-04-10</span>
+      <span class="date">2026-11-06</span>
     </div>
-    <h2>音声ズレ、adelayとitsoffsetで手直し</h2>
+    <h2>権限待ちで詰まらない設定が追加</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>FFmpegで動画と音声のズレを手動で直す方法の解説記事。音声が遅れている場合はadelayフィルタ（音声を遅らせる、単位はミリ秒。例：「adelay=500|500」）を音声側に当て、音声が先行している場合は「-itsoffset」（入力のタイムスタンプを秒単位でずらす）を動画側に当てる、という使い分けを示している。</p>
+      <p>Claude Codeの更新情報（v2.1.319、2026年11月6日公開）。settings.jsonに`permissions.denyInsteadOfPrompting`という設定が追加された。これを有効にすると、通常なら許可を求めて待機するツール呼び出しが、確認待ちで止まらずに拒否され、そのままターンが続行されるようになる。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>実写の撮影を始めたあと声と映像がズレて聞こえたら、ズレている方向を見て、adelayか-itsoffsetのどちらを音声側・動画側のどちらに当てるかを決めて直せる。</p>
+      <p>クラウドで自動実行させているこのレポートのようなClaude Codeのルーティンの設定に`permissions.denyInsteadOfPrompting`を追加すると、無人実行中に権限の確認待ちが発生する場面があっても、拒否されたままそのまま処理が続き、ルーティンが途中で止まりにくくなる。</p>
     </div>
-    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/audio-delay-fix/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/audio-delay-fix
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.319" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.319
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第77回<br>
-    2026年11月07日分
+    デイリートレンドレーダー 第78回<br>
+    2026年11月08日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-08.html">2026-11-08（第78回）</a>
       <a href="days/2026-11-07.html">2026-11-07（第77回）</a>
       <a href="days/2026-11-06.html">2026-11-06（第76回）</a>
       <a href="days/2026-11-05.html">2026-11-05（第75回）</a>

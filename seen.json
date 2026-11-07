@@ -1314,6 +1314,26 @@
       "url": "https://ffmpeg-cookbook.com/ja/articles/audio-delay-fix/",
       "title": "音声ズレ、adelayとitsoffsetで手直し",
       "date": "2026-11-07"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/claude-comic-script-workflow",
+      "title": "漫画の台本、Claudeで先に固める",
+      "date": "2026-11-08"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/flat-image-to-editable-comic-page",
+      "title": "完成画像、パーツごとに分解して直す",
+      "date": "2026-11-08"
+    },
+    {
+      "url": "https://0120.co.jp/blog/video-82/",
+      "title": "テロップの書体、太ゴシックが基本",
+      "date": "2026-11-08"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.319",
+      "title": "権限待ちで詰まらない設定が追加",
+      "date": "2026-11-08"
     }
   ]
 }

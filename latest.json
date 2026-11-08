@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-08.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-09.html",
   "items": [
-    {"title": "漫画の台本、Claudeで先に固める", "why": "画像生成にコマ割りを丸ごと頼む前に、Claudeに登場人物設定と各コマの可視アクション・セリフの文字数を箇条書きで作らせてから渡すと、設定の矛盾やオチの早バレを防ぎやすい", "url": "https://llamagen.ai/ja/blogs/claude-comic-script-workflow"},
-    {"title": "完成画像、パーツごとに分解して直す", "why": "完成形の画像が出た後にセリフやキャラの位置を直したいとき、丸ごと作り直さず背景・キャラクター・吹き出しを個別要素に分解してから直す5段階の手順を踏める", "url": "https://llamagen.ai/ja/blogs/flat-image-to-editable-comic-page"},
-    {"title": "テロップの書体、太ゴシックが基本", "why": "主役テロップを太め（ウェイト700以上）のゴシック体に変え、文字サイズを画面幅の8〜12%・1画面15〜25文字以内に収め、個性派フォントは1〜2か所だけアクセントに使う", "url": "https://0120.co.jp/blog/video-82/"},
-    {"title": "権限待ちで詰まらない設定が追加", "why": "クラウドで自動実行させているClaude Codeのルーティンに`permissions.denyInsteadOfPrompting`を加えると、権限確認待ちで止まらず拒否されたまま処理が続く", "url": "https://code.claude.com/docs/en/changelog#v2.1.319"}
+    {"title": "テロップは1行13字・1秒4字が目安", "why": "漫画リールのテロップを、1行13文字（縦型は8〜10文字）以内・表示時間は文字数÷4秒を下回らない、の2点だけ次回から当てはめる", "url": "https://0120.co.jp/blog/video-125/"},
+    {"title": "字幕で緊張感を作る、冒頭の型", "why": "漫画リールの冒頭カットを、「結果を先に見せる」か「字幕で緊張感を作る」のどちらかの型に当てはめて作ってみる", "url": "https://www.capcut.com/create/short-form-video-hooks-first-3-second-patterns"},
+    {"title": "冒頭の強さより視聴完了率を見る", "why": "漫画リールの冒頭で結末を先に出さず、話が終わったら約2秒で切る編成に変えてみる", "url": "https://autoclip.dev/blog/why-3-second-hooks-are-overrated"},
+    {"title": "クラウドのClaude Code、リポジトリ不要に", "why": "議事録整理やアンケート集計のような、コードやリポジトリが絡まない作業でもクラウドのClaude Codeセッションを「No repository」でそのまま始められる", "url": "https://code.claude.com/docs/en/changelog#v2.1.318"}
   ]
 }

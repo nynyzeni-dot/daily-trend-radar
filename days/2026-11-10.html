@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第80回｜2026.11.10</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第80回</span>
+    <h1>今日のトレンド調査<br><span class="accent">小ゴマを淡々と並べ、次の一撃を効かす</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は漫画のコマ割りの「緩急」と、画像生成でキャラがブレん型が拾えたで。冒頭のトリム＋フラッシュの合わせ技もいけそうやし、美容室クライアントには物販動画が作れるAIの案内役サービスの話もできそうやで。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開日不明</span>
+    </div>
+    <h2>小ゴマを淡々と並べ、次の一撃を効かす</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>漫画のコマ割り演出を解説する記事。大事な場面（見開きや大ゴマ）の前に、同じくらいの大きさの小さいコマを淡々と並べておくと読者の緊張がいったん緩み、次の大ゴマの衝撃が強く効くという「緩急」の技法が紹介されている。『マルドゥック・スクランブル』では、静かな会話を均一な小ゴマで見せた直後に、1ページ全部を使った激しい場面を置く例が挙げられている。人が多く乱雑なシーンでは、足元からのローアングルで画面に映り込む物の数を減らす工夫も紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールで一番インパクトを出したいコマの前に、同じ大きさの小ゴマを淡々と並べて緊張を緩めてから出す「緩急」の順番を次回当てはめてみる。</p>
+    </div>
+    <a class="source-link" href="https://www.clipstudio.net/oekaki/archives/152311" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> clipstudio.net/oekaki/archives/152311
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">更新2026-10-06</span>
+    </div>
+    <h2>画像生成、キャラ一貫性を6項目で指示</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>画像生成でキャラクターの顔や姿勢が生成ごとに微妙にブレてしまう問題への対処法を解説する記事。プロンプトを「参照の役割」「アイデンティティ（固定したい特徴）」「シーン」「変更点」「維持点」「変更禁止」の6項目に書き分ける構成が紹介されている。変更する要素は一度に1つだけに絞り、直前の生成結果ではなく最初に承認した基準画像と見比べて確認する、という進め方も挙げられている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>note本文の写真を画像生成で作るとき、プロンプトを「アイデンティティ」「変更点」「維持点」「変更禁止」に書き分けて、変える要素を一度に1つだけに絞ってみる。</p>
+    </div>
+    <a class="source-link" href="https://leadde.ai/ja/blog/how-to-keep-characters-consistent-in-gpt-image-2-5-fix-face-and-pose-drift" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> leadde.ai/ja/blog/how-to-keep-characters-consistent-in-gpt-image-2-5-fix-face-and-pose-drift
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-04-01・更新2026-08-02</span>
+    </div>
+    <h2>冒頭を切り詰め、強い場面を先出し</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画冒頭の視聴維持率を上げる編集法を紹介する記事。開始点を決めたあとさらに2〜3秒を削り、頭から勢いのある状態で始める「トリム」と、最も見栄えする場面を0.5〜1秒だけ先に見せてから本題の頭に戻る「フラッシュ」という手口が紹介されている。1秒地点の視聴維持率は40%未満だと弱く、70%以上だと優秀という目安も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの冒頭で、今の開始位置からさらに2〜3秒分を削ってから始め、一番インパクトのあるコマを0.5〜1秒だけ先に見せて本編の頭に戻る編集を次回試してみる。</p>
+    </div>
+    <a class="source-link" href="https://www.clipspeed.ai/blog/hook-first-second-video-retention.html" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> clipspeed.ai/blog/hook-first-second-video-retention.html
+    </a>
+  </div>
+
+  <!-- 4: B 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">2026-11-04</span>
+    </div>
+    <h2>AIの案内役で商品紹介動画が作れる</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Higgsfieldが「Shorts Studio」を公開（2026年11月4日）。繰り返し使えるAIの案内役（プレゼンター）が商品を紹介する縦型9:16動画を作れる機能で、既存の動きを別の映像に移す「モーション転送」にも対応する。1本あたりの料金は4.41〜94.08ドルで、15秒の動画はPlusプランで4.41ドル程度とされている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>クライアントの美容室が店頭の物販紹介動画を作りたいときに、同じAIの案内役を繰り返し使って商品紹介の縦型動画が作れる、という提案の材料にする。</p>
+    </div>
+    <a class="source-link" href="https://runtimewire.com/article/higgsfield-shorts-studio-ai-presenter" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> runtimewire.com/article/higgsfield-shorts-studio-ai-presenter
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第80回<br>
+    2026年11月10日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回はこちら</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

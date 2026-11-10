@@ -1,11 +1,10 @@
 {
-  "date": "2026-11-10",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-10.html",
+  "date": "2026-11-11",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-11.html",
   "items": [
-    {"title": "小ゴマを淡々と並べ、次の一撃を効かす", "why": "インパクトを出したいコマの前に、同じ大きさの小ゴマを淡々と並べて緊張を緩めてから出す", "url": "https://www.clipstudio.net/oekaki/archives/152311"},
-    {"title": "画像生成、キャラ一貫性を6項目で指示", "why": "note本文の画像生成で、プロンプトをアイデンティティ・変更点・維持点・変更禁止に書き分け、変える要素を一度に1つに絞る", "url": "https://leadde.ai/ja/blog/how-to-keep-characters-consistent-in-gpt-image-2-5-fix-face-and-pose-drift"},
-    {"title": "冒頭を切り詰め、強い場面を先出し", "why": "漫画リールの冒頭をさらに2〜3秒削り、一番インパクトのあるコマを0.5〜1秒先に見せて本編に戻る", "url": "https://www.clipspeed.ai/blog/hook-first-second-video-retention.html"},
-    {"title": "AIの案内役で商品紹介動画が作れる", "why": "美容室クライアントに、AIの案内役を繰り返し使って物販紹介の縦型動画が作れると提案できる", "url": "https://runtimewire.com/article/higgsfield-shorts-studio-ai-presenter"}
+    {"title": "縦型動画、上下15%はUIで隠れる", "why": "漫画リールのテロップや見出しのコマを、画面の上下15%を避けて中央70%の安全領域に収める", "url": "https://0120.co.jp/blog/video-104/"},
+    {"title": "コマの形、アクションと会話で使い分け", "why": "ゴリラ漫画のコマ割りで、動きのある場面は横長や斜めのコマ、会話の場面は正方形コマに使い分ける", "url": "https://lifestyle.assist-all.co.jp/?p=38437"},
+    {"title": "ネーム前に、エピソードを付箋でページ配分", "why": "ゴリラ漫画の展開を考えるとき、エピソードを付箋に書き出してページ数を振ってから構成を固める", "url": "https://www.clipstudio.net/oekaki/archives/151965"}
   ]
 }

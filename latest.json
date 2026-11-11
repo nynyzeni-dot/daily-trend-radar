@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-11",
+  "date": "2026-11-12",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-11.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-12.html",
   "items": [
-    {"title": "縦型動画、上下15%はUIで隠れる", "why": "漫画リールのテロップや見出しのコマを、画面の上下15%を避けて中央70%の安全領域に収める", "url": "https://0120.co.jp/blog/video-104/"},
-    {"title": "コマの形、アクションと会話で使い分け", "why": "ゴリラ漫画のコマ割りで、動きのある場面は横長や斜めのコマ、会話の場面は正方形コマに使い分ける", "url": "https://lifestyle.assist-all.co.jp/?p=38437"},
-    {"title": "ネーム前に、エピソードを付箋でページ配分", "why": "ゴリラ漫画の展開を考えるとき、エピソードを付箋に書き出してページ数を振ってから構成を固める", "url": "https://www.clipstudio.net/oekaki/archives/151965"}
+    {"title": "テロップ文字数、フックは2〜5語", "why": "漫画リールのフックのコマは2〜5語、通常のコマは1行3〜7語に文字数を絞り、強調語だけ同じ色にする", "url": "https://subclip.app/blogs/subtitle-styles-that-convert"},
+    {"title": "バズった動画を0.25倍速で分解する", "why": "台本を作る前にバズった動画の冒頭3秒を0.25倍速で見て、pattern interrupt・curiosity gap・identity signalが入る瞬間を書き出す", "url": "https://dev.to/bulkdl/how-to-reverse-engineer-any-viral-video-a-creators-systematic-framework-2026-2nh5"},
+    {"title": "終わりと始まりをつなげてループさせる", "why": "リールの最後のコマと最初のコマをつなげてループにして、投稿前に2回連続再生して確認する", "url": "https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral"}
   ]
 }

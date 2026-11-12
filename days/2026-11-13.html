@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第83回｜2026.11.13</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第83回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップは単語ごとに色を変えて焼く</span></h1>
+    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はテロップの単語ハイライト・コマ切り替えの技・フックの型の3本に、Claudeの新機能2つを乗せた5本やで。ffmpegの字幕焼き込みとコマ切り替えはそのまま次のリールで試せるし、Claude SheetsとWhiteboardsは議事録とアンケート集計にすぐ使えそうや。Spacefastは物販ページの決済まで任せられるらしいから、クライアントの案件で一度試してみたいわ。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-06-10</span>
+    </div>
+    <h2>テロップ、単語ごとに色を変えて焼く</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ffmpegで動画に、カラオケのように読んでいる単語だけ色が変わるテロップを焼き込む具体的な実装を解説する記事。字幕はASS（Advanced SubStation Alpha＝字幕の書式を細かく指定できるファイル形式のこと）で作り、単語ごとの「\kf」タグ（＝色が変わる速さをセンチ秒で指定するタグのこと）に各単語の表示時間を入れて、ffmpegの`subtitles`フィルターで動画に焼き込む。音量は`loudnorm`フィルターで-14LUFSに揃える設定例も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのテロップをffmpegで焼き込む工程に、ASSファイルの「\kf」タグを使った単語ごとの色替えを足して、読んでいる場所が一目で分かるテロップに変えてみる。</p>
+    </div>
+    <a class="source-link" href="https://dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-05-25</span>
+    </div>
+    <h2>コマ切り替え、テキストポップとプッシュイン</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画のカット・トランジションを14種類に分けて解説する記事。そのうち「テキストポップ」は切り替え点で巨大な一語のテロップを6〜8フレームだけ表示する手法、「プッシュイン強調」は切り替え点で4フレームのキーフレームを使い100%から115%へ素早く拡大する手法として紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのコマ切り替えで、巨大な一語テロップを6〜8フレームだけ出す「テキストポップ」や、4フレームで100%→115%に拡大する「プッシュイン」を、ffmpegのフィルターで真似してみる。</p>
+    </div>
+    <a class="source-link" href="https://tokcount.com/blog/14-micro-cut-transitions-that-keep-completion-rates-above-60-percent" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> tokcount.com/blog/14-micro-cut-transitions
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2025-11-17</span>
+    </div>
+    <h2>フックは7パターンから選んで試す</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画冒頭のフックを7パターンに分けて例文付きで解説する記事。「意外な矛盾」（例："I grew my audience by posting less"）、「具体的な数字の約束」（例："5 edits that take 30 seconds but double engagement"）、「ビフォー・アフター」（例："100回再生から90日で10万回再生"）などを挙げ、同じ動画で3〜4パターンのフックを作って試すことを勧めている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>次のゴリラ漫画やリールの冒頭フックの文章を、この7パターンのどれかの型に当てはめて2〜3種類書いてみて、その中から良さそうなものを選ぶ。</p>
+    </div>
+    <a class="source-link" href="https://www.opus.pro/blog/the-science-of-hooks" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/the-science-of-hooks
+    </a>
+  </div>
+
+  <!-- 4: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-10</span>
+    </div>
+    <h2>議事録とアンケート、Claudeの新機能で片付け</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Anthropicが2026年11月10日、「Claude Whiteboards」と「Claude Sheets」をベータ公開した。WhiteboardsはチームでClaudeと一緒にブレインストーミングできる共有ボードで、話し合った内容を担当者と期日つきのタイムラインに変換したり、会議のメモをテーマ別にまとめて担当ごとのアクション項目を下書きしたりできる。Sheetsはタブ・数式・書式・ドロップダウンを備えたスプレッドシートを、「キャンペーン管理表」のようにプロンプトだけで作成・編集できる。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>議事録のメモをClaude Whiteboardsに貼ってテーマ別にまとめさせ、担当ごとのアクション項目を下書きさせる。顧客アンケートの集計表も、プロンプトだけでClaude Sheetsに作らせてみる。</p>
+    </div>
+    <a class="source-link" href="https://claude.com/resources/articles/sheets-whiteboards-data" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> claude.com/resources/articles/sheets-whiteboards-data
+    </a>
+  </div>
+
+  <!-- 5: B 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-09</span>
+    </div>
+    <h2>顧客向けLP、Claudeに頼んで即公開</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>WordPress.comを運営するAutomatticが、2026年11月9日に「Spacefast」を発表した。バイブコーディング（AIに指示して作ったアプリやサイトのこと）をそのまま動くサービスとして公開するための基盤で、データベース・認証・ファイルアップロード・メール送信・アナリティクスを備える。WordPress連携やWooCommerceによるEC機能も比較的簡単に追加できるという。Claude・ChatGPT・Cursorなど複数のAIエージェントから接続でき、Gitリポジトリを接続して始めることもできる。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>顧客向けのLPや簡易ツールを作るとき、Claudeから直接Spacefastに接続して公開し、WooCommerceで物販ページの決済機能を試しに追加してみる。</p>
+    </div>
+    <a class="source-link" href="https://letsdatascience.com/news/automattic-launches-spacefast-to-deploy-vibe-coded-websites-fb2995d5" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> letsdatascience.com/news/automattic-launches-spacefast
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第83回<br>
+    2026年11月13日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回はこちら</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第82回｜2026.11.12</title>
+<title>デイリートレンド調査レポート 第83回｜2026.11.13</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第82回</span>
-    <h1>今日のトレンド調査<br><span class="accent">テロップは2〜5語に絞る</span></h1>
-    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第83回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップは単語ごとに色を変えて焼く</span></h1>
+    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はテロップの文字数・バズ動画の分解・終わり方のループ、どれも地味やけどすぐ効くネタが拾えたで。フックのテロップは2〜5語に削って強調は1色だけ、台本前にバズった動画を0.25倍速で分解、リールの最後と最初をつなげてループにする、次のゴリラ漫画やリールでそのまま試せるわ。AIツールの方は、出典で確認できる新ネタが今日は見当たらんかったから見送りや。</p>
+    <p>今日はテロップの単語ハイライト・コマ切り替えの技・フックの型の3本に、Claudeの新機能2つを乗せた5本やで。ffmpegの字幕焼き込みとコマ切り替えはそのまま次のリールで試せるし、Claude SheetsとWhiteboardsは議事録とアンケート集計にすぐ使えそうや。Spacefastは物販ページの決済まで任せられるらしいから、クライアントの案件で一度試してみたいわ。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-04-28</span>
+      <span class="date">公開2026-06-10</span>
     </div>
-    <h2>テロップ文字数、フックは2〜5語</h2>
+    <h2>テロップ、単語ごとに色を変えて焼く</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ショート動画のテロップ・字幕デザインを解説する記事。用途別の目安として、冒頭のフック（＝視聴者を引き付ける最初の一言のこと）は画面に2〜5語、通常のショート動画は1行3〜7語に収めるとしている。強調して目立たせる対象として、数字・「but」「instead」のような対比語・オファーの条件・製品名・締切の表現・CTA（＝行動を呼びかける一言のこと）の動詞・視聴者に覚えてほしい一文を挙げ、アクセントカラーは1つに絞り、CTAの強調は1回だけにとどめるよう勧めている。</p>
+      <p>ffmpegで動画に、カラオケのように読んでいる単語だけ色が変わるテロップを焼き込む具体的な実装を解説する記事。字幕はASS（Advanced SubStation Alpha＝字幕の書式を細かく指定できるファイル形式のこと）で作り、単語ごとの「\kf」タグ（＝色が変わる速さをセンチ秒で指定するタグのこと）に各単語の表示時間を入れて、ffmpegの`subtitles`フィルターで動画に焼き込む。音量は`loudnorm`フィルターで-14LUFSに揃える設定例も示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのフックのコマは2〜5語、通常のコマは1行3〜7語に文字数を絞り、強調したい数字や締切の言葉・CTAの一言だけに同じ色を使って目立たせてみる。</p>
+      <p>漫画リールのテロップをffmpegで焼き込む工程に、ASSファイルの「\kf」タグを使った単語ごとの色替えを足して、読んでいる場所が一目で分かるテロップに変えてみる。</p>
     </div>
-    <a class="source-link" href="https://subclip.app/blogs/subtitle-styles-that-convert" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> subclip.app/blogs/subtitle-styles-that-convert
+    <a class="source-link" href="https://dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-06-20</span>
+      <span class="date">公開2026-05-25</span>
     </div>
-    <h2>バズった動画を0.25倍速で分解する</h2>
+    <h2>コマ切り替え、テキストポップとプッシュイン</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>バズった動画を6層に分解して自分の企画に応用するフレームワークを解説する記事。冒頭3秒を0.25倍速で再生し、pattern interrupt（＝予想を外す出だしのこと）・curiosity gap（＝続きを気にさせる仕掛けのこと）・identity signal（＝誰に向けた内容かを示す合図のこと）がどの瞬間に入っているかをタイムスタンプで書き出す手順を示している。脚本はセットアップ・緊張・結末の比率を目安15:60:25とし、感情の高さを5秒ごとに1〜10点で記録して曲線を作る。投稿後は1時間・6時間・24時間・72時間の伸びを元動画と比べ、6時間時点で元動画の15〜25%なら構造が機能している、5%未満なら構成がズレている目安にするという。</p>
+      <p>動画のカット・トランジションを14種類に分けて解説する記事。そのうち「テキストポップ」は切り替え点で巨大な一語のテロップを6〜8フレームだけ表示する手法、「プッシュイン強調」は切り替え点で4フレームのキーフレームを使い100%から115%へ素早く拡大する手法として紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>次のゴリラ漫画やリールを作る前に、過去にバズった動画の冒頭3秒を0.25倍速で見て、どこにpattern interrupt・curiosity gap・identity signalが入っているかをタイムスタンプで書き出し、セットアップ・緊張・結末の比率を15:60:25に当てはめて自分の台本に反映してみる。</p>
+      <p>漫画リールのコマ切り替えで、巨大な一語テロップを6〜8フレームだけ出す「テキストポップ」や、4フレームで100%→115%に拡大する「プッシュイン」を、ffmpegのフィルターで真似してみる。</p>
     </div>
-    <a class="source-link" href="https://dev.to/bulkdl/how-to-reverse-engineer-any-viral-video-a-creators-systematic-framework-2026-2nh5" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> dev.to/bulkdl/how-to-reverse-engineer-any-viral-video
+    <a class="source-link" href="https://tokcount.com/blog/14-micro-cut-transitions-that-keep-completion-rates-above-60-percent" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> tokcount.com/blog/14-micro-cut-transitions
     </a>
   </div>
 
@@ -291,27 +291,70 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">更新2026-07-29</span>
+      <span class="date">公開2025-11-17</span>
     </div>
-    <h2>終わりと始まりをつなげてループさせる</h2>
+    <h2>フックは7パターンから選んで試す</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>YouTube Shortsで視聴数を伸ばすコツをまとめた記事。30秒の動画を2回見られる方が60秒の動画を1回見られるより有利だとして、動画の冒頭を「まず始める」場面にし、締めで結論を残したうえで、最後のフレームと冒頭のフレームをつなげてループさせる作り方を勧めている。投稿前に2回連続で再生し、つながりの切れ目に気づかなければ成功という確認方法も紹介している。</p>
+      <p>動画冒頭のフックを7パターンに分けて例文付きで解説する記事。「意外な矛盾」（例："I grew my audience by posting less"）、「具体的な数字の約束」（例："5 edits that take 30 seconds but double engagement"）、「ビフォー・アフター」（例："100回再生から90日で10万回再生"）などを挙げ、同じ動画で3〜4パターンのフックを作って試すことを勧めている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>次のゴリラ漫画リールの最後のコマと最初のコマをつなげてループするように作り、投稿前に2回連続で再生して、つながりの切れ目に気づかないかを確認してみる。</p>
+      <p>次のゴリラ漫画やリールの冒頭フックの文章を、この7パターンのどれかの型に当てはめて2〜3種類書いてみて、その中から良さそうなものを選ぶ。</p>
     </div>
-    <a class="source-link" href="https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> scalelab.com/en/41-tips-to-make-youtube-shorts-viral
+    <a class="source-link" href="https://www.opus.pro/blog/the-science-of-hooks" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/the-science-of-hooks
+    </a>
+  </div>
+
+  <!-- 4: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-10</span>
+    </div>
+    <h2>議事録とアンケート、Claudeの新機能で片付け</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Anthropicが2026年11月10日、「Claude Whiteboards」と「Claude Sheets」をベータ公開した。WhiteboardsはチームでClaudeと一緒にブレインストーミングできる共有ボードで、話し合った内容を担当者と期日つきのタイムラインに変換したり、会議のメモをテーマ別にまとめて担当ごとのアクション項目を下書きしたりできる。Sheetsはタブ・数式・書式・ドロップダウンを備えたスプレッドシートを、「キャンペーン管理表」のようにプロンプトだけで作成・編集できる。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>議事録のメモをClaude Whiteboardsに貼ってテーマ別にまとめさせ、担当ごとのアクション項目を下書きさせる。顧客アンケートの集計表も、プロンプトだけでClaude Sheetsに作らせてみる。</p>
+    </div>
+    <a class="source-link" href="https://claude.com/resources/articles/sheets-whiteboards-data" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> claude.com/resources/articles/sheets-whiteboards-data
+    </a>
+  </div>
+
+  <!-- 5: B 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-09</span>
+    </div>
+    <h2>顧客向けLP、Claudeに頼んで即公開</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>WordPress.comを運営するAutomatticが、2026年11月9日に「Spacefast」を発表した。バイブコーディング（AIに指示して作ったアプリやサイトのこと）をそのまま動くサービスとして公開するための基盤で、データベース・認証・ファイルアップロード・メール送信・アナリティクスを備える。WordPress連携やWooCommerceによるEC機能も比較的簡単に追加できるという。Claude・ChatGPT・Cursorなど複数のAIエージェントから接続でき、Gitリポジトリを接続して始めることもできる。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>顧客向けのLPや簡易ツールを作るとき、Claudeから直接Spacefastに接続して公開し、WooCommerceで物販ページの決済機能を試しに追加してみる。</p>
+    </div>
+    <a class="source-link" href="https://letsdatascience.com/news/automattic-launches-spacefast-to-deploy-vibe-coded-websites-fb2995d5" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> letsdatascience.com/news/automattic-launches-spacefast
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第82回<br>
-    2026年11月12日分
+    デイリートレンドレーダー 第83回<br>
+    2026年11月13日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-13.html">2026-11-13（第83回）</a>
       <a href="days/2026-11-12.html">2026-11-12（第82回）</a>
       <a href="days/2026-11-11.html">2026-11-11（第81回）</a>
       <a href="days/2026-11-10.html">2026-11-10（第80回）</a>

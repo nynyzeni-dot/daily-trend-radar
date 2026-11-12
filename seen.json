@@ -1404,6 +1404,31 @@
       "url": "https://scalelab.com/en/41-tips-to-make-youtube-shorts-viral",
       "title": "終わりと始まりをつなげてループさせる",
       "date": "2026-11-12"
+    },
+    {
+      "url": "https://dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg",
+      "title": "テロップ、単語ごとに色を変えて焼く",
+      "date": "2026-11-13"
+    },
+    {
+      "url": "https://tokcount.com/blog/14-micro-cut-transitions-that-keep-completion-rates-above-60-percent",
+      "title": "コマ切り替え、テキストポップとプッシュイン",
+      "date": "2026-11-13"
+    },
+    {
+      "url": "https://www.opus.pro/blog/the-science-of-hooks",
+      "title": "フックは7パターンから選んで試す",
+      "date": "2026-11-13"
+    },
+    {
+      "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "title": "議事録とアンケート、Claudeの新機能で片付け",
+      "date": "2026-11-13"
+    },
+    {
+      "url": "https://letsdatascience.com/news/automattic-launches-spacefast-to-deploy-vibe-coded-websites-fb2995d5",
+      "title": "顧客向けLP、Claudeに頼んで即公開",
+      "date": "2026-11-13"
     }
   ]
 }

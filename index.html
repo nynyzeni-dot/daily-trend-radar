@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第83回｜2026.11.13</title>
+<title>デイリートレンド調査レポート 第84回｜2026.11.14</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第83回</span>
-    <h1>今日のトレンド調査<br><span class="accent">テロップは単語ごとに色を変えて焼く</span></h1>
-    <p class="period">全5件・動画の作り方3件／AIツール2件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第84回</span>
+    <h1>今日のトレンド調査<br><span class="accent">テロップは太ゴシック・画面比率で決める</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はテロップの単語ハイライト・コマ切り替えの技・フックの型の3本に、Claudeの新機能2つを乗せた5本やで。ffmpegの字幕焼き込みとコマ切り替えはそのまま次のリールで試せるし、Claude SheetsとWhiteboardsは議事録とアンケート集計にすぐ使えそうや。Spacefastは物販ページの決済まで任せられるらしいから、クライアントの案件で一度試してみたいわ。</p>
+    <p>今日はテロップのフォント・サイズを画面比率で決める具体的な基準と、冒頭2秒の鉄板NG集が拾えたで。漫画リールの字幕設定とオープニング、どっちもこの数字をそのまま当てはめてみてほしいわ。Claude Codeの権限バグ修正は、VPSで自動運転させてる身としては見逃せんやつや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,40 +249,40 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-06-10</span>
+      <span class="date">公開2026-08-10</span>
     </div>
-    <h2>テロップ、単語ごとに色を変えて焼く</h2>
+    <h2>テロップは太ゴシック・画面比率で決める</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ffmpegで動画に、カラオケのように読んでいる単語だけ色が変わるテロップを焼き込む具体的な実装を解説する記事。字幕はASS（Advanced SubStation Alpha＝字幕の書式を細かく指定できるファイル形式のこと）で作り、単語ごとの「\kf」タグ（＝色が変わる速さをセンチ秒で指定するタグのこと）に各単語の表示時間を入れて、ffmpegの`subtitles`フィルターで動画に焼き込む。音量は`loudnorm`フィルターで-14LUFSに揃える設定例も示されている。</p>
+      <p>字幕・テロップのフォントとサイズの選び方を解説する記事。フォントは線の太さが均一なゴシック体（サンセリフ）を基本とし、商用利用可のNoto Sans JP・BIZ UDゴシック・M PLUS 1p・Zen Kaku Gothic Newなどをすすめている（いずれもSIL Open Font License＝無料で商用利用も認められたフォントの配布ライセンスのこと）。文字の大きさはpx指定ではなく画面の高さに対する比率で決め、縦長（9:16）の動画では画面高さの3.9〜4.5%を目安にするとしている。明朝体・手書き風・極細ウェイトは、小さい画面や動画の圧縮ノイズで線がつぶれやすく字幕には向かないとも述べている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのテロップをffmpegで焼き込む工程に、ASSファイルの「\kf」タグを使った単語ごとの色替えを足して、読んでいる場所が一目で分かるテロップに変えてみる。</p>
+      <p>漫画リールのテロップ、フォントをNoto Sans JPなどの太めのゴシック体に固定し、文字の高さは画面高さの3.9〜4.5%になるよう解像度から逆算して設定してみる。</p>
     </div>
-    <a class="source-link" href="https://dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg
+    <a class="source-link" href="https://subanana.com/ja/blog/字幕-フォント-おすすめ" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> subanana.com/ja/blog/字幕-フォント-おすすめ
     </a>
   </div>
 
-  <!-- 2: A 中 -->
-  <div class="card mid">
+  <!-- 2: A 高 -->
+  <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-05-25</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-07-12</span>
     </div>
-    <h2>コマ切り替え、テキストポップとプッシュイン</h2>
+    <h2>冒頭2秒に2カット、NG開幕を避ける</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>動画のカット・トランジションを14種類に分けて解説する記事。そのうち「テキストポップ」は切り替え点で巨大な一語のテロップを6〜8フレームだけ表示する手法、「プッシュイン強調」は切り替え点で4フレームのキーフレームを使い100%から115%へ素早く拡大する手法として紹介されている。</p>
+      <p>Instagramリールの冒頭の作り方を解説する記事。冒頭2秒以内に2カット分の絵の変化を入れる「2カットの法則」を紹介し、黒背景で始める・無音のまま始める・結論が後半にしかない、といった開幕のNG例と、その代替案を表で示している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのコマ切り替えで、巨大な一語テロップを6〜8フレームだけ出す「テキストポップ」や、4フレームで100%→115%に拡大する「プッシュイン」を、ffmpegのフィルターで真似してみる。</p>
+      <p>漫画リールの冒頭を、黒背景や無音のまま始めるのをやめて、最初の2秒の中に2カット分の絵の変化を入れる構成に変えてみる。</p>
     </div>
-    <a class="source-link" href="https://tokcount.com/blog/14-micro-cut-transitions-that-keep-completion-rates-above-60-percent" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> tokcount.com/blog/14-micro-cut-transitions
+    <a class="source-link" href="https://tatap.jp/knowledge/instagram-reel-185/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> tatap.jp/knowledge/instagram-reel-185
     </a>
   </div>
 
@@ -291,69 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2025-11-17</span>
+      <span class="date">公開2026-06-20</span>
     </div>
-    <h2>フックは7パターンから選んで試す</h2>
+    <h2>投稿前にフックを5項目で自己採点</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>動画冒頭のフックを7パターンに分けて例文付きで解説する記事。「意外な矛盾」（例："I grew my audience by posting less"）、「具体的な数字の約束」（例："5 edits that take 30 seconds but double engagement"）、「ビフォー・アフター」（例："100回再生から90日で10万回再生"）などを挙げ、同じ動画で3〜4パターンのフックを作って試すことを勧めている。</p>
+      <p>動画冒頭のフック作りを解説する記事。0〜100点で評価する5項目（各20点）の採点基準を示し、投稿前に同じジャンルで直近30日に伸びた動画10本の冒頭3秒を分析する手順、フック案を3つ作って採点し一番良いものを選ぶ運用、音を消した状態でも内容が伝わるか確かめる「無音テスト」を紹介している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>次のゴリラ漫画やリールの冒頭フックの文章を、この7パターンのどれかの型に当てはめて2〜3種類書いてみて、その中から良さそうなものを選ぶ。</p>
+      <p>漫画リールを投稿する前に、同じジャンルで最近伸びている動画の冒頭3秒を見て自分のフック案を2〜3パターン作り、記事の5項目採点に当てはめて一番点数が高いものを選ぶ。仕上げに音を消した状態でも内容が伝わるか「無音テスト」で確認する。</p>
     </div>
-    <a class="source-link" href="https://www.opus.pro/blog/the-science-of-hooks" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> opus.pro/blog/the-science-of-hooks
+    <a class="source-link" href="https://dev.to/bulkdl/hook-engineering-the-science-of-the-first-3-seconds-in-short-form-video-2026-2jp9" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dev.to/bulkdl/hook-engineering-the-science-of-the-first-3-seconds
     </a>
   </div>
 
-  <!-- 4: B 高 -->
-  <div class="card high">
-    <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-10</span>
-    </div>
-    <h2>議事録とアンケート、Claudeの新機能で片付け</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>Anthropicが2026年11月10日、「Claude Whiteboards」と「Claude Sheets」をベータ公開した。WhiteboardsはチームでClaudeと一緒にブレインストーミングできる共有ボードで、話し合った内容を担当者と期日つきのタイムラインに変換したり、会議のメモをテーマ別にまとめて担当ごとのアクション項目を下書きしたりできる。Sheetsはタブ・数式・書式・ドロップダウンを備えたスプレッドシートを、「キャンペーン管理表」のようにプロンプトだけで作成・編集できる。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>議事録のメモをClaude Whiteboardsに貼ってテーマ別にまとめさせ、担当ごとのアクション項目を下書きさせる。顧客アンケートの集計表も、プロンプトだけでClaude Sheetsに作らせてみる。</p>
-    </div>
-    <a class="source-link" href="https://claude.com/resources/articles/sheets-whiteboards-data" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> claude.com/resources/articles/sheets-whiteboards-data
-    </a>
-  </div>
-
-  <!-- 5: B 中 -->
+  <!-- 4: B 中 -->
   <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-09</span>
+      <span class="date">公開2026-11-10</span>
     </div>
-    <h2>顧客向けLP、Claudeに頼んで即公開</h2>
+    <h2>Claude Codeの権限バグ、VPS運用者は確認</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>WordPress.comを運営するAutomatticが、2026年11月9日に「Spacefast」を発表した。バイブコーディング（AIに指示して作ったアプリやサイトのこと）をそのまま動くサービスとして公開するための基盤で、データベース・認証・ファイルアップロード・メール送信・アナリティクスを備える。WordPress連携やWooCommerceによるEC機能も比較的簡単に追加できるという。Claude・ChatGPT・Cursorなど複数のAIエージェントから接続でき、Gitリポジトリを接続して始めることもできる。</p>
+      <p>Claude Codeのv2.1.321（2026年11月10日公開）の解説記事。読み取り専用と判定されたBashコマンドが権限確認なしにサンドボックス外で実行されてしまう問題、cp・mvでディレクトリに書き込まれるファイルにdenyルールや保護ファイルの確認が適用されていなかった問題、MCPサーバーをOAuthで接続した際にリフレッシュトークンなどの秘密情報が別ホストに送られてしまう問題が修正された。Linuxのヘッドレス実行（claude -p）でディスク容量不足などによりトランスクリプトが失われた場合、以前は終了コード0で正常終了としていたのが、修正後はエラーとして終了コード1を返すようになった。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>顧客向けのLPや簡易ツールを作るとき、Claudeから直接Spacefastに接続して公開し、WooCommerceで物販ページの決済機能を試しに追加してみる。</p>
+      <p>VPSでClaude Codeを自動実行してLINE Botやスクリプトの作業をさせているとき、終了コードで成功・失敗を判定している処理があれば、ディスク容量不足時の挙動が変わった点を踏まえて確認する。MCPサーバーをOAuthで繋いでいる場合は、v2.1.321に上げて秘密情報の送信先の修正を反映させる。</p>
     </div>
-    <a class="source-link" href="https://letsdatascience.com/news/automattic-launches-spacefast-to-deploy-vibe-coded-websites-fb2995d5" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> letsdatascience.com/news/automattic-launches-spacefast
+    <a class="source-link" href="https://labmemo.com/claude-code-v2-1-321-fable-5-2-default-security-fixes-2026-11/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> labmemo.com/claude-code-v2-1-321-fable-5-2-default-security-fixes
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第83回<br>
-    2026年11月13日分
+    デイリートレンドレーダー 第84回<br>
+    2026年11月14日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-14.html">2026-11-14（第84回）</a>
       <a href="days/2026-11-13.html">2026-11-13（第83回）</a>
       <a href="days/2026-11-12.html">2026-11-12（第82回）</a>
       <a href="days/2026-11-11.html">2026-11-11（第81回）</a>

@@ -1,12 +1,11 @@
 {
-  "date": "2026-11-13",
-  "count": 5,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-13.html",
+  "date": "2026-11-14",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-14.html",
   "items": [
-    {"title": "テロップ、単語ごとに色を変えて焼く", "why": "漫画リールのテロップ焼き込みに、ASSファイルの「\\kf」タグを使った単語ごとの色替えを足す", "url": "https://dev.to/danielrusnok/captions-that-read-along-one-word-at-a-time-3alg"},
-    {"title": "コマ切り替え、テキストポップとプッシュイン", "why": "コマ切り替えで、巨大な一語テロップを6〜8フレームだけ出す「テキストポップ」や、4フレームで100%→115%に拡大する「プッシュイン」をffmpegで真似る", "url": "https://tokcount.com/blog/14-micro-cut-transitions-that-keep-completion-rates-above-60-percent"},
-    {"title": "フックは7パターンから選んで試す", "why": "冒頭フックの文章を7パターンの型に当てはめて2〜3種類書き、良さそうなものを選ぶ", "url": "https://www.opus.pro/blog/the-science-of-hooks"},
-    {"title": "議事録とアンケート、Claudeの新機能で片付け", "why": "議事録のメモをClaude Whiteboardsでテーマ別にまとめさせ、顧客アンケートの集計表をClaude Sheetsに作らせる", "url": "https://claude.com/resources/articles/sheets-whiteboards-data"},
-    {"title": "顧客向けLP、Claudeに頼んで即公開", "why": "顧客向けのLPを作るとき、Claudeから直接Spacefastに接続して公開し、WooCommerceで物販ページの決済機能を試す", "url": "https://letsdatascience.com/news/automattic-launches-spacefast-to-deploy-vibe-coded-websites-fb2995d5"}
+    {"title": "テロップは太ゴシック・画面比率で決める", "why": "漫画リールのテロップ、フォントを太めのゴシック体に固定し、文字の高さは画面高さの3.9〜4.5%で設定する", "url": "https://subanana.com/ja/blog/字幕-フォント-おすすめ"},
+    {"title": "冒頭2秒に2カット、NG開幕を避ける", "why": "漫画リールの冒頭を黒背景・無音のまま始めず、最初の2秒の中に2カット分の絵の変化を入れる", "url": "https://tatap.jp/knowledge/instagram-reel-185/"},
+    {"title": "投稿前にフックを5項目で自己採点", "why": "投稿前に同ジャンルの伸びている動画を見てフック案を2〜3パターン作り、5項目採点と無音テストで選ぶ", "url": "https://dev.to/bulkdl/hook-engineering-the-science-of-the-first-3-seconds-in-short-form-video-2026-2jp9"},
+    {"title": "Claude Codeの権限バグ、VPS運用者は確認", "why": "VPSでClaude Codeを自動実行しているとき、終了コード判定とMCPのOAuth接続をv2.1.321の修正内容で確認する", "url": "https://labmemo.com/claude-code-v2-1-321-fable-5-2-default-security-fixes-2026-11/"}
   ]
 }

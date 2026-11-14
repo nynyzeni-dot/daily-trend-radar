@@ -1449,6 +1449,21 @@
       "url": "https://labmemo.com/claude-code-v2-1-321-fable-5-2-default-security-fixes-2026-11/",
       "title": "Claude Codeの権限バグ、VPS運用者は確認",
       "date": "2026-11-14"
+    },
+    {
+      "url": "https://gokkoclub.jp/shortdrama-lab/category/study/5309/",
+      "title": "冒頭3秒を0.5秒刻みで計画する",
+      "date": "2026-11-15"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/internal-monologue-to-comic-panels",
+      "title": "漫画のキャプション、1ページ1〜3個に絞る",
+      "date": "2026-11-15"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.325",
+      "title": "Claude Code、VPS自動実行の既定が変更",
+      "date": "2026-11-15"
     }
   ]
 }

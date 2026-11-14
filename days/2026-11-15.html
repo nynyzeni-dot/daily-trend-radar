@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第85回｜2026.11.15</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第85回</span>
+    <h1>今日のトレンド調査<br><span class="accent">冒頭3秒を0.5秒刻みで計画する</span></h1>
+    <p class="period">全3件・動画の作り方2件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日は冒頭3秒の作り方を実例で分解した記事と、漫画のキャプションを絞る具体的な目安が拾えたで。どっちも明日のネーム作りでそのまま試せるやつや。一番大事なんはClaude Codeの権限確認の既定変更やから、VPSで自動実行してる分が止まってへんか自分でも確認しといてほしいわ。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-13</span>
+    </div>
+    <h2>冒頭3秒を0.5秒刻みで計画する</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ショートドラマの作り方を解説する記事。TikTok動画323本を分析した結果、平均の視聴維持率は1秒時点で77%、3秒時点で54%だったと示している（3秒・15秒という基準は目安であり、公式のTikTok基準や再生数の保証ではないと注記あり）。冒頭3秒は0.5秒単位で「次に何を見せるか」を計画し、場面とBGMの入りがずれないようにする、1カット目で提示した引きを2カット目でさらに気になる形にする、という作り方を紹介している。15秒までに主人公が誰で何に困っているかが分かる映像にすることも挙げ、例として「電車の窓を見てスマホを確認するだけの場面」は抽象的、「元恋人のSNSを開いて知らない人との写真を見る場面」は具体的で問題が分かりやすい、と対比している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの冒頭を作るとき、0.5秒ごとに「この瞬間に何を見せて視聴者にどう感じてほしいか」を書き出してから絵を並べてみる。15秒までのどこかで主人公が何に困っているかを、電車の窓を見るような抽象的な絵ではなく、元恋人のSNSを見るような具体的な絵で見せられているか見直す。</p>
+    </div>
+    <a class="source-link" href="https://gokkoclub.jp/shortdrama-lab/category/study/5309/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gokkoclub.jp/shortdrama-lab/category/study/5309
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-08-25</span>
+    </div>
+    <h2>漫画のキャプション、1ページ1〜3個に絞る</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作のワークフローを解説する記事。登場人物の内面の独白やナレーションをコマにする際、まず各独白に「否認・回避・圧力・記憶の引き起こし」などの役割を割り当て、それを表情・動作・持ち物・背景・キャプション・セリフ・沈黙のどれで見せるかを選ぶという手順を示している。キャプションの予算（1ページに入れてよい短いキャプションの数）の目安として、6コマの漫画ページなら1〜3個、雰囲気重視の漫画ページなら0〜2個、ウェブトゥーンなら3〜5スクロールごとに1個としている。例として「彼女は後悔していた。」という独白を、間違いに結びつく物に伸ばした手が止まる絵に変換する例を挙げている。見直し用の表では、「すべてのコマにキャプションが付いている」という問題に対し、最も鋭い独白だけ残して他は沈黙や絵に置き換える、という直し方を示している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのネームを作るとき、独白をそのまま全コマにキャプションとして書き込む前に、1ページ（6コマ想定）あたりキャプションは1〜3個までに絞れないか見直してみる。「彼女は後悔していた」のような説明的な独白が出てきたら、後悔を表す動作（手が止まる、物を見る）に置き換えられないか考えてから文字を当てる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/internal-monologue-to-comic-panels" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/internal-monologue-to-comic-panels
+    </a>
+  </div>
+
+  <!-- 3: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-13</span>
+    </div>
+    <h2>Claude Code、VPS自動実行の既定が変更</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeのv2.1.323（11月12日公開）とv2.1.325（11月13日公開）の解説。サンドボックス内のBashコマンドは、これまで権限確認なしで自動実行されていたが、v2.1.325から通常の権限確認フローに従うのが既定になった（確認なしで動かし続けるには設定ファイルで<code>sandbox.autoAllowBashIfSandboxed</code>をtrueにする必要がある）。また、スケジュールされたタスクや<code>/loop</code>が、<code>allowed-tools</code>やhooksを宣言したスキルを実行する前に確認を求めるようになった（無人で動かすには設定の<code>permissions.allow</code>に<code>Skill(name)</code>を追加する必要がある）。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>VPSでClaude Codeを自動実行してレポート作成やLINE Bot関連のスクリプトを無人で動かしている場合、v2.1.325以降の環境だとBashコマンドやスキル実行で権限確認に引っかかって処理が止まる可能性がある。設定ファイルの<code>sandbox.autoAllowBashIfSandboxed</code>や<code>permissions.allow</code>への<code>Skill(name)</code>追加を見直し、無人実行が今までどおり最後まで動くか確認する。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.325" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.325
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第85回<br>
+    2026年11月15日分
+    <div class="archive">
+      <p>過去回一覧</p>
+      <a href="../index.html">最新回はこちら</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1464,6 +1464,21 @@
       "url": "https://code.claude.com/docs/en/changelog#v2.1.325",
       "title": "Claude Code、VPS自動実行の既定が変更",
       "date": "2026-11-15"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/animate-comic-panels-into-video",
+      "title": "漫画のコマ、AI動画で部分的に動かす",
+      "date": "2026-11-16"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue",
+      "title": "新キャラ、6表情×2で同一性を先に確認",
+      "date": "2026-11-16"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images",
+      "title": "6コマ漫画、プロンプトを3層に分けて書く",
+      "date": "2026-11-16"
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-15.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-16.html",
   "items": [
-    {"title": "冒頭3秒を0.5秒刻みで計画する", "why": "漫画リールの冒頭を0.5秒ごとに何を見せるか計画し、15秒までに主人公が何に困っているかを具体的な絵で見せる", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/5309/"},
-    {"title": "漫画のキャプション、1ページ1〜3個に絞る", "why": "漫画リールのネームで独白を全コマにキャプション化せず、1ページあたり1〜3個に絞り、説明的な独白は動作に置き換える", "url": "https://llamagen.ai/ja/blogs/internal-monologue-to-comic-panels"},
-    {"title": "Claude Code、VPS自動実行の既定が変更", "why": "VPSで無人実行しているClaude Codeが、sandbox設定とpermissions.allowの見直しなしだと権限確認で止まる可能性がある", "url": "https://code.claude.com/docs/en/changelog#v2.1.325"}
+    {"title": "漫画のコマ、AI動画で部分的に動かす", "why": "漫画リールのコマに、Veo 3.1 Fast（Replicate経由）で部分的な動きを足し、ffmpegの書き出し工程にそのまま組み込める", "url": "https://llamagen.ai/ja/blogs/animate-comic-panels-into-video"},
+    {"title": "新キャラ、6表情×2で同一性を先に確認", "why": "新キャラを本番のページに使う前に、6表情×2回の計12枚で同一性と表情のブレを先に確認できる", "url": "https://llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue"},
+    {"title": "6コマ漫画、プロンプトを3層に分けて書く", "why": "キャラの固定情報・コマごとの出来事・ページ全体の決まりを3層に分けてプロンプトを書く型を使える", "url": "https://llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images"}
   ]
 }

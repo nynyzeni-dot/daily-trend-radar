@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第85回｜2026.11.15</title>
+<title>デイリートレンド調査レポート 第86回｜2026.11.16</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第85回</span>
-    <h1>今日のトレンド調査<br><span class="accent">冒頭3秒を0.5秒刻みで計画する</span></h1>
-    <p class="period">全3件・動画の作り方2件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第86回</span>
+    <h1>今日のトレンド調査<br><span class="accent">漫画のコマ、AI動画で部分的に動かす</span></h1>
+    <p class="period">全3件・動画の作り方3件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日は冒頭3秒の作り方を実例で分解した記事と、漫画のキャプションを絞る具体的な目安が拾えたで。どっちも明日のネーム作りでそのまま試せるやつや。一番大事なんはClaude Codeの権限確認の既定変更やから、VPSで自動実行してる分が止まってへんか自分でも確認しといてほしいわ。</p>
+    <p>今日はAIツールのニュースは特に無かったから無理に埋めんかったけど、LlamaGen.AIの漫画制作ネタが3本まとまって拾えたで。コマに動きを足す話、新キャラの表情チェック、プロンプトの3層の型、どれも次のネーム作りでそのまま試せるやつばっかりや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-13</span>
+      <span class="date">公開2026-11-15</span>
     </div>
-    <h2>冒頭3秒を0.5秒刻みで計画する</h2>
+    <h2>漫画のコマ、AI動画で部分的に動かす</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ショートドラマの作り方を解説する記事。TikTok動画323本を分析した結果、平均の視聴維持率は1秒時点で77%、3秒時点で54%だったと示している（3秒・15秒という基準は目安であり、公式のTikTok基準や再生数の保証ではないと注記あり）。冒頭3秒は0.5秒単位で「次に何を見せるか」を計画し、場面とBGMの入りがずれないようにする、1カット目で提示した引きを2カット目でさらに気になる形にする、という作り方を紹介している。15秒までに主人公が誰で何に困っているかが分かる映像にすることも挙げ、例として「電車の窓を見てスマホを確認するだけの場面」は抽象的、「元恋人のSNSを開いて知らない人との写真を見る場面」は具体的で問題が分かりやすい、と対比している。</p>
+      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、6コマ漫画のうち3コマを選び、音声なしの15秒動画に仕上げる手順を実例で公開した。各コマは720×1280のアイボリー色の背景にアートをそのまま配置し、Googleの動画生成AI「Veo 3.1 Fast」（＝静止画に数秒だけ動きを付けられるAIのこと。Replicateという外部サービス経由で呼び出す）で、1コマにつき1つの動作（例：手がノートの表紙に触れる、持ち主がノートを受け取って微笑む）だけを指示して6秒の動画を作る。そこからffmpegで各クリップの最初の5秒を720角に切り出して24fpsに統一し、3つを順番に結合して1本のMP4に書き出す。音声・セリフ・リップシンクは含めない。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの冒頭を作るとき、0.5秒ごとに「この瞬間に何を見せて視聴者にどう感じてほしいか」を書き出してから絵を並べてみる。15秒までのどこかで主人公が何に困っているかを、電車の窓を見るような抽象的な絵ではなく、元恋人のSNSを見るような具体的な絵で見せられているか見直す。</p>
+      <p>漫画リールで仕上げたコマのうち、特に見せたい1コマだけを選び、Veo 3.1 Fast（Replicate経由）に「このコマで起きる動作を1つだけ」と指示して数秒の動画にし、ffmpegで必要な秒数だけ切り出して今の書き出し工程に差し込む、という足し方を試せる。音声なしの設定のままなので、今の無音の作りを変える必要はない。</p>
     </div>
-    <a class="source-link" href="https://gokkoclub.jp/shortdrama-lab/category/study/5309/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> gokkoclub.jp/shortdrama-lab/category/study/5309
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/animate-comic-panels-into-video" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/animate-comic-panels-into-video
     </a>
   </div>
 
@@ -270,48 +270,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-08-25</span>
+      <span class="date">公開2026-11-13</span>
     </div>
-    <h2>漫画のキャプション、1ページ1〜3個に絞る</h2>
+    <h2>新キャラ、6表情×2で同一性を先に確認</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作のワークフローを解説する記事。登場人物の内面の独白やナレーションをコマにする際、まず各独白に「否認・回避・圧力・記憶の引き起こし」などの役割を割り当て、それを表情・動作・持ち物・背景・キャプション・セリフ・沈黙のどれで見せるかを選ぶという手順を示している。キャプションの予算（1ページに入れてよい短いキャプションの数）の目安として、6コマの漫画ページなら1〜3個、雰囲気重視の漫画ページなら0〜2個、ウェブトゥーンなら3〜5スクロールごとに1個としている。例として「彼女は後悔していた。」という独白を、間違いに結びつく物に伸ばした手が止まる絵に変換する例を挙げている。見直し用の表では、「すべてのコマにキャプションが付いている」という問題に対し、最も鋭い独白だけ残して他は沈黙や絵に置き換える、という直し方を示している。</p>
+      <p>LlamaGen.AIのブログが、漫画の新しいオリジナルキャラクター（OC）を本番のページに使う前に、同一性と表情のブレを確認する手順を公開した。承認済みの参照画像と、容姿・衣装などを説明する固定の同一性テキストを毎回同じものとして使い、ニュートラル・喜び・不安・驚き・苛立ち・安堵の6つの表情をそれぞれ2回ずつ、計12枚生成する。まず感情のラベルを隠した状態で顔と衣装が同じキャラクターかどうかを確認し、その後に各表情の表現を個別に見るという2段階で判定する。実際には「喜び」の2回目で髪先が崩れたり、「驚き」と「不安」で眉の形が似てしまう、といったブレも報告されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールのネームを作るとき、独白をそのまま全コマにキャプションとして書き込む前に、1ページ（6コマ想定）あたりキャプションは1〜3個までに絞れないか見直してみる。「彼女は後悔していた」のような説明的な独白が出てきたら、後悔を表す動作（手が止まる、物を見る）に置き換えられないか考えてから文字を当てる。</p>
+      <p>漫画リールに新しいキャラクターを登場させる前に、容姿・衣装を説明する同一性テキストを固定し、ニュートラル・喜び・不安・驚き・苛立ち・安堵の6表情を2回ずつ、計12枚を先に作って確認してみる。感情ラベルを隠した状態で「同じキャラに見えるか」だけをまず見て、その後に各表情が意図通りかを見る、という2段階チェックなら、ページを作り込んだ後に顔がブレていることに気づく手戻りを避けやすくなる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/internal-monologue-to-comic-panels" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/internal-monologue-to-comic-panels
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue
     </a>
   </div>
 
-  <!-- 3: B 高 -->
-  <div class="card high">
+  <!-- 3: A 中 -->
+  <div class="card mid">
     <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-13</span>
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-11</span>
     </div>
-    <h2>Claude Code、VPS自動実行の既定が変更</h2>
+    <h2>6コマ漫画、プロンプトを3層に分けて書く</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Claude Codeのv2.1.323（11月12日公開）とv2.1.325（11月13日公開）の解説。サンドボックス内のBashコマンドは、これまで権限確認なしで自動実行されていたが、v2.1.325から通常の権限確認フローに従うのが既定になった（確認なしで動かし続けるには設定ファイルで<code>sandbox.autoAllowBashIfSandboxed</code>をtrueにする必要がある）。また、スケジュールされたタスクや<code>/loop</code>が、<code>allowed-tools</code>やhooksを宣言したスキルを実行する前に確認を求めるようになった（無人で動かすには設定の<code>permissions.allow</code>に<code>Skill(name)</code>を追加する必要がある）。</p>
+      <p>LlamaGen.AIのブログが、参照画像を使って6コマ漫画の1ページ分のプロンプトを書くときの型を公開した。1つの指示文を「キャラクターロック」（容姿や衣装などキャラの固定情報）・「コマごとのビート」（各コマで起きる出来事）・「ページルール」（読む順番やコマ数などページ全体の決まり）の3層に分けて書き、"Create one complete six-panel comic page."から書き始める。コマ数は<code>Panels Num: 6</code>のように明示し、読む順番も「左から右、上から下」と指定する。下書きを作った後、弱いコマだけを選んで直す「部分修正」の工程も紹介している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>VPSでClaude Codeを自動実行してレポート作成やLINE Bot関連のスクリプトを無人で動かしている場合、v2.1.325以降の環境だとBashコマンドやスキル実行で権限確認に引っかかって処理が止まる可能性がある。設定ファイルの<code>sandbox.autoAllowBashIfSandboxed</code>や<code>permissions.allow</code>への<code>Skill(name)</code>追加を見直し、無人実行が今までどおり最後まで動くか確認する。</p>
+      <p>漫画リールのコマ作りで、思いつきで1文にまとめていたプロンプトを、キャラの固定情報（容姿・衣装など）・コマごとに起きる出来事・読む順番やコマ数などページ全体の決まり、の3層に分けて書く型に変えてみる。6コマ全部を描き直さず、できあがった中で弱いコマだけを選んで直す、という考え方も取り入れられる。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.325" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.325
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第85回<br>
-    2026年11月15日分
+    デイリートレンドレーダー 第86回<br>
+    2026年11月16日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-16.html">2026-11-16（第86回）</a>
       <a href="days/2026-11-15.html">2026-11-15（第85回）</a>
       <a href="days/2026-11-14.html">2026-11-14（第84回）</a>
       <a href="days/2026-11-13.html">2026-11-13（第83回）</a>

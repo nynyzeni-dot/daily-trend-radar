@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第86回｜2026.11.16</title>
+<title>デイリートレンド調査レポート 第87回｜2026.11.17</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第86回</span>
-    <h1>今日のトレンド調査<br><span class="accent">漫画のコマ、AI動画で部分的に動かす</span></h1>
-    <p class="period">全3件・動画の作り方3件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第87回</span>
+    <h1>今日のトレンド調査<br><span class="accent">キャラ一貫性、同じスレッドで参照を固定</span></h1>
+    <p class="period">全2件・動画の作り方2件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースは特に無かったから無理に埋めんかったけど、LlamaGen.AIの漫画制作ネタが3本まとまって拾えたで。コマに動きを足す話、新キャラの表情チェック、プロンプトの3層の型、どれも次のネーム作りでそのまま試せるやつばっかりや。</p>
+    <p>今日はAIツールの方は週報と被らんくて鮮度のあるネタが見つからんかったから、無理に埋めんかったで。動画の作り方は2本だけやけど、ChatGPTでキャラをブレさせへん順番と、リールのBGMをトレンド音源から選ぶ探し方、どっちも次の制作でそのまま試せるやつや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-15</span>
+      <span class="date">公開2026-06-26</span>
     </div>
-    <h2>漫画のコマ、AI動画で部分的に動かす</h2>
+    <h2>キャラ一貫性、同じスレッドで参照を固定</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、6コマ漫画のうち3コマを選び、音声なしの15秒動画に仕上げる手順を実例で公開した。各コマは720×1280のアイボリー色の背景にアートをそのまま配置し、Googleの動画生成AI「Veo 3.1 Fast」（＝静止画に数秒だけ動きを付けられるAIのこと。Replicateという外部サービス経由で呼び出す）で、1コマにつき1つの動作（例：手がノートの表紙に触れる、持ち主がノートを受け取って微笑む）だけを指示して6秒の動画を作る。そこからffmpegで各クリップの最初の5秒を720角に切り出して24fpsに統一し、3つを順番に結合して1本のMP4に書き出す。音声・セリフ・リップシンクは含めない。</p>
+      <p>画像生成サービス「Flick」のブログが、ChatGPTの画像生成機能「GPT Image」（＝ChatGPT上で使える画像生成AIのこと。キャラクターを保存しておく機能は無い）で、キャラクターの見た目をブレさせずに複数枚生成する手順を公開した。参照用の画像を1枚に決めて固定し、生成は同じチャット（スレッド）の中で続け、新しい指示を出すたびにその参照画像を入れ直す。できあがった中で一番良い出力を次の参照画像として差し替え、省略されがちな小物や色は言葉で明示するよう勧めている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールで仕上げたコマのうち、特に見せたい1コマだけを選び、Veo 3.1 Fast（Replicate経由）に「このコマで起きる動作を1つだけ」と指示して数秒の動画にし、ffmpegで必要な秒数だけ切り出して今の書き出し工程に差し込む、という足し方を試せる。音声なしの設定のままなので、今の無音の作りを変える必要はない。</p>
+      <p>ChatGPTで同じキャラの絵を複数コマ分作るとき、最初に決めた1枚の参照画像を毎回のやり取りに入れ直し、同じチャット（スレッド）を切らずに生成を続け、良い仕上がりが出たらその画像を次の参照に差し替える、という順番を試せる。小物や色が消えやすいと感じたら、プロンプトにその語を言葉で書いて明示する。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/animate-comic-panels-into-video" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/animate-comic-panels-into-video
+    <a class="source-link" href="https://flick.art/ja/blog/img2img-consistent-character/gpt-image" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> flick.art/ja/blog/img2img-consistent-character/gpt-image
     </a>
   </div>
 
@@ -270,48 +270,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-13</span>
+      <span class="date">公開2026-06-13</span>
     </div>
-    <h2>新キャラ、6表情×2で同一性を先に確認</h2>
+    <h2>リールのBGM、トレンド音源の探し方</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>LlamaGen.AIのブログが、漫画の新しいオリジナルキャラクター（OC）を本番のページに使う前に、同一性と表情のブレを確認する手順を公開した。承認済みの参照画像と、容姿・衣装などを説明する固定の同一性テキストを毎回同じものとして使い、ニュートラル・喜び・不安・驚き・苛立ち・安堵の6つの表情をそれぞれ2回ずつ、計12枚生成する。まず感情のラベルを隠した状態で顔と衣装が同じキャラクターかどうかを確認し、その後に各表情の表現を個別に見るという2段階で判定する。実際には「喜び」の2回目で髪先が崩れたり、「驚き」と「不安」で眉の形が似てしまう、といったブレも報告されている。</p>
+      <p>動画編集サービス「Dreamina」のブログが、Instagramでトレンド音源（＝多くのクリエイターに使われ伸びやすい音楽のこと）を見つける手順を公開した。Reelsのフィードやオーディオページ、検索、クリエイターの投稿、保存済みオーディオなど複数の場所を10〜15分ほど見て回り、5〜10人ほどの異なるクリエイターが同じ曲を繰り返し使っているかどうかでトレンドを判断する。合わせるハッシュタグは、トピック・ニッチ・ムードの3つの層に分けて選ぶとしている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールに新しいキャラクターを登場させる前に、容姿・衣装を説明する同一性テキストを固定し、ニュートラル・喜び・不安・驚き・苛立ち・安堵の6表情を2回ずつ、計12枚を先に作って確認してみる。感情ラベルを隠した状態で「同じキャラに見えるか」だけをまず見て、その後に各表情が意図通りかを見る、という2段階チェックなら、ページを作り込んだ後に顔がブレていることに気づく手戻りを避けやすくなる。</p>
+      <p>漫画リールにBGMをInstagram側の音楽ライブラリで後付けする前に、Reelsのフィードやオーディオページを10〜15分ほど見て、5〜10人くらいの別のクリエイターが同じ曲を繰り返し使っているかを確認し、漫画の雰囲気に合う音源を選ぶ、という探し方を試せる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue
-    </a>
-  </div>
-
-  <!-- 3: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-11</span>
-    </div>
-    <h2>6コマ漫画、プロンプトを3層に分けて書く</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>LlamaGen.AIのブログが、参照画像を使って6コマ漫画の1ページ分のプロンプトを書くときの型を公開した。1つの指示文を「キャラクターロック」（容姿や衣装などキャラの固定情報）・「コマごとのビート」（各コマで起きる出来事）・「ページルール」（読む順番やコマ数などページ全体の決まり）の3層に分けて書き、"Create one complete six-panel comic page."から書き始める。コマ数は<code>Panels Num: 6</code>のように明示し、読む順番も「左から右、上から下」と指定する。下書きを作った後、弱いコマだけを選んで直す「部分修正」の工程も紹介している。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>漫画リールのコマ作りで、思いつきで1文にまとめていたプロンプトを、キャラの固定情報（容姿・衣装など）・コマごとに起きる出来事・読む順番やコマ数などページ全体の決まり、の3層に分けて書く型に変えてみる。6コマ全部を描き直さず、できあがった中で弱いコマだけを選んで直す、という考え方も取り入れられる。</p>
-    </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images
+    <a class="source-link" href="https://dreamina.capcut.com/ja-jp/resource/how-to-find-trending-audio-on-instagram" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> dreamina.capcut.com/ja-jp/resource/how-to-find-trending-audio-on-instagram
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第86回<br>
-    2026年11月16日分
+    デイリートレンドレーダー 第87回<br>
+    2026年11月17日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-17.html">2026-11-17（第87回）</a>
       <a href="days/2026-11-16.html">2026-11-16（第86回）</a>
       <a href="days/2026-11-15.html">2026-11-15（第85回）</a>
       <a href="days/2026-11-14.html">2026-11-14（第84回）</a>

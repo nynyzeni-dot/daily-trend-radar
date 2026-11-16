@@ -1,10 +1,9 @@
 {
-  "date": "2026-11-16",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-16.html",
+  "date": "2026-11-17",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-17.html",
   "items": [
-    {"title": "漫画のコマ、AI動画で部分的に動かす", "why": "漫画リールのコマに、Veo 3.1 Fast（Replicate経由）で部分的な動きを足し、ffmpegの書き出し工程にそのまま組み込める", "url": "https://llamagen.ai/ja/blogs/animate-comic-panels-into-video"},
-    {"title": "新キャラ、6表情×2で同一性を先に確認", "why": "新キャラを本番のページに使う前に、6表情×2回の計12枚で同一性と表情のブレを先に確認できる", "url": "https://llamagen.ai/ja/blogs/same-oc-six-expressions-dialogue"},
-    {"title": "6コマ漫画、プロンプトを3層に分けて書く", "why": "キャラの固定情報・コマごとの出来事・ページ全体の決まりを3層に分けてプロンプトを書く型を使える", "url": "https://llamagen.ai/ja/blogs/how-to-make-a-six-panel-comic-with-reference-images"}
+    {"title": "キャラ一貫性、同じスレッドで参照を固定", "why": "ChatGPTで複数コマを作る時、参照画像を同じチャットで固定し続けると絵がブレにくい", "url": "https://flick.art/ja/blog/img2img-consistent-character/gpt-image"},
+    {"title": "リールのBGM、トレンド音源の探し方", "why": "BGMをInstagram側の音楽ライブラリで付ける前に、Reelsのフィードやオーディオページで複数のクリエイターが使う曲を確認して選べる", "url": "https://dreamina.capcut.com/ja-jp/resource/how-to-find-trending-audio-on-instagram"}
   ]
 }

@@ -1,9 +1,10 @@
 {
-  "date": "2026-11-17",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-17.html",
+  "date": "2026-11-18",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-18.html",
   "items": [
-    {"title": "キャラ一貫性、同じスレッドで参照を固定", "why": "ChatGPTで複数コマを作る時、参照画像を同じチャットで固定し続けると絵がブレにくい", "url": "https://flick.art/ja/blog/img2img-consistent-character/gpt-image"},
-    {"title": "リールのBGM、トレンド音源の探し方", "why": "BGMをInstagram側の音楽ライブラリで付ける前に、Reelsのフィードやオーディオページで複数のクリエイターが使う曲を確認して選べる", "url": "https://dreamina.capcut.com/ja-jp/resource/how-to-find-trending-audio-on-instagram"}
+    {"title": "新キャラ作り、望み・障害・行動で固定", "why": "新しいキャラクターを出す前に、望み・障害・行動を1文にして判断基準を決め、性格を印象語でなく髪型や服装などの具体的な要素に置き換え、複数案を比べて1つ採用したら固定する", "url": "https://llamagen.ai/ja/blogs/how-to-make-an-oc"},
+    {"title": "台本からコマへ、文字は後からローカル合成", "why": "コマを作るとき、崩れたコマだけ選んで描き直す指示を出し、セリフやキャプションの文字は生成画像に焼き込まずあとからローカルで合成する", "url": "https://llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example"},
+    {"title": "コマを動画にする前に、9項目で引き継ぎ確認", "why": "コマをAI動画で動かす前に各コマにIDを付けて秒数とフレーム数をメモし、動きとカメラの動きを分けて書き、前後のコマで手の位置や小道具のずれも確認する", "url": "https://llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist"}
   ]
 }

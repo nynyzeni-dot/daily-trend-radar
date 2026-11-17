@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第88回｜2026.11.18</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第88回</span>
+    <h1>今日のトレンド調査<br><span class="accent">新キャラ作り、望み・障害・行動で固定</span></h1>
+    <p class="period">全3件・動画の作り方3件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日もAIツールの方は週報とかぶらん鮮度のあるネタが見つからんかったから、無理に埋めんかったで。動画の作り方はLlamaGenの漫画制作ネタが3本まとまって拾えたで。新キャラの固定順、崩れたコマだけ直す技、動画化する前の引き継ぎチェック、どれも次のネーム作りでそのまま試せるやつや。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-12</span>
+    </div>
+    <h2>新キャラ作り、望み・障害・行動で固定</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、オリジナルキャラクター（OC）を作って再利用できる形に固める手順を実例で公開した。架空キャラ「Maya」を例に、まず「望み・障害・行動」の3点に答えて判断基準となる1文を作り、性格を「優しい」のような印象語でなく髪型や服装などの具体的な見た目の要素（アンカー）に変換する。初回生成で3つのデザイン案を比べて1案を採用し、承認後は他の案を混ぜない、2回目の生成でポーズだけを直す、という進め方を示している。承認済みの見た目・固定してよい要素と変えてよい要素・バージョン番号を記録し、正面・側面・背面や表情・配色をまとめたリファレンスシートに進む手順も紹介している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールに新しいキャラクターを出す前に、「望み・障害・行動」を1文にして判断基準を決め、性格を印象語でなく髪型や服装などの具体的な要素（アンカー）に置き換えてみる。複数のデザイン案を比べて1つを採用したら、他の案を混ぜずに固定し、見た目の固定要素と変えてよい要素を分けてメモに残しておく。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/how-to-make-an-oc" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/how-to-make-an-oc
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-13</span>
+    </div>
+    <h2>台本からコマへ、文字は後からローカル合成</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、3ページの脚本を4コマ漫画に仕上げる過程を実例で公開した。各ページの内容をPDFのテキストをそのまま目で確認してコマに割り当て、生成時は参照キャラを固定し吹き出しや文字を入れない条件で絵だけを作る。最初の出力で1コマ目の前景に余分な手が映り込んだため、そのコマだけ描き直す指示を出し、他の3コマはそのまま使う。セリフやキャプションの文字は生成した画像に焼き込まず、ローカルで合成し、編集しやすいSVGも用意したとしている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのコマを作るとき、台本の内容をそのまま目で確認してコマに割り当て、生成時は吹き出しの文字を入れない条件にしておく。できた絵の中で崩れたコマだけを選んで描き直す指示を出し、セリフやキャプションの文字は生成画像に焼き込まず、あとからローカルで合成する、という順番を試せる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-01</span>
+    </div>
+    <h2>コマを動画にする前に、9項目で引き継ぎ確認</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、絵コンテ（ストーリーボード）から動画制作に作業を渡すときのチェックリストを公開した。各ショットにIDを付けて途中で挿入してもIDを変えないこと、ショットごとに秒数とフレーム数を表にすること、被写体の動きとカメラの動きを分けて書くこと、音声は最終セリフ・仮の声・効果音・環境音・BGMを区別すること、前後のショットで手の位置や小道具の大きさ・向き・照明がずれていないか確認することなどを挙げ、最後に9項目の最終チェックリストを示している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画のコマをAI動画で動かす前に、各コマにIDを付けて秒数とフレーム数をメモし、動かす対象の動きとカメラの動きを分けて一言で書いておく。音声を使う場合は最終セリフ・仮の声・効果音・BGMを分けてメモし、前後のコマで手の位置や小道具の大きさ・向きがずれていないかも確認してから動画化する。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第88回<br>
+    2026年11月18日分
+  </footer>
+
+</div>
+</body>
+</html>

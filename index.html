@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第88回｜2026.11.18</title>
+<title>デイリートレンド調査レポート 第89回｜2026.11.19</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,55 +234,55 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第88回</span>
-    <h1>今日のトレンド調査<br><span class="accent">新キャラ作り、望み・障害・行動で固定</span></h1>
-    <p class="period">全3件・動画の作り方3件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第89回</span>
+    <h1>今日のトレンド調査<br><span class="accent">Claude Codeの書き込み制限、VPS要確認</span></h1>
+    <p class="period">全3件・動画の作り方2件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日もAIツールの方は週報とかぶらん鮮度のあるネタが見つからんかったから、無理に埋めんかったで。動画の作り方はLlamaGenの漫画制作ネタが3本まとまって拾えたで。新キャラの固定順、崩れたコマだけ直す技、動画化する前の引き継ぎチェック、どれも次のネーム作りでそのまま試せるやつや。</p>
+    <p>Claude CodeのBashサンドボックスで書き込み制限が入ったで、VPS回してる人は要確認な話や。動画の作り方はffmpegのwhisper字幕とショートドラマのカット尺、どっちも数字入りで具体的やったから採用や。AIツールは週報と被らん鮮度のネタがこの1本だけやったから、無理に埋めんかったで。</p>
   </div>
 
-  <!-- 1: A 高 -->
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-16</span>
+    </div>
+    <h2>Claude Codeの書き込み制限、VPS要確認</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeの最新版v2.1.326（2026年11月16日公開）で、Bashサンドボックス（＝コマンド実行を制限しながら動かす仕組み）が既定でホームディレクトリの一部の機密フォルダへの書き込みをしなくなった。書き込みを許可したい場合は sandbox.filesystem.allowWrite という設定で指定できるとされている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>VPSで自動実行しているClaude Codeの処理が急に書き込みエラーで止まったら、sandbox.filesystem.allowWriteの設定に書き込み先のフォルダを追加できないか確認する。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.326" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.326
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
   <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
       <span class="date">公開2026-11-12</span>
     </div>
-    <h2>新キャラ作り、望み・障害・行動で固定</h2>
+    <h2>字幕を声から自動生成、queueを20秒に</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、オリジナルキャラクター（OC）を作って再利用できる形に固める手順を実例で公開した。架空キャラ「Maya」を例に、まず「望み・障害・行動」の3点に答えて判断基準となる1文を作り、性格を「優しい」のような印象語でなく髪型や服装などの具体的な見た目の要素（アンカー）に変換する。初回生成で3つのデザイン案を比べて1案を採用し、承認後は他の案を混ぜない、2回目の生成でポーズだけを直す、という進め方を示している。承認済みの見た目・固定してよい要素と変えてよい要素・バージョン番号を記録し、正面・側面・背面や表情・配色をまとめたリファレンスシートに進む手順も紹介している。</p>
+      <p>ffmpegの使い方を解説するサイトが、音声から文字起こしして字幕（SRT）を1コマンドで作れるwhisperフィルタ（＝AIで声を自動的に文字にする機能）の使い方を実測付きで公開した。queueという設定を既定の3秒から20秒に伸ばすと、日本語の文字起こしの誤り率が26.8%から12.0%に下がったという。モデルはbase・small・large-v3-turboの3種類が比較されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールに新しいキャラクターを出す前に、「望み・障害・行動」を1文にして判断基準を決め、性格を印象語でなく髪型や服装などの具体的な要素（アンカー）に置き換えてみる。複数のデザイン案を比べて1つを採用したら、他の案を混ぜずに固定し、見た目の固定要素と変えてよい要素を分けてメモに残しておく。</p>
+      <p>実写動画の声から字幕を作るとき、ffmpegのwhisperフィルタのqueueを既定の3秒から20秒に変えると、文字起こしの誤りを減らせる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/how-to-make-an-oc" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/how-to-make-an-oc
-    </a>
-  </div>
-
-  <!-- 2: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-13</span>
-    </div>
-    <h2>台本からコマへ、文字は後からローカル合成</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、3ページの脚本を4コマ漫画に仕上げる過程を実例で公開した。各ページの内容をPDFのテキストをそのまま目で確認してコマに割り当て、生成時は参照キャラを固定し吹き出しや文字を入れない条件で絵だけを作る。最初の出力で1コマ目の前景に余分な手が映り込んだため、そのコマだけ描き直す指示を出し、他の3コマはそのまま使う。セリフやキャプションの文字は生成した画像に焼き込まず、ローカルで合成し、編集しやすいSVGも用意したとしている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>漫画リールのコマを作るとき、台本の内容をそのまま目で確認してコマに割り当て、生成時は吹き出しの文字を入れない条件にしておく。できた絵の中で崩れたコマだけを選んで描き直す指示を出し、セリフやキャプションの文字は生成画像に焼き込まず、あとからローカルで合成する、という順番を試せる。</p>
-    </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example
+    <a class="source-link" href="https://ffmpeg-cookbook.com/ja/articles/ffmpeg-whisper-subtitles/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> ffmpeg-cookbook.com/ja/articles/ffmpeg-whisper-subtitles/
     </a>
   </div>
 
@@ -291,27 +291,28 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-01</span>
+      <span class="date">公開2026-11-16</span>
     </div>
-    <h2>コマを動画にする前に、9項目で引き継ぎ確認</h2>
+    <h2>カットは5秒以内、中盤に「転」を仕込む</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作ツール「LlamaGen.AI」のブログが、絵コンテ（ストーリーボード）から動画制作に作業を渡すときのチェックリストを公開した。各ショットにIDを付けて途中で挿入してもIDを変えないこと、ショットごとに秒数とフレーム数を表にすること、被写体の動きとカメラの動きを分けて書くこと、音声は最終セリフ・仮の声・効果音・環境音・BGMを区別すること、前後のショットで手の位置や小道具の大きさ・向き・照明がずれていないか確認することなどを挙げ、最後に9項目の最終チェックリストを示している。</p>
+      <p>ショートドラマの作り方を解説する連載記事が、前半（45秒あたりまで）は1カットを原則5秒以内にしてテンポを作り、話の展開が大きく変わる「転」（＝予想と違う方向に話が動く場面のこと）を中盤に一つ仕込むと、中盤の離脱を防げると紹介した。次に映す人物や位置を前のカットで先に見せておくという、カットのつながりの原則も説明している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画のコマをAI動画で動かす前に、各コマにIDを付けて秒数とフレーム数をメモし、動かす対象の動きとカメラの動きを分けて一言で書いておく。音声を使う場合は最終セリフ・仮の声・効果音・BGMを分けてメモし、前後のコマで手の位置や小道具の大きさ・向きがずれていないかも確認してから動画化する。</p>
+      <p>漫画リールの前半のコマ送りは1コマを5秒以内くらいのテンポで作り、中盤で予想と違う展開を一つ挟むと、中盤の離脱を防げる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist
+    <a class="source-link" href="https://gokkoclub.jp/shortdrama-lab/category/study/5339/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> gokkoclub.jp/shortdrama-lab/category/study/5339/
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第88回<br>
-    2026年11月18日分
+    デイリートレンドレーダー 第89回<br>
+    2026年11月19日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-19.html">2026-11-19（第89回）</a>
       <a href="days/2026-11-18.html">2026-11-18（第88回）</a>
       <a href="days/2026-11-17.html">2026-11-17（第87回）</a>
       <a href="days/2026-11-16.html">2026-11-16（第86回）</a>

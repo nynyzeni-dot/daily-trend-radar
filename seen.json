@@ -1504,6 +1504,21 @@
       "url": "https://llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist",
       "title": "コマを動画にする前に、9項目で引き継ぎ確認",
       "date": "2026-11-18"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.326",
+      "title": "Claude Codeの書き込み制限、VPS要確認",
+      "date": "2026-11-19"
+    },
+    {
+      "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-whisper-subtitles/",
+      "title": "字幕を声から自動生成、queueを20秒に",
+      "date": "2026-11-19"
+    },
+    {
+      "url": "https://gokkoclub.jp/shortdrama-lab/category/study/5339/",
+      "title": "カットは5秒以内、中盤に「転」を仕込む",
+      "date": "2026-11-19"
     }
   ]
 }

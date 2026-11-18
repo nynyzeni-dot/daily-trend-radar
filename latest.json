@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-18.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-19.html",
   "items": [
-    {"title": "新キャラ作り、望み・障害・行動で固定", "why": "新しいキャラクターを出す前に、望み・障害・行動を1文にして判断基準を決め、性格を印象語でなく髪型や服装などの具体的な要素に置き換え、複数案を比べて1つ採用したら固定する", "url": "https://llamagen.ai/ja/blogs/how-to-make-an-oc"},
-    {"title": "台本からコマへ、文字は後からローカル合成", "why": "コマを作るとき、崩れたコマだけ選んで描き直す指示を出し、セリフやキャプションの文字は生成画像に焼き込まずあとからローカルで合成する", "url": "https://llamagen.ai/ja/blogs/pdf-to-four-panel-comic-example"},
-    {"title": "コマを動画にする前に、9項目で引き継ぎ確認", "why": "コマをAI動画で動かす前に各コマにIDを付けて秒数とフレーム数をメモし、動きとカメラの動きを分けて書き、前後のコマで手の位置や小道具のずれも確認する", "url": "https://llamagen.ai/ja/blogs/storyboard-to-video-handoff-checklist"}
+    {"title": "Claude Codeの書き込み制限、VPS要確認", "why": "VPSで自動実行しているClaude Codeが書き込みエラーで止まったら、sandbox.filesystem.allowWriteの設定を確認する", "url": "https://code.claude.com/docs/en/changelog#v2.1.326"},
+    {"title": "字幕を声から自動生成、queueを20秒に", "why": "実写動画の声から字幕を作るとき、ffmpegのwhisperフィルタのqueueを既定の3秒から20秒に変えると文字起こしの誤りを減らせる", "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-whisper-subtitles/"},
+    {"title": "カットは5秒以内、中盤に「転」を仕込む", "why": "漫画リールの前半のコマ送りは1コマ5秒以内くらいのテンポで作り、中盤で予想と違う展開を一つ挟むと離脱を防げる", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/5339/"}
   ]
 }

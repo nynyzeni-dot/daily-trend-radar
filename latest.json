@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-19.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-20.html",
   "items": [
-    {"title": "Claude Codeの書き込み制限、VPS要確認", "why": "VPSで自動実行しているClaude Codeが書き込みエラーで止まったら、sandbox.filesystem.allowWriteの設定を確認する", "url": "https://code.claude.com/docs/en/changelog#v2.1.326"},
-    {"title": "字幕を声から自動生成、queueを20秒に", "why": "実写動画の声から字幕を作るとき、ffmpegのwhisperフィルタのqueueを既定の3秒から20秒に変えると文字起こしの誤りを減らせる", "url": "https://ffmpeg-cookbook.com/ja/articles/ffmpeg-whisper-subtitles/"},
-    {"title": "カットは5秒以内、中盤に「転」を仕込む", "why": "漫画リールの前半のコマ送りは1コマ5秒以内くらいのテンポで作り、中盤で予想と違う展開を一つ挟むと離脱を防げる", "url": "https://gokkoclub.jp/shortdrama-lab/category/study/5339/"}
+    {"title": "「/status」に壊れた設定の一覧表示", "why": "VPSで自動実行しているClaude Codeがおかしいと感じたら、/statusでどのagent・skill・commandファイルや設定が壊れているか確認する", "url": "https://code.claude.com/docs/en/changelog#v2.1.327"},
+    {"title": "衣装3版、承認済み参照だけ各シーンへ", "why": "漫画リールで同じキャラクターの服を場面ごとに変えるとき、顔・髪型は固定したまま承認した衣装の参照画像だけをシーンに当てはめると見た目がブレにくくなる", "url": "https://llamagen.ai/ja/blogs/oc-wardrobe-three-scene-comic"},
+    {"title": "40ページ漫画、台帳で進捗を一元管理", "why": "漫画リールを何本もまとめて作るとき、各ページにIDと状態（レビュー待ち・修正必要・承認済み）を付けた表で管理すると進捗を把握しやすくなる", "url": "https://llamagen.ai/ja/blogs/batch-comic-production-workflow"}
   ]
 }

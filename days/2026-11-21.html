@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第91回｜2026.11.21</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第91回</span>
+    <h1>今日のトレンド調査<br><span class="accent">6コマ漫画を20秒トレーラーに編集</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はClaude Code自身の話とAI漫画制作の話が3本やで。自分が回してる予約タスクが急に止まってへんかの確認方法と、6コマ漫画を20秒トレーラーにまとめる話、2人のキャラを1コマに収める話、写真6枚を漫画化する話、どれも具体的な手順入りやったから採用や。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-19</span>
+    </div>
+    <h2>保存済みスケジュールタスク、サインインで再登録必要に</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeのv2.1.329（2026年11月19日公開）で、スケジュールタスク（＝決まった時間に自動で動かす予約のこと）の扱いが変わった。新しくサインインし直したセッションでは、旧バージョンで保存されたスケジュールタスクのほとんどが再スケジュール（＝予約の再登録）を必要とするようになった。同じセッションを`--resume`（＝続きから再開する操作）で再開した場合は、そのまま動く。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>VPSで自動実行しているClaude Codeの予約タスク（このレポートの自動実行も含む）が、サインインを更新した後も`/tasks`で正しく一覧に出ているか確認する。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.329" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.329
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-20</span>
+    </div>
+    <h2>6コマ漫画を20秒トレーラー化、尺を2秒ずつ調整</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作サイトが、すでにある6コマの漫画と、以前作った6秒のクリップ2本を使い、新しく動画を生成せずに20秒（480フレーム・正方形720×720・24fps・無音）のティーザートレーラーに編集した事例を公開した。最初は到着4秒・発見5秒・地図5秒・受け渡し4秒・エンドカード2秒で組んだが、見直して到着と地図を1秒ずつ短くし、その2秒をエンドカードに回して4秒にした。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの元ネタがすでにあるとき、新しく動画を作らずに既存のコマと過去に作ったクリップを組み合わせて短いトレーラーにまとめ、各パートの秒数を1〜2秒単位で見直して尺を調整すると、ティーザー的な1本を作れる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/six-panels-comic-book-trailer" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/six-panels-comic-book-trailer
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-20</span>
+    </div>
+    <h2>2人のOC、1パネルで話者を見失わない</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作サイトが、既存の2人のオリジナルキャラクター（OC）を同じコマの対話シーンに入れる手順を公開した。先に各キャラの見た目の識別情報（髪型・服装・小物など）を固定し、セリフを入れる前に6パネルの構図だけで誰が誰か分かるようにし、リバースショット（＝話す相手を映す切り返しのコマ）は「カメラ視点が変わっただけ」として扱い、最後にセリフを足すという4ステップが示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールで2人のキャラクターを同じコマに出すとき、見た目の特徴を先に決めてから、セリフを入れる前にコマ割りだけで誰が誰か分かるようにして、最後にセリフを足す順番にすると組み上げやすくなる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-20</span>
+    </div>
+    <h2>写真6枚を漫画化、差し替えは2か所だけ</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作サイトが、人物やペットが写った写真6枚を、2列×3行の漫画ページに変換した事例を公開した。各人物・ペットの同一性の目印（髪型・服の色・首輪など）を先に決めておいたことで、仕上がったページの修正は2か所の差し替えだけで済んだ。元の写真に無かった赤いボールが生成時に紛れ込んでいたのを削除する、という修正例も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>持っている写真から漫画リールを作るとき、写っている人物やペットの特徴（髪型・服の色など）を先にメモしてから生成すると、仕上がったコマの中に元の写真に無いものが混ざっていないかだけを確認すればよくなる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/turn-photo-album-into-comic-story" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/turn-photo-album-into-comic-story
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第91回<br>
+    2026年11月21日分
+  </footer>
+
+</div>
+</body>
+</html>

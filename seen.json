@@ -1534,6 +1534,26 @@
       "url": "https://llamagen.ai/ja/blogs/batch-comic-production-workflow",
       "title": "40ページ漫画、台帳で進捗を一元管理",
       "date": "2026-11-20"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/changelog#v2.1.329",
+      "title": "保存済みスケジュールタスク、サインインで再登録必要に",
+      "date": "2026-11-21"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/six-panels-comic-book-trailer",
+      "title": "6コマ漫画を20秒トレーラー化、尺を2秒ずつ調整",
+      "date": "2026-11-21"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics",
+      "title": "2人のOC、1パネルで話者を見失わない",
+      "date": "2026-11-21"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/turn-photo-album-into-comic-story",
+      "title": "写真6枚を漫画化、差し替えは2か所だけ",
+      "date": "2026-11-21"
     }
   ]
 }

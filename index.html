@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第90回｜2026.11.20</title>
+<title>デイリートレンド調査レポート 第91回｜2026.11.21</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第90回</span>
-    <h1>今日のトレンド調査<br><span class="accent">漫画リール、衣装3版でブレを防ぐ</span></h1>
-    <p class="period">全3件・動画の作り方2件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第91回</span>
+    <h1>今日のトレンド調査<br><span class="accent">6コマ漫画を20秒トレーラーに編集</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAI漫画制作の話が2本、Claude Codeの話が1本やで。衣装を変えても同一人物に見せる台帳の作り方と、40ページ分をバッチで管理する台帳の話、どっちも具体的な手順入りやったから採用や。Claude Codeは/statusで壊れた設定が見えるようになったで、VPS回してる身としてはありがたい話やな。</p>
+    <p>今日はClaude Code自身の話とAI漫画制作の話が3本やで。自分が回してる予約タスクが急に止まってへんかの確認方法と、6コマ漫画を20秒トレーラーにまとめる話、2人のキャラを1コマに収める話、写真6枚を漫画化する話、どれも具体的な手順入りやったから採用や。</p>
   </div>
 
   <!-- 1: B 高 -->
@@ -249,19 +249,19 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-17</span>
+      <span class="date">公開2026-11-19</span>
     </div>
-    <h2>「/status」に壊れた設定の一覧表示</h2>
+    <h2>保存済みスケジュールタスク、サインインで再登録必要に</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Claude Codeの最新版v2.1.327（2026年11月17日公開）で、/statusコマンドに、壊れているagent・skill・commandファイル、キーバインドのエラー、利用できないサンドボックス、無視されている権限設定、一度も一致しなかったフックのマッチャーの一覧が表示されるようになった。</p>
+      <p>Claude Codeのv2.1.329（2026年11月19日公開）で、スケジュールタスク（＝決まった時間に自動で動かす予約のこと）の扱いが変わった。新しくサインインし直したセッションでは、旧バージョンで保存されたスケジュールタスクのほとんどが再スケジュール（＝予約の再登録）を必要とするようになった。同じセッションを`--resume`（＝続きから再開する操作）で再開した場合は、そのまま動く。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>VPSで自動実行しているClaude Codeの処理がおかしいと感じたら、/statusを実行すると、どのagent・skill・commandファイルや設定が壊れているかを一覧で確認できる。</p>
+      <p>VPSで自動実行しているClaude Codeの予約タスク（このレポートの自動実行も含む）が、サインインを更新した後も`/tasks`で正しく一覧に出ているか確認する。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.327" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.327
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.329" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.329
     </a>
   </div>
 
@@ -270,19 +270,19 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-19</span>
+      <span class="date">公開2026-11-20</span>
     </div>
-    <h2>衣装3版、承認済み参照だけ各シーンへ</h2>
+    <h2>6コマ漫画を20秒トレーラー化、尺を2秒ずつ調整</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトが、同じオリジナルキャラクターに3種類の衣装（名前付きの版）を着せ、3つのシーンのコミックページで見た目のブレを防いだ事例を公開した。衣装ごとに2案ずつ出力し、まず顔と髪を基準画像と比べ、次に服装を版の説明と比べる2段階レビューをしてから、承認した参照画像だけを各シーンに当てはめている。修正するときも「エプロンのポケットの位置」のように直す範囲だけを指示し、顔・髪型・服装の他の部分は変えないと明示する。</p>
+      <p>AI漫画制作サイトが、すでにある6コマの漫画と、以前作った6秒のクリップ2本を使い、新しく動画を生成せずに20秒（480フレーム・正方形720×720・24fps・無音）のティーザートレーラーに編集した事例を公開した。最初は到着4秒・発見5秒・地図5秒・受け渡し4秒・エンドカード2秒で組んだが、見直して到着と地図を1秒ずつ短くし、その2秒をエンドカードに回して4秒にした。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールで同じキャラクターの服を場面ごとに変えるとき、顔・髪型は固定したまま、顔→服の順でレビューして承認した参照画像だけを各シーンに当てはめると、見た目がブレにくくなる。</p>
+      <p>漫画リールの元ネタがすでにあるとき、新しく動画を作らずに既存のコマと過去に作ったクリップを組み合わせて短いトレーラーにまとめ、各パートの秒数を1〜2秒単位で見直して尺を調整すると、ティーザー的な1本を作れる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/oc-wardrobe-three-scene-comic" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/oc-wardrobe-three-scene-comic
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/six-panels-comic-book-trailer" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/six-panels-comic-book-trailer
     </a>
   </div>
 
@@ -291,27 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-10-30</span>
+      <span class="date">公開2026-11-20</span>
     </div>
-    <h2>40ページ漫画、台帳で進捗を一元管理</h2>
+    <h2>2人のOC、1パネルで話者を見失わない</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトが、40ページ・1ページ4コマの漫画をバッチ（数ページずつのまとまり）で作る際の管理方法を公開した。ページID・バッチ番号・台本版・参照版・レビュー状態（レビュー待ち・修正必要・承認済み）・書き出し版を記録する台帳をつけ、重複・欠落・未承認・書き出しバージョン未設定のページがないかをPythonで検査する例が示されている。</p>
+      <p>AI漫画制作サイトが、既存の2人のオリジナルキャラクター（OC）を同じコマの対話シーンに入れる手順を公開した。先に各キャラの見た目の識別情報（髪型・服装・小物など）を固定し、セリフを入れる前に6パネルの構図だけで誰が誰か分かるようにし、リバースショット（＝話す相手を映す切り返しのコマ）は「カメラ視点が変わっただけ」として扱い、最後にセリフを足すという4ステップが示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールを何本もまとめて作るとき、各ページ（コマ）にIDと今の状態（レビュー待ち・修正必要・承認済み）を付けた表で管理すると、どこまで終わったか・どこが直し待ちかを把握しやすくなる。</p>
+      <p>漫画リールで2人のキャラクターを同じコマに出すとき、見た目の特徴を先に決めてから、セリフを入れる前にコマ割りだけで誰が誰か分かるようにして、最後にセリフを足す順番にすると組み上げやすくなる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/batch-comic-production-workflow" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/batch-comic-production-workflow
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-20</span>
+    </div>
+    <h2>写真6枚を漫画化、差し替えは2か所だけ</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画制作サイトが、人物やペットが写った写真6枚を、2列×3行の漫画ページに変換した事例を公開した。各人物・ペットの同一性の目印（髪型・服の色・首輪など）を先に決めておいたことで、仕上がったページの修正は2か所の差し替えだけで済んだ。元の写真に無かった赤いボールが生成時に紛れ込んでいたのを削除する、という修正例も示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>持っている写真から漫画リールを作るとき、写っている人物やペットの特徴（髪型・服の色など）を先にメモしてから生成すると、仕上がったコマの中に元の写真に無いものが混ざっていないかだけを確認すればよくなる。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/turn-photo-album-into-comic-story" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/turn-photo-album-into-comic-story
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第90回<br>
-    2026年11月20日分
+    デイリートレンドレーダー 第91回<br>
+    2026年11月21日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-21.html">2026-11-21（第91回）</a>
       <a href="days/2026-11-20.html">2026-11-20（第90回）</a>
       <a href="days/2026-11-19.html">2026-11-19（第89回）</a>
       <a href="days/2026-11-18.html">2026-11-18（第88回）</a>

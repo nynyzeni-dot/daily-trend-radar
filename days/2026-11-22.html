@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第92回｜2026.11.22</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第92回</span>
+    <h1>今日のトレンド調査<br><span class="accent">スケジュールタスク、7日→30日に延長</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はClaude Codeの地味やけど効く話が1本と、動画編集のテクニック3本やで。予約タスクの持ち期間が伸びた話、中断の入れ方、字幕の置き場所、冒頭の型のパターン集、どれも明日からそのまま手が動かせるやつ選んだ。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-20</span>
+    </div>
+    <h2>スケジュールタスク、持ち期間が7日→30日に</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Claude Codeのv2.1.330（2026年11月20日公開）で、スケジュールタスクと`/loop`（＝決まった間隔で繰り返し動かす予約のこと）の実行可能期間が、これまでの7日間から30日間に延長された。合わせて、ルートやホーム・作業フォルダを狙った`rm`コマンドの一部は、より多くの場面で実行前の確認が入るようになった。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>VPSで動かしている自動実行ルーティン（このレポートや週報の自動実行も含む）の予約を、次に設定し直すタイミングで期間30日まで延ばせるようになったので、7日おきに再登録していた手間を減らせる。</p>
+    </div>
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.330" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.330
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-06-12</span>
+    </div>
+    <h2>中だるみ対策、「パターン・インタラプト」を2〜3回</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>CapCutが公開した記事が、視聴者の惰性を断ち切る「パターン・インタラプト」（＝予想を崩す小さな中断のこと）の作り方を紹介した。起こりそうな視聴者の反応を3つ想像し、2つの中断手法を組み合わせ、1つの伝えたいメッセージにまとめる「3-2-1」という設計手順を示し、中断の種類は視覚（ズームインなど）・キャプション（短い矛盾した一言を出す）・音声（突然の無音から答えを明かす）・構成（先に結果を見せてから工程に戻る）の4つに分けた。15〜30秒の動画なら2〜3回の中断を入れるとよいとしている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの中盤で、結果のコマを先に見せてから工程のコマに戻る「構成」の中断を1回、矛盾した一言を添えるキャプションの中断を1回、合わせて2〜3回仕込んでみる（音声を焼き込まない作りなので、音声の中断は見送り、視覚・キャプション・構成の3種類から選ぶ）。</p>
+    </div>
+    <a class="source-link" href="https://www.capcut.com/create/pattern-interrupt-technique-short-form-video" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/pattern-interrupt-technique-short-form-video
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2025-09-12</span>
+    </div>
+    <h2>字幕の置き場所、画面下25%＋端から60px</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Opus Proのキャプション設計ガイドが、字幕は画面下から25%の範囲（記事は「下三分の一ルール」と呼ぶ）に置き、横方向は画面幅の中央80%以内に収め、画面端から60px以上離すとよいと紹介した。表示時間は1〜6秒、字幕どうしの間には2フレームの空白を空け、0.3秒のフェードインを付けると自然に見えるとしている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのコマに文字を合成する位置を、画面下25%の範囲・画面幅中央80%以内・端から60px以上離す、の3つの基準でチェックし、1コマあたりの文字の表示時間も1〜6秒の範囲に収まっているか見直す。</p>
+    </div>
+    <a class="source-link" href="https://www.opus.pro/blog/video-caption-design-placement" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/video-caption-design-placement
+    </a>
+  </div>
+
+  <!-- 4: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-10-04</span>
+    </div>
+    <h2>冒頭の型、500本調査で11パターンに分類</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>FluxNoteが2026年1〜9月に投稿された100万再生超のショート動画500本（TikTok200・Reels150・Shorts150、フォロワー100万未満のクリエイター）を調べ、冒頭の型を11パターンに分類した。最多は具体的な数字を使った言い切り（14%）、次にPOV設定（11%）、通説を覆す逆説（10%）、特定の対象を名指しした引き（9%）が続き、約100本（20%）はどのパターンにも当てはまらなかった。質問だけの型より、質問に言い切りを組み合わせた型のほうが強いとも指摘している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの1コマ目のセリフ・テロップを、文字だけで作れる型（具体的な数字を使った言い切り／POV設定／通説を覆す逆説／質問＋言い切りの組み合わせ）の中から3パターン書いてみて、一番強い案を選ぶ。</p>
+    </div>
+    <a class="source-link" href="https://fluxnote.io/blog/short-form-hook-library-500-viral-videos" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> fluxnote.io/blog/short-form-hook-library-500-viral-videos
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第92回<br>
+    2026年11月22日分
+  </footer>
+
+</div>
+</body>
+</html>

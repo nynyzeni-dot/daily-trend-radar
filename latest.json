@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-21.html",
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-22.html",
   "items": [
-    {"title": "保存済みスケジュールタスク、サインインで再登録必要に", "why": "VPSで自動実行しているClaude Codeの予約タスクが、サインインを更新した後も/tasksで正しく一覧に出ているか確認する", "url": "https://code.claude.com/docs/en/changelog#v2.1.329"},
-    {"title": "6コマ漫画を20秒トレーラー化、尺を2秒ずつ調整", "why": "漫画リールの元ネタがすでにあるとき、既存のコマと過去のクリップを組み合わせて短いトレーラーにまとめ、各パートの秒数を見直して尺を調整するとティーザー的な1本を作れる", "url": "https://llamagen.ai/ja/blogs/six-panels-comic-book-trailer"},
-    {"title": "2人のOC、1パネルで話者を見失わない", "why": "漫画リールで2人のキャラクターを同じコマに出すとき、見た目の特徴を先に決めてセリフより先にコマ割りで誰が誰か分かるようにすると組み上げやすくなる", "url": "https://llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics"},
-    {"title": "写真6枚を漫画化、差し替えは2か所だけ", "why": "持っている写真から漫画リールを作るとき、人物やペットの特徴を先にメモしてから生成すると元の写真に無いものが混ざっていないかだけ確認すればよくなる", "url": "https://llamagen.ai/ja/blogs/turn-photo-album-into-comic-story"}
+    {"title": "スケジュールタスク、持ち期間が7日→30日に", "why": "VPSで動かしている自動実行ルーティンの予約を、次の設定時に期間30日まで延ばせるので7日おきの再登録の手間を減らせる", "url": "https://code.claude.com/docs/en/changelog#v2.1.330"},
+    {"title": "中だるみ対策、「パターン・インタラプト」を2〜3回", "why": "漫画リールの中盤で、結果を先に見せてから工程に戻る構成の中断と、矛盾した一言を添えるキャプションの中断を合わせて2〜3回仕込む", "url": "https://www.capcut.com/create/pattern-interrupt-technique-short-form-video"},
+    {"title": "字幕の置き場所、画面下25%＋端から60px", "why": "漫画リールの文字を合成する位置を画面下25%・画面幅中央80%以内・端から60px以上離すの3基準でチェックし、表示時間も1〜6秒に収める", "url": "https://www.opus.pro/blog/video-caption-design-placement"},
+    {"title": "冒頭の型、500本調査で11パターンに分類", "why": "漫画リールの1コマ目のセリフ・テロップを、数字を使った言い切りやPOV設定など文字だけで作れる型に当てはめて3パターン書き、一番強い案を選ぶ", "url": "https://fluxnote.io/blog/short-form-hook-library-500-viral-videos"}
   ]
 }

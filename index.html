@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第91回｜2026.11.21</title>
+<title>デイリートレンド調査レポート 第92回｜2026.11.22</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第91回</span>
-    <h1>今日のトレンド調査<br><span class="accent">6コマ漫画を20秒トレーラーに編集</span></h1>
+    <span class="kicker">デイリートレンドレーダー ／ 第92回</span>
+    <h1>今日のトレンド調査<br><span class="accent">スケジュールタスク、7日→30日に延長</span></h1>
     <p class="period">全4件・動画の作り方3件／AIツール1件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はClaude Code自身の話とAI漫画制作の話が3本やで。自分が回してる予約タスクが急に止まってへんかの確認方法と、6コマ漫画を20秒トレーラーにまとめる話、2人のキャラを1コマに収める話、写真6枚を漫画化する話、どれも具体的な手順入りやったから採用や。</p>
+    <p>今日はClaude Codeの地味やけど効く話が1本と、動画編集のテクニック3本やで。予約タスクの持ち期間が伸びた話、中断の入れ方、字幕の置き場所、冒頭の型のパターン集、どれも明日からそのまま手が動かせるやつ選んだ。</p>
   </div>
 
   <!-- 1: B 高 -->
@@ -249,40 +249,40 @@
     <div class="badge-row">
       <span class="badge genre">B：AIツール</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-19</span>
+      <span class="date">公開2026-11-20</span>
     </div>
-    <h2>保存済みスケジュールタスク、サインインで再登録必要に</h2>
+    <h2>スケジュールタスク、持ち期間が7日→30日に</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>Claude Codeのv2.1.329（2026年11月19日公開）で、スケジュールタスク（＝決まった時間に自動で動かす予約のこと）の扱いが変わった。新しくサインインし直したセッションでは、旧バージョンで保存されたスケジュールタスクのほとんどが再スケジュール（＝予約の再登録）を必要とするようになった。同じセッションを`--resume`（＝続きから再開する操作）で再開した場合は、そのまま動く。</p>
+      <p>Claude Codeのv2.1.330（2026年11月20日公開）で、スケジュールタスクと`/loop`（＝決まった間隔で繰り返し動かす予約のこと）の実行可能期間が、これまでの7日間から30日間に延長された。合わせて、ルートやホーム・作業フォルダを狙った`rm`コマンドの一部は、より多くの場面で実行前の確認が入るようになった。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>VPSで自動実行しているClaude Codeの予約タスク（このレポートの自動実行も含む）が、サインインを更新した後も`/tasks`で正しく一覧に出ているか確認する。</p>
+      <p>VPSで動かしている自動実行ルーティン（このレポートや週報の自動実行も含む）の予約を、次に設定し直すタイミングで期間30日まで延ばせるようになったので、7日おきに再登録していた手間を減らせる。</p>
     </div>
-    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.329" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.329
+    <a class="source-link" href="https://code.claude.com/docs/en/changelog#v2.1.330" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> code.claude.com/docs/en/changelog#v2.1.330
     </a>
   </div>
 
-  <!-- 2: A 高 -->
-  <div class="card high">
+  <!-- 2: A 中 -->
+  <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-20</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-06-12</span>
     </div>
-    <h2>6コマ漫画を20秒トレーラー化、尺を2秒ずつ調整</h2>
+    <h2>中だるみ対策、「パターン・インタラプト」を2〜3回</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトが、すでにある6コマの漫画と、以前作った6秒のクリップ2本を使い、新しく動画を生成せずに20秒（480フレーム・正方形720×720・24fps・無音）のティーザートレーラーに編集した事例を公開した。最初は到着4秒・発見5秒・地図5秒・受け渡し4秒・エンドカード2秒で組んだが、見直して到着と地図を1秒ずつ短くし、その2秒をエンドカードに回して4秒にした。</p>
+      <p>CapCutが公開した記事が、視聴者の惰性を断ち切る「パターン・インタラプト」（＝予想を崩す小さな中断のこと）の作り方を紹介した。起こりそうな視聴者の反応を3つ想像し、2つの中断手法を組み合わせ、1つの伝えたいメッセージにまとめる「3-2-1」という設計手順を示し、中断の種類は視覚（ズームインなど）・キャプション（短い矛盾した一言を出す）・音声（突然の無音から答えを明かす）・構成（先に結果を見せてから工程に戻る）の4つに分けた。15〜30秒の動画なら2〜3回の中断を入れるとよいとしている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの元ネタがすでにあるとき、新しく動画を作らずに既存のコマと過去に作ったクリップを組み合わせて短いトレーラーにまとめ、各パートの秒数を1〜2秒単位で見直して尺を調整すると、ティーザー的な1本を作れる。</p>
+      <p>漫画リールの中盤で、結果のコマを先に見せてから工程のコマに戻る「構成」の中断を1回、矛盾した一言を添えるキャプションの中断を1回、合わせて2〜3回仕込んでみる（音声を焼き込まない作りなので、音声の中断は見送り、視覚・キャプション・構成の3種類から選ぶ）。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/six-panels-comic-book-trailer" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/six-panels-comic-book-trailer
+    <a class="source-link" href="https://www.capcut.com/create/pattern-interrupt-technique-short-form-video" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/pattern-interrupt-technique-short-form-video
     </a>
   </div>
 
@@ -291,48 +291,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-20</span>
+      <span class="date">公開2025-09-12</span>
     </div>
-    <h2>2人のOC、1パネルで話者を見失わない</h2>
+    <h2>字幕の置き場所、画面下25%＋端から60px</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトが、既存の2人のオリジナルキャラクター（OC）を同じコマの対話シーンに入れる手順を公開した。先に各キャラの見た目の識別情報（髪型・服装・小物など）を固定し、セリフを入れる前に6パネルの構図だけで誰が誰か分かるようにし、リバースショット（＝話す相手を映す切り返しのコマ）は「カメラ視点が変わっただけ」として扱い、最後にセリフを足すという4ステップが示されている。</p>
+      <p>Opus Proのキャプション設計ガイドが、字幕は画面下から25%の範囲（記事は「下三分の一ルール」と呼ぶ）に置き、横方向は画面幅の中央80%以内に収め、画面端から60px以上離すとよいと紹介した。表示時間は1〜6秒、字幕どうしの間には2フレームの空白を空け、0.3秒のフェードインを付けると自然に見えるとしている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールで2人のキャラクターを同じコマに出すとき、見た目の特徴を先に決めてから、セリフを入れる前にコマ割りだけで誰が誰か分かるようにして、最後にセリフを足す順番にすると組み上げやすくなる。</p>
+      <p>漫画リールのコマに文字を合成する位置を、画面下25%の範囲・画面幅中央80%以内・端から60px以上離す、の3つの基準でチェックし、1コマあたりの文字の表示時間も1〜6秒の範囲に収まっているか見直す。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/multiple-character-consistency-ai-comics
+    <a class="source-link" href="https://www.opus.pro/blog/video-caption-design-placement" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/video-caption-design-placement
     </a>
   </div>
 
-  <!-- 4: A 中 -->
-  <div class="card mid">
+  <!-- 4: A 高 -->
+  <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-20</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-10-04</span>
     </div>
-    <h2>写真6枚を漫画化、差し替えは2か所だけ</h2>
+    <h2>冒頭の型、500本調査で11パターンに分類</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトが、人物やペットが写った写真6枚を、2列×3行の漫画ページに変換した事例を公開した。各人物・ペットの同一性の目印（髪型・服の色・首輪など）を先に決めておいたことで、仕上がったページの修正は2か所の差し替えだけで済んだ。元の写真に無かった赤いボールが生成時に紛れ込んでいたのを削除する、という修正例も示されている。</p>
+      <p>FluxNoteが2026年1〜9月に投稿された100万再生超のショート動画500本（TikTok200・Reels150・Shorts150、フォロワー100万未満のクリエイター）を調べ、冒頭の型を11パターンに分類した。最多は具体的な数字を使った言い切り（14%）、次にPOV設定（11%）、通説を覆す逆説（10%）、特定の対象を名指しした引き（9%）が続き、約100本（20%）はどのパターンにも当てはまらなかった。質問だけの型より、質問に言い切りを組み合わせた型のほうが強いとも指摘している。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>持っている写真から漫画リールを作るとき、写っている人物やペットの特徴（髪型・服の色など）を先にメモしてから生成すると、仕上がったコマの中に元の写真に無いものが混ざっていないかだけを確認すればよくなる。</p>
+      <p>漫画リールの1コマ目のセリフ・テロップを、文字だけで作れる型（具体的な数字を使った言い切り／POV設定／通説を覆す逆説／質問＋言い切りの組み合わせ）の中から3パターン書いてみて、一番強い案を選ぶ。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/turn-photo-album-into-comic-story" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/turn-photo-album-into-comic-story
+    <a class="source-link" href="https://fluxnote.io/blog/short-form-hook-library-500-viral-videos" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> fluxnote.io/blog/short-form-hook-library-500-viral-videos
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第91回<br>
-    2026年11月21日分
+    デイリートレンドレーダー 第92回<br>
+    2026年11月22日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-22.html">2026-11-22（第92回）</a>
       <a href="days/2026-11-21.html">2026-11-21（第91回）</a>
       <a href="days/2026-11-20.html">2026-11-20（第90回）</a>
       <a href="days/2026-11-19.html">2026-11-19（第89回）</a>

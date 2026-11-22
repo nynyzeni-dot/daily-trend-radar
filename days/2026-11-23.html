@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第93回｜2026.11.23</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第93回</span>
+    <h1>今日のトレンド調査<br><span class="accent">バズった動画、6工程で分解して分析</span></h1>
+    <p class="period">全3件・動画の作り方3件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はAIツール系のネタが日付や重複でどれも弱くて0件、動画の作り方系だけ3本やで。バズった動画をちゃんと分解する手順と、テロップの秒数の分け方、書き出した後の見え方チェック、どれも地味やけど明日からそのまま手が動かせるやつ選んだ。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2025-12-21</span>
+    </div>
+    <h2>バズった動画、6工程で分解して分析</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>海外メディアGraphedが、バズった動画の演出を分析する手順を6つの工程に整理した記事を公開した。①動画を選ぶ→②普通に見る→③無音で見る→④音声だけ聴く→⑤フレームごとに送って見る→⑥冒頭1〜3秒のフック・中盤・締めという構成に分解する、という順番。無音で見るときはテンポや場面転換に注目し、フレーム送りではカットがどの言葉・ビート・動作に合わせてあるかを探す、としている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>自分の漫画リールを作る前に、過去に保存したバズったリールを、普通に見る→無音で見る→音声だけ聴く→フレーム送りで見る→構成分解、の順でチェックし、冒頭1〜3秒のフックの作り方や中盤の運び方を自分のネタ用に書き出してみる。</p>
+    </div>
+    <a class="source-link" href="https://graphed.com/blog/how-to-analyze-tiktok-video-editing-techniques" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> graphed.com/blog/how-to-analyze-tiktok-video-editing-techniques
+    </a>
+  </div>
+
+  <!-- 2: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-10-10</span>
+    </div>
+    <h2>テロップの表示秒数、用途別に1.5〜6秒</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>CapCutが、画面に乗せる強調文字（テロップ／オーバーレイ）の表示時間を内容ごとに分ける考え方を紹介する記事を公開した。フック用の一言は1〜3秒、数値や細かい仕様を見せる場面は3〜4秒、操作手順を見せる場面は4〜6秒を目安とし、全体では1.5〜6秒の範囲に収めるとした。テロップを入れるかどうかは、その文字を消してみて「フックや手順、利点が伝わりにくくなるか」で判定する、としている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールに合成するテロップの表示時間を、フックの一言なら1〜3秒・数値や固有名詞を見せる場面は3〜4秒・手順を見せる場面は4〜6秒で分けてみる。迷ったテロップは一度消してみて、意味や手順が伝わりにくくなるかどうかで残すか決める。</p>
+    </div>
+    <a class="source-link" href="https://www.capcut.com/create/text-overlay-timing-ai-video-editing" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/text-overlay-timing-ai-video-editing
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-08</span>
+    </div>
+    <h2>テロップ、縮小後も読めるか4.5:1で確認</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>Open Designが、動画のテロップや見出し文字が、スマホ画面などに縮小されても読めるかを確認するチェック方法を公開した。1080pxの動画を360px幅で表示すると文字も約3分の1の大きさになる例を挙げ、文字と背景のコントラストは通常の文字で4.5:1・大きな文字で3:1を基準にし、文字の「登場・静止・退場」を分けて、完成した形で止まって見える時間を確保すべきとしている。4秒のテロップでも組み立てと消去にそれぞれ1秒かかると、安定して読めるのは2秒だけになる、という例も示した。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールに入れたテロップを書き出した後、スマホの実機で見て、文字と背景のコントラストが通常の文字で4.5:1・大きな文字で3:1を下回っていないか、テロップが「登場→静止→退場」のうち静止の時間を十分に確保できているかを確認する。</p>
+    </div>
+    <a class="source-link" href="https://open-design.ai/ja/blog/kinetic-typography-readability/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> open-design.ai/ja/blog/kinetic-typography-readability
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第93回<br>
+    2026年11月23日分
+  </footer>
+
+</div>
+</body>
+</html>

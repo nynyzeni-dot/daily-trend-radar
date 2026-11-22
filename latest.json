@@ -1,11 +1,10 @@
 {
-  "date": "2026-11-22",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-22.html",
+  "date": "2026-11-23",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-23.html",
   "items": [
-    {"title": "スケジュールタスク、持ち期間が7日→30日に", "why": "VPSで動かしている自動実行ルーティンの予約を、次の設定時に期間30日まで延ばせるので7日おきの再登録の手間を減らせる", "url": "https://code.claude.com/docs/en/changelog#v2.1.330"},
-    {"title": "中だるみ対策、「パターン・インタラプト」を2〜3回", "why": "漫画リールの中盤で、結果を先に見せてから工程に戻る構成の中断と、矛盾した一言を添えるキャプションの中断を合わせて2〜3回仕込む", "url": "https://www.capcut.com/create/pattern-interrupt-technique-short-form-video"},
-    {"title": "字幕の置き場所、画面下25%＋端から60px", "why": "漫画リールの文字を合成する位置を画面下25%・画面幅中央80%以内・端から60px以上離すの3基準でチェックし、表示時間も1〜6秒に収める", "url": "https://www.opus.pro/blog/video-caption-design-placement"},
-    {"title": "冒頭の型、500本調査で11パターンに分類", "why": "漫画リールの1コマ目のセリフ・テロップを、数字を使った言い切りやPOV設定など文字だけで作れる型に当てはめて3パターン書き、一番強い案を選ぶ", "url": "https://fluxnote.io/blog/short-form-hook-library-500-viral-videos"}
+    {"title": "バズった動画、6工程で分解して分析", "why": "バズったリールを無音→音声だけ→フレーム送りの順でチェックし、冒頭1〜3秒のフックの作り方を自分のネタに書き出す", "url": "https://graphed.com/blog/how-to-analyze-tiktok-video-editing-techniques"},
+    {"title": "テロップの表示秒数、用途別に1.5〜6秒", "why": "テロップの表示秒数をフック1〜3秒・数値3〜4秒・手順4〜6秒で分け、消して伝わるか確認して残すか決める", "url": "https://www.capcut.com/create/text-overlay-timing-ai-video-editing"},
+    {"title": "テロップ、縮小後も読めるか4.5:1で確認", "why": "書き出したテロップをスマホ実機で見て、コントラスト4.5:1(大きい文字は3:1)と静止の時間を確認する", "url": "https://open-design.ai/ja/blog/kinetic-typography-readability/"}
   ]
 }

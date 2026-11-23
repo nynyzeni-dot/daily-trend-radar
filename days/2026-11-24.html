@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第94回｜2026.11.24</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第94回</span>
+    <h1>今日のトレンド調査<br><span class="accent">Flexメッセージ、入れ子は20階層まで</span></h1>
+    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はLINE BotのFlexメッセージに地味な上限が入った話が一番実務に効くやつやで。動画の作り方は、1枚の画像からClaude Codeでリールを作る時の失敗と直し方、コマの動きがコケた時の静止画への切り替え、ハッシュタグの混ぜ方の3本、どれも明日からそのまま手が動くやつ選んだ。</p>
+  </div>
+
+  <!-- 1: B 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">B：AIツール</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-11-19</span>
+    </div>
+    <h2>Flexメッセージ、入れ子は20階層まで</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>LINEが2026年11月19日、Messaging API（＝LINE Botを動かすための仕組みのこと）の仕様を変更した。Flex Message（＝LINEのBotで自由にレイアウトを組めるメッセージ形式のこと）で、ボックス（＝レイアウトを組む箱）を箱の中に箱と入れ子にできる深さには、これまで上限が無かったが、今回から最大20階層までに制限された。最外側のボックスを1階層目として数え、20階層を超えるFlex Messageを送ると「400 Bad Request」というエラーが返るようになる。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>運用しているLINE Botで複雑なFlex Message（カルーセルや入れ子の深いレイアウトなど）を使っている場合、ボックスの入れ子が20階層を超えていないか確認し、超えていたら400エラーで動かなくなる前に構造を見直す。</p>
+    </div>
+    <a class="source-link" href="https://developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-05-18</span>
+    </div>
+    <h2>1枚の画像からリール、失敗2つを直す</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>ノウハウ共有サイト「リベシティ」に、画像1枚をClaude Codeに渡してInstagram用の15秒リール動画を作った体験記が公開された。Ken Burns効果（＝静止画をゆっくり拡大・移動させる定番の動かし方のこと）だけでは動きが地味になった失敗と、元画像にすでにある文字とClaudeが後から乗せた文字が重なって、文字の二重表示や文字化けが起きた失敗が紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>テロップを合成するとき、元画像の文字がある位置を避けて上半分の余白に配置し、フォントは日本語対応のものに統一する。動きが単調に感じたら、タイトルが下からスライドインして1秒かけて出てきて3秒止まる、のように文字アニメーションの秒数を指示して動きを足す。</p>
+    </div>
+    <a class="source-link" href="https://library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-11-23</span>
+    </div>
+    <h2>コマの動きがコケたら、静止画で保持</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI漫画・AI映像制作サイトのLlamaGenが、駅で向かい合う静かなシーンを題材にしたAI映像制作の修正過程を公開した。封筒を開く動作を動画化しようとしたところ、封筒と中身が一緒に持ち上がってしまう失敗が起き、最終版では動かすのをやめて、開いた状態の静止画を4秒保持する方法に切り替えたという。動かす前に開始フレーム（＝動かす前の最初の1枚のこと）を静止画のまま確認し、封筒が早く見えすぎるといった不具合を先に直してから動かす、という手順も紹介されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画のコマを部分的に動かして不自然になったときは、動かすのをやめて、うまく見えている状態の静止画を数秒長めに保持する方に切り替える。動かす前にそのコマの静止画だけを見て、小道具や位置がおかしくないかを先に確認する。</p>
+    </div>
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity
+    </a>
+  </div>
+
+  <!-- 4: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-04-17</span>
+    </div>
+    <h2>バイラルTikTok分析、ハッシュタグはニッチ+汎用</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>AI動画クリップツールのOpusClipが、2026年1〜3月に投稿された動画を分析した記事を公開した。伸びた動画はハッシュタグを平均10.4個つけており、ニッチなタグ（その分野特有の専門的なタグ）と汎用タグ（#fypのような広く使われるタグ）を混ぜたほうが、ニッチだけのタグより再生数が中央値で2.5倍高かったという。また#fypを付けた動画は、付けていない動画より再生数が中央値で2.2倍高かったとしている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールに付けるハッシュタグを、ニッチな専門タグだけでなく#fypのような汎用タグも混ぜて、10個前後つけてみる。</p>
+    </div>
+    <a class="source-link" href="https://www.opus.pro/blog/anatomy-of-a-viral-tiktok-2026" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/anatomy-of-a-viral-tiktok-2026
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第94回<br>
+    2026年11月24日分
+  </footer>
+
+</div>
+</body>
+</html>

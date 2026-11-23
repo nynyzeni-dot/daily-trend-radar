@@ -1,10 +1,11 @@
 {
-  "date": "2026-11-23",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-23.html",
+  "date": "2026-11-24",
+  "count": 4,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-24.html",
   "items": [
-    {"title": "バズった動画、6工程で分解して分析", "why": "バズったリールを無音→音声だけ→フレーム送りの順でチェックし、冒頭1〜3秒のフックの作り方を自分のネタに書き出す", "url": "https://graphed.com/blog/how-to-analyze-tiktok-video-editing-techniques"},
-    {"title": "テロップの表示秒数、用途別に1.5〜6秒", "why": "テロップの表示秒数をフック1〜3秒・数値3〜4秒・手順4〜6秒で分け、消して伝わるか確認して残すか決める", "url": "https://www.capcut.com/create/text-overlay-timing-ai-video-editing"},
-    {"title": "テロップ、縮小後も読めるか4.5:1で確認", "why": "書き出したテロップをスマホ実機で見て、コントラスト4.5:1(大きい文字は3:1)と静止の時間を確認する", "url": "https://open-design.ai/ja/blog/kinetic-typography-readability/"}
+    {"title": "Flexメッセージ、入れ子は20階層まで", "why": "LINE Botの複雑なFlex Messageが20階層を超えていないか確認し、400エラーになる前に構造を見直す", "url": "https://developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation/"},
+    {"title": "1枚の画像からリール、失敗2つを直す", "why": "テロップは元画像の文字位置を避けて上半分に配置し日本語フォントに統一、動きが単調なら文字のスライドインを秒数指定で足す", "url": "https://library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7"},
+    {"title": "コマの動きがコケたら、静止画で保持", "why": "コマの動きが不自然になったら動かすのをやめて静止画を数秒長めに保持し、動かす前に静止画で小道具や位置を確認する", "url": "https://llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity"},
+    {"title": "バイラルTikTok分析、ハッシュタグはニッチ+汎用", "why": "ハッシュタグをニッチな専門タグだけでなく#fypのような汎用タグも混ぜて10個前後つける", "url": "https://www.opus.pro/blog/anatomy-of-a-viral-tiktok-2026"}
   ]
 }

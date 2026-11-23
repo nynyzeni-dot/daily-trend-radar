@@ -1589,6 +1589,26 @@
       "date": "2026-11-23",
       "title": "テロップ、縮小後も読めるか4.5:1で確認",
       "url": "https://open-design.ai/ja/blog/kinetic-typography-readability/"
+    },
+    {
+      "date": "2026-11-24",
+      "title": "Flexメッセージ、入れ子は20階層まで",
+      "url": "https://developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation/"
+    },
+    {
+      "date": "2026-11-24",
+      "title": "1枚の画像からリール、失敗2つを直す",
+      "url": "https://library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7"
+    },
+    {
+      "date": "2026-11-24",
+      "title": "コマの動きがコケたら、静止画で保持",
+      "url": "https://llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity"
+    },
+    {
+      "date": "2026-11-24",
+      "title": "バイラルTikTok分析、ハッシュタグはニッチ+汎用",
+      "url": "https://www.opus.pro/blog/anatomy-of-a-viral-tiktok-2026"
     }
   ]
 }

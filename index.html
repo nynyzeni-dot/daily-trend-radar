@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第94回｜2026.11.24</title>
+<title>デイリートレンド調査レポート 第95回｜2026.11.25</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,105 +234,64 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第94回</span>
-    <h1>今日のトレンド調査<br><span class="accent">Flexメッセージ、入れ子は20階層まで</span></h1>
-    <p class="period">全4件・動画の作り方3件／AIツール1件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第95回</span>
+    <h1>今日のトレンド調査<br><span class="accent">崩れた1コマ、直す前に5点診断</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はLINE BotのFlexメッセージに地味な上限が入った話が一番実務に効くやつやで。動画の作り方は、1枚の画像からClaude Codeでリールを作る時の失敗と直し方、コマの動きがコケた時の静止画への切り替え、ハッシュタグの混ぜ方の3本、どれも明日からそのまま手が動くやつ選んだ。</p>
+    <p>今日はAIツールのニュースは拾えんかったけど、動画の作り方は2本とも実務にそのまま効くやつ選んだで。漫画のコマが1つだけ崩れた時の直し方と、字幕の文字サイズ・表示秒数の目安、どっちも「次の1本」で試せるやつや。</p>
   </div>
 
-  <!-- 1: B 高 -->
-  <div class="card high">
-    <div class="badge-row">
-      <span class="badge genre">B：AIツール</span>
-      <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-19</span>
-    </div>
-    <h2>Flexメッセージ、入れ子は20階層まで</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>LINEが2026年11月19日、Messaging API（＝LINE Botを動かすための仕組みのこと）の仕様を変更した。Flex Message（＝LINEのBotで自由にレイアウトを組めるメッセージ形式のこと）で、ボックス（＝レイアウトを組む箱）を箱の中に箱と入れ子にできる深さには、これまで上限が無かったが、今回から最大20階層までに制限された。最外側のボックスを1階層目として数え、20階層を超えるFlex Messageを送ると「400 Bad Request」というエラーが返るようになる。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>運用しているLINE Botで複雑なFlex Message（カルーセルや入れ子の深いレイアウトなど）を使っている場合、ボックスの入れ子が20階層を超えていないか確認し、超えていたら400エラーで動かなくなる前に構造を見直す。</p>
-    </div>
-    <a class="source-link" href="https://developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation/" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation
-    </a>
-  </div>
-
-  <!-- 2: A 高 -->
+  <!-- 1: A 高 -->
   <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-05-18</span>
+      <span class="date">公開2026-10-13</span>
     </div>
-    <h2>1枚の画像からリール、失敗2つを直す</h2>
+    <h2>崩れた1コマ、直す前に5点診断</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>ノウハウ共有サイト「リベシティ」に、画像1枚をClaude Codeに渡してInstagram用の15秒リール動画を作った体験記が公開された。Ken Burns効果（＝静止画をゆっくり拡大・移動させる定番の動かし方のこと）だけでは動きが地味になった失敗と、元画像にすでにある文字とClaudeが後から乗せた文字が重なって、文字の二重表示や文字化けが起きた失敗が紹介されている。</p>
+      <p>AI漫画制作サイトのLlamaGenが、6コマの漫画のうち1コマだけ絵が崩れてしまった場合の直し方を公開した。ページ全体を再生成する前に、ストーリー・同一性（＝キャラクターの顔や服など見た目のこと）・小道具・構図・テキストという5つの観点で何が崩れたかをまず診断し、崩れている部分だけをテキスト編集→部分修正→描き直し→画像置換の順に、影響が小さい方法から選んで直す「修正ラダー」という考え方が紹介されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>テロップを合成するとき、元画像の文字がある位置を避けて上半分の余白に配置し、フォントは日本語対応のものに統一する。動きが単調に感じたら、タイトルが下からスライドインして1秒かけて出てきて3秒止まる、のように文字アニメーションの秒数を指示して動きを足す。</p>
+      <p>ゴリラ漫画の1コマだけ絵が崩れたときに、すぐ全部描き直すのをやめて、まず「同一性（顔・服）」「小道具」「構図」「テキスト」のどこが崩れたのかを診断してから、崩れた部分だけを部分修正か描き直しで直すようにする。</p>
     </div>
-    <a class="source-link" href="https://library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7
+    <a class="source-link" href="https://llamagen.ai/ja/blogs/fix-one-bad-comic-panel" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/fix-one-bad-comic-panel
     </a>
   </div>
 
-  <!-- 3: A 中 -->
+  <!-- 2: A 中 -->
   <div class="card mid">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-23</span>
+      <span class="date">公開2025-11-11・更新2026-10-29</span>
     </div>
-    <h2>コマの動きがコケたら、静止画で保持</h2>
+    <h2>字幕は48px以上・1ブロック2〜4秒</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画・AI映像制作サイトのLlamaGenが、駅で向かい合う静かなシーンを題材にしたAI映像制作の修正過程を公開した。封筒を開く動作を動画化しようとしたところ、封筒と中身が一緒に持ち上がってしまう失敗が起き、最終版では動かすのをやめて、開いた状態の静止画を4秒保持する方法に切り替えたという。動かす前に開始フレーム（＝動かす前の最初の1枚のこと）を静止画のまま確認し、封筒が早く見えすぎるといった不具合を先に直してから動かす、という手順も紹介されている。</p>
+      <p>AI動画クリップツールのOpusClipが、Instagramリールの字幕（＝キャプション）についての目安をまとめた記事を公開した。文字サイズは48〜60ピクセル以上、1ブロックの表示時間は2〜4秒、配置は画面の中央1/3エリアを基準にするとしている。フォントはサンセリフ体の太字かセミボールドを使い、白文字には暗い背景、黒文字には明るい背景を合わせてコントラストを強めに取るとされている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画のコマを部分的に動かして不自然になったときは、動かすのをやめて、うまく見えている状態の静止画を数秒長めに保持する方に切り替える。動かす前にそのコマの静止画だけを見て、小道具や位置がおかしくないかを先に確認する。</p>
+      <p>漫画リールのテロップを置くとき、文字サイズが48ピクセル以上あるか、1カットの表示が2〜4秒になっているか、画面の中央1/3エリアに収まっているかをチェックリストとして確認する。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity
-    </a>
-  </div>
-
-  <!-- 4: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-04-17</span>
-    </div>
-    <h2>バイラルTikTok分析、ハッシュタグはニッチ+汎用</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>AI動画クリップツールのOpusClipが、2026年1〜3月に投稿された動画を分析した記事を公開した。伸びた動画はハッシュタグを平均10.4個つけており、ニッチなタグ（その分野特有の専門的なタグ）と汎用タグ（#fypのような広く使われるタグ）を混ぜたほうが、ニッチだけのタグより再生数が中央値で2.5倍高かったという。また#fypを付けた動画は、付けていない動画より再生数が中央値で2.2倍高かったとしている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>漫画リールに付けるハッシュタグを、ニッチな専門タグだけでなく#fypのような汎用タグも混ぜて、10個前後つけてみる。</p>
-    </div>
-    <a class="source-link" href="https://www.opus.pro/blog/anatomy-of-a-viral-tiktok-2026" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> opus.pro/blog/anatomy-of-a-viral-tiktok-2026
+    <a class="source-link" href="https://www.opus.pro/blog/instagram-reels-caption-subtitle-best-practices" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/instagram-reels-caption-subtitle-best-practices
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第94回<br>
-    2026年11月24日分
+    デイリートレンドレーダー 第95回<br>
+    2026年11月25日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-25.html">2026-11-25（第95回）</a>
       <a href="days/2026-11-24.html">2026-11-24（第94回）</a>
       <a href="days/2026-11-23.html">2026-11-23（第93回）</a>
       <a href="days/2026-11-22.html">2026-11-22（第92回）</a>

@@ -1,11 +1,9 @@
 {
-  "date": "2026-11-24",
-  "count": 4,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-24.html",
+  "date": "2026-11-25",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-25.html",
   "items": [
-    {"title": "Flexメッセージ、入れ子は20階層まで", "why": "LINE Botの複雑なFlex Messageが20階層を超えていないか確認し、400エラーになる前に構造を見直す", "url": "https://developers.line.biz/ja/news/2026/11/19/flex-message-nested-boxes-validation/"},
-    {"title": "1枚の画像からリール、失敗2つを直す", "why": "テロップは元画像の文字位置を避けて上半分に配置し日本語フォントに統一、動きが単調なら文字のスライドインを秒数指定で足す", "url": "https://library.libecity.com/articles/01KRT5BFDW0CZRK6EM1Q40XTP7"},
-    {"title": "コマの動きがコケたら、静止画で保持", "why": "コマの動きが不自然になったら動かすのをやめて静止画を数秒長めに保持し、動かす前に静止画で小道具や位置を確認する", "url": "https://llamagen.ai/ja/blogs/ai-film-quiet-scene-continuity"},
-    {"title": "バイラルTikTok分析、ハッシュタグはニッチ+汎用", "why": "ハッシュタグをニッチな専門タグだけでなく#fypのような汎用タグも混ぜて10個前後つける", "url": "https://www.opus.pro/blog/anatomy-of-a-viral-tiktok-2026"}
+    {"title": "崩れた1コマ、直す前に5点診断", "why": "漫画のコマが1つ崩れた時、全部描き直す前に同一性・小道具・構図・テキストのどこが崩れたか診断し、崩れた部分だけ部分修正か描き直しで直す", "url": "https://llamagen.ai/ja/blogs/fix-one-bad-comic-panel"},
+    {"title": "字幕は48px以上・1ブロック2〜4秒", "why": "テロップの文字サイズが48px以上・1カットの表示が2〜4秒・画面中央1/3エリアに収まっているかをチェックする", "url": "https://www.opus.pro/blog/instagram-reels-caption-subtitle-best-practices"}
   ]
 }

@@ -1619,6 +1619,21 @@
       "date": "2026-11-25",
       "title": "字幕は48px以上・1ブロック2〜4秒",
       "url": "https://www.opus.pro/blog/instagram-reels-caption-subtitle-best-practices"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/human-led-ai-game-cutscene-workflow",
+      "title": "カットシーン制作、絵コンテ2案と秒数表で管理",
+      "date": "2026-11-26"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/comic-panel-layout-for-beginners",
+      "title": "コマ割りの基本、サイズと文字余白を先に決める",
+      "date": "2026-11-26"
+    },
+    {
+      "url": "https://llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow",
+      "title": "複数コマの話、各コマを開始・動作・終了で記述",
+      "date": "2026-11-26"
     }
   ]
 }

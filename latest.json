@@ -1,9 +1,10 @@
 {
-  "date": "2026-11-25",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-25.html",
+  "date": "2026-11-26",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-26.html",
   "items": [
-    {"title": "崩れた1コマ、直す前に5点診断", "why": "漫画のコマが1つ崩れた時、全部描き直す前に同一性・小道具・構図・テキストのどこが崩れたか診断し、崩れた部分だけ部分修正か描き直しで直す", "url": "https://llamagen.ai/ja/blogs/fix-one-bad-comic-panel"},
-    {"title": "字幕は48px以上・1ブロック2〜4秒", "why": "テロップの文字サイズが48px以上・1カットの表示が2〜4秒・画面中央1/3エリアに収まっているかをチェックする", "url": "https://www.opus.pro/blog/instagram-reels-caption-subtitle-best-practices"}
+    {"title": "カットシーン制作、絵コンテ2案と秒数表で管理", "why": "コマを動画化する前に構図を2パターン作って見比べ、生成した動きが意図と違ったら却下し、秒数配分も2パターン作って比較してから本番の秒数を決める", "url": "https://llamagen.ai/ja/blogs/human-led-ai-game-cutscene-workflow"},
+    {"title": "コマ割りの基本、サイズと文字余白を先に決める", "why": "6コマの役割を導入→物体→動き→見せ場→反応→手がかりの流れで割り振り、見せ場は大きくし、セリフを置く場所を先に決めて顔や重要な部分を覆わない空きを確保する", "url": "https://llamagen.ai/ja/blogs/comic-panel-layout-for-beginners"},
+    {"title": "複数コマの話、各コマを開始・動作・終了で記述", "why": "複数コマ・複数回のストーリーで各コマの指示を開始状態・動作・終了状態の3つに分けて書き、次に引き継ぐべき状態を台帳にメモして話がつながらなくなるミスを防ぐ", "url": "https://llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow"}
   ]
 }

@@ -1634,6 +1634,16 @@
       "url": "https://llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow",
       "title": "複数コマの話、各コマを開始・動作・終了で記述",
       "date": "2026-11-26"
+    },
+    {
+      "url": "https://techgym.jp/column/claude-code-video-use/",
+      "title": "Claude Code動画編集、無音とフィラー語を自動カット",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://www.opus.pro/blog/youtube-shorts-caption-subtitle-best-practices",
+      "title": "字幕の表示時間、0.3秒×語数＋0.5秒で計算",
+      "date": "2026-11-27"
     }
   ]
 }

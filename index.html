@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>デイリートレンド調査レポート 第96回｜2026.11.26</title>
+<title>デイリートレンド調査レポート 第97回｜2026.11.27</title>
 <style>
   :root {
     --main: #D4722A;
@@ -234,14 +234,14 @@
 <div class="wrap">
 
   <header>
-    <span class="kicker">デイリートレンドレーダー ／ 第96回</span>
-    <h1>今日のトレンド調査<br><span class="accent">カットシーン制作、絵コンテ2案と秒数表で管理</span></h1>
-    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+    <span class="kicker">デイリートレンドレーダー ／ 第97回</span>
+    <h1>今日のトレンド調査<br><span class="accent">Claude Codeに動画編集を任せる「video-use」登場</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
   </header>
 
   <div class="summary-box">
     <span class="label">今日の一言まとめ</span>
-    <p>今日はAIツールのニュースは具体性が足らんかったから見送りや。動画の作り方は3本とも、漫画のコマを動画や複数回のストーリーに広げる時にそのまま使える話選んだで。絵コンテとタイミングの比較、コマ割りの基本、複数コマをつなぐ記録の付け方、どれも次の1本で試せるやつや。</p>
+    <p>今日はAIツールのニュースは具体性か鮮度が足らんかったから見送りや。動画の作り方も粒ぞろいの候補が少なかったから2本に絞ったで。Claude Codeに動画編集を丸投げできる新しいスキルと、字幕の数値基準の話や。どっちも次の1本でそのまま試せるやつや。</p>
   </div>
 
   <!-- 1: A 高 -->
@@ -249,69 +249,49 @@
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
       <span class="badge high">重要度：高</span>
-      <span class="date">公開2026-11-23</span>
+      <span class="date">公開2026-08-31・更新2026-10-15</span>
     </div>
-    <h2>カットシーン制作、絵コンテ2案と秒数表で管理</h2>
+    <h2>Claude Code動画編集、無音とフィラー語を自動カット</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画・AI映像制作サイトのLlamaGenが、小さなロボットが門の鍵を使う12秒のカットシーンを例に、人間主導でAI生成を管理する手口を公開した。演出意図を先に脚本として固定し、絵コンテ（＝コマ構成の下書きのこと）の候補を2つ比較してから1つを採用し、AIが生成した動きが意図と合わない場合は却下して記録に残すとした。同じ12秒でも、予備動作・結果・リアクションの秒数配分を2パターン作って比較し、最終的に1280×720・24fps・288フレームの無音アニマティックにまとめたという。</p>
+      <p>オープンソースのClaude Codeスキル「video-use」が公開されている。動画素材が入ったフォルダで`claude`を起動し、自然言語で指示するだけで編集を任せられる仕組みで、フィラーワード（「えー」「あの」等）の自動削除、無音部分のカット、セグメントごとの自動カラーグレーディング、字幕の焼き込み、Remotion・Manim・PILを使ったアニメーション生成、レンダリング後のカット境界や音声の不自然さの自己チェックまでをカバーするという。セットアップは`git clone`で取得し、`~/.claude/skills`配下にシンボリックリンクを作るだけで済む。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画のコマを動画化する前に、コマの構図（絵コンテ）を2パターン作って見比べてから1つを選び、生成した動きが意図と違ったら潔く却下して理由を記録に残す。尺の配分も「予備動作◯秒・結果◯秒・リアクション◯秒」のように数値で2パターン試して比較してから、本番の秒数を決める。</p>
+      <p>動画素材が入ったフォルダに移動して`claude`を起動し、「不要な無音部分を削除して、フィラーワードも可能な範囲でカットしてください。字幕も追加してください」のように日本語で頼むだけで、今まで自分でffmpegコマンドを書いていた無音カットや字幕焼き込みをClaude Codeに任せられる。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/human-led-ai-game-cutscene-workflow" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/human-led-ai-game-cutscene-workflow
+    <a class="source-link" href="https://techgym.jp/column/claude-code-video-use/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> techgym.jp/column/claude-code-video-use
     </a>
   </div>
 
-  <!-- 2: A 中 -->
-  <div class="card mid">
+  <!-- 2: A 高 -->
+  <div class="card high">
     <div class="badge-row">
       <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-08-08・更新2026-11-12</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2025-11-11・更新2026-10-29</span>
     </div>
-    <h2>コマ割りの基本、サイズと文字余白を先に決める</h2>
+    <h2>字幕の表示時間、0.3秒×語数＋0.5秒で計算</h2>
     <div class="block">
       <p class="h">何があったか</p>
-      <p>AI漫画制作サイトのLlamaGenが、初心者向けにコマ割りの基本をまとめた記事を公開した。6コマのページを作る例で、各コマの役割を「広い導入→物体→動き→見せ場→反応→手がかり」というリズムで割り振り、コマのサイズは大・中・小を混ぜて見せ場のコマだけ大きくするとしている。さらに、各コマに文字（吹き出しやテロップ）を置く場所をあらかじめ決め、顔や手がかりになる部分を覆わないよう空きを確保してから作画の指示を出す、という手順が紹介されている。初心者がつまずく失敗として、状況説明のコマがない・コマサイズが全部同じ・読む順序が分かりにくい・文字の余地がない、の4つを挙げている。</p>
+      <p>動画編集ツールOpusClipのブログが、YouTubeショート向け字幕の数値基準をまとめた記事を公開した。フォントサイズは18〜24pt（20〜22ptが読みやすい目安）、1行は32〜42文字（約5〜7語）で同時表示は2行まで、表示時間は「1語あたり0.3秒＋バッファ0.5秒」で計算し目安は1.5〜3秒、字幕は音声より0.1〜0.3秒早く表示するとしている。さらにコントラスト比は4.5:1以上（WCAG AA準拠）、黒背景ボックスを敷く場合は不透明度60〜80％、画面上部20％（タイトル・チャンネル名が入る帯）と下部25％（いいね・コメント・シェアボタン）を避けるセーフゾーンも示されている。</p>
     </div>
     <div class="block">
       <p class="h">明日から試せること</p>
-      <p>漫画リールの6コマを作る前に、各コマの役割を「導入→物体→動き→見せ場→反応→手がかり」の流れで割り振り、見せ場のコマだけ大きくするなどサイズに差をつける。セリフやテロップを置く場所も先に決めて、顔や重要な部分を覆わない空きを確保してから作画の指示を出す。</p>
+      <p>漫画リールの字幕を作るとき、1行32〜42文字・同時2行までに収め、表示時間は「文字数に応じて1語0.3秒＋0.5秒」で計算してから尺を決める。画面上部20％・下部25％には字幕を置かないようにし、黒帯を敷くなら不透明度60〜80％を目安にする。</p>
     </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/comic-panel-layout-for-beginners" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/comic-panel-layout-for-beginners
-    </a>
-  </div>
-
-  <!-- 3: A 中 -->
-  <div class="card mid">
-    <div class="badge-row">
-      <span class="badge genre">A：動画の作り方</span>
-      <span class="badge mid">重要度：中</span>
-      <span class="date">公開2026-11-23</span>
-    </div>
-    <h2>複数コマの話、各コマを開始・動作・終了で記述</h2>
-    <div class="block">
-      <p class="h">何があったか</p>
-      <p>AI漫画・AI映像制作サイトのLlamaGenが、2人のキャラクターが駅で再会する6ショットのパイロット版を例に、複数ショットにわたる物語を管理する手口を公開した。各ショットは5秒ずつ、合計30秒に区切り、ショットごとに「開始状態・動作・終了状態」と、保持すべき要素（顔・衣装・持ち物など）、固定するカメラの指定を分けて書くという。さらに、ノートの位置や開閉状態、小道具の所在、キャラクターの知識状態などを「引き継ぎ台帳」として記録し、次のエピソードに引き継ぐとしている。</p>
-    </div>
-    <div class="block">
-      <p class="h">明日から試せること</p>
-      <p>複数コマ・複数回にわたる漫画ストーリーを作るとき、各コマの指示を「開始状態・動作・終了状態」の3つに分けて書き、キャラの持ち物や表情など次のコマ・次回に引き継ぐべき状態を台帳としてメモしておく。話がつながらなくなるミスを防げる。</p>
-    </div>
-    <a class="source-link" href="https://llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow" target="_blank" rel="noopener">
-      <span class="arrow">&#8599;</span> llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow
+    <a class="source-link" href="https://www.opus.pro/blog/youtube-shorts-caption-subtitle-best-practices" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/youtube-shorts-caption-subtitle-best-practices
     </a>
   </div>
 
   <footer>
-    デイリートレンドレーダー 第96回<br>
-    2026年11月26日分
+    デイリートレンドレーダー 第97回<br>
+    2026年11月27日分
     <div class="archive">
       <p>過去回一覧</p>
+      <a href="days/2026-11-27.html">2026-11-27（第97回）</a>
       <a href="days/2026-11-26.html">2026-11-26（第96回）</a>
       <a href="days/2026-11-25.html">2026-11-25（第95回）</a>
       <a href="days/2026-11-24.html">2026-11-24（第94回）</a>

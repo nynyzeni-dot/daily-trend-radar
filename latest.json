@@ -1,10 +1,9 @@
 {
-  "date": "2026-11-26",
-  "count": 3,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-26.html",
+  "date": "2026-11-27",
+  "count": 2,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-27.html",
   "items": [
-    {"title": "カットシーン制作、絵コンテ2案と秒数表で管理", "why": "コマを動画化する前に構図を2パターン作って見比べ、生成した動きが意図と違ったら却下し、秒数配分も2パターン作って比較してから本番の秒数を決める", "url": "https://llamagen.ai/ja/blogs/human-led-ai-game-cutscene-workflow"},
-    {"title": "コマ割りの基本、サイズと文字余白を先に決める", "why": "6コマの役割を導入→物体→動き→見せ場→反応→手がかりの流れで割り振り、見せ場は大きくし、セリフを置く場所を先に決めて顔や重要な部分を覆わない空きを確保する", "url": "https://llamagen.ai/ja/blogs/comic-panel-layout-for-beginners"},
-    {"title": "複数コマの話、各コマを開始・動作・終了で記述", "why": "複数コマ・複数回のストーリーで各コマの指示を開始状態・動作・終了状態の3つに分けて書き、次に引き継ぐべき状態を台帳にメモして話がつながらなくなるミスを防ぐ", "url": "https://llamagen.ai/ja/blogs/ai-drama-six-shot-pilot-workflow"}
+    {"title": "Claude Code動画編集、無音とフィラー語を自動カット", "why": "動画素材のフォルダでclaudeを起動し、日本語で無音カットや字幕追加を頼むだけで、今まで自分で書いていたffmpegコマンドを任せられる", "url": "https://techgym.jp/column/claude-code-video-use/"},
+    {"title": "字幕の表示時間、0.3秒×語数＋0.5秒で計算", "why": "字幕は1行32〜42文字・同時2行まで、表示時間は1語0.3秒＋0.5秒で計算し、画面上部20％・下部25％を避けて置く", "url": "https://www.opus.pro/blog/youtube-shorts-caption-subtitle-best-practices"}
   ]
 }

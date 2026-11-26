@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第97回｜2026.11.27</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第97回</span>
+    <h1>今日のトレンド調査<br><span class="accent">Claude Codeに動画編集を任せる「video-use」登場</span></h1>
+    <p class="period">全2件・動画の作り方2件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はAIツールのニュースは具体性か鮮度が足らんかったから見送りや。動画の作り方も粒ぞろいの候補が少なかったから2本に絞ったで。Claude Codeに動画編集を丸投げできる新しいスキルと、字幕の数値基準の話や。どっちも次の1本でそのまま試せるやつや。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-08-31・更新2026-10-15</span>
+    </div>
+    <h2>Claude Code動画編集、無音とフィラー語を自動カット</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>オープンソースのClaude Codeスキル「video-use」が公開されている。動画素材が入ったフォルダで`claude`を起動し、自然言語で指示するだけで編集を任せられる仕組みで、フィラーワード（「えー」「あの」等）の自動削除、無音部分のカット、セグメントごとの自動カラーグレーディング、字幕の焼き込み、Remotion・Manim・PILを使ったアニメーション生成、レンダリング後のカット境界や音声の不自然さの自己チェックまでをカバーするという。セットアップは`git clone`で取得し、`~/.claude/skills`配下にシンボリックリンクを作るだけで済む。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>動画素材が入ったフォルダに移動して`claude`を起動し、「不要な無音部分を削除して、フィラーワードも可能な範囲でカットしてください。字幕も追加してください」のように日本語で頼むだけで、今まで自分でffmpegコマンドを書いていた無音カットや字幕焼き込みをClaude Codeに任せられる。</p>
+    </div>
+    <a class="source-link" href="https://techgym.jp/column/claude-code-video-use/" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> techgym.jp/column/claude-code-video-use
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2025-11-11・更新2026-10-29</span>
+    </div>
+    <h2>字幕の表示時間、0.3秒×語数＋0.5秒で計算</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>動画編集ツールOpusClipのブログが、YouTubeショート向け字幕の数値基準をまとめた記事を公開した。フォントサイズは18〜24pt（20〜22ptが読みやすい目安）、1行は32〜42文字（約5〜7語）で同時表示は2行まで、表示時間は「1語あたり0.3秒＋バッファ0.5秒」で計算し目安は1.5〜3秒、字幕は音声より0.1〜0.3秒早く表示するとしている。さらにコントラスト比は4.5:1以上（WCAG AA準拠）、黒背景ボックスを敷く場合は不透明度60〜80％、画面上部20％（タイトル・チャンネル名が入る帯）と下部25％（いいね・コメント・シェアボタン）を避けるセーフゾーンも示されている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの字幕を作るとき、1行32〜42文字・同時2行までに収め、表示時間は「文字数に応じて1語0.3秒＋0.5秒」で計算してから尺を決める。画面上部20％・下部25％には字幕を置かないようにし、黒帯を敷くなら不透明度60〜80％を目安にする。</p>
+    </div>
+    <a class="source-link" href="https://www.opus.pro/blog/youtube-shorts-caption-subtitle-best-practices" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> opus.pro/blog/youtube-shorts-caption-subtitle-best-practices
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第97回<br>
+    2026年11月27日分
+  </footer>
+
+</div>
+</body>
+</html>

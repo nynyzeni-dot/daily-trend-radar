@@ -1,9 +1,10 @@
 {
-  "date": "2026-11-27",
-  "count": 2,
-  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-27.html",
+  "date": "2026-11-28",
+  "count": 3,
+  "url": "https://nynyzeni-dot.github.io/daily-trend-radar/days/2026-11-28.html",
   "items": [
-    {"title": "Claude Code動画編集、無音とフィラー語を自動カット", "why": "動画素材のフォルダでclaudeを起動し、日本語で無音カットや字幕追加を頼むだけで、今まで自分で書いていたffmpegコマンドを任せられる", "url": "https://techgym.jp/column/claude-code-video-use/"},
-    {"title": "字幕の表示時間、0.3秒×語数＋0.5秒で計算", "why": "字幕は1行32〜42文字・同時2行まで、表示時間は1語0.3秒＋0.5秒で計算し、画面上部20％・下部25％を避けて置く", "url": "https://www.opus.pro/blog/youtube-shorts-caption-subtitle-best-practices"}
+    {"title": "効果音、波形の立ち上がりで合わせる", "why": "効果音はテロップ・画像の切り替えや感情が動く瞬間に絞り、タイムラインを拡大して波形の立ち上がりを画面の変化点に重ねる", "url": "https://library.libecity.com/articles/01KRT6NYN9JMYGDK9RCJ04AWHY"},
+    {"title": "7秒動画、1フレーム1役割で組む", "why": "各コマに被写体を示す・緊張感を作る・見返りを届けるのどれか一つの役割だけを割り当てて組み直す", "url": "https://www.capcut.com/create/micro-storytelling-reels-under-7-seconds"},
+    {"title": "トランジション手法、流行の早さで選ぶ", "why": "コマ切り替えの演出は流行の初期・ピーク・飽和期を判定し、マッチカットかホイップパンかマスク付きリビールかを使い分ける", "url": "https://www.capcut.com/create/instagram-reel-transitions-viral-edit-tips"}
   ]
 }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>デイリートレンド調査レポート 第98回｜2026.11.28</title>
+<style>
+  :root {
+    --main: #D4722A;
+    --sub: #C25F18;
+    --accent: #F5C28A;
+    --text-brand: #A85513;
+    --bg: #FDFAF5;
+    --bg-card: #FFFFFF;
+    --bg-card2: #F7F1E8;
+    --border: #E5DACB;
+    --text: #3A3229;
+    --text-dim: #6B6157;
+    --text-faint: #938779;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  img, svg { max-width: 100%; }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 16px 56px;
+    width: 100%;
+  }
+
+  header {
+    padding: 4px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+  }
+  .kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #1A0F06;
+    background: linear-gradient(135deg, var(--main), var(--sub));
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 800;
+  }
+  h1 .accent { color: var(--text-brand); }
+  .period {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+  }
+
+  .summary-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sub);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .summary-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-brand);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-box p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .toc {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(58,50,41,.08);
+  }
+  .card.high {
+    border-left: 4px solid var(--main);
+    background: var(--bg-card2);
+  }
+  .card.mid {
+    border-left: 4px solid var(--border);
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .badge.high {
+    background: var(--main);
+    color: #1A0F06;
+  }
+  .badge.mid {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+  }
+  .badge.genre {
+    background: var(--accent);
+    color: #1A0F06;
+    border: none;
+  }
+  .date {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .card h2 {
+    font-size: 16.5px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .block {
+    margin-bottom: 12px;
+  }
+  .block:last-of-type {
+    margin-bottom: 14px;
+  }
+  .block .h {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-brand);
+    margin: 0 0 5px;
+    letter-spacing: 0.03em;
+  }
+  .card.mid .block .h {
+    color: var(--text-brand);
+  }
+  .block p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dim);
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--text-brand);
+    text-decoration: underline;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+    word-break: break-all;
+  }
+  .source-link:active,
+  .source-link:hover {
+    color: var(--main);
+  }
+  .source-link .arrow {
+    flex-shrink: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+  footer .archive {
+    margin-top: 14px;
+    text-align: left;
+  }
+  footer .archive p {
+    margin: 0 0 6px;
+    color: var(--text-faint);
+  }
+  footer .archive a {
+    color: var(--text-brand);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 4px;
+  }
+  footer .archive a:hover { color: var(--main); }
+
+  @media (min-width: 480px) {
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">デイリートレンドレーダー ／ 第98回</span>
+    <h1>今日のトレンド調査<br><span class="accent">効果音、波形の立ち上がりで合わせる</span></h1>
+    <p class="period">全3件・動画の作り方3件／AIツール0件</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="label">今日の一言まとめ</span>
+    <p>今日はAIツールのニュースが日付条件や週報との重複でどれも弱くて0件、動画の作り方系だけ3本やで。効果音を波形の立ち上がりに合わせる地味な技と、7秒動画を1フレーム1役割で組む型、トランジションを流行の段階で選ぶ基準を選んだ。どれも次のコマ作りからそのまま手が動かせるやつや。</p>
+  </div>
+
+  <!-- 1: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-05-17</span>
+    </div>
+    <h2>効果音、波形の立ち上がりで合わせる</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>個人クリエイターが、動画に効果音を入れるタイミングの合わせ方を解説する記事を公開した。効果音を入れるタイミングは、テロップや画像が出る瞬間・カメラアングルの切り替え時・演者の感情が動いた瞬間の3つに絞るのが基本とし、効果音ファイルの先頭には無音部分（＝再生してもすぐには音が出ない部分）が含まれていることが多いため、タイムラインを拡大して波形が立ち上がる位置を見つけ、その位置を映像の変化点に重ねる、という手順を示している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールに効果音を入れる位置を、テロップや画像が切り替わる瞬間・感情が動く瞬間の3つに絞り、タイムラインを拡大して波形の立ち上がりを探し、その位置を画面の変化点に重ねて決める。</p>
+    </div>
+    <a class="source-link" href="https://library.libecity.com/articles/01KRT6NYN9JMYGDK9RCJ04AWHY" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> library.libecity.com/articles/01KRT6NYN9JMYGDK9RCJ04AWHY
+    </a>
+  </div>
+
+  <!-- 2: A 高 -->
+  <div class="card high">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge high">重要度：高</span>
+      <span class="date">公開2026-08-11</span>
+    </div>
+    <h2>7秒動画、1フレーム1役割で組む</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>CapCutが、7秒以内の短い動画（マイクロストーリーテリング）の作り方を解説する記事を公開した。短い動画はフック・メッセージ・感情的な見返りを短時間に詰め込めるため視聴完了や再視聴につながりやすいとし、視聴者が見続けるか判断するのは2秒未満としている。各フレームには「被写体を示す」「緊張感を作る」「見返りを届ける」のいずれか一つの役割を割り当てるべきとし、冒頭は結果を先に見せる・問題を即座に提示する・一つの動作や表情をフックにする、という構成を勧めている。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールの各コマに、被写体を示す・緊張感を作る・見返りを届けるのどれか一つの役割だけを割り当てて組み直す。冒頭のコマは結果か問題を先に見せる形にし、字幕はミュート再生を想定して読みやすくする。</p>
+    </div>
+    <a class="source-link" href="https://www.capcut.com/create/micro-storytelling-reels-under-7-seconds" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/micro-storytelling-reels-under-7-seconds
+    </a>
+  </div>
+
+  <!-- 3: A 中 -->
+  <div class="card mid">
+    <div class="badge-row">
+      <span class="badge genre">A：動画の作り方</span>
+      <span class="badge mid">重要度：中</span>
+      <span class="date">公開2026-08-12</span>
+    </div>
+    <h2>トランジション手法、流行の早さで選ぶ</h2>
+    <div class="block">
+      <p class="h">何があったか</p>
+      <p>CapCutが、リールのトランジション（＝場面の切り替え演出）演出について、流行の段階に応じた使い方をまとめた記事を公開した。流行の初期段階なら自社向けに作り替えて試し、ピーク期は手法だけ真似て内容は差し替え、飽和していたり目的に合わなければ使わない、という判定基準を示している。手法としてマッチカット・ホイップパン・マスク付きリビール・スピードランプを挙げ、メッセージの流れを先に決める→最終フレームを絵コンテ化する→撮影条件を固定する→予備テイクを撮る→動きの途中で切る、という制作手順を紹介している。</p>
+    </div>
+    <div class="block">
+      <p class="h">明日から試せること</p>
+      <p>漫画リールのコマ切り替えに使う演出を決める前に、今が流行の初期か・ピークか・飽和期かを判定し、マッチカットかホイップパンかマスク付きリビールかを使い分ける。公開前には視聴時間・初期の離脱率・シェア・保存・意図した成果の5つで複数投稿を比較する。</p>
+    </div>
+    <a class="source-link" href="https://www.capcut.com/create/instagram-reel-transitions-viral-edit-tips" target="_blank" rel="noopener">
+      <span class="arrow">&#8599;</span> capcut.com/create/instagram-reel-transitions-viral-edit-tips
+    </a>
+  </div>
+
+  <footer>
+    デイリートレンドレーダー 第98回<br>
+    2026年11月28日分
+  </footer>
+
+</div>
+</body>
+</html>
